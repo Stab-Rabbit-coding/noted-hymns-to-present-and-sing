@@ -1,6 +1,6 @@
 # noted-hymns-to-present-and-sing
 
-This reposository is an attempt to produce text based hymns with music notation.
+This reposository is an attempt to produce text based hymns with music notation.  I got tired of not having melody lines on the presentation slides during divine services that are either broadcast over Youtube or displayed on an overhead projector.  This is to fix that issue.  The congregation needs more than just the lyrics.
 
 **requirements**
 - text based instead of image based
