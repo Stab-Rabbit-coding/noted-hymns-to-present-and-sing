@@ -21,3 +21,6 @@ This reposository is an attempt to produce text based hymns with music notation.
 *Initial content will be taken from The Open Hymnal Project http://openhymnal.org/index.html*
   
 *The work will begin with liturgy and hymns contained in the Lutheran Service Book, published by Concordia Publishing House, https://www.cph.org/c-2810-lutheran-service-book but sourced from public domain or other sources which authorize copying without royalties.*
+
+
+I am using the open source "Musiqwik" font, copyright 2000 by Robert Allgeyer. https://www.fontspace.com/musiqwik-font-f3722
