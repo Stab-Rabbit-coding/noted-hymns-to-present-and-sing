@@ -1,0 +1,409 @@
+# TODO — Work Breakdown Structure
+# noted-hymns-to-present-and-sing
+
+Scope: All hymns, canticles, and liturgy included in the Lutheran Service Book (LSB, 2006,
+Concordia Publishing House) whose words, music, and settings are in the public domain or
+otherwise free to reproduce without royalties.
+
+## Status Legend
+
+- [ ] Not started
+- [~] In progress
+- [x] Complete
+- [!] Requires copyright verification before starting
+
+---
+
+## 1.0 Project Infrastructure
+
+### 1.1 Documentation
+- [x] 1.1.1 README.md — project overview
+- [x] 1.1.2 CLAUDE.md — implementation guide
+- [ ] 1.1.3 Musiqwik character reference sheet (`docs/musiqwik-reference.md`)
+- [ ] 1.1.4 OpenDyslexic Mono installation guide (`docs/fonts.md`)
+
+### 1.2 Presentation Templates
+- [ ] 1.2.1 PowerPoint template (.potx) with Musiqwik + OpenDyslexic Mono pre-applied
+- [ ] 1.2.2 LibreOffice Impress template (.otp)
+- [ ] 1.2.3 ProPresenter template notes
+- [ ] 1.2.4 EasyWorship import notes
+
+---
+
+## 2.0 Divine Service Liturgy (Ancient / Public Domain)
+
+The ordinary and propers of the Lutheran Divine Service derive from ancient liturgical sources
+predating copyright by centuries.
+
+### 2.1 Ordinary of the Mass (Kyrie through Benediction)
+- [ ] 2.1.1 Kyrie eleison (ancient Greek, pre-4th c.)
+- [ ] 2.1.2 Gloria in Excelsis Deo (ancient Latin doxology, 4th c.)
+- [ ] 2.1.3 Nicene Creed (Council of Constantinople, 381 AD)
+- [ ] 2.1.4 Apostles' Creed (ancient Roman baptismal creed)
+- [ ] 2.1.5 Sanctus — "Holy, Holy, Holy" (Isaiah 6:3 / ancient liturgical)
+- [ ] 2.1.6 Agnus Dei — "Lamb of God" (John 1:29 / ancient liturgical, 7th c.)
+- [ ] 2.1.7 Nunc Dimittis — "Lord, now lettest Thou" (Luke 2:29–32 / ancient)
+- [ ] 2.1.8 Pax Domini — "The peace of the Lord" (ancient)
+- [ ] 2.1.9 Benedicamus (ancient versicle)
+- [ ] 2.1.10 Aaronic Benediction (Numbers 6:24–26 / ancient)
+
+### 2.2 Propers and Versicles
+- [ ] 2.2.1 Introit tones — Gregorian psalm tones 1–8
+- [ ] 2.2.2 Alleluia verse (ancient)
+- [ ] 2.2.3 Offertory — "Create in Me a Clean Heart" (Psalm 51:10–12 / ancient)
+- [ ] 2.2.4 Collect tones (ancient)
+- [ ] 2.2.5 Sursum Corda — "Lift up your hearts" (ancient preface dialog)
+
+### 2.3 Lutherian Divine Service Distinctives
+- [ ] 2.3.1 Confession and Absolution versicles (LSB Setting 1–3 ordinary, TLH era)
+- [ ] 2.3.2 Salutation and Response (ancient)
+- [ ] 2.3.3 Words of Institution (1 Corinthians 11 / ancient)
+
+---
+
+## 3.0 Matins / Morning Prayer (Ancient Office)
+
+- [ ] 3.1 Opening Versicles (ancient)
+- [ ] 3.2 Venite — Psalm 95 (ancient)
+- [ ] 3.3 Invitatory antiphon tones (Gregorian)
+- [ ] 3.4 Office Hymn versicles (ancient)
+- [ ] 3.5 Benedictus — "Blessed Is the Lord" (Luke 1:68–79 / ancient)
+- [ ] 3.6 Suffrages (ancient)
+- [ ] 3.7 Closing Versicles (ancient)
+
+---
+
+## 4.0 Vespers / Evening Prayer (Ancient Office)
+
+- [ ] 4.1 Opening Versicles (ancient)
+- [ ] 4.2 Phos Hilaron — "O Gracious Light" (Greek, 3rd c.)
+- [ ] 4.3 Psalms with antiphons (Gregorian)
+- [ ] 4.4 Magnificat — "My soul magnifies the Lord" (Luke 1:46–55 / ancient)
+- [ ] 4.5 Nunc Dimittis (see 2.1.7 — may share file)
+- [ ] 4.6 Suffrages (ancient)
+- [ ] 4.7 Closing Versicles and Benediction (ancient)
+
+---
+
+## 5.0 Compline / Prayer at the Close of the Day (Ancient Office)
+
+- [ ] 5.1 Opening Versicles (ancient)
+- [ ] 5.2 Examination of Conscience (ancient)
+- [ ] 5.3 Hymn: "Before the Ending of the Day" — Te lucis ante terminum (Latin, 8th c.)
+- [ ] 5.4 Psalms 4, 31, 91, 134 (ancient)
+- [ ] 5.5 Nunc Dimittis (see 2.1.7)
+- [ ] 5.6 Closing Antiphon: "Salve Regina" or Lutheran equivalent (medieval)
+
+---
+
+## 6.0 Canticles
+
+### 6.1 Canticles from Scripture
+- [ ] 6.1.1 Magnificat — "My soul magnifies the Lord" (Luke 1:46–55)
+- [ ] 6.1.2 Benedictus — "Blessed is the Lord" (Luke 1:68–79)
+- [ ] 6.1.3 Nunc Dimittis — "Lord, now lettest Thou" (Luke 2:29–32)
+- [ ] 6.1.4 Jubilate — Psalm 100
+- [ ] 6.1.5 Deus Misereatur — Psalm 67
+- [ ] 6.1.6 Benedicite, omnia opera — Song of the Three Children (Daniel 3, apocrypha)
+
+### 6.2 Ancient Hymnic Canticles
+- [ ] 6.2.1 Te Deum Laudamus (attr. Ambrose/Nicetas, 4th c.)
+- [ ] 6.2.2 Gloria in Excelsis (see 2.1.2 — shared)
+- [ ] 6.2.3 Athanasian Creed — Quicumque vult (ancient, 5th–6th c.)
+
+---
+
+## 7.0 Hymns
+
+### 7.1 Advent
+
+- [ ] 7.1.01 Savior of the Nations, Come — Ambrose of Milan, c. 340–397; trans. Luther 1524
+- [ ] 7.1.02 O Come, O Come, Emmanuel — Latin antiphons, 9th c.; Neale trans. 1851
+- [ ] 7.1.03 Come, Thou Long-Expected Jesus — Charles Wesley, 1744
+- [ ] 7.1.04 Hark! A Thrilling Voice Is Sounding — Latin, 6th c.; Coffin trans. 1736
+- [ ] 7.1.05 O Lord, How Shall I Meet You — Paul Gerhardt, 1653
+- [ ] 7.1.06 The King Shall Come When Morning Dawns — John Brownlie, 1907
+- [ ] 7.1.07 Hark the Glad Sound — Philip Doddridge, 1735
+- [ ] 7.1.08 Come, Thou Precious Ransom, Come — Johann Gottfried Olearius, 1671
+- [ ] 7.1.09 Prepare the Royal Highway — Frans Mikael Franzén, 1812
+- [ ] 7.1.10 O Bride of Christ, Rejoice — Danish, 1639; Rygh trans.
+- [ ] 7.1.11 Lo! He Comes with Clouds Descending — Charles Wesley, 1758
+- [ ] 7.1.12 Once He Came in Blessing — Johann Horn, 1544; Winkworth trans. 1858
+- [ ] 7.1.13 Rejoice, Rejoice, Believers — Laurentius Laurenti, 1700
+
+### 7.2 Christmas
+
+- [ ] 7.2.01 From Heaven Above to Earth I Come — Martin Luther, 1534
+- [ ] 7.2.02 All My Heart Again Rejoices — Paul Gerhardt, 1653
+- [ ] 7.2.03 Of the Father's Love Begotten — Prudentius, 5th c.; Neale/Baker trans.
+- [ ] 7.2.04 Good Christian Friends, Rejoice — Heinrich Suso, 14th c.; Neale trans. 1853
+- [ ] 7.2.05 Joy to the World — Isaac Watts, 1719
+- [ ] 7.2.06 Hark! The Herald Angels Sing — Charles Wesley, 1739
+- [ ] 7.2.07 O Little Town of Bethlehem — Phillips Brooks, 1867
+- [ ] 7.2.08 O Come, All Ye Faithful — J.F. Wade, c. 1743; Oakeley trans. 1841
+- [ ] 7.2.09 Angels We Have Heard on High — French carol, 18th c.
+- [ ] 7.2.10 Infant Holy, Infant Lowly — Polish carol; Reed trans. 1925 [!verify Reed trans.]
+- [ ] 7.2.11 Silent Night, Holy Night — Joseph Mohr, 1818; Young trans.
+- [ ] 7.2.12 O Morning Star, How Fair and Bright — Philipp Nicolai, 1599; Winkworth trans.
+- [ ] 7.2.13 Once in Royal David's City — Cecil Alexander, 1848
+- [ ] 7.2.14 Away in a Manger — anon., 1885
+- [ ] 7.2.15 What Child Is This — William C. Dix, 1865
+- [ ] 7.2.16 O Come, Little Children — Christoph von Schmid, c. 1790; trans. 19th c.
+- [ ] 7.2.17 Songs of Thankfulness and Praise — Christopher Wordsworth, 1862
+- [ ] 7.2.18 Now Sing We, Now Rejoice — Latin, 14th c.; Winkworth trans.
+- [ ] 7.2.19 In the Bleak Midwinter — Christina Rossetti, 1872
+- [ ] 7.2.20 Good King Wenceslas — J.M. Neale, 1853
+- [ ] 7.2.21 Angels from the Realms of Glory — James Montgomery, 1816
+- [ ] 7.2.22 Let Our Gladness Have No End — Czech carol, 14th c.
+- [ ] 7.2.23 On Christmas Night All Christians Sing — Sussex carol, 17th c.
+
+### 7.3 Epiphany
+
+- [ ] 7.3.01 As with Gladness Men of Old — William C. Dix, 1858
+- [ ] 7.3.02 The Star Proclaims the King Is Here — Celerius, 4th c.; Coffin/Chandler trans.
+- [ ] 7.3.03 When Christ's Appearing Was Made Known — Celerius, 4th c.; Ellerton trans.
+- [ ] 7.3.04 We Three Kings — John Henry Hopkins, 1857
+- [ ] 7.3.05 What Star Is This, with Beams So Bright — Charles Coffin, 1736; Chandler trans.
+- [ ] 7.3.06 The Only Son from Heaven — Elisabeth Cruciger, 1524; Winkworth trans.
+- [ ] 7.3.07 O Wondrous Type! O Vision Fair — Latin, 15th c.; Neale trans.
+- [ ] 7.3.08 Christ, Whose Glory Fills the Skies — Charles Wesley, 1740
+- [ ] 7.3.09 To Jordan Came the Christ, Our Lord — Martin Luther, 1541; Heermann trans.
+- [ ] 7.3.10 O Christ, Our True and Only Light — Johann Heermann, 1630; Winkworth trans.
+- [ ] 7.3.11 O Love, How Deep — Latin, 15th c.; Littledale trans.
+- [ ] 7.3.12 Bright and Glorious Is the Sky — Nikolai Grundtvig, 1810; trans. 19th c.
+
+### 7.4 Lent
+
+- [ ] 7.4.01 From Depths of Woe I Cry to Thee — Martin Luther, 1523
+- [ ] 7.4.02 Out of the Depths I Cry to You — Martin Luther, 1523 (alternate trans.)
+- [ ] 7.4.03 Lord Jesus, Think on Me — Synesius of Cyrene, 4th c.; Chatfield trans.
+- [ ] 7.4.04 The Glory of These Forty Days — Gregory the Great, 6th c.; Lyman trans.
+- [ ] 7.4.05 O Lord, Throughout These Forty Days — Claudia Hernaman, 1873
+- [ ] 7.4.06 A Lamb Goes Uncomplaining Forth — Paul Gerhardt, 1647; Kelly trans.
+- [ ] 7.4.07 O Dearest Jesus — Johann Heermann, 1630; Winkworth trans.
+- [ ] 7.4.08 When I Survey the Wondrous Cross — Isaac Watts, 1707
+- [ ] 7.4.09 What Wondrous Love Is This — American folk hymn, 19th c.
+- [ ] 7.4.10 Go to Dark Gethsemane — James Montgomery, 1820
+- [ ] 7.4.11 Were You There — African-American spiritual, 19th c.
+- [ ] 7.4.12 Savior, When in Dust to Thee — Robert Grant, 1815
+- [ ] 7.4.13 Stricken, Smitten, and Afflicted — Thomas Kelly, 1804
+- [ ] 7.4.14 Jesus, I Will Ponder Now — Jeremias Homburg, 1659; Winkworth trans.
+- [ ] 7.4.15 My Song Is Love Unknown — Samuel Crossman, 1664
+
+### 7.5 Holy Week
+
+- [ ] 7.5.01 O Sacred Head, Now Wounded — Bernard/Gerhardt; Alexander trans. 1830
+- [ ] 7.5.02 Upon the Cross Extended — Johann Heermann, 1630; Heermann/Massie trans.
+- [ ] 7.5.03 A Lamb Goes Uncomplaining Forth (see 7.4.06)
+- [ ] 7.5.04 Christ, the Life of All the Living — Ernst Homburg, 1659; Winkworth trans.
+- [ ] 7.5.05 Jesus, in Your Dying Woes — Thomas Benson Pollock, 1871
+- [ ] 7.5.06 O Perfect Life of Love — Henry Baker, 1875
+- [ ] 7.5.07 Not All the Blood of Beasts — Isaac Watts, 1709
+
+### 7.6 Easter
+
+- [ ] 7.6.01 Christ Jesus Lay in Death's Strong Bands — Martin Luther, 1524
+- [ ] 7.6.02 Jesus Christ Is Risen Today — Latin, 14th c.; anon. trans. 1708
+- [ ] 7.6.03 The Day of Resurrection! — John of Damascus, 8th c.; Neale trans.
+- [ ] 7.6.04 Come, You Faithful, Raise the Strain — John of Damascus, 8th c.; Neale trans.
+- [ ] 7.6.05 The Strife Is O'er, the Battle Done — Latin, c. 1695; Pott trans.
+- [ ] 7.6.06 At the Lamb's High Feast We Sing — Latin, 5th c.; Bourne trans.
+- [ ] 7.6.07 O Sons and Daughters of the King — Jean Tisserand, 15th c.; Neale trans.
+- [ ] 7.6.08 I Know That My Redeemer Lives! — Samuel Medley, 1775
+- [ ] 7.6.09 Jesus Lives! The Victory's Won — Christian Gellert, 1757; Cox trans.
+- [ ] 7.6.10 Hail Thee, Festival Day! — Venantius Fortunatus, 6th c.; Pott trans.
+- [ ] 7.6.11 Alleluia! Sing to Jesus — William C. Dix, 1866
+- [ ] 7.6.12 Christians, to the Paschal Victim — Wipo of Burgundy, 11th c.
+- [ ] 7.6.13 Hallelujah! Jesus Lives! — Carolina Sandell Berg, 1858; Olson trans.
+- [ ] 7.6.14 Christ Is Arisen — German, 12th c.
+- [ ] 7.6.15 Now All the Vault of Heaven Resounds — Paul Speratus, 1524
+- [ ] 7.6.16 Christ the Lord Is Risen Today — Charles Wesley, 1739
+
+### 7.7 Pentecost / The Holy Spirit
+
+- [ ] 7.7.01 Come, Holy Ghost, God and Lord — Martin Luther, 1524
+- [ ] 7.7.02 Come, Holy Ghost, Creator Blest — Rabanus Maurus, 9th c.; Caswall trans.
+- [ ] 7.7.03 Creator Spirit, by Whose Aid — Rabanus Maurus, 9th c.; Dryden trans.
+- [ ] 7.7.04 Holy Spirit, Light Divine — Andrew Reed, 1817
+- [ ] 7.7.05 O Holy Spirit, Enter In — Michael Schirmer, 1640; Winkworth trans.
+- [ ] 7.7.06 Hail Thee, Festival Day! Pentecost — Fortunatus, 6th c. (see 7.6.10)
+- [ ] 7.7.07 Spirit of God, Descend upon My Heart — George Croly, 1854
+- [ ] 7.7.08 Gracious Spirit, Dwell with Me — Thomas Lynch, 1855
+
+### 7.8 The Holy Trinity
+
+- [ ] 7.8.01 Holy, Holy, Holy — Reginald Heber, 1826
+- [ ] 7.8.02 Come, Thou Almighty King — anon., c. 1757
+- [ ] 7.8.03 We All Believe in One True God — Martin Luther, 1524
+- [ ] 7.8.04 Father Most Holy — Latin, 10th c.; Percy Dearmer trans.
+- [ ] 7.8.05 Come, Holy Ghost, in Love — attr. Sylvester II, 10th c.
+
+### 7.9 The Word of God
+
+- [~] 7.9.01 A Mighty Fortress Is Our God — Martin Luther, 1529 [MELODY IN PROGRESS]
+- [ ] 7.9.02 Lord, Keep Us Steadfast in Your Word — Martin Luther, 1542
+- [ ] 7.9.03 Built on the Rock — Nikolai Grundtvig, 1825; Doving trans.
+- [ ] 7.9.04 The Gospel Shows the Father's Grace — Erasmus Alber, c. 1549; Winkworth trans.
+- [ ] 7.9.05 Spread, Oh, Spread, Thou Mighty Word — Jonathan Fabricius, 1724; Kelly trans.
+- [ ] 7.9.06 O Word of God Incarnate — William How, 1867
+- [ ] 7.9.07 Almighty God, Your Word Is Cast — John Cawood, c. 1819
+- [ ] 7.9.08 Hark, the Voice of Jesus Crying — Daniel March, 1868
+
+### 7.10 Holy Baptism
+
+- [ ] 7.10.01 All Who Believe and Are Baptized — Thomas Kingo, 1689; Rygh trans.
+- [ ] 7.10.02 God's Own Child, I Gladly Say It — Erdmann Neumeister, 1718; Heermann trans.
+- [ ] 7.10.03 To Jordan Came the Christ, Our Lord (see 7.3.09)
+- [ ] 7.10.04 I Bind unto Myself Today — St. Patrick, 5th c.; Cecil Alexander trans. 1889
+
+### 7.11 The Lord's Supper
+
+- [ ] 7.11.01 O Lord, We Praise Thee — Martin Luther, 1526; Winkworth trans.
+- [ ] 7.11.02 I Come, O Savior, to Thy Table — Friedrich Franck, 1674; Heermann trans.
+- [ ] 7.11.03 Thy Body, Given for Me, O Savior — Friedrich Franck, 1674
+- [ ] 7.11.04 Jesus Christ, Our Blessed Savior — Martin Luther / Jan Hus, c. 1524
+- [ ] 7.11.05 Let All Mortal Flesh Keep Silent — Liturgy of St. James, 4th c.; Moultrie trans.
+- [ ] 7.11.06 Soul, Adorn Yourself with Gladness — Johann Franck, 1649; Winkworth trans.
+- [ ] 7.11.07 Draw Near and Take the Body of the Lord — Latin, 7th c.; Neale trans.
+- [ ] 7.11.08 O Jesus, Blessed Lord, to Thee — Thomas Hansen Kingo, 1689; Rygh trans.
+- [ ] 7.11.09 Thee Will I Love, My Strength, My Tower — Johann Scheffler, 1657; Winkworth trans.
+- [ ] 7.11.10 Now, Lord, You Have Kept Your Word — Caspar Huberinus, 1542
+- [ ] 7.11.11 Lord Jesus Christ, We Humbly Pray — Henry Hayn, 1659
+
+### 7.12 Justification and Grace
+
+- [ ] 7.12.01 Dear Christians, One and All, Rejoice — Martin Luther, 1523
+- [ ] 7.12.02 By Grace I'm Saved — Christian Ludwig Scheidt, 1742; Heermann trans.
+- [ ] 7.12.03 Lord, to You I Make Confession — Johann Franck, 1653; Winkworth trans.
+- [ ] 7.12.04 Not All the Blood of Beasts (see 7.5.07)
+- [ ] 7.12.05 Jesus, Thy Blood and Righteousness — Nikolaus von Zinzendorf, 1739; Wesley trans.
+- [ ] 7.12.06 Just as I Am, without One Plea — Charlotte Elliott, 1836
+- [ ] 7.12.07 Jesus Sinners Doth Receive — Erdmann Neumeister, 1718; Winkworth trans.
+- [ ] 7.12.08 Rock of Ages, Cleft for Me — Augustus Toplady, 1776
+- [ ] 7.12.09 My Hope Is Built on Nothing Less — Edward Mote, c. 1834
+
+### 7.13 The Church and Ministry
+
+- [ ] 7.13.01 Glorious Things of Thee Are Spoken — John Newton, 1779
+- [ ] 7.13.02 The Church's One Foundation — Samuel Stone, 1866
+- [ ] 7.13.03 Onward, Christian Soldiers — Sabine Baring-Gould, 1865
+- [ ] 7.13.04 Eternal Father, Strong to Save — William Whiting, 1860
+- [ ] 7.13.05 Rise Up, O Men of God — William P. Merrill, 1911
+- [ ] 7.13.06 Stand Up, Stand Up for Jesus — George Duffield, 1858
+- [ ] 7.13.07 Lead On, O King Eternal — Ernest Shurtleff, 1888
+- [ ] 7.13.08 Lift High the Cross — George Kitchin, 1887; Newbolt adapt.
+- [ ] 7.13.09 Thee We Adore, O Hidden Savior — Thomas Aquinas, 13th c.; Caswall trans.
+
+### 7.14 The Christian Life — Discipleship and Daily Walk
+
+- [ ] 7.14.01 Lord, Thee I Love with All My Heart — Martin Schalling, 1571; Winkworth trans.
+- [ ] 7.14.02 Jesus, Lead Thou On — Nikolaus von Zinzendorf, 1721; Borthwick trans.
+- [ ] 7.14.03 O Holy Spirit, Grant Us Grace — Paul Gerhardt, 1653
+- [ ] 7.14.04 I Walk in Danger All the Way — Hans Adolph Brorson, 1734; Rygh trans.
+- [ ] 7.14.05 What God Ordains Is Always Good — Samuel Rodigast, 1675; Winkworth trans.
+- [ ] 7.14.06 Jesus, Priceless Treasure — Johann Franck, 1653; Winkworth trans.
+- [ ] 7.14.07 Jesus, Still Lead On — Zinzendorf, 1721; Borthwick trans.
+- [ ] 7.14.08 Preserve Your Word, O Savior — Andreas Gryphius, 1639; Winkworth trans.
+- [ ] 7.14.09 Seek Where You May to Find a Way — Johann Freystein, c. 1697
+- [ ] 7.14.10 Let Me Be Thine Forever — Nikolaus Selnecker, 1572; Winkworth trans.
+- [ ] 7.14.11 All Depends on Our Possessing — Adam Reusner, c. 1533; Winkworth trans.
+- [ ] 7.14.12 In Thee Is Gladness — Johann Lindemann, 1598; Winkworth trans.
+- [ ] 7.14.13 Abide, O Dearest Jesus — Josua Stegmann, 1628; Winkworth trans.
+
+### 7.15 Trust, Hope, and Comfort
+
+- [ ] 7.15.01 Jesus, Thy Boundless Love to Me — Paul Gerhardt, 1653; Wesley trans.
+- [ ] 7.15.02 O Jesus, King Most Wonderful — Bernard of Clairvaux, 12th c.; Caswall trans.
+- [ ] 7.15.03 Beautiful Savior — Münster Gesangbuch, 1677; Baker trans.
+- [ ] 7.15.04 Children of the Heavenly Father — Carolina Sandell Berg, 1858; Berg trans.
+- [ ] 7.15.05 Be Still, My Soul — Katharina von Schlegel, 1752; Borthwick trans.
+- [ ] 7.15.06 O God, Our Help in Ages Past — Isaac Watts, 1719
+- [ ] 7.15.07 How Firm a Foundation — Robert Keen, c. 1787; anon. trans.
+- [ ] 7.15.08 Take the World, but Give Me Jesus — Fanny Crosby, 1879
+- [ ] 7.15.09 All the Way My Savior Leads Me — Fanny Crosby, 1875
+- [ ] 7.15.10 What a Friend We Have in Jesus — Joseph Scriven, c. 1855; Converse melody
+- [ ] 7.15.11 My Faith Looks Up to Thee — Ray Palmer, 1830
+- [ ] 7.15.12 Take My Life and Let It Be — Frances Havergal, 1874
+- [ ] 7.15.13 Lord of All Hopefulness [!] — Jan Struther, 1931 — verify copyright
+- [ ] 7.15.14 Abide with Me — Henry Francis Lyte, 1847
+
+### 7.16 Morning and Evening
+
+- [ ] 7.16.01 Before the Ending of the Day — Te lucis ante terminum, Latin, 8th c.
+- [ ] 7.16.02 All Praise to Thee, My God, This Night — Thomas Ken, 1709
+- [ ] 7.16.03 Sun of My Soul, Thou Savior Dear — John Keble, 1820
+- [ ] 7.16.04 Now Rest Beneath Night's Shadow — Paul Gerhardt, 1647; Winkworth trans.
+- [ ] 7.16.05 Now the Light Has Gone Away — Frances Havergal, 1869
+- [ ] 7.16.06 Thee I Ardently Desire — Johann Scheffler, 1657
+- [ ] 7.16.07 God, Who Made the Earth and Heaven — Reginald Heber, 1827; Thring adapt.
+- [ ] 7.16.08 Father, We Praise Thee — Gregory the Great, 6th c.; Percy Dearmer trans.
+
+### 7.17 Praise and Thanksgiving
+
+- [ ] 7.17.01 Praise God, from Whom All Blessings Flow — Thomas Ken, 1709
+- [ ] 7.17.02 All People That on Earth Do Dwell — William Kethe, 1561 (Psalm 100)
+- [ ] 7.17.03 Now Thank We All Our God — Martin Rinkart, 1636; Winkworth trans.
+- [ ] 7.17.04 Praise, My Soul, the King of Heaven — Henry Francis Lyte, 1834
+- [ ] 7.17.05 Praise to the Lord, the Almighty — Joachim Neander, 1680; Winkworth trans.
+- [ ] 7.17.06 All Creatures of Our God and King — Francis of Assisi, 1225; Draper trans.
+- [ ] 7.17.07 Immortal, Invisible, God Only Wise — Walter Chalmers Smith, 1867
+- [ ] 7.17.08 Sing Praise to God Who Reigns Above — Johann Schütz, 1675; Cox trans.
+- [ ] 7.17.09 Glory Be to God the Father — Horatius Bonar, 1866
+- [ ] 7.17.10 Come, We That Love the Lord — Isaac Watts, 1707
+- [ ] 7.17.11 Rejoice, O Pilgrim Throng — Edward Plumptre, 1865
+- [ ] 7.17.12 We Praise You, O God — Julia Cory, 1902
+- [ ] 7.17.13 Hark, the Sound of Holy Voices — Christopher Wordsworth, 1862
+- [ ] 7.17.14 For the Beauty of the Earth — Folliott Pierpoint, 1864
+- [ ] 7.17.15 This Is the Day the Lord Has Made — Isaac Watts, 1719
+- [ ] 7.17.16 We All Believe in One True God (Creedal) — Tobias Clausnitzer, 1668; Winkworth trans.
+- [ ] 7.17.17 In Christ There Is No East or West — John Oxenham, 1908
+
+### 7.18 Prayer
+
+- [ ] 7.18.01 Lord, Teach Us How to Pray Aright — James Montgomery, 1818
+- [ ] 7.18.02 What a Friend We Have in Jesus (see 7.15.10)
+- [ ] 7.18.03 Sweet Hour of Prayer — William Walford, 1845
+- [ ] 7.18.04 Hear Us, Father, When We Pray — Reginald Heber, 1827
+
+### 7.19 Society, Nation, and Vocation
+
+- [ ] 7.19.01 God Bless Our Native Land — Siegfried Schmid, 1819; Dwight trans.
+- [ ] 7.19.02 Lord of Our Life — Philipp Puteanus, 17th c.; Pollock trans.
+- [ ] 7.19.03 Lord, Whose Love in Humble Service [!] — Albert Bayly, 1961 — verify copyright
+- [ ] 7.19.04 Son of God, Eternal Savior — Somerset Lowry, 1893
+- [ ] 7.19.05 For All the Blessings of the Year — Albert Hutchinson, 1884
+
+### 7.20 The Church Triumphant and Last Things
+
+- [ ] 7.20.01 For All the Saints — William How, 1864
+- [ ] 7.20.02 Jerusalem the Golden — Bernard of Cluny, 12th c.; Neale trans.
+- [ ] 7.20.03 Oh, What Their Joy and Their Glory Must Be — Peter Abelard, 12th c.; Neale trans.
+- [ ] 7.20.04 The Day Is Surely Drawing Near — Bartholomäus Ringwald, 1586; Winkworth trans.
+- [ ] 7.20.05 Wake, Awake, for Night Is Flying — Philipp Nicolai, 1599; Winkworth trans.
+- [ ] 7.20.06 Jerusalem, My Happy Home — anon., c. 1601
+- [ ] 7.20.07 Jesus, the Very Thought of Thee — Bernard of Clairvaux, 12th c.; Caswall trans.
+- [ ] 7.20.08 Ye Watchers and Ye Holy Ones — J. Athelstan Riley, 1906
+
+---
+
+## 8.0 Psalm Settings (Metered / Hymn Versions)
+
+- [ ] 8.01 Psalm 1 — "That Man Is Blest" (Scottish Psalter, 1650)
+- [ ] 8.02 Psalm 23 — "The Lord's My Shepherd, I'll Not Want" (Scottish Psalter, 1650)
+- [ ] 8.03 Psalm 46 — "God Is Our Refuge and Our Strength" (Watts, 1719)
+- [ ] 8.04 Psalm 51 — "Have Mercy on Me, O My God" (Watts / Scottish Psalter)
+- [ ] 8.05 Psalm 90 — "O God, Our Help in Ages Past" (Watts, 1719)
+- [ ] 8.06 Psalm 98 — "Joy to the World" (Watts, 1719) [see 7.2.05]
+- [ ] 8.07 Psalm 100 — "All People That on Earth Do Dwell" (Kethe, 1561) [see 7.17.02]
+- [ ] 8.08 Psalm 103 — "Praise, My Soul, the King of Heaven" (Lyte, 1834) [see 7.17.04]
+- [ ] 8.09 Psalm 121 — "I to the Hills Will Lift My Eyes" (Scottish Psalter, 1650)
+- [ ] 8.10 Psalm 130 — "From Depths of Woe I Cry to Thee" (Luther, 1523) [see 7.4.01]
+- [ ] 8.11 Psalm 150 — "Praise the Lord! Ye Heavens, Adore Him" (anon., 1796)
+
+---
+
+## Notes
+
+Items marked [!] require copyright verification before work begins.
+Translations count separately from originals — the translation must also be public domain
+(generally requires death of translator before 1928 for US purposes, or explicit free license).
