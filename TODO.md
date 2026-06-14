@@ -18,9 +18,10 @@ otherwise free to reproduce without royalties.
 
 ### 1.1 Documentation
 - [x] 1.1.1 README.md — project overview
-- [x] 1.1.2 CLAUDE.md — implementation guide
+- [x] 1.1.2 CLAUDE.md — implementation guide (includes Design Standards Policy)
 - [ ] 1.1.3 Musiqwik character reference sheet (`docs/musiqwik-reference.md`)
 - [ ] 1.1.4 OpenDyslexic Mono installation guide (`docs/fonts.md`)
+- [x] 1.1.5 REFERENCES.md — standards and regulations catalog [REF-1 through REF-6]
 
 ### 1.2 Presentation Templates
 - [ ] 1.2.1 PowerPoint template (.potx) with Musiqwik + OpenDyslexic Mono pre-applied
@@ -407,3 +408,8 @@ predating copyright by centuries.
 Items marked [!] require copyright verification before work begins.
 Translations count separately from originals — the translation must also be public domain
 (generally requires death of translator before 1928 for US purposes, or explicit free license).
+See 17 U.S.C. § 103 and § 304(b) [REFERENCES.md REF-3].
+
+All non-cosmetic design decisions must be vetted against applicable standards cataloged in
+REFERENCES.md (see CLAUDE.md §Design Standards Policy). Citations must include chapter,
+section, and paragraph of the cited standard.

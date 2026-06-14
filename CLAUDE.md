@@ -5,6 +5,22 @@
 Text-based hymns with melody notation for presentation slides during divine services
 (YouTube broadcasts, overhead projection). Congregations need melody lines, not only lyrics.
 
+## Design Standards Policy
+
+Any design specification that has a functional effect beyond cosmetics — including file
+format choices, text encoding, font selection for readability, and copyright determination
+methodology — must be vetted against an applicable industry standard or regulation before
+adoption. All such standards are cataloged in [`REFERENCES.md`](REFERENCES.md) with verified,
+publicly accessible URLs.
+
+When citing a standard anywhere in this repository (documentation or file comments), include
+the specific chapter, section, and paragraph of the cited standard to allow efficient
+auditing. Example: _17 U.S.C. § 304(b)_ or _RFC 3629 §3_.
+
+There must be no fabricated or unverifiable references anywhere in this repository.
+
+---
+
 ## Core Requirements
 
 - **Text-based** — plain text files, not images
@@ -15,14 +31,20 @@ Text-based hymns with melody notation for presentation slides during divine serv
 
 ## Fonts (v0.1)
 
-| Content | Font | Source |
-|---------|------|--------|
-| Musical notation (melody line) | Musiqwik | https://www.fontspace.com/musiqwik-font-f3722 (© 2000 Robert Allgeyer) |
-| Lyrics | OpenDyslexic Mono | https://opendyslexic.org/ |
+| Content | Font | Source | Standard ref |
+|---------|------|--------|--------------|
+| Musical notation (melody line) | Musiqwik | https://www.fontspace.com/musiqwik-font-f3722 (© 2000 Robert Allgeyer) | [REFERENCES.md REF-4] |
+| Lyrics | OpenDyslexic Mono | https://opendyslexic.org/ | [REFERENCES.md REF-5] |
 
 Both fonts must be installed on any system used to create or render the presentation files.
 In presentation software, apply Musiqwik to the melody text box and OpenDyslexic Mono to
 the lyrics text box.
+
+Font selection for both text boxes is a functional decision, not a cosmetic one: Musiqwik
+encodes musical symbols as characters (a different font breaks the melody entirely), and
+OpenDyslexic Mono is chosen for documented accessibility benefit to readers with dyslexia.
+See [REFERENCES.md REF-4] and [REFERENCES.md REF-5] for the authoritative sources governing
+each font.
 
 ---
 
@@ -81,10 +103,12 @@ copyright: <Status — public domain or license statement>
 
 ## Melody Encoding
 
-### Format: ABC Notation
+### Format: ABC Notation v2.1 [REFERENCES.md REF-1]
 
 Store the melody as ABC notation in the `# Melody` section. ABC is the source format
 used by the Open Hymnal Project and is the authoritative reference for each hymn's tune.
+All files in this repository conform to ABC Notation Standard v2.1
+(https://abcnotation.com/wiki/abc:standard:v2.1).
 
 ```
 X:1                  — tune index (always 1 per file)
@@ -144,8 +168,11 @@ ABC notation stored in the file is the reference representation. To render in pr
 - [ ] File named correctly (underscores, no extension)
 - [ ] All three section headers present (`# Melody`, `#Lyrics`, `#Citations and References`)
 - [ ] ABC notation header fields complete (X, T, C, S, M, L, K)
+- [ ] ABC melody section includes `% ABC Notation Standard v2.1 [REFERENCES.md REF-1]` comment
 - [ ] All verses included
 - [ ] Citations complete: words, music, setting, copyright, source URL
+- [ ] Public domain basis cited with specific 17 U.S.C. section [REFERENCES.md REF-3]
+- [ ] All cited URLs verified as publicly accessible
 - [ ] Item added to / updated in `TODO.md`
 - [ ] ABC parses without errors (test at https://abcjs.net/abcjs-editor.html or similar)
 
@@ -156,6 +183,7 @@ ABC notation stored in the file is the reference representation. To render in pr
 ```
 /
 ├── CLAUDE.md                      ← this file (implementation guide)
+├── REFERENCES.md                  ← standards and regulations catalog
 ├── README.md                      ← project overview
 ├── TODO.md                        ← work breakdown structure
 ├── A_Mighty_Fortress_Trusty_Shield
@@ -165,6 +193,10 @@ ABC notation stored in the file is the reference representation. To render in pr
 ---
 
 ## Copyright Notes for Lutheran Service Book Content
+
+Public domain determination is governed by 17 U.S.C. [REFERENCES.md REF-3]. Words,
+music, and settings are treated as independent works under 17 U.S.C. § 103; each must
+independently qualify as public domain before a hymn file may be created.
 
 The LSB (2006) contains a mix of ancient, public domain, and modern copyrighted material.
 Items that are clearly public domain for this project:
@@ -181,5 +213,11 @@ Items that require verification before inclusion:
 - Any setting first published after 1927
 - Hymns explicitly marked © in the LSB index
 
-When in doubt, cross-reference with the Open Hymnal Project, which only publishes
-public domain material sourced from the LSB tradition.
+The operative rule: works published in the United States before January 1, 1928 are in the
+public domain (17 U.S.C. § 304(b)). US works first published 1928–1963 are public domain
+only if copyright was not renewed after the initial 28-year term (Copyright Act of 1909).
+When in doubt, cross-reference with the Open Hymnal Project [REFERENCES.md REF-6], which
+publishes only public domain material.
+
+Each hymn file's `#Citations and References` section must cite the specific statutory basis
+for its public domain determination (e.g., _17 U.S.C. § 304(b) — published before 1928_).
