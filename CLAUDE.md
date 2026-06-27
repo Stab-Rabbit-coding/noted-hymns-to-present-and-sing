@@ -62,7 +62,11 @@ Every hymn file uses this exact three-section layout:
 
 # Melody
 
+## ABC
 <ABC notation — see Melody Encoding below>
+
+## Musiquik
+<ASCII that, when rendered in Musiquik font, matches the ABC melody and can be copied into presentation software>
 
 #Lyrics
 <All verses, continuous prose. Verse numbers inline: "2.", "3.", "4.">
