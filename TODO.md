@@ -254,7 +254,7 @@ predating copyright by centuries.
 - [ ] 7.10.01 All Who Believe and Are Baptized — Thomas Kingo, 1689; Rygh trans.
 - [ ] 7.10.02 God's Own Child, I Gladly Say It — Erdmann Neumeister, 1718; Heermann trans.
 - [ ] 7.10.03 To Jordan Came the Christ, Our Lord (see 7.3.09)
-- [ ] 7.10.04 I Bind unto Myself Today — St. Patrick, 5th c.; Cecil Alexander trans. 1889
+- [~] 7.10.04 I Bind unto Myself Today — St. Patrick, 5th c.; Cecil Alexander trans. 1889 [FILE: hymns/7.10_Holy_Baptism/I_Bind_Unto_Myself_Today]
 
 ### 7.11 The Lord's Supper
 
@@ -287,7 +287,7 @@ predating copyright by centuries.
 - [ ] 7.13.01 Glorious Things of Thee Are Spoken — John Newton, 1779
 - [ ] 7.13.02 The Church's One Foundation — Samuel Stone, 1866
 - [ ] 7.13.03 Onward, Christian Soldiers — Sabine Baring-Gould, 1865
-- [ ] 7.13.04 Eternal Father, Strong to Save — William Whiting, 1860
+- [~] 7.13.04 Eternal Father, Strong to Save — William Whiting, 1860 [FILE: hymns/7.13_The_Church_and_Ministry/Eternal_Father_Strong_to_Save]
 - [ ] 7.13.05 Rise Up, O Men of God — William P. Merrill, 1911
 - [ ] 7.13.06 Stand Up, Stand Up for Jesus — George Duffield, 1858
 - [ ] 7.13.07 Lead On, O King Eternal — Ernest Shurtleff, 1888

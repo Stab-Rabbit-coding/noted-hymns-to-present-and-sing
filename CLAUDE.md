@@ -127,15 +127,73 @@ ABC notation stored in the file is the reference representation. To render in pr
 
 ---
 
+## ABC-to-MusiQwik Workflow (Repeatable for Every Song)
+
+Use `abc_to_musiqwik.py` for every hymn to produce the MusiQwik presentation string.
+Run it any time the `# Melody` section changes.
+
+### Step 1 — Obtain the ABC source
+
+Fetch the ABC file from the Open Hymnal Project:
+
+```
+https://openhymnal.org/Abc/<Hymn_File_Name>.abc
+```
+
+The filename follows the pattern visible in `#Citations and References` (e.g.
+`Eternal_Father_Strong_To_Save-Melita.abc`).  Paste the ABC header and body
+directly into the `# Melody` section of the hymn file.
+
+### Step 2 — Run the converter
+
+```
+python3 abc_to_musiqwik.py --file <path/to/hymn_file>
+```
+
+The script reads the `# Melody` section, converts ABC notation to MusiQwik font
+characters, and prints the result to stdout.  Warnings about out-of-range notes
+or unsupported durations go to stderr.
+
+Example (from the repo root):
+
+```
+python3 abc_to_musiqwik.py --file hymns/7.13_The_Church_and_Ministry/Eternal_Father_Strong_to_Save
+python3 abc_to_musiqwik.py --file hymns/7.10_Holy_Baptism/I_Bind_Unto_Myself_Today
+```
+
+### Step 3 — Paste into presentation software
+
+Copy the MusiQwik output, paste it into the melody text box in your slide, and
+apply the **MusiQwik** font.  The characters render as staff notation with
+clef, time signature, notes, and barlines already encoded.
+
+### Step 4 — Verify against the rendered ABC
+
+Open the `# Melody` ABC source at `https://abcjs.net/abcjs-editor.html` to get
+a visual staff reference.  Compare it with the MusiQwik rendering in your slide.
+Adjust any note flagged by a stderr warning by editing the melody text box
+directly in the presentation software.
+
+### Workflow notes
+
+- Notes outside the MusiQwik range A3–A5 are skipped with a warning — transpose
+  the ABC key if the melody sits too high or low for the font's staff.
+- Dotted notes are approximated to the nearest supported duration; add the dot
+  manually in the presentation text box after pasting.
+- The script also accepts stdin: `python3 abc_to_musiqwik.py < hymn_file`
+
+---
+
 ## Adding a New Hymn — Checklist
 
 1. Confirm all three components are public domain: words, music, setting
 2. Find the ABC source at Open Hymnal Project or equivalent
-3. Create a new file using the naming convention
+3. Create the hymn file under `hymns/<section_dir>/` using the naming convention
 4. Populate `# Melody` with ABC notation
-5. Populate `#Lyrics` with all verses
-6. Populate `#Citations and References` with full attribution and source URL
-7. Mark the item Done in `TODO.md`
+5. Run `python3 abc_to_musiqwik.py --file <hymn_file>` and confirm output is sensible
+6. Populate `#Lyrics` with all verses
+7. Populate `#Citations and References` with full attribution and source URL
+8. Mark the item Done in `TODO.md`
 
 ---
 
@@ -153,14 +211,28 @@ ABC notation stored in the file is the reference representation. To render in pr
 
 ## Repository Layout
 
+Hymn files are organised into a directory tree that mirrors the TODO section
+numbers, making them easy to locate by liturgical category.
+
 ```
 /
-├── CLAUDE.md                      ← this file (implementation guide)
-├── README.md                      ← project overview
-├── TODO.md                        ← work breakdown structure
-├── A_Mighty_Fortress_Trusty_Shield
-└── <additional hymn files…>
+├── CLAUDE.md                             ← this file (implementation guide)
+├── README.md                             ← project overview
+├── TODO.md                               ← work breakdown structure
+├── abc_to_musiqwik.py                    ← ABC-to-MusiQwik converter script
+├── A_Mighty_Fortress_Trusty_Shield       ← legacy root-level file (7.9)
+└── hymns/
+    ├── 7.10_Holy_Baptism/
+    │   └── I_Bind_Unto_Myself_Today
+    ├── 7.13_The_Church_and_Ministry/
+    │   └── Eternal_Father_Strong_to_Save
+    └── <additional section dirs…>/
+        └── <hymn files named per convention>
 ```
+
+New hymns go under `hymns/<section_number>_<Section_Name>/`.  Use underscores for
+spaces in both directory and file names.  Directory names begin with the
+two-digit TODO section number so `ls` orders them numerically.
 
 ---
 
