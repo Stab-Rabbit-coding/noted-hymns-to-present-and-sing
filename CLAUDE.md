@@ -134,7 +134,7 @@ ABC notation stored in the file is the reference representation. To render in pr
 ## ABC-to-MusiQwik Workflow (Repeatable for Every Song)
 
 Use `abc_to_musiqwik.py` for every hymn to produce the MusiQwik presentation string.
-Run it any time the `# Melody` section changes.
+Run it any time the `## ABC` subsection changes.
 
 ### Step 1 — Obtain the ABC source
 
@@ -146,7 +146,7 @@ https://openhymnal.org/Abc/<Hymn_File_Name>.abc
 
 The filename follows the pattern visible in `#Citations and References` (e.g.
 `Eternal_Father_Strong_To_Save-Melita.abc`).  Paste the ABC header and body
-directly into the `# Melody` section of the hymn file.
+into the `## ABC` subsection under `# Melody` in the hymn file.
 
 ### Step 2 — Run the converter
 
@@ -154,8 +154,9 @@ directly into the `# Melody` section of the hymn file.
 python3 abc_to_musiqwik.py --file <path/to/hymn_file>
 ```
 
-The script reads the `# Melody` section, converts ABC notation to MusiQwik font
-characters, and prints the result to stdout.  Warnings about out-of-range notes
+The script reads the `## ABC` subsection, converts the notation to MusiQwik font
+characters, prints the result to stdout, and **saves it directly to the
+`## Musiquik` subsection** of the same file.  Warnings about out-of-range notes
 or unsupported durations go to stderr.
 
 Example (from the repo root):
@@ -165,16 +166,17 @@ python3 abc_to_musiqwik.py --file hymns/7.13_The_Church_and_Ministry/Eternal_Fat
 python3 abc_to_musiqwik.py --file hymns/7.10_Holy_Baptism/I_Bind_Unto_Myself_Today
 ```
 
-### Step 3 — Paste into presentation software
+### Step 3 — Copy into presentation software
 
-Copy the MusiQwik output, paste it into the melody text box in your slide, and
-apply the **MusiQwik** font.  The characters render as staff notation with
-clef, time signature, notes, and barlines already encoded.
+Open the hymn file and copy the content of the `## Musiquik` section.  Paste it
+into the melody text box in your slide and apply the **MusiQwik** font.  The
+characters render as staff notation with clef, time signature, notes, and
+barlines already encoded.
 
 ### Step 4 — Verify against the rendered ABC
 
-Open the `# Melody` ABC source at `https://abcjs.net/abcjs-editor.html` to get
-a visual staff reference.  Compare it with the MusiQwik rendering in your slide.
+Open the `## ABC` source at `https://abcjs.net/abcjs-editor.html` to get a
+visual staff reference.  Compare it with the MusiQwik rendering in your slide.
 Adjust any note flagged by a stderr warning by editing the melody text box
 directly in the presentation software.
 
@@ -185,6 +187,7 @@ directly in the presentation software.
 - Dotted notes are approximated to the nearest supported duration; add the dot
   manually in the presentation text box after pasting.
 - The script also accepts stdin: `python3 abc_to_musiqwik.py < hymn_file`
+  (stdin mode prints to stdout only; it does not write back to a file).
 
 ---
 
@@ -193,8 +196,8 @@ directly in the presentation software.
 1. Confirm all three components are public domain: words, music, setting
 2. Find the ABC source at Open Hymnal Project or equivalent
 3. Create the hymn file under `hymns/<section_dir>/` using the naming convention
-4. Populate `# Melody` with ABC notation
-5. Run `python3 abc_to_musiqwik.py --file <hymn_file>` and confirm output is sensible
+4. Populate the `## ABC` subsection under `# Melody` with ABC notation
+5. Run `python3 abc_to_musiqwik.py --file <hymn_file>` — this saves the output to `## Musiquik` automatically; confirm no unexpected warnings
 6. Populate `#Lyrics` with all verses
 7. Populate `#Citations and References` with full attribution and source URL
 8. Mark the item Done in `TODO.md`

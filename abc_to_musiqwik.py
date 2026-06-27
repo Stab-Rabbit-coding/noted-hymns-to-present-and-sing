@@ -504,10 +504,9 @@ def abc_to_musiqwik(text: str) -> tuple[str, list[str]]:
         header_end = len(lines)
 
     body_lines = lines[header_end:]
-    body         = " ".join(body_lines)
-
-    # Remove inline comments (%...) and continuation characters (\).
-    body = re.sub(r"%[^\n]*", "", body)
+    # Strip per-line comments before joining so that %%-style directives (e.g.
+    # %%MIDI program 0) don't consume the rest of the body once newlines are gone.
+    body = " ".join(re.sub(r"%.*$", "", line) for line in body_lines)
     body = body.replace("\\", " ")
 
     # Parse header fields.
@@ -683,19 +682,73 @@ def _build_arg_parser() -> argparse.ArgumentParser:
 
 def _extract_melody_section(text: str) -> str:
     """
-    Pull just the ABC content from a hymn file that uses the project's
-    three-section format (# Melody, #Lyrics, #Citations and References).
+    Pull just the ABC content from a hymn file.
+
+    Prefers the ## ABC subsection when the file uses the structured
+    (## ABC / ## Musiquik) format; falls back to the full # Melody block
+    for files that have not yet been migrated to the new layout.
     """
-    # Match from "# Melody" header to the next section header or end of file.
-    match = re.search(
-        r"#\s*Melody\s*\n(.*?)(?=^#|\Z)",
+    # New format: ## ABC subsection under # Melody.
+    abc_match = re.search(
+        r"^##\s*ABC[^\n]*\n(.*?)(?=^##|^#|\Z)",
         text,
         re.DOTALL | re.MULTILINE,
     )
-    if match:
-        return match.group(1).strip()
+    if abc_match:
+        return abc_match.group(1).strip()
+
+    # Legacy format: raw ABC directly under # Melody.
+    melody_match = re.search(
+        r"^#\s*Melody\s*\n(.*?)(?=^#|\Z)",
+        text,
+        re.DOTALL | re.MULTILINE,
+    )
+    if melody_match:
+        return melody_match.group(1).strip()
+
     # No section header found — return the whole text as-is.
     return text
+
+
+def _update_musiqwik_section(path: Path, musiqwik_text: str) -> None:
+    """
+    Write *musiqwik_text* into the ## Musiquik subsection of the hymn file.
+
+    If the subsection already exists its content is replaced.  If it is
+    absent it is inserted after the ## ABC subsection.
+    """
+    text = path.read_text(encoding="utf-8")
+
+    # Locate the ## Musiquik header line.
+    m_header = re.search(r"^##\s*Musiquik[^\n]*\n", text, re.MULTILINE)
+    if m_header:
+        # Replace everything from after the header to the next section marker.
+        content_start = m_header.end()
+        m_next = re.search(r"^#", text[content_start:], re.MULTILINE)
+        content_end = content_start + m_next.start() if m_next else len(text)
+        new_text = text[:content_start] + musiqwik_text + "\n\n" + text[content_end:]
+        path.write_text(new_text, encoding="utf-8")
+        print(f"[info] ## Musiquik section updated in {path}", file=sys.stderr)
+        return
+
+    # No ## Musiquik yet — insert after the ## ABC block.
+    m_abc = re.search(r"^##\s*ABC[^\n]*\n", text, re.MULTILINE)
+    if m_abc:
+        abc_content_start = m_abc.end()
+        m_abc_end = re.search(r"^#", text[abc_content_start:], re.MULTILINE)
+        abc_end = abc_content_start + m_abc_end.start() if m_abc_end else len(text)
+        new_text = (
+            text[:abc_end].rstrip("\n")
+            + "\n\n## Musiquik\n"
+            + musiqwik_text
+            + "\n\n"
+            + text[abc_end:].lstrip("\n")
+        )
+        path.write_text(new_text, encoding="utf-8")
+        print(f"[info] ## Musiquik section inserted in {path}", file=sys.stderr)
+        return
+
+    print("[warn] No ## ABC or ## Musiquik section found; file not updated.", file=sys.stderr)
 
 
 def main() -> None:
@@ -721,6 +774,7 @@ def main() -> None:
             for w in warnings:
                 print(f"[warn] {w}", file=sys.stderr)
         print(result)
+        _update_musiqwik_section(path, result)
         return
 
     run_interactive()
