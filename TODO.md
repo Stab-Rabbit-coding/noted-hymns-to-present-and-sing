@@ -35,6 +35,12 @@ otherwise free to reproduce without royalties.
 - [x] 1.3.1 Import and conversion script to generate hymn files with MusiQwik melody lines from abc music files. (abc_to_musiqwik.py)
 - [x] 1.3.2 Export script to create presentation slides in common formats (hymn_to_presentation.py)
 
+### 1.4 Release Packaging and Extensibility
+
+- [ ] 1.4.1 Self-contained release bundle — design and document a distributable archive (zip or installer) that packages hymn files, both fonts (Musiqwik, OpenDyslexic Mono), presentation templates, conversion scripts, and this documentation so that a congregation can deploy it offline on any platform without external dependencies or network access; the bundle format must accommodate future additions without breaking existing content or scripts.
+- [ ] 1.4.2 Extensibility guide — document the complete file format, theological tag taxonomy, folder naming convention, and copyright verification checklist so that end users can contribute hymns from traditions beyond the initial LSB scope (Roman Catholic, Reformed, Baptist, Anglican, etc.) following the same conventions as the core collection.
+- [x] 1.4.3 Theological tag taxonomy — defined in CLAUDE.md; tags applied to all existing hymn files.
+
 ---
 
 ## 2.0 Divine Service Liturgy (Ancient / Public Domain)

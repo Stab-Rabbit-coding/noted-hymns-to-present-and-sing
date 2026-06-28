@@ -55,10 +55,12 @@ originals.
 
 ## File Structure
 
-Every hymn file uses this exact three-section layout:
+Every hymn file uses this exact layout:
 
 ```
 <Full Hymn Title>
+
+Tags: <comma-separated theological and tradition tags — see Tag Taxonomy below>
 
 # Melody
 
@@ -79,6 +81,90 @@ Setting: <Setting source, Year.>
 copyright: <Status — public domain or license statement>
 
 <Source URL>
+```
+
+---
+
+## Tag Taxonomy
+
+Every hymn file carries a `Tags:` line between the title and `# Melody`.  Tags are
+comma-separated, lowercase, hyphenated identifiers.  Apply every tag that accurately
+describes the piece; do not omit a tag because another tag implies it.
+
+### Tradition tags
+
+These identify the liturgical or confessional tradition from which a piece originates
+or for which it is primarily intended.  They are the primary filter for users building
+collections from traditions outside the core Lutheran scope.
+
+| Tag | Use |
+|-----|-----|
+| `lutheran` | Lutheran tradition (LCMS, ELCA, LMS, etc.); default for all LSB content |
+| `roman` | Roman Catholic tradition (includes Tridentine and Novus Ordo repertoire) |
+| `reformed` | Reformed / Calvinist tradition (Presbyterian, Dutch Reformed, etc.) |
+| `baptist` | Baptist tradition (Southern Baptist, Independent Baptist, etc.) |
+| `anglican` | Anglican / Episcopal tradition (BCP-based liturgy and hymnody) |
+| `ecumenical` | Shared across multiple traditions without strong confessional identity |
+
+### Theological content tags
+
+These mark pieces whose **primary textual theme** is the doctrine named.  Apply only
+when the doctrine is the subject of the text, not merely mentioned in passing.
+
+**Sacramental theology** (Lutheran: means-of-grace emphasis)
+
+| Tag | Applies to |
+|-----|-----------|
+| `sacramental` | Any piece centred on the sacraments as means of grace |
+| `real-presence` | Explicitly affirms Christ's body and blood in the Lord's Supper (Lutheran, Roman) |
+| `baptismal-regeneration` | Baptism as the means of new birth / regeneration |
+| `absolution` | Confession, the Office of the Keys, and Holy Absolution |
+| `lords-supper` | Lord's Supper / Holy Communion focus |
+| `baptism` | Baptism focus (may or may not include regeneration language) |
+
+**Reformation theology**
+
+| Tag | Applies to |
+|-----|-----------|
+| `reformation` | Broadly Reformation in character (Luther, Calvin, Zwingli era) |
+| `sola-scriptura` | Scripture alone as the source and norm of doctrine |
+| `sola-fide` | Faith alone as the means of justification |
+| `sola-gratia` | Grace alone as the ground of salvation |
+| `solus-christus` | Christ alone as mediator and redeemer |
+
+### Form and function tags
+
+| Tag | Applies to |
+|-----|-----------|
+| `liturgical` | Part of a formal liturgical order (Divine Service, Daily Office) |
+| `office` | Daily Office (Matins, Vespers, Compline, etc.) |
+| `canticle` | Prose canticle chanted to a psalm tone |
+| `psalm` | Psalm setting (metrical or chanted) |
+| `creed` | Credal text (Nicene, Apostles', Athanasian) |
+| `intercession` | Primarily a prayer of intercession for others |
+
+### Examples
+
+```
+# Hymn with strong sacramental and Reformation identity
+Tags: lutheran, sacramental, baptism, baptismal-regeneration
+# — God's Own Child, I Gladly Say It (Neumeister, 1718)
+
+# Reformation battle hymn — Word of God theme
+Tags: lutheran, reformation, sola-scriptura, solus-christus
+# — A Mighty Fortress Is Our God (Luther, 1529)
+
+# Explicitly sola scriptura
+Tags: lutheran, reformation, sola-scriptura
+# — Lord, Keep Us Steadfast in Your Word (Luther, 1542)
+
+# Communion liturgy — real presence context
+Tags: lutheran, liturgical, sacramental, real-presence, lords-supper
+# — Words of Institution / Pax Domini / Agnus Dei
+
+# Piece added from outside LSB scope
+Tags: roman, liturgical, canticle
+# — contributor-added Roman Rite canticle
 ```
 
 ---
