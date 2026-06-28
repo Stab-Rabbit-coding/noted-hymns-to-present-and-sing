@@ -332,10 +332,13 @@ def duration_to_base(absolute_dur: Fraction, warnings: list[str]) -> Optional[in
     ]
     for threshold, base, label in thresholds:
         if absolute_dur == threshold:
+            # Extract just the duration word ("half", "quarter", "eighth") for the
+            # warning; the label is already "dotted half" / "dotted quarter" / etc.
+            undotted_name = label.split()[1]   # e.g. "half" from "dotted half"
             warnings.append(
                 f"Dotted note ({label}, duration={absolute_dur}) approximated "
-                f"as {_PITCH_NAMES[0][0:0]}; render the dot manually in your "
-                "presentation software."
+                f"as an undotted {undotted_name} note; add the dot manually in "
+                "your presentation software."
             )
             return base
 
@@ -975,13 +978,16 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _extract_melody_section(text: str) -> str:
+def _extract_melody_section(text: str) -> Optional[str]:
     """
     Pull just the ABC content from a hymn file.
 
     Prefers the ## ABC subsection when the file uses the structured
     (## ABC / ## Musiquik) format; falls back to the full # Melody block
     for files that have not yet been migrated to the new layout.
+
+    Returns None when no melody section is found at all — callers should
+    skip conversion rather than attempt to parse the full file text as ABC.
     """
     # New format: ## ABC subsection under # Melody.
     abc_match = re.search(
@@ -990,7 +996,11 @@ def _extract_melody_section(text: str) -> str:
         re.DOTALL | re.MULTILINE,
     )
     if abc_match:
-        return abc_match.group(1).strip()
+        extracted = abc_match.group(1).strip()
+        # Treat a placeholder comment "(None…)" or blank content as absent
+        # so that text-only liturgical files are handled gracefully.
+        if extracted and not extracted.startswith("("):
+            return extracted
 
     # Legacy format: raw ABC directly under # Melody.
     melody_match = re.search(
@@ -999,10 +1009,12 @@ def _extract_melody_section(text: str) -> str:
         re.DOTALL | re.MULTILINE,
     )
     if melody_match:
-        return melody_match.group(1).strip()
+        extracted = melody_match.group(1).strip()
+        if extracted and not extracted.startswith("("):
+            return extracted
 
-    # No section header found — return the whole text as-is.
-    return text
+    # No usable melody section found — signal the caller to skip conversion.
+    return None
 
 
 def _update_musiqwik_section(path: Path, musiqwik_text: str) -> None:
@@ -1072,6 +1084,16 @@ def main() -> None:
             sys.exit(f"Error: file not found: {path}")
         raw_text = path.read_text(encoding="utf-8")
         abc_text = _extract_melody_section(raw_text)
+        # _extract_melody_section returns None for text-only files (e.g. spoken
+        # liturgical items like an Examination of Conscience) that deliberately
+        # contain no ## ABC subsection or contain only a placeholder comment.
+        if abc_text is None:
+            print(
+                f"[warn] No ## ABC notation found in {path}; "
+                "skipping MusiQwik conversion for this text-only file.",
+                file=sys.stderr,
+            )
+            return
         result, warnings = abc_to_musiqwik(abc_text)
         if warnings:
             for w in warnings:

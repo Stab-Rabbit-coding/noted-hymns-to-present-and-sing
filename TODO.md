@@ -94,12 +94,12 @@ predating copyright by centuries.
 
 ## 5.0 Compline / Prayer at the Close of the Day (Ancient Office)
 
-- [ ] 5.1 Opening Versicles (ancient)
-- [ ] 5.2 Examination of Conscience (ancient)
-- [ ] 5.3 Hymn: "Before the Ending of the Day" — Te lucis ante terminum (Latin, 8th c.)
-- [ ] 5.4 Psalms 4, 31, 91, 134 (ancient)
-- [ ] 5.5 Nunc Dimittis (see 2.1.7)
-- [ ] 5.6 Closing Antiphon: "Salve Regina" or Lutheran equivalent (medieval)
+- [x] 5.1 Opening Versicles (ancient) [FILE: hymns/5.0_Compline/Compline_Opening_Versicles]
+- [x] 5.2 Examination of Conscience (ancient) [FILE: hymns/5.0_Compline/Examination_of_Conscience]
+- [x] 5.3 Hymn: "Before the Ending of the Day" — Te lucis ante terminum (Latin, 8th c.) [FILE: hymns/5.0_Compline/Before_the_Ending_of_the_Day]
+- [x] 5.4 Psalms 4, 31, 91, 134 (ancient) [FILES: hymns/5.0_Compline/Psalm_4, Psalm_31, Psalm_91, Psalm_134]
+- [x] 5.5 Nunc Dimittis (see 2.1.7) [FILE: hymns/5.0_Compline/Nunc_Dimittis]
+- [x] 5.6 Closing Antiphon: "Salve Regina" or Lutheran equivalent (medieval) [FILE: hymns/5.0_Compline/Closing_Antiphon — Lutheran equivalent: "In Peace I Will Lie Down and Sleep"]
 
 ---
 
