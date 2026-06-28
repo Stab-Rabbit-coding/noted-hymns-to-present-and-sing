@@ -106,17 +106,17 @@ predating copyright by centuries.
 ## 6.0 Canticles
 
 ### 6.1 Canticles from Scripture
-- [ ] 6.1.1 Magnificat — "My soul magnifies the Lord" (Luke 1:46–55)
-- [ ] 6.1.2 Benedictus — "Blessed is the Lord" (Luke 1:68–79)
-- [ ] 6.1.3 Nunc Dimittis — "Lord, now lettest Thou" (Luke 2:29–32)
-- [ ] 6.1.4 Jubilate — Psalm 100
-- [ ] 6.1.5 Deus Misereatur — Psalm 67
-- [ ] 6.1.6 Benedicite, omnia opera — Song of the Three Children (Daniel 3, apocrypha)
+- [x] 6.1.1 Magnificat — "My soul magnifies the Lord" (Luke 1:46–55) [FILE: hymns/6.1_Canticles_from_Scripture/Magnificat]
+- [x] 6.1.2 Benedictus — "Blessed is the Lord" (Luke 1:68–79) [FILE: hymns/6.1_Canticles_from_Scripture/Benedictus]
+- [x] 6.1.3 Nunc Dimittis — "Lord, now lettest Thou" (Luke 2:29–32) [FILE: hymns/6.1_Canticles_from_Scripture/Nunc_Dimittis]
+- [x] 6.1.4 Jubilate — Psalm 100 [FILE: hymns/6.1_Canticles_from_Scripture/Jubilate]
+- [x] 6.1.5 Deus Misereatur — Psalm 67 [FILE: hymns/6.1_Canticles_from_Scripture/Deus_Misereatur]
+- [x] 6.1.6 Benedicite, omnia opera — Song of the Three Children (Daniel 3, apocrypha) [FILE: hymns/6.1_Canticles_from_Scripture/Benedicite_Omnia_Opera]
 
 ### 6.2 Ancient Hymnic Canticles
-- [ ] 6.2.1 Te Deum Laudamus (attr. Ambrose/Nicetas, 4th c.)
-- [ ] 6.2.2 Gloria in Excelsis (see 2.1.2 — shared)
-- [ ] 6.2.3 Athanasian Creed — Quicumque vult (ancient, 5th–6th c.)
+- [x] 6.2.1 Te Deum Laudamus (attr. Ambrose/Nicetas, 4th c.) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Te_Deum_Laudamus]
+- [x] 6.2.2 Gloria in Excelsis (see 2.1.2 — shared) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Gloria_in_Excelsis]
+- [x] 6.2.3 Athanasian Creed — Quicumque vult (ancient, 5th–6th c.) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Athanasian_Creed]
 
 ---
 
