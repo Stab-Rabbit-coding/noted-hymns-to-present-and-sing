@@ -808,30 +808,114 @@ def parse_full_abc(text: str) -> dict:
     }
 
 
-def _verses_from_w_fields(w_fields: list[str]) -> list[str]:
+# ---------------------------------------------------------------------------
+# Repeating lyrical segment support
+# ---------------------------------------------------------------------------
+
+# Inline markers placed in the #Lyrics block where a segment is sung.
+# e.g.  [Refrain]  [Chorus]  [Response]  [Antiphon]
+_INLINE_SEGMENT_RE = re.compile(
+    r"\[(Refrain|Chorus|Response|Antiphon)\]", re.IGNORECASE
+)
+
+# Labeled segment definitions starting at the beginning of a line.
+# e.g.  "Refrain: O hear us when we cry to Thee…"
+#       "Response: And also with you."
+#       "Antiphon: Alleluia."
+_SEGMENT_LABEL_RE = re.compile(
+    r"(?m)^(Refrain|Chorus|Response|Antiphon)\s*:[ \t]*", re.IGNORECASE
+)
+
+# Open Hymnal W: field convention — lines beginning "R. " mark the refrain.
+_W_REFRAIN_LINE_RE = re.compile(r"^R\.\s+", re.IGNORECASE)
+
+
+def _detect_trailing_refrain(
+    verses: list[str], min_words: int = 5
+) -> tuple[list[str], str | None]:
     """
-    Group W: field values into verse strings.
+    Extract a common trailing refrain shared by every verse.
+
+    If all verses end with the same sequence of at least *min_words* words,
+    that sequence is returned as the refrain and stripped from each verse.
+    At least one unique word is always preserved per verse so that the verse
+    content is never consumed entirely by the refrain.
+
+    Returns (stripped_verses, refrain_text) when a qualifying common suffix
+    is found, otherwise (verses, None) unchanged.
+    """
+    if len(verses) < 2:
+        return verses, None
+
+    word_lists = [v.split() for v in verses]
+    min_len = min(len(wl) for wl in word_lists)
+    max_refrain_len = min_len - 1  # always leave at least one unique word per verse
+
+    if max_refrain_len < min_words:
+        return verses, None
+
+    # Walk outward from each verse's end; stop at the first word that differs.
+    common_end = 0
+    for i in range(1, max_refrain_len + 1):
+        tails = [tuple(wl[-i:]) for wl in word_lists]
+        if len(set(tails)) == 1:
+            common_end = i
+        else:
+            break
+
+    if common_end < min_words:
+        return verses, None
+
+    refrain = " ".join(word_lists[0][-common_end:])
+    stripped = [" ".join(wl[:-common_end]).rstrip() for wl in word_lists]
+    return stripped, refrain
+
+
+def _verses_from_w_fields(w_fields: list[str]) -> tuple[list[str], str | None]:
+    """
+    Group W: field values into verse strings, detecting a repeating refrain.
 
     Open Hymnal convention: a blank W: line separates verses; lines within a
     verse are joined with a single space.  Leading verse numbers ("2. ", "3. ")
     are stripped so the caller can re-insert them uniformly.
+
+    Lines beginning with "R. " (the Open Hymnal refrain marker) are collected
+    as explicit refrain text.  When no explicit refrain is found, a heuristic
+    checks whether all verses share a common trailing sequence of five or more
+    words and promotes that sequence to a refrain automatically.
+
+    Returns (verses, refrain_text | None).
     """
     verses: list[str] = []
+    explicit_refrain: list[str] = []
     current: list[str] = []
 
     for value in w_fields:
-        if not value.strip():
+        stripped = value.strip()
+        if not stripped:
             if current:
                 verses.append(" ".join(current))
                 current = []
+        elif _W_REFRAIN_LINE_RE.match(stripped):
+            explicit_refrain.append(
+                _W_REFRAIN_LINE_RE.sub("", stripped, count=1).strip()
+            )
         else:
-            current.append(value.strip())
+            current.append(stripped)
 
     if current:
         verses.append(" ".join(current))
 
-    # Strip any leading verse number prefix (e.g. "2. " or "3. ").
-    return [re.sub(r"^\d+\.\s+", "", v, count=1) for v in verses]
+    # Strip any leading verse-number prefix (e.g. "2. " or "3. ").
+    verses = [re.sub(r"^\d+\.\s+", "", v, count=1) for v in verses]
+
+    if explicit_refrain:
+        # Deduplicate: if all R. lines carry the same text (the usual case),
+        # use it once rather than joining identical copies.
+        unique_parts = list(dict.fromkeys(explicit_refrain))
+        return verses, " ".join(unique_parts)
+
+    return _detect_trailing_refrain(verses)
 
 
 def _safe_filename(title: str) -> str:
@@ -994,6 +1078,13 @@ def check_lyrics_completeness(
     lower_text = full_text.lower()
     title_lower = title.lower()
 
+    # Separate any labeled repeating segment (Refrain:, Response:, etc.) from
+    # the verse prose so that word counts reflect verse content only and are
+    # not inflated by the segment text that is repeated at presentation time.
+    check_text, _seg_label, _seg_text = _parse_lyric_segments(full_text)
+    if not check_text:
+        check_text = full_text
+
     # Universal: abrupt ending without sentence-final punctuation.
     last_char = full_text.rstrip()[-1] if full_text.strip() else ""
     sentence_endings = {".", "!", "?", '"', "”", "'", "’", ")", "]"}
@@ -1039,7 +1130,7 @@ def check_lyrics_completeness(
                         )
                 break  # only match the first canticle key
 
-        word_count = len(full_text.split())
+        word_count = len(check_text.split())
         if word_count < 60:
             warnings.append(
                 f"Canticle text is short ({word_count} words). "
@@ -1061,7 +1152,7 @@ def check_lyrics_completeness(
             warnings.append(
                 "Creed text does not appear to end with 'Amen' — may be incomplete."
             )
-        word_count = len(full_text.split())
+        word_count = len(check_text.split())
         if word_count < 80:
             warnings.append(
                 f"Creed text is short ({word_count} words) — verify the full text "
@@ -1082,6 +1173,34 @@ def _extract_lyrics_section(text: str) -> Optional[str]:
     if match:
         return match.group(1).strip()
     return None
+
+
+def _parse_lyric_segments(lyrics_raw: str) -> tuple[str, str, str]:
+    """
+    Separate verse text from a named repeating segment in a #Lyrics block.
+
+    Recognises labeled segment definitions that begin at a line boundary:
+        Refrain: <text>    Chorus: <text>
+        Response: <text>   Antiphon: <text>
+
+    Everything before the first such label is the verse prose; everything
+    after is the segment text.  Only the first matching label is extracted.
+
+    This matters both for presentation (the label appears once, each verse
+    references it via an inline [Refrain] / [Response] marker) and for
+    structural checks (word counts should reflect verse text, not the
+    repeated segment).
+
+    Returns (verse_text, label, segment_text).  When no labeled segment is
+    present, returns (lyrics_raw.strip(), "", "").
+    """
+    m = _SEGMENT_LABEL_RE.search(lyrics_raw)
+    if not m:
+        return lyrics_raw.strip(), "", ""
+    label = m.group(1).capitalize()
+    segment_text = lyrics_raw[m.end():].strip()
+    verse_text = lyrics_raw[:m.start()].strip()
+    return verse_text, label, segment_text
 
 
 def _emit_completeness_warnings(warnings: list, source: str) -> None:
@@ -1120,8 +1239,8 @@ def create_hymn_from_url(url: str, output_dir: Path) -> Path:
     for w in mel_warnings:
         print(f"[warn] {w}", file=sys.stderr)
 
-    # Parse lyrics from W: fields.
-    verses = _verses_from_w_fields(w_fields)
+    # Parse lyrics from W: fields (detects a repeating refrain automatically).
+    verses, refrain = _verses_from_w_fields(w_fields)
     if not verses:
         print(
             "[warn] No W: lyrics fields found; #Lyrics section will be empty.",
@@ -1130,6 +1249,8 @@ def create_hymn_from_url(url: str, output_dir: Path) -> Path:
     else:
         content_type = detect_content_type(title)
         full_lyrics = "  ".join(verses)
+        if refrain:
+            full_lyrics += f"\n\nRefrain: {refrain}"
         _emit_completeness_warnings(
             check_lyrics_completeness(
                 full_lyrics, title, content_type, verse_count=len(verses)
@@ -1138,9 +1259,15 @@ def create_hymn_from_url(url: str, output_dir: Path) -> Path:
         )
 
     # Format lyrics as continuous prose with inline verse numbers.
+    # When a refrain is present it is written once after the verse block;
+    # each verse references it via an inline [Refrain] marker.
     if verses:
         parts = [verses[0]] + [f"{i}. {v}" for i, v in enumerate(verses[1:], start=2)]
+        if refrain:
+            parts = [f"{p}  [Refrain]" for p in parts]
         lyrics_text = "  ".join(parts)
+        if refrain:
+            lyrics_text += f"\n\nRefrain: {refrain}"
     else:
         lyrics_text = "(no lyrics found)"
 

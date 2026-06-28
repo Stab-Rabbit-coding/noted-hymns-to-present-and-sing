@@ -129,6 +129,68 @@ ABC notation stored in the file is the reference representation. To render in pr
 - Preserve historical orthography present in the public domain source
 - Verse 1 has no leading number
 
+### Refrains, Choruses, Responses, and Antiphons
+
+Repeating lyrical segments are written **once** at the bottom of the `#Lyrics`
+block and referenced inline wherever they are sung.  This prevents file bloat
+and keeps the structure clear for presentation.
+
+**Inline reference marker** — placed after each verse or invocation where the
+segment is sung:
+
+```
+[Refrain]    [Chorus]    [Response]    [Antiphon]
+```
+
+**Labeled definition** — appears once, after a blank line, at the end of the
+`#Lyrics` block:
+
+```
+Refrain: <full text of the refrain>
+Chorus: <full text of the chorus>
+Response: <congregational response text>
+Antiphon: <antiphon text>
+```
+
+Only the first labeled definition in the block is parsed by the script;
+subsequent ones may appear but will not be extracted automatically.
+
+**Strophic hymn with refrain** (e.g. *Eternal Father, Strong to Save*):
+
+```
+#Lyrics
+Eternal Father, strong to save, Whose arm hath bound the restless wave...  [Refrain]  2. O Christ, whose voice the waters heard...  [Refrain]  3. O Holy Spirit, who didst brood...  [Refrain]  4. O Trinity of love and power...  [Refrain]
+
+Refrain: O hear us when we cry to Thee For those in peril on the sea.
+```
+
+**Litanic canticle with repeating response** (e.g. *Benedicite, Omnia Opera*):
+
+```
+#Lyrics
+O all ye works of the Lord, bless ye the Lord: [Refrain]  O ye angels of the Lord, bless ye the Lord: [Refrain]  O ye heavens, bless ye the Lord: [Refrain]  ...
+
+Refrain: praise him, and magnify him for ever.
+```
+
+**Liturgical call-and-response** (e.g. *Salutation and Response*):
+
+```
+#Lyrics
+The Lord be with you.
+
+Response: And also with you.
+```
+
+The `abc_to_musiqwik.py` script recognises these conventions:
+- `[Refrain]` (and its variants) at the end of a verse does not trigger the
+  "abrupt ending" warning, since `]` is a sentence-final character.
+- Word counts for canticle/creed completeness checks exclude the labeled
+  segment text so that a short antiphon does not skew the analysis.
+- When creating a hymn file with `--url`, the script automatically detects
+  repeating trailing text across verses and formats the `#Lyrics` block with
+  `[Refrain]` markers and a `Refrain:` definition.
+
 ---
 
 ## ABC-to-MusiQwik Workflow (Repeatable for Every Song)
