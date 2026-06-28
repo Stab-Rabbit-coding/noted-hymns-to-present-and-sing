@@ -895,6 +895,110 @@ def to_ewsx(slides: list[Slide], out: Path) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Tradition-filter prompt
+# ---------------------------------------------------------------------------
+
+def _prompt_tradition_filter(
+    hymn_title: str,
+    file_tags: list[str],
+    verses: list[tuple[str, list[str]]],
+) -> tuple[list[str], list[str]]:
+    """
+    When the hymn contains stanzas with tradition-specific tags, describe them
+    and interactively ask the user how to filter.
+
+    A stanza is "notable" when its explicit [Tags: ...] marker differs from
+    the file-level tag set — meaning it was added by, or is exclusive to, a
+    particular tradition within the broader scope of the hymn file.
+
+    Returns (include_tags, exclude_tags).  Both empty means include all.
+    When stdin is not a TTY, prints a one-line notice to stderr and returns
+    ([], []) so piped / scripted use is unaffected.
+    """
+    file_set = frozenset(t.lower() for t in file_tags)
+
+    notable: list[tuple[int, list[str], str]] = []
+    for i, (text, tags) in enumerate(verses):
+        if not tags:
+            continue
+        if frozenset(t.lower() for t in tags) != file_set:
+            preview = (text[:60] + '…') if len(text) > 60 else text
+            notable.append((i + 1, tags, preview))
+
+    if not notable:
+        return [], []
+
+    if not sys.stdin.isatty():
+        print(
+            f'[info] {hymn_title}: {len(notable)} stanza(s) carry tradition-specific '
+            'tags; use --include / --exclude to filter. Proceeding with all stanzas.',
+            file=sys.stderr,
+        )
+        return [], []
+
+    # Collect unique tradition sets from notable stanzas (order of first occurrence).
+    seen_sets: list[frozenset] = []
+    for _, tags, _ in notable:
+        s = frozenset(t.lower() for t in tags)
+        if s not in seen_sets:
+            seen_sets.append(s)
+
+    # Build a numbered menu — one "include only" entry per unique tradition set.
+    menu: list[tuple[str, str, list[str]]] = []   # (key, label, include_tags)
+    for idx, tset in enumerate(seen_sets, start=1):
+        label_tags = ', '.join(sorted(tset))
+        count = sum(
+            1 for _, stanza_tags in verses
+            if (frozenset(t.lower() for t in stanza_tags) if stanza_tags else file_set) & tset
+        )
+        noun = 'stanza' if count == 1 else 'stanzas'
+        menu.append((str(idx), f'{label_tags.capitalize()} only  ({count} {noun})', sorted(tset)))
+
+    # Print header and notable-stanza summary.
+    bar = '─' * 62
+    print(f'\n{bar}')
+    print(f'  {hymn_title}')
+    print(f'  File tradition: {", ".join(file_tags) or "(none)"}')
+    print(bar)
+    print('\n  Stanzas with tradition-specific tags:\n')
+    for stanza_num, tags, preview in notable:
+        print(f'    Stanza {stanza_num}  [{", ".join(tags)}]')
+        print(f'    "{preview}"\n')
+
+    total = len(verses)
+    noun = 'stanza' if total == 1 else 'stanzas'
+    print('  Options:\n')
+    print(f'    a  Include all  ({total} {noun}, default)')
+    for key, label, _ in menu:
+        print(f'    {key}  {label}')
+    print('    c  Custom filter')
+    print()
+
+    while True:
+        try:
+            choice = input('  Choice [a]: ').strip().lower() or 'a'
+        except (EOFError, KeyboardInterrupt):
+            print()
+            return [], []
+
+        if choice == 'a':
+            return [], []
+
+        for key, _, inc in menu:
+            if choice == key:
+                return inc, []
+
+        if choice == 'c':
+            inc_raw = input('  Include tags (comma-separated, blank = all): ').strip()
+            exc_raw = input('  Exclude tags (comma-separated, blank = none): ').strip()
+            inc = [t.strip() for t in inc_raw.split(',') if t.strip()]
+            exc = [t.strip() for t in exc_raw.split(',') if t.strip()]
+            return inc, exc
+
+        print('  Please enter one of the listed choices.  ', end='', flush=True)
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -924,7 +1028,15 @@ def main() -> None:
     if not src.exists():
         sys.exit(f'Error: file not found: {src}')
 
-    hymn   = parse_hymn_file(src)
+    hymn = parse_hymn_file(src)
+
+    if not args.include and not args.exclude:
+        args.include, args.exclude = _prompt_tradition_filter(
+            hymn['title'],
+            hymn.get('file_tags', []),
+            parse_verses(hymn['lyrics_text']),
+        )
+
     slides = build_slides(hymn, args.lines_per_slide, args.max_lyric_chars,
                           args.include, args.exclude)
     out    = Path(args.output) if args.output else Path(src.name + '.' + args.format)
