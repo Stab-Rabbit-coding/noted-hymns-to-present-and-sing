@@ -9,6 +9,10 @@ Usage (pipe from file):
     python3 abc_to_musiqwik.py < hymn_file
     python3 abc_to_musiqwik.py --file A_Mighty_Fortress_Trusty_Shield
 
+Usage (fetch from URL and create hymn file):
+    python3 abc_to_musiqwik.py --url http://openhymnal.org/Abc/Lord_Keep_Us_Steadfast.abc
+    python3 abc_to_musiqwik.py -u http://openhymnal.org/Abc/Lord_Keep_Us_Steadfast.abc -d hymns/
+
 The output is plain text. Paste it into a presentation text box and apply
 the MusiQwik font (by Robert Allgeyer) to render it as staff notation.
 
@@ -48,8 +52,13 @@ Special characters confirmed from font-file glyph analysis:
 """
 
 import argparse
+import os
 import re
+import ssl
 import sys
+import urllib.error
+import urllib.parse
+import urllib.request
 from fractions import Fraction
 from pathlib import Path
 from typing import Optional
@@ -657,6 +666,277 @@ def run_interactive() -> None:
 
 
 # ---------------------------------------------------------------------------
+# URL fetching and hymn file creation
+# ---------------------------------------------------------------------------
+
+_CA_BUNDLE = "/root/.ccr/ca-bundle.crt"
+_MAX_CONTENT_BYTES = 512 * 1024  # 512 KB
+_FETCH_TIMEOUT = 30  # seconds
+
+_SUSPICIOUS_PATTERNS = [
+    re.compile(r"<script", re.IGNORECASE),
+    re.compile(r"javascript:", re.IGNORECASE),
+    re.compile(r"\beval\s*\(", re.IGNORECASE),
+    re.compile(r"\bexec\s*\(", re.IGNORECASE),
+    re.compile(r"__import__", re.IGNORECASE),
+    re.compile(r"\bos\.system\b", re.IGNORECASE),
+    re.compile(r"\bsubprocess\b", re.IGNORECASE),
+]
+
+_MAX_LINE_LENGTH = 1000
+
+
+def _ssl_context() -> ssl.SSLContext:
+    """Return an SSL context that loads the custom CA bundle when present."""
+    ctx = ssl.create_default_context()
+    if os.path.exists(_CA_BUNDLE):
+        ctx.load_verify_locations(_CA_BUNDLE)
+    return ctx
+
+
+def fetch_abc_url(url: str) -> str:
+    """
+    Fetch an ABC file from *url* and return its text.
+
+    Only http and https schemes are accepted.  Content is capped at 512 KB.
+    Raises ValueError for unsupported schemes and RuntimeError for network or
+    HTTP errors.
+    """
+    parsed = urllib.parse.urlparse(url)
+    if parsed.scheme not in ("http", "https"):
+        raise ValueError(
+            f"Only http/https URLs are supported; got scheme: {parsed.scheme!r}"
+        )
+
+    req = urllib.request.Request(
+        url, headers={"User-Agent": "abc_to_musiqwik/1.0 (hymn-converter)"}
+    )
+    open_kwargs: dict = {"timeout": _FETCH_TIMEOUT}
+    if parsed.scheme == "https":
+        open_kwargs["context"] = _ssl_context()
+
+    try:
+        with urllib.request.urlopen(req, **open_kwargs) as resp:
+            data = resp.read(_MAX_CONTENT_BYTES + 1)
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError(f"HTTP {exc.code} fetching {url}: {exc.reason}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"Failed to fetch {url}: {exc.reason}") from exc
+
+    if len(data) > _MAX_CONTENT_BYTES:
+        raise RuntimeError(
+            f"Content exceeds the {_MAX_CONTENT_BYTES // 1024} KB size limit"
+        )
+
+    return data.decode("utf-8", errors="replace")
+
+
+def validate_abc_content(text: str) -> None:
+    """
+    Raise ValueError if *text* contains unsafe or non-ABC content.
+
+    Checks performed:
+    - No null bytes
+    - No line longer than 1 000 characters
+    - No suspicious patterns (script tags, eval, os.system, etc.)
+    - Minimum required ABC fields present: X:, T:, K:
+    """
+    if "\x00" in text:
+        raise ValueError("Content contains null bytes")
+
+    for lineno, line in enumerate(text.splitlines(), 1):
+        if len(line) > _MAX_LINE_LENGTH:
+            raise ValueError(
+                f"Line {lineno} exceeds {_MAX_LINE_LENGTH} characters ({len(line)} chars)"
+            )
+
+    for pattern in _SUSPICIOUS_PATTERNS:
+        if pattern.search(text):
+            raise ValueError(
+                f"Content contains a suspicious pattern: {pattern.pattern!r}"
+            )
+
+    missing = []
+    if not re.search(r"^X:\s*\d+", text, re.MULTILINE):
+        missing.append("X:")
+    if not re.search(r"^T:", text, re.MULTILINE):
+        missing.append("T:")
+    if not re.search(r"^K:", text, re.MULTILINE):
+        missing.append("K:")
+    if missing:
+        raise ValueError(
+            f"Content is missing required ABC header field(s): {', '.join(missing)}"
+        )
+
+
+def parse_full_abc(text: str) -> dict:
+    """
+    Parse a complete ABC file into its components.
+
+    Returns a dict with:
+        header      : dict of uppercase field letter → value (first occurrence wins)
+        abc_for_file: the ABC text with W: lines removed (for the ## ABC section)
+        w_fields    : list of raw W: values in document order
+    """
+    w_fields: list[str] = []
+    non_w_lines: list[str] = []
+    header: dict[str, str] = {}
+
+    for line in text.splitlines():
+        stripped = line.strip()
+
+        w_match = re.match(r"^W:\s*(.*)", stripped)
+        if w_match:
+            w_fields.append(w_match.group(1))
+            continue
+
+        non_w_lines.append(line)
+
+        h_match = re.match(r"^([A-Za-z]):\s*(.*)", stripped)
+        if h_match:
+            key = h_match.group(1).upper()
+            if key not in header:
+                header[key] = h_match.group(2).strip()
+
+    return {
+        "header": header,
+        "abc_for_file": "\n".join(non_w_lines).strip(),
+        "w_fields": w_fields,
+    }
+
+
+def _verses_from_w_fields(w_fields: list[str]) -> list[str]:
+    """
+    Group W: field values into verse strings.
+
+    Open Hymnal convention: a blank W: line separates verses; lines within a
+    verse are joined with a single space.  Leading verse numbers ("2. ", "3. ")
+    are stripped so the caller can re-insert them uniformly.
+    """
+    verses: list[str] = []
+    current: list[str] = []
+
+    for value in w_fields:
+        if not value.strip():
+            if current:
+                verses.append(" ".join(current))
+                current = []
+        else:
+            current.append(value.strip())
+
+    if current:
+        verses.append(" ".join(current))
+
+    # Strip any leading verse number prefix (e.g. "2. " or "3. ").
+    return [re.sub(r"^\d+\.\s+", "", v, count=1) for v in verses]
+
+
+def _safe_filename(title: str) -> str:
+    """Derive a repository-style filename from a hymn title."""
+    title = re.sub(r"\s*\([^)]*\)", "", title).strip()   # drop parenthetical subtitle
+    return re.sub(r"[^A-Za-z0-9]+", "_", title).strip("_")
+
+
+def _build_citation(header: dict, source_url: str) -> str:
+    """Build the #Citations and References block from ABC header fields."""
+    composer = header.get("C", "Unknown")
+    source_field = header.get("S", "")
+    z_field = header.get("Z", "")   # transcriber / arranger — sometimes carries word credit
+    tune_name = header.get("T", "Unknown")
+
+    # S: in Open Hymnal: "Open Hymnal Project, YYYY; openhymnal.org/Abc/..."
+    setting = source_field.split(";")[0].strip() if source_field else ""
+
+    words_credit = z_field if z_field else composer
+    lines = [
+        f"Words: {words_credit}.",
+        f"Music: '{tune_name}' {composer}.",
+    ]
+    if setting:
+        lines.append(f"Setting: {setting}.")
+    lines.append(
+        "copyright: public domain. This score is a part of the Open Hymnal Project."
+    )
+    lines.append("")
+    lines.append(source_url)
+    return "\n".join(lines)
+
+
+def create_hymn_from_url(url: str, output_dir: Path) -> Path:
+    """
+    Fetch an ABC file from *url*, convert it, and write a complete hymn file.
+
+    Returns the path of the created file.  Progress and warnings go to stderr.
+    Raises ValueError or RuntimeError on failure.
+    """
+    print(f"[info] Fetching {url} …", file=sys.stderr)
+    raw = fetch_abc_url(url)
+
+    print("[info] Validating content …", file=sys.stderr)
+    validate_abc_content(raw)
+
+    parsed = parse_full_abc(raw)
+    header       = parsed["header"]
+    abc_for_file = parsed["abc_for_file"]
+    w_fields     = parsed["w_fields"]
+
+    title = header.get("T", "Untitled Hymn")
+    print(f"[info] Title: {title}", file=sys.stderr)
+
+    # Convert melody.
+    print("[info] Converting melody to MusiQwik …", file=sys.stderr)
+    musiqwik, mel_warnings = abc_to_musiqwik(abc_for_file)
+    for w in mel_warnings:
+        print(f"[warn] {w}", file=sys.stderr)
+
+    # Parse lyrics from W: fields.
+    verses = _verses_from_w_fields(w_fields)
+    if not verses:
+        print(
+            "[warn] No W: lyrics fields found; #Lyrics section will be empty.",
+            file=sys.stderr,
+        )
+    elif len(verses) < 3:
+        print(
+            f"[warn] Only {len(verses)} verse(s) found — this hymn may be truncated.",
+            file=sys.stderr,
+        )
+
+    # Format lyrics as continuous prose with inline verse numbers.
+    if verses:
+        parts = [verses[0]] + [f"{i}. {v}" for i, v in enumerate(verses[1:], start=2)]
+        lyrics_text = "  ".join(parts)
+    else:
+        lyrics_text = "(no lyrics found)"
+
+    citation_text = _build_citation(header, url)
+
+    hymn_content = (
+        f"{title}\n\n"
+        f"# Melody\n\n"
+        f"## ABC\n{abc_for_file}\n\n"
+        f"## Musiquik\n{musiqwik}\n\n"
+        f"#Lyrics\n{lyrics_text}\n\n"
+        f"#Citations and References\n\n"
+        f"{citation_text}\n"
+    )
+
+    filename = _safe_filename(title) or "Untitled_Hymn"
+    out_path = output_dir / filename
+
+    if out_path.exists():
+        print(
+            f"[warn] File already exists and will be overwritten: {out_path}",
+            file=sys.stderr,
+        )
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(hymn_content, encoding="utf-8")
+    print(f"[info] Hymn file written: {out_path}", file=sys.stderr)
+    return out_path
+
+
+# ---------------------------------------------------------------------------
 # CLI entry point
 # ---------------------------------------------------------------------------
 
@@ -671,6 +951,21 @@ def _build_arg_parser() -> argparse.ArgumentParser:
         "--file", "-f",
         metavar="PATH",
         help="Path to a hymn file containing ABC notation (reads the # Melody section).",
+    )
+    parser.add_argument(
+        "--url", "-u",
+        metavar="URL",
+        help=(
+            "Fetch an ABC file from URL (http or https), convert it to MusiQwik, "
+            "and write a complete hymn file. "
+            "Hymns with fewer than 3 verses are flagged as possibly truncated."
+        ),
+    )
+    parser.add_argument(
+        "--output-dir", "-d",
+        metavar="DIR",
+        default=".",
+        help="Directory in which to write the hymn file created with --url (default: .).",
     )
     parser.add_argument(
         "--example",
@@ -761,6 +1056,14 @@ def main() -> None:
             for w in warnings:
                 print(f"[warn] {w}", file=sys.stderr)
         print(result)
+        return
+
+    if args.url:
+        try:
+            out = create_hymn_from_url(args.url, Path(args.output_dir))
+            print(out)
+        except (ValueError, RuntimeError) as exc:
+            sys.exit(f"Error: {exc}")
         return
 
     if args.file:
