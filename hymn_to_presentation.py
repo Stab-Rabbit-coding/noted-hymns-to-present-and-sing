@@ -16,6 +16,17 @@ Usage:
     python3 hymn_to_presentation.py --file <hymn_file> --format ewsx
     python3 hymn_to_presentation.py --file <hymn_file> --lines-per-slide 2
 
+Tradition filtering (stanza-level [Tags: ...] markers in the hymn file):
+    python3 hymn_to_presentation.py --file <hymn_file> --include lutheran
+    python3 hymn_to_presentation.py --file <hymn_file> --exclude baptist
+    python3 hymn_to_presentation.py --file <hymn_file> -I lutheran -I ecumenical -X anglican
+
+    --include / -I  Keep only stanzas whose tradition tags overlap this set.
+    --exclude / -X  Drop any stanza whose tradition tags overlap this set.
+
+    Stanzas without a [Tags: ...] marker inherit the file-level Tags: line.
+    Both flags are repeatable; omitting both emits all stanzas unchanged.
+
 Dependencies:
     PDF  — playwright  (pip install playwright)  +  Chromium at /opt/pw-browsers
     PPTX — python-pptx (pip install python-pptx)
@@ -39,6 +50,10 @@ from pathlib import Path
 # Hymn-file parsing
 # ---------------------------------------------------------------------------
 
+# Matches [Tags: tag1, tag2] stanza-level markers at the start of a verse chunk.
+_STANZA_TAG_RE = re.compile(r'^\s*\[Tags:\s*([^\]]+)\]', re.IGNORECASE)
+
+
 def _extract_section(text: str, header_re: str, stop_re: str) -> str:
     m = re.search(header_re, text, re.MULTILINE | re.IGNORECASE)
     if not m:
@@ -53,8 +68,15 @@ def parse_hymn_file(path: Path) -> dict:
     lines = text.splitlines()
     title = next((l.strip() for l in lines if l.strip()), '')
 
+    tag_match = re.search(r'^Tags:[ \t]*(.+)$', text, re.MULTILINE)
+    file_tags = (
+        [t.strip() for t in tag_match.group(1).split(',') if t.strip()]
+        if tag_match else []
+    )
+
     return {
         'title':       title,
+        'file_tags':   file_tags,
         'abc_text':    _extract_section(text, r'^##\s*ABC[^\n]*\n',      r'^##|^#(?!#)'),
         'musiqwik':    _extract_section(text, r'^##\s*Musiquik[^\n]*\n', r'^##|^#(?!#)').strip(),
         'lyrics_text': _extract_section(text, r'^#\s*Lyrics[^\n]*\n',    r'^#(?!#)').strip(),
@@ -130,17 +152,64 @@ def split_musiqwik(musiqwik: str, barlines_per_line: list[int]) -> list[str]:
 # Lyric parsing
 # ---------------------------------------------------------------------------
 
-def parse_verses(lyrics_text: str) -> list[str]:
-    """Split continuous lyric text into individual verse strings."""
+def parse_verses(lyrics_text: str) -> list[tuple[str, list[str]]]:
+    """
+    Split continuous lyric text into (verse_text, stanza_tags) pairs.
+
+    Each chunk is checked for a leading [Tags: ...] marker; if found, the
+    tags are extracted and the marker stripped from the display text.
+    Chunks without a marker return an empty tag list (the caller should fall
+    back to the file-level Tags: line for filtering purposes).
+    """
     parts  = re.split(r'(?<!\w)(\d+\.)\s+', lyrics_text)
-    verses = []
+    chunks: list[str] = []
     if parts and parts[0].strip():
-        verses.append(parts[0].strip())
+        chunks.append(parts[0].strip())
     for i in range(1, len(parts) - 1, 2):
         v = parts[i + 1].strip() if (i + 1) < len(parts) else ''
         if v:
-            verses.append(v)
+            chunks.append(v)
+
+    verses: list[tuple[str, list[str]]] = []
+    for chunk in chunks:
+        m = _STANZA_TAG_RE.match(chunk)
+        if m:
+            tags = [t.strip() for t in m.group(1).split(',') if t.strip()]
+            text = chunk[m.end():].strip()
+        else:
+            tags = []
+            text = chunk
+        verses.append((text, tags))
     return verses
+
+
+def filter_verses(
+    verses: list[tuple[str, list[str]]],
+    file_tags: list[str],
+    include: list[str],
+    exclude: list[str],
+) -> list[tuple[str, list[str]]]:
+    """
+    Filter (verse_text, stanza_tags) pairs by tradition tag.
+
+    A stanza without its own [Tags: ...] marker inherits the file-level tags.
+    With --include, a verse must share at least one tag with the include set.
+    With --exclude, a verse is dropped if it shares any tag with the exclude set.
+    When neither list is provided all verses are returned unchanged.
+    """
+    if not include and not exclude:
+        return verses
+    inc = {t.lower() for t in include}
+    exc = {t.lower() for t in exclude}
+    result = []
+    for verse_text, stanza_tags in verses:
+        tags = {t.lower() for t in (stanza_tags if stanza_tags else file_tags)}
+        if inc and not tags & inc:
+            continue
+        if exc and tags & exc:
+            continue
+        result.append((verse_text, stanza_tags))
+    return result
 
 
 def _word_wrap(text: str, max_chars: int) -> list[str]:
@@ -206,7 +275,9 @@ class Slide:
 
 
 def build_slides(hymn: dict, lines_per_slide: int = 3,
-                 max_lyric_chars: int = 25) -> list[Slide]:
+                 max_lyric_chars: int = 25,
+                 include_tags: list[str] | None = None,
+                 exclude_tags: list[str] | None = None) -> list[Slide]:
     slides: list[Slide] = [
         Slide('title', title=hymn['title'], attribution=hymn['attribution'])
     ]
@@ -219,7 +290,15 @@ def build_slides(hymn: dict, lines_per_slide: int = 3,
         print('[warn] No melody lines found; slides will contain lyrics only.',
               file=sys.stderr)
 
-    for v_idx, verse in enumerate(parse_verses(hymn['lyrics_text'])):
+    all_verses = parse_verses(hymn['lyrics_text'])
+    verses = filter_verses(
+        all_verses,
+        hymn.get('file_tags', []),
+        include_tags or [],
+        exclude_tags or [],
+    )
+
+    for v_idx, (verse, _stanza_tags) in enumerate(verses):
         pairs = verse_to_pairs(verse, mel_lines, max_lyric_chars)
 
         for start in range(0, max(len(pairs), 1), lines_per_slide):
@@ -835,6 +914,10 @@ def main() -> None:
                     help='Max melody/lyric pairs per content slide (default: 3)')
     ap.add_argument('--max-lyric-chars', type=int, default=25, metavar='C',
                     help='Max characters per lyric line (default: 25)')
+    ap.add_argument('--include', '-I', action='append', default=[], metavar='TAG',
+                    help='Include only stanzas with this tradition tag (repeatable)')
+    ap.add_argument('--exclude', '-X', action='append', default=[], metavar='TAG',
+                    help='Exclude stanzas with this tradition tag (repeatable)')
     args = ap.parse_args()
 
     src = Path(args.file)
@@ -842,7 +925,8 @@ def main() -> None:
         sys.exit(f'Error: file not found: {src}')
 
     hymn   = parse_hymn_file(src)
-    slides = build_slides(hymn, args.lines_per_slide, args.max_lyric_chars)
+    slides = build_slides(hymn, args.lines_per_slide, args.max_lyric_chars,
+                          args.include, args.exclude)
     out    = Path(args.output) if args.output else Path(src.name + '.' + args.format)
 
     if args.format == 'html':
