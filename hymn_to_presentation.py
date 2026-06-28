@@ -75,7 +75,7 @@ _TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
     "eastern":     frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
                               "solus-christus", "decision", "reformation"}),
     "ecumenical":  frozenset(),
-    "charismatic": frozenset(),
+    "charismatic": frozenset({"saints", "decision"}),
 }
 
 
@@ -963,70 +963,75 @@ def _prompt_tradition_filter(
     verses: list[tuple[str, list[str]]],
 ) -> tuple[list[str], list[str]]:
     """
-    When the hymn contains stanzas with tradition-specific tags, describe them
-    and interactively ask the user how to filter.
+    When the hymn contains stanzas with theological tags that are tradition-
+    incompatible, describe them and interactively ask the user how to filter.
 
-    A stanza is "notable" when it carries an explicit [Tags: ...] marker whose
-    tradition tags are a proper subset of the union of all tradition tags across
-    all explicitly-tagged stanzas — meaning some --include filter would exclude
-    it while passing others.  Stanzas with no explicit marker are ecumenical and
-    are never shown (they always pass every filter).
+    Stanzas carry only theological tags (sacramental, saints, decision, etc.).
+    The compatibility matrix determines which traditions accept or reject them.
+    Any tradition whose implied exclusions would drop at least one stanza is
+    offered as a menu option.  Stanzas without a [Tags: ...] marker are
+    ecumenical and are never listed (they always pass every filter).
 
     Returns (include_tags, exclude_tags).  Both empty means include all.
     When stdin is not a TTY, prints a one-line notice to stderr and returns
     ([], []) so piped / scripted use is unaffected.
     """
-    # Gather tradition tags (not theological tags) from each explicitly-tagged stanza.
-    stanza_traditions: list[tuple[int, frozenset, list[str], str]] = []
+    # Collect theological tags from explicitly-tagged stanzas.
+    tagged: list[tuple[int, list[str], str]] = []
     for i, (text, tags) in enumerate(verses):
-        if not tags:
-            continue  # untagged = ecumenical, never notable
-        trad = frozenset(t.lower() for t in tags if t.lower() in _TRADITION_TAGS)
-        stanza_traditions.append((i, trad, tags, text))
+        if tags:
+            tagged.append((i, tags, text))
 
-    if not stanza_traditions:
+    if not tagged:
         return [], []
 
-    # Union of all tradition tags seen across every explicitly-tagged stanza.
-    all_traditions = frozenset().union(*(t for _, t, _, _ in stanza_traditions))
+    # All theological tags present across explicitly-tagged stanzas.
+    present_theo = frozenset(
+        t.lower() for _, tags, _ in tagged
+        for t in tags
+        if t.lower() not in _TRADITION_TAGS
+    )
 
-    # Notable: tradition tags are a proper subset → some --include would drop this stanza.
-    notable: list[tuple[int, list[str], str]] = []
-    for i, trad, tags, text in stanza_traditions:
-        if trad < all_traditions:
+    if not present_theo:
+        return [], []
+
+    # Traditions whose compat matrix overlaps the theological tags present —
+    # i.e. traditions where filtering would actually change the stanza count.
+    discriminating: list[str] = [
+        trad for trad in sorted(_TRADITION_INCOMPATIBLE_THEOLOGY)
+        if present_theo & _TRADITION_INCOMPATIBLE_THEOLOGY[trad]
+    ]
+
+    if not discriminating:
+        return [], []
+
+    # Which stanzas would be excluded by each discriminating tradition?
+    notable_stanzas: list[tuple[int, list[str], str]] = []
+    for stanza_i, tags, text in tagged:
+        theo = frozenset(t.lower() for t in tags if t.lower() not in _TRADITION_TAGS)
+        excluded_by = [
+            trad for trad in discriminating
+            if theo & _TRADITION_INCOMPATIBLE_THEOLOGY[trad]
+        ]
+        if excluded_by:
             preview = (text[:60] + '…') if len(text) > 60 else text
-            notable.append((i + 1, tags, preview))
-
-    if not notable:
-        return [], []
+            notable_stanzas.append((stanza_i + 1, tags, preview))
 
     if not sys.stdin.isatty():
         print(
-            f'[info] {hymn_title}: {len(notable)} stanza(s) carry tradition-specific '
-            'tags; use --include / --exclude to filter. Proceeding with all stanzas.',
+            f'[info] {hymn_title}: {len(notable_stanzas)} stanza(s) carry '
+            f'tradition-specific theological tags ({", ".join(sorted(present_theo))}); '
+            'use --include / --exclude to filter. Proceeding with all stanzas.',
             file=sys.stderr,
         )
         return [], []
 
-    # Unique tradition sets from notable stanzas (order of first occurrence).
-    seen_sets: list[frozenset] = []
-    for _, tags, _ in notable:
-        s = frozenset(t.lower() for t in tags if t.lower() in _TRADITION_TAGS)
-        if s not in seen_sets:
-            seen_sets.append(s)
-
-    # Build a numbered menu — one "include only" entry per unique tradition set.
-    # Untagged stanzas are ecumenical and always counted in every option.
-    menu: list[tuple[str, str, list[str]]] = []   # (key, label, include_tags)
-    for idx, tset in enumerate(seen_sets, start=1):
-        label_tags = ', '.join(sorted(tset))
-        count = sum(
-            1 for _, stanza_tags in verses
-            if not stanza_tags  # ecumenical — always included
-            or frozenset(t.lower() for t in stanza_tags) & tset
-        )
+    # Build menu — one entry per discriminating tradition, with stanza count.
+    menu: list[tuple[str, str, list[str]]] = []
+    for idx, trad in enumerate(discriminating, start=1):
+        count = len(filter_verses(verses, file_tags, [trad], []))
         noun = 'stanza' if count == 1 else 'stanzas'
-        menu.append((str(idx), f'{label_tags.capitalize()} only  ({count} {noun})', sorted(tset)))
+        menu.append((str(idx), f'{trad.capitalize()} only  ({count} {noun})', [trad]))
 
     # Print header and notable-stanza summary.
     bar = '─' * 62
@@ -1034,8 +1039,8 @@ def _prompt_tradition_filter(
     print(f'  {hymn_title}')
     print(f'  File tradition: {", ".join(file_tags) or "(none)"}')
     print(bar)
-    print('\n  Stanzas with tradition-specific tags:\n')
-    for stanza_num, tags, preview in notable:
+    print('\n  Stanzas with tradition-specific theological tags:\n')
+    for stanza_num, tags, preview in notable_stanzas:
         print(f'    Stanza {stanza_num}  [{", ".join(tags)}]')
         print(f'    "{preview}"\n')
 

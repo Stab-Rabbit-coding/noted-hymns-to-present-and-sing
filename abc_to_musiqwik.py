@@ -1084,8 +1084,8 @@ _TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
     "anglican":   frozenset({"decision"}),
     "eastern":    frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
                              "solus-christus", "decision", "reformation"}),
-    "ecumenical": frozenset(),
-    "charismatic": frozenset(),
+    "ecumenical":  frozenset(),
+    "charismatic": frozenset({"saints", "decision"}),
 }
 
 # Inline stanza-level tag marker: [Tags: tag1, tag2] placed after a verse number.

@@ -138,7 +138,7 @@ when the doctrine is the subject of the text, not merely mentioned in passing.
 
 | Tag | Applies to |
 |-----|-----------|
-| `saints` | Invocation of saints or angels as intercessors or sources of spiritual power (Roman, Eastern, Anglican; contra Lutheran/Reformed/Baptist solus Christus) |
+| `saints` | Invocation of saints or angels as intercessors or sources of spiritual power (Roman, Eastern, Anglican; contra Lutheran, Reformed, Baptist, Charismatic — solus Christus) |
 | `decision` | Decision theology — regeneration contingent on a human act of will / altar call (Baptist, revivalist, charismatic; contra Lutheran, Roman, Eastern, Reformed) |
 
 ### Form and function tags
