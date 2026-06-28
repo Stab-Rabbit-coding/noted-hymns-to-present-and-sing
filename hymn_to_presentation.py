@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-hymn_to_presentation.py — Convert a hymn file to HTML, PDF, or PPTX slides.
+hymn_to_presentation.py — Convert a hymn file to HTML, PDF, PPTX, OTP, pro6, or ewsx slides.
 
 Produces one title slide (with full attribution) followed by content slides
 showing up to --lines-per-slide (default 3) melody/lyric pairs each.  The
@@ -11,18 +11,27 @@ Usage:
     python3 hymn_to_presentation.py --file <hymn_file>
     python3 hymn_to_presentation.py --file <hymn_file> --format pptx
     python3 hymn_to_presentation.py --file <hymn_file> --format pdf -o out.pdf
+    python3 hymn_to_presentation.py --file <hymn_file> --format otp
+    python3 hymn_to_presentation.py --file <hymn_file> --format pro6
+    python3 hymn_to_presentation.py --file <hymn_file> --format ewsx
     python3 hymn_to_presentation.py --file <hymn_file> --lines-per-slide 2
 
 Dependencies:
     PDF  — playwright  (pip install playwright)  +  Chromium at /opt/pw-browsers
     PPTX — python-pptx (pip install python-pptx)
-    HTML — stdlib only
+    HTML/OTP/pro6/ewsx — stdlib only
 """
 
 import argparse
+import base64
+import io
 import re
 import sys
+import uuid
+import zipfile
+from collections import defaultdict
 from dataclasses import dataclass, field
+from html import escape as _xe
 from pathlib import Path
 
 
@@ -279,6 +288,70 @@ html, body { background: #0d0d1a; }
 """
 
 
+# ---------------------------------------------------------------------------
+# OTP (LibreOffice Impress) helpers
+# ---------------------------------------------------------------------------
+
+# Slide geometry in EMU (matches the PPTX output dimensions)
+_W  = 9_144_000
+_H  = 5_143_500
+_MX = int(_W * 0.06)
+_MY = int(_H * 0.08)
+
+
+def _ecm(emu: int) -> str:
+    """Convert EMU to a centimetre string for ODF attributes."""
+    return f"{emu / 914400 * 2.54:.4f}cm"
+
+
+_OTP_STYLES = """\
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+  xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+  xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+  xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
+  xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"
+  xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0"
+  office:version="1.3">
+  <office:styles>
+    <style:style style:name="HymnPage" style:family="drawing-page">
+      <style:drawing-page-properties draw:fill="solid" draw:fill-color="#1A1A2E"
+        draw:background-size="border"
+        presentation:display-header="false" presentation:display-footer="false"
+        presentation:display-page-number="false" presentation:display-date-time="false"/>
+    </style:style>
+    <style:style style:name="P-Melody" style:family="paragraph">
+      <style:paragraph-properties fo:text-align="left"/>
+      <style:text-properties fo:font-family="Musiqwik" fo:font-size="26pt" fo:color="#F0E68C"/>
+    </style:style>
+    <style:style style:name="P-Lyrics" style:family="paragraph">
+      <style:paragraph-properties fo:text-align="left"/>
+      <style:text-properties fo:font-family="OpenDyslexic Mono" fo:font-size="19pt" fo:color="#E4E4E4"/>
+    </style:style>
+    <style:style style:name="P-Title" style:family="paragraph">
+      <style:paragraph-properties fo:text-align="center"/>
+      <style:text-properties fo:font-family="OpenDyslexic Mono" fo:font-size="36pt"
+        fo:font-weight="bold" fo:color="#F0E68C"/>
+    </style:style>
+    <style:style style:name="P-Attr" style:family="paragraph">
+      <style:paragraph-properties fo:text-align="center"/>
+      <style:text-properties fo:font-family="OpenDyslexic Mono" fo:font-size="15pt" fo:color="#9090B8"/>
+    </style:style>
+    <style:style style:name="P-Label" style:family="paragraph">
+      <style:paragraph-properties fo:text-align="left"/>
+      <style:text-properties fo:font-family="OpenDyslexic Mono" fo:font-size="13pt" fo:color="#6868A0"/>
+    </style:style>
+  </office:styles>
+  <office:master-styles>
+    <style:master-page style:name="Default" draw:style-name="HymnPage"/>
+  </office:master-styles>
+</office:document-styles>"""
+
+
+# ---------------------------------------------------------------------------
+# HTML helpers
+# ---------------------------------------------------------------------------
+
 def _e(s: str) -> str:
     return (s.replace('&', '&amp;').replace('<', '&lt;')
              .replace('>', '&gt;').replace('"', '&quot;'))
@@ -442,6 +515,307 @@ def to_pptx(slides: list[Slide], out: Path) -> None:
 
 
 # ---------------------------------------------------------------------------
+# OTP output (LibreOffice Impress template)
+# ---------------------------------------------------------------------------
+
+def to_otp(slides: list[Slide], out: Path) -> None:
+    """Write a LibreOffice Impress template (.otp) file with all hymn slides."""
+
+    def _frame(x: int, y: int, w: int, h: int, pstyle: str,
+                lines: list[str]) -> str:
+        paras = ''.join(
+            f'<text:p text:style-name="{pstyle}">{_xe(l)}</text:p>'
+            for l in lines
+        )
+        return (
+            f'<draw:frame draw:style-name="GrText" draw:layer="layout"'
+            f' svg:x="{_ecm(x)}" svg:y="{_ecm(y)}"'
+            f' svg:width="{_ecm(w)}" svg:height="{_ecm(h)}">'
+            f'<draw:text-box>{paras}</draw:text-box></draw:frame>'
+        )
+
+    def _title_page(sl: Slide) -> str:
+        fw = _W - 2 * _MX
+        return (
+            '<draw:page draw:name="Title" draw:style-name="dp1"'
+            ' draw:master-page-name="Default">'
+            + _frame(_MX, int(_H * 0.20), fw, int(_H * 0.28), 'P-Title', [sl.title])
+            + _frame(_MX, int(_H * 0.52), fw, int(_H * 0.42), 'P-Attr',
+                     sl.attribution.splitlines() or [''])
+            + '</draw:page>'
+        )
+
+    def _content_page(sl: Slide, idx: int) -> str:
+        n      = max(len(sl.pairs), 1)
+        avail  = _H - _MY - int(_H * 0.12)
+        pair_h = avail // n
+        mel_h  = int(pair_h * 0.44)
+        lyr_h  = int(pair_h * 0.50)
+        fw     = _W - 2 * _MX
+        page   = (
+            f'<draw:page draw:name="{_xe(f"V{sl.verse_num}-{idx}")}"'
+            ' draw:style-name="dp1" draw:master-page-name="Default">'
+        )
+        page += _frame(_MX, int(_MY * 0.4), fw, int(_H * 0.08),
+                       'P-Label', [f'Verse {sl.verse_num}'])
+        for i, (melody, lyric) in enumerate(sl.pairs):
+            y = _MY + int(_H * 0.10) + i * pair_h
+            page += _frame(_MX, y,         fw, mel_h, 'P-Melody', [melody])
+            page += _frame(_MX, y + mel_h, fw, lyr_h, 'P-Lyrics', [lyric])
+        page += '</draw:page>'
+        return page
+
+    pages: list[str] = []
+    verse_counters: dict[int, int] = {}
+    for sl in slides:
+        if sl.kind == 'title':
+            pages.append(_title_page(sl))
+        else:
+            verse_counters[sl.verse_num] = verse_counters.get(sl.verse_num, 0) + 1
+            pages.append(_content_page(sl, verse_counters[sl.verse_num]))
+
+    content_xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<office:document-content'
+        ' xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"'
+        ' xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"'
+        ' xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"'
+        ' xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"'
+        ' xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"'
+        ' xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"'
+        ' xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0"'
+        ' office:version="1.3">'
+        '<office:automatic-styles>'
+        '<style:style style:name="dp1" style:family="drawing-page">'
+        '<style:drawing-page-properties draw:fill="solid" draw:fill-color="#1A1A2E"'
+        ' draw:background-size="border"'
+        ' presentation:display-header="false" presentation:display-footer="false"'
+        ' presentation:display-page-number="false"'
+        ' presentation:display-date-time="false"/>'
+        '</style:style>'
+        '<style:style style:name="GrText" style:family="graphic">'
+        '<style:graphic-properties draw:fill="none" draw:stroke="none"/>'
+        '</style:style>'
+        '</office:automatic-styles>'
+        '<office:body><office:presentation>'
+        + ''.join(pages)
+        + '</office:presentation></office:body></office:document-content>'
+    )
+
+    manifest = (
+        '<?xml version="1.0" encoding="UTF-8"?>'
+        '<manifest:manifest'
+        ' xmlns:manifest="urn:oasis:names:tc:opendocument:xmlns:manifest:1.0"'
+        ' manifest:version="1.3">'
+        '<manifest:file-entry manifest:full-path="/"'
+        ' manifest:media-type="application/vnd.oasis.opendocument.presentation-template"'
+        ' manifest:version="1.3"/>'
+        '<manifest:file-entry manifest:full-path="content.xml"'
+        ' manifest:media-type="text/xml"/>'
+        '<manifest:file-entry manifest:full-path="styles.xml"'
+        ' manifest:media-type="text/xml"/>'
+        '</manifest:manifest>'
+    )
+
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, 'w', compression=zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr(
+            zipfile.ZipInfo('mimetype'),
+            b'application/vnd.oasis.opendocument.presentation-template',
+            compress_type=zipfile.ZIP_STORED,
+        )
+        zf.writestr('META-INF/manifest.xml', manifest)
+        zf.writestr('styles.xml', _OTP_STYLES)
+        zf.writestr('content.xml', content_xml)
+    out.write_bytes(buf.getvalue())
+
+
+# ---------------------------------------------------------------------------
+# ProPresenter 6 output (.pro6)
+# ---------------------------------------------------------------------------
+
+def to_pro6(slides: list[Slide], out: Path) -> None:
+    """Write a ProPresenter 6 (.pro6) XML file with all hymn slides."""
+
+    PW, PH = 1280, 720   # slide pixel dimensions
+
+    def _uid() -> str:
+        return str(uuid.uuid4())
+
+    def _rtf(text: str, font: str, pt: int, r: int, g: int, b: int) -> str:
+        fs = pt * 2   # RTF uses half-points
+        escaped = text.replace('\\', '\\\\').replace('{', '\\{').replace('}', '\\}')
+        lines   = escaped.splitlines() or ['']
+        body    = '\\par\n'.join(lines)
+        return (
+            f'{{\\rtf1\\ansi\\deff0'
+            f'{{\\fonttbl{{\\f0\\fnil {font};}}}}'
+            f'{{\\colortbl ;\\red{r}\\green{g}\\blue{b};}}'
+            f'\\pard\\f0\\fs{fs}\\cf1 {body}}}'
+        )
+
+    def _b64rtf(text: str, font: str, pt: int, r: int, g: int, b: int) -> str:
+        return base64.b64encode(_rtf(text, font, pt, r, g, b).encode('latin-1')).decode()
+
+    def _tel(name: str, x: int, y: int, w: int, h: int, rtf64: str) -> str:
+        return (
+            f'<RVTextElement additionalLineFillHeight="0" adjustsHeightToFit="false"'
+            f' bezelRadius="0" displayDelay="0" displayName="{_xe(name)}"'
+            f' drawLineBackground="false" drawingFill="false" drawingShadow="false"'
+            f' drawingStroke="false" fillColor="0 0 0 0" fromTemplate="false"'
+            f' guid="{_uid()}" locked="false" opacity="1" persistent="0"'
+            f' revealType="0" rotation="0" scaleFactor="0"'
+            f' shadow="0 0 0 0 0" stroke="0 0 0 0 1" textSourceRemote="0"'
+            f' typeID="0" useAllCaps="false">'
+            f'<_-RVRect3D-_position x="{float(x)}" y="{float(y)}" z="0.0"/>'
+            f'<_-RVRect3D-_size x="{float(w)}" y="{float(h)}" z="0.0"/>'
+            f'<RTFData>{rtf64}</RTFData>'
+            f'</RVTextElement>'
+        )
+
+    def _dslide(elements: list[str]) -> str:
+        return (
+            f'<RVDisplaySlide backgroundColor="0 0 0 1" enabled="true"'
+            f' highlightColor="0 0 0 0" hotKey="" label="" notes=""'
+            f' uuid="{_uid()}"><cues/>'
+            f'<displayElements>{"".join(elements)}</displayElements>'
+            f'</RVDisplaySlide>'
+        )
+
+    def _group(name: str, dslides: list[str]) -> str:
+        return (
+            f'<RVSlideGrouping color="0 0 0 0" name="{_xe(name)}" uuid="{_uid()}">'
+            f'<slides>{"".join(dslides)}</slides></RVSlideGrouping>'
+        )
+
+    title_sl  = slides[0] if slides and slides[0].kind == 'title' else None
+    song_title = title_sl.title if title_sl else ''
+    attr       = title_sl.attribution if title_sl else ''
+
+    t_el = _tel('Title', 50, int(PH*0.20), PW-100, int(PH*0.28),
+                _b64rtf(song_title, 'OpenDyslexic Mono', 36, 0xF0, 0xE6, 0x8C))
+    a_el = _tel('Attribution', 50, int(PH*0.52), PW-100, int(PH*0.38),
+                _b64rtf(attr, 'OpenDyslexic Mono', 15, 0x90, 0x90, 0xB8))
+    groups = [_group('Title', [_dslide([t_el, a_el])])]
+
+    verse_slides: dict[int, list[Slide]] = defaultdict(list)
+    for sl in slides:
+        if sl.kind == 'content':
+            verse_slides[sl.verse_num].append(sl)
+
+    for v_num in sorted(verse_slides.keys()):
+        dslides = []
+        for sl in verse_slides[v_num]:
+            n      = max(len(sl.pairs), 1)
+            avail  = PH - 80 - 40   # top area for label + bottom margin
+            pair_h = avail // n
+            mel_h  = max(int(pair_h * 0.44), 1)
+            lyr_h  = max(int(pair_h * 0.50), 1)
+            els = [_tel('Label', 50, 40, PW-100, 25,
+                        _b64rtf(f'Verse {v_num}', 'OpenDyslexic Mono', 13,
+                                0x68, 0x68, 0xA0))]
+            for i, (melody, lyric) in enumerate(sl.pairs):
+                y = 80 + i * pair_h
+                els.append(_tel('Melody', 50, y, PW-100, mel_h,
+                                _b64rtf(melody, 'Musiqwik', 26, 0xF0, 0xE6, 0x8C)))
+                els.append(_tel('Lyric', 50, y+mel_h, PW-100, lyr_h,
+                                _b64rtf(lyric, 'OpenDyslexic Mono', 19, 0xE4, 0xE4, 0xE4)))
+            dslides.append(_dslide(els))
+        groups.append(_group(f'Verse {v_num}', dslides))
+
+    out.write_text(
+        '<?xml version="1.0" encoding="utf-8"?>\n'
+        f'<RVPresentationDocument CCLISongTitle="{_xe(song_title)}"'
+        f' CCLICopyrightInfo="" CCLIArtistCredits=""'
+        f' backgroundColor="0 0 0 1" buildNumber="6105" category="Presentation"'
+        f' docType="0" drawingBackgroundColor="false" height="{PH}"'
+        f' lastDateUsed="2026-06-28T00:00:00" notes="" resourcesDirectory=""'
+        f' selectedArrangement="" usedCount="0" uuid="{_uid()}"'
+        f' versionNumber="600" width="{PW}">'
+        f'<groups>{"".join(groups)}</groups>'
+        f'</RVPresentationDocument>\n',
+        encoding='utf-8',
+    )
+
+
+# ---------------------------------------------------------------------------
+# EasyWorship Song XML output (.ewsx)
+# ---------------------------------------------------------------------------
+
+def to_ewsx(slides: list[Slide], out: Path) -> None:
+    """Write an EasyWorship Song XML (.ewsx) file.
+
+    Lyrics are organised by verse.  Melody characters appear as the first
+    line of each verse so users can manually apply the Musiqwik font in
+    EasyWorship's song editor.  For slides with melody rendered
+    automatically use --format pptx and import into EasyWorship.
+    """
+    title_sl = slides[0] if slides and slides[0].kind == 'title' else None
+    title    = title_sl.title if title_sl else ''
+    attr     = title_sl.attribution if title_sl else ''
+
+    author = ''
+    copyright_str = 'Public Domain'
+    for line in attr.splitlines():
+        ll = line.lower()
+        if ll.startswith('words:'):
+            author = line[6:].strip().rstrip('.')
+        elif ll.startswith('copyright:'):
+            copyright_str = line[10:].strip().rstrip('.')
+
+    verse_slides: dict[int, list[Slide]] = defaultdict(list)
+    for sl in slides:
+        if sl.kind == 'content':
+            verse_slides[sl.verse_num].append(sl)
+
+    verse_ids    = sorted(verse_slides.keys())
+    verse_order  = ' '.join(f'V{v}' for v in verse_ids)
+
+    def _verse_lines(v: int) -> str:
+        parts: list[str] = []
+        for sl in verse_slides[v]:
+            for melody, lyric in sl.pairs:
+                if melody:
+                    parts.append(_xe(melody))
+                if lyric:
+                    parts.append(_xe(lyric))
+        return '&#10;'.join(parts)
+
+    verses_xml = '\n'.join(
+        f'        <verse id="V{v}" label="Verse {v}">'
+        f'<lines>{_verse_lines(v)}</lines></verse>'
+        for v in verse_ids
+    )
+
+    notes = (
+        'Melody lines use Musiqwik font characters. '
+        'In EasyWorship Song Editor select each melody line and apply the Musiqwik font. '
+        'For slides with melody rendered automatically use '
+        'hymn_to_presentation.py --format pptx and import into EasyWorship.'
+    )
+
+    out.write_text(
+        '<?xml version="1.0" encoding="utf-8"?>\n'
+        '<EasywrshipSongData version="3">\n'
+        '  <songs>\n'
+        '    <song>\n'
+        f'      <title>{_xe(title)}</title>\n'
+        f'      <author>{_xe(author)}</author>\n'
+        f'      <copyright>{_xe(copyright_str)}</copyright>\n'
+        '      <ccli/>\n'
+        f'      <notes>{_xe(notes)}</notes>\n'
+        f'      <verseOrder>{verse_order}</verseOrder>\n'
+        '      <lyrics>\n'
+        f'{verses_xml}\n'
+        '      </lyrics>\n'
+        '    </song>\n'
+        '  </songs>\n'
+        '</EasywrshipSongData>\n',
+        encoding='utf-8',
+    )
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -453,8 +827,8 @@ def main() -> None:
     )
     ap.add_argument('--file', '-f', required=True,
                     help='Path to the hymn file')
-    ap.add_argument('--format', choices=['html', 'pdf', 'pptx'], default='html',
-                    help='Output format (default: html)')
+    ap.add_argument('--format', choices=['html', 'pdf', 'pptx', 'otp', 'pro6', 'ewsx'],
+                    default='html', help='Output format (default: html)')
     ap.add_argument('--output', '-o',
                     help='Output file path (default: <hymn_name>.<format>)')
     ap.add_argument('--lines-per-slide', type=int, default=3, metavar='N',
@@ -478,6 +852,12 @@ def main() -> None:
         to_pdf(to_html(slides), out)
     elif args.format == 'pptx':
         to_pptx(slides, out)
+    elif args.format == 'otp':
+        to_otp(slides, out)
+    elif args.format == 'pro6':
+        to_pro6(slides, out)
+    elif args.format == 'ewsx':
+        to_ewsx(slides, out)
 
     print(f'Written {len(slides)} slides → {out}')
 
