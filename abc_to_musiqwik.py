@@ -1056,6 +1056,8 @@ _THEOLOGICAL_TAGS: frozenset[str] = frozenset({
     "sola-fide",
     "sola-gratia",
     "solus-christus",
+    "saints",
+    "decision",
 })
 
 _FORM_TAGS: frozenset[str] = frozenset({
@@ -1068,6 +1070,23 @@ _FORM_TAGS: frozenset[str] = frozenset({
 })
 
 _VALID_TAGS: frozenset[str] = _TRADITION_TAGS | _THEOLOGICAL_TAGS | _FORM_TAGS
+
+# Theological tags that are incompatible with each tradition.
+# When --include specifies a tradition, stanzas carrying any of these
+# theological tags are implicitly excluded for that tradition.
+_TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
+    "lutheran":   frozenset({"saints", "decision"}),
+    "reformed":   frozenset({"saints", "real-presence", "baptismal-regeneration", "decision"}),
+    "baptist":    frozenset({"saints", "sacramental", "real-presence",
+                             "baptismal-regeneration", "absolution", "lords-supper"}),
+    "roman":      frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
+                             "solus-christus", "decision", "reformation"}),
+    "anglican":   frozenset({"decision"}),
+    "eastern":    frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
+                             "solus-christus", "decision", "reformation"}),
+    "ecumenical": frozenset(),
+    "charismatic": frozenset(),
+}
 
 # Inline stanza-level tag marker: [Tags: tag1, tag2] placed after a verse number.
 # e.g.  "2. [Tags: anglican] O Holy Spirit, who didst brood…"
@@ -1097,6 +1116,23 @@ def _check_tags(tags: list[str]) -> list[str]:
         for t in tags
         if t not in _VALID_TAGS
     ]
+
+
+def _check_tradition_theology_compat(tags: list[str], context: str = "") -> list[str]:
+    """
+    Warn when a tag set carries both a tradition tag and a theological tag
+    that is incompatible with that tradition per _TRADITION_INCOMPATIBLE_THEOLOGY.
+    """
+    tag_set = {t.lower() for t in tags}
+    warnings: list[str] = []
+    prefix = f"{context}: " if context else ""
+    for trad in tag_set & _TRADITION_TAGS:
+        bad = tag_set & _TRADITION_INCOMPATIBLE_THEOLOGY.get(trad, frozenset())
+        for theo in sorted(bad):
+            warnings.append(
+                f"{prefix}tag '{theo}' is incompatible with tradition '{trad}'"
+            )
+    return warnings
 
 
 def detect_content_type(title: str) -> str:
@@ -1515,8 +1551,11 @@ def main() -> None:
             sys.exit(f"Error: file not found: {path}")
         raw_text = path.read_text(encoding="utf-8")
 
-        tag_warnings = _check_tags(_parse_tags(raw_text))
+        file_tags = _parse_tags(raw_text)
+        tag_warnings = _check_tags(file_tags)
         for w in tag_warnings:
+            print(f"[warn] {w}", file=sys.stderr)
+        for w in _check_tradition_theology_compat(file_tags, context="file tags"):
             print(f"[warn] {w}", file=sys.stderr)
 
         abc_text = _extract_melody_section(raw_text)
@@ -1540,9 +1579,13 @@ def main() -> None:
         # Check lyrics completeness using canticle-aware detection.
         lyrics_raw = _extract_lyrics_section(raw_text)
         if lyrics_raw:
-            for tag_list in _parse_stanza_tags(lyrics_raw):
+            for i, tag_list in enumerate(_parse_stanza_tags(lyrics_raw), start=1):
                 for w in _check_tags(tag_list):
-                    print(f"[warn] stanza tag — {w}", file=sys.stderr)
+                    print(f"[warn] stanza {i} tag — {w}", file=sys.stderr)
+                for w in _check_tradition_theology_compat(
+                    tag_list, context=f"stanza {i}"
+                ):
+                    print(f"[warn] {w}", file=sys.stderr)
             title_guess = path.name.replace("_", " ")
             content_type = detect_content_type(title_guess)
             _emit_completeness_warnings(

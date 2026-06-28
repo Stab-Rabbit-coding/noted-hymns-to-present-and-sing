@@ -21,10 +21,12 @@ Tradition filtering (stanza-level [Tags: ...] markers in the hymn file):
     python3 hymn_to_presentation.py --file <hymn_file> --exclude baptist
     python3 hymn_to_presentation.py --file <hymn_file> -I lutheran -I ecumenical -X anglican
 
-    --include / -I  Keep only stanzas whose tradition tags overlap this set.
-    --exclude / -X  Drop any stanza whose tradition tags overlap this set.
+    --include / -I  Keep only stanzas whose tradition or theological tags overlap this set.
+    --exclude / -X  Drop any stanza whose tradition or theological tags overlap this set.
 
-    Stanzas without a [Tags: ...] marker inherit the file-level Tags: line.
+    Stanzas without a [Tags: ...] marker are ecumenical and always included.
+    Specifying a tradition tag as --include also implies theological exclusions
+    (e.g. --include lutheran automatically drops stanzas tagged 'saints' or 'decision').
     Both flags are repeatable; omitting both emits all stanzas unchanged.
 
 Dependencies:
@@ -59,6 +61,22 @@ _TRADITION_TAGS = frozenset({
     "lutheran", "roman", "reformed", "baptist", "anglican",
     "ecumenical", "eastern", "charismatic",
 })
+
+# Theological tags implicitly excluded when a tradition is included.
+# Specifying --include lutheran also excludes stanzas tagged 'saints' or 'decision'.
+_TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
+    "lutheran":    frozenset({"saints", "decision"}),
+    "reformed":    frozenset({"saints", "real-presence", "baptismal-regeneration", "decision"}),
+    "baptist":     frozenset({"saints", "sacramental", "real-presence",
+                              "baptismal-regeneration", "absolution", "lords-supper"}),
+    "roman":       frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
+                              "solus-christus", "decision", "reformation"}),
+    "anglican":    frozenset({"decision"}),
+    "eastern":     frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
+                              "solus-christus", "decision", "reformation"}),
+    "ecumenical":  frozenset(),
+    "charismatic": frozenset(),
+}
 
 
 def _extract_section(text: str, header_re: str, stop_re: str) -> str:
@@ -197,28 +215,58 @@ def filter_verses(
     exclude: list[str],
 ) -> list[tuple[str, list[str]]]:
     """
-    Filter (verse_text, stanza_tags) pairs by tradition tag.
+    Filter (verse_text, stanza_tags) pairs by tradition and/or theological tag.
 
-    A stanza with no explicit [Tags: ...] marker is treated as ecumenical:
-    it is suitable for all traditions and always passes every filter.
-    A tagged stanza is tradition-specific: it passes --include only when its
-    tags overlap the include set, and fails --exclude when they overlap.
+    A stanza with no explicit [Tags: ...] marker is ecumenical and always passes.
+    For tagged stanzas, filters are split into tradition and theological sets:
+
+    - Tradition filter: a tagged stanza must overlap the --include tradition set
+      (if provided) and must not overlap the --exclude tradition set.
+    - Theological filter: applied directly via --include / --exclude; also applied
+      implicitly when a tradition is included — e.g. --include lutheran
+      automatically excludes stanzas tagged 'saints' or 'decision'.
+    - Form tags (liturgical, canticle, etc.) are not filtered; they pass through.
+
     When neither list is provided all verses are returned unchanged.
     """
     if not include and not exclude:
         return verses
+
     inc = {t.lower() for t in include}
     exc = {t.lower() for t in exclude}
+
+    inc_trad = inc & _TRADITION_TAGS
+    inc_theo = inc - _TRADITION_TAGS
+    exc_trad = exc & _TRADITION_TAGS
+    exc_theo = exc - _TRADITION_TAGS
+
+    # Accumulate tradition-implied theological exclusions.
+    for trad in inc_trad:
+        exc_theo |= _TRADITION_INCOMPATIBLE_THEOLOGY.get(trad, frozenset())
+
     result = []
     for verse_text, stanza_tags in verses:
         if not stanza_tags:
-            result.append((verse_text, stanza_tags))
+            result.append((verse_text, stanza_tags))  # ecumenical always passes
             continue
-        tags = {t.lower() for t in stanza_tags}
-        if inc and not tags & inc:
+
+        tag_set  = {t.lower() for t in stanza_tags}
+        trad_set = tag_set & _TRADITION_TAGS
+        theo_set = tag_set - _TRADITION_TAGS
+
+        # Tradition filter (only when the stanza carries at least one tradition tag).
+        if trad_set:
+            if inc_trad and not trad_set & inc_trad:
+                continue
+            if exc_trad and trad_set & exc_trad:
+                continue
+
+        # Theological filter (explicit + tradition-implied exclusions).
+        if inc_theo and not theo_set & inc_theo:
             continue
-        if exc and tags & exc:
+        if exc_theo and theo_set & exc_theo:
             continue
+
         result.append((verse_text, stanza_tags))
     return result
 
@@ -1045,9 +1093,10 @@ def main() -> None:
     ap.add_argument('--max-lyric-chars', type=int, default=25, metavar='C',
                     help='Max characters per lyric line (default: 25)')
     ap.add_argument('--include', '-I', action='append', default=[], metavar='TAG',
-                    help='Include only stanzas with this tradition tag (repeatable)')
+                    help='Include only stanzas matching this tag (tradition or theological); '
+                         'tradition tags also imply doctrinal exclusions (repeatable)')
     ap.add_argument('--exclude', '-X', action='append', default=[], metavar='TAG',
-                    help='Exclude stanzas with this tradition tag (repeatable)')
+                    help='Exclude stanzas matching this tag (tradition or theological; repeatable)')
     args = ap.parse_args()
 
     src = Path(args.file)
