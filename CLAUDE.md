@@ -105,6 +105,8 @@ collections from traditions outside the core Lutheran scope.
 | `baptist` | Baptist tradition (Southern Baptist, Independent Baptist, etc.) |
 | `anglican` | Anglican / Episcopal tradition (BCP-based liturgy and hymnody) |
 | `ecumenical` | Shared across multiple traditions without strong confessional identity |
+| `eastern` | Eastern Orthodox tradition (Greek, Russian, Coptic, Ethiopian, Armenian, etc.) |
+| `charismatic` | Charismatic / Pentecostal tradition (including neo-charismatic and renewal movements) |
 
 ### Theological content tags
 
@@ -131,6 +133,14 @@ when the doctrine is the subject of the text, not merely mentioned in passing.
 | `sola-fide` | Faith alone as the means of justification |
 | `sola-gratia` | Grace alone as the ground of salvation |
 | `solus-christus` | Christ alone as mediator and redeemer |
+
+**Cross-tradition markers**
+
+| Tag | Applies to |
+|-----|-----------|
+| `saints` | Invocation of saints or angels as intercessors or sources of spiritual power (Roman, Eastern, Anglican; contra Lutheran, Reformed, Baptist, Charismatic — solus Christus) |
+| `decision` | Decision theology — regeneration contingent on a human act of will / altar call (Baptist, revivalist, Charismatic; contra Lutheran, Roman, Eastern, Reformed) |
+| `gifts` | Emphasis on active continuationist spiritual gifts — tongues, prophecy, healing (Charismatic; contra Baptist, Reformed) |
 
 ### Form and function tags
 
@@ -166,6 +176,39 @@ Tags: lutheran, liturgical, sacramental, real-presence, lords-supper
 Tags: roman, liturgical, canticle
 # — contributor-added Roman Rite canticle
 ```
+
+### Stanza-level tags
+
+When a hymn originates in one tradition but is later adopted by another —
+with verses added, dropped, or altered in the process — individual stanzas
+can be tagged independently using an inline `[Tags: ...]` marker.
+
+**Placement** — immediately after the verse number (or at the very start of
+the `#Lyrics` block for verse 1):
+
+```
+#Lyrics
+[Tags: lutheran, ecumenical] First verse text...  2. [Tags: lutheran, ecumenical] Second verse...  3. [Tags: anglican] Verse added in the Anglican setting...
+```
+
+The file-level `Tags:` line reflects the **broadest** tradition covered by
+any stanza in the file.  Stanza tags narrow that down to individual verses.
+
+**Example** — a hymn where the third stanza was added for Anglican naval use
+and is absent from some Lutheran settings:
+
+```
+Tags: lutheran, ecumenical, anglican
+
+#Lyrics
+Eternal Father, strong to save... [Refrain]  2. O Christ, whose voice the waters heard... [Refrain]  3. [Tags: anglican] O Holy Spirit, who didst brood upon the chaos dark and rude... [Refrain]  4. O Trinity of love and power... [Refrain]
+
+Refrain: O hear us when we cry to Thee For those in peril on the sea.
+```
+
+The `abc_to_musiqwik.py` script validates stanza tags against the same
+taxonomy as file-level tags and strips the markers before word-count
+completeness checks.
 
 ---
 

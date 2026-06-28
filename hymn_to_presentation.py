@@ -16,6 +16,19 @@ Usage:
     python3 hymn_to_presentation.py --file <hymn_file> --format ewsx
     python3 hymn_to_presentation.py --file <hymn_file> --lines-per-slide 2
 
+Tradition filtering (stanza-level [Tags: ...] markers in the hymn file):
+    python3 hymn_to_presentation.py --file <hymn_file> --include lutheran
+    python3 hymn_to_presentation.py --file <hymn_file> --exclude baptist
+    python3 hymn_to_presentation.py --file <hymn_file> -I lutheran -I ecumenical -X anglican
+
+    --include / -I  Keep only stanzas whose tradition or theological tags overlap this set.
+    --exclude / -X  Drop any stanza whose tradition or theological tags overlap this set.
+
+    Stanzas without a [Tags: ...] marker are ecumenical and always included.
+    Specifying a tradition tag as --include also implies theological exclusions
+    (e.g. --include lutheran automatically drops stanzas tagged 'saints' or 'decision').
+    Both flags are repeatable; omitting both emits all stanzas unchanged.
+
 Dependencies:
     PDF  — playwright  (pip install playwright)  +  Chromium at /opt/pw-browsers
     PPTX — python-pptx (pip install python-pptx)
@@ -39,6 +52,33 @@ from pathlib import Path
 # Hymn-file parsing
 # ---------------------------------------------------------------------------
 
+# Matches [Tags: tag1, tag2] stanza-level markers at the start of a verse chunk.
+_STANZA_TAG_RE = re.compile(r'^\s*\[Tags:\s*([^\]]+)\]', re.IGNORECASE)
+
+# Canonical tradition tags — used to distinguish tradition-scoping from
+# theological-content tags when deciding which stanzas to flag in the prompt.
+_TRADITION_TAGS = frozenset({
+    "lutheran", "roman", "reformed", "baptist", "anglican",
+    "ecumenical", "eastern", "charismatic",
+})
+
+# Theological tags implicitly excluded when a tradition is included.
+# Specifying --include lutheran also excludes stanzas tagged 'saints' or 'decision'.
+_TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
+    "lutheran":    frozenset({"saints", "decision"}),
+    "reformed":    frozenset({"saints", "real-presence", "baptismal-regeneration", "decision", "gifts"}),
+    "baptist":     frozenset({"saints", "sacramental", "real-presence",
+                              "baptismal-regeneration", "absolution", "lords-supper", "gifts"}),
+    "roman":       frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
+                              "solus-christus", "decision", "reformation"}),
+    "anglican":    frozenset({"decision"}),
+    "eastern":     frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
+                              "solus-christus", "decision", "reformation"}),
+    "ecumenical":  frozenset(),
+    "charismatic": frozenset({"saints"}),
+}
+
+
 def _extract_section(text: str, header_re: str, stop_re: str) -> str:
     m = re.search(header_re, text, re.MULTILINE | re.IGNORECASE)
     if not m:
@@ -53,8 +93,15 @@ def parse_hymn_file(path: Path) -> dict:
     lines = text.splitlines()
     title = next((l.strip() for l in lines if l.strip()), '')
 
+    tag_match = re.search(r'^Tags:[ \t]*(.+)$', text, re.MULTILINE)
+    file_tags = (
+        [t.strip() for t in tag_match.group(1).split(',') if t.strip()]
+        if tag_match else []
+    )
+
     return {
         'title':       title,
+        'file_tags':   file_tags,
         'abc_text':    _extract_section(text, r'^##\s*ABC[^\n]*\n',      r'^##|^#(?!#)'),
         'musiqwik':    _extract_section(text, r'^##\s*Musiquik[^\n]*\n', r'^##|^#(?!#)').strip(),
         'lyrics_text': _extract_section(text, r'^#\s*Lyrics[^\n]*\n',    r'^#(?!#)').strip(),
@@ -130,17 +177,98 @@ def split_musiqwik(musiqwik: str, barlines_per_line: list[int]) -> list[str]:
 # Lyric parsing
 # ---------------------------------------------------------------------------
 
-def parse_verses(lyrics_text: str) -> list[str]:
-    """Split continuous lyric text into individual verse strings."""
+def parse_verses(lyrics_text: str) -> list[tuple[str, list[str]]]:
+    """
+    Split continuous lyric text into (verse_text, stanza_tags) pairs.
+
+    Each chunk is checked for a leading [Tags: ...] marker; if found, the
+    tags are extracted and the marker stripped from the display text.
+    Chunks without a marker return an empty tag list (the caller should fall
+    back to the file-level Tags: line for filtering purposes).
+    """
     parts  = re.split(r'(?<!\w)(\d+\.)\s+', lyrics_text)
-    verses = []
+    chunks: list[str] = []
     if parts and parts[0].strip():
-        verses.append(parts[0].strip())
+        chunks.append(parts[0].strip())
     for i in range(1, len(parts) - 1, 2):
         v = parts[i + 1].strip() if (i + 1) < len(parts) else ''
         if v:
-            verses.append(v)
+            chunks.append(v)
+
+    verses: list[tuple[str, list[str]]] = []
+    for chunk in chunks:
+        m = _STANZA_TAG_RE.match(chunk)
+        if m:
+            tags = [t.strip() for t in m.group(1).split(',') if t.strip()]
+            text = chunk[m.end():].strip()
+        else:
+            tags = []
+            text = chunk
+        verses.append((text, tags))
     return verses
+
+
+def filter_verses(
+    verses: list[tuple[str, list[str]]],
+    file_tags: list[str],
+    include: list[str],
+    exclude: list[str],
+) -> list[tuple[str, list[str]]]:
+    """
+    Filter (verse_text, stanza_tags) pairs by tradition and/or theological tag.
+
+    A stanza with no explicit [Tags: ...] marker is ecumenical and always passes.
+    For tagged stanzas, filters are split into tradition and theological sets:
+
+    - Tradition filter: a tagged stanza must overlap the --include tradition set
+      (if provided) and must not overlap the --exclude tradition set.
+    - Theological filter: applied directly via --include / --exclude; also applied
+      implicitly when a tradition is included — e.g. --include lutheran
+      automatically excludes stanzas tagged 'saints' or 'decision'.
+    - Form tags (liturgical, canticle, etc.) are not filtered; they pass through.
+
+    When neither list is provided all verses are returned unchanged.
+    """
+    if not include and not exclude:
+        return verses
+
+    inc = {t.lower() for t in include}
+    exc = {t.lower() for t in exclude}
+
+    inc_trad = inc & _TRADITION_TAGS
+    inc_theo = inc - _TRADITION_TAGS
+    exc_trad = exc & _TRADITION_TAGS
+    exc_theo = exc - _TRADITION_TAGS
+
+    # Accumulate tradition-implied theological exclusions.
+    for trad in inc_trad:
+        exc_theo |= _TRADITION_INCOMPATIBLE_THEOLOGY.get(trad, frozenset())
+
+    result = []
+    for verse_text, stanza_tags in verses:
+        if not stanza_tags:
+            result.append((verse_text, stanza_tags))  # ecumenical always passes
+            continue
+
+        tag_set  = {t.lower() for t in stanza_tags}
+        trad_set = tag_set & _TRADITION_TAGS
+        theo_set = tag_set - _TRADITION_TAGS
+
+        # Tradition filter (only when the stanza carries at least one tradition tag).
+        if trad_set:
+            if inc_trad and not trad_set & inc_trad:
+                continue
+            if exc_trad and trad_set & exc_trad:
+                continue
+
+        # Theological filter (explicit + tradition-implied exclusions).
+        if inc_theo and not theo_set & inc_theo:
+            continue
+        if exc_theo and theo_set & exc_theo:
+            continue
+
+        result.append((verse_text, stanza_tags))
+    return result
 
 
 def _word_wrap(text: str, max_chars: int) -> list[str]:
@@ -206,7 +334,9 @@ class Slide:
 
 
 def build_slides(hymn: dict, lines_per_slide: int = 3,
-                 max_lyric_chars: int = 25) -> list[Slide]:
+                 max_lyric_chars: int = 25,
+                 include_tags: list[str] | None = None,
+                 exclude_tags: list[str] | None = None) -> list[Slide]:
     slides: list[Slide] = [
         Slide('title', title=hymn['title'], attribution=hymn['attribution'])
     ]
@@ -219,7 +349,15 @@ def build_slides(hymn: dict, lines_per_slide: int = 3,
         print('[warn] No melody lines found; slides will contain lyrics only.',
               file=sys.stderr)
 
-    for v_idx, verse in enumerate(parse_verses(hymn['lyrics_text'])):
+    all_verses = parse_verses(hymn['lyrics_text'])
+    verses = filter_verses(
+        all_verses,
+        hymn.get('file_tags', []),
+        include_tags or [],
+        exclude_tags or [],
+    )
+
+    for v_idx, (verse, _stanza_tags) in enumerate(verses):
         pairs = verse_to_pairs(verse, mel_lines, max_lyric_chars)
 
         for start in range(0, max(len(pairs), 1), lines_per_slide):
@@ -816,6 +954,130 @@ def to_ewsx(slides: list[Slide], out: Path) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Tradition-filter prompt
+# ---------------------------------------------------------------------------
+
+def _prompt_tradition_filter(
+    hymn_title: str,
+    file_tags: list[str],
+    verses: list[tuple[str, list[str]]],
+) -> tuple[list[str], list[str]]:
+    """
+    When the hymn contains stanzas with theological tags that are tradition-
+    incompatible, describe them and interactively ask the user how to filter.
+
+    Stanzas carry only theological tags (sacramental, saints, decision, etc.).
+    The compatibility matrix determines which traditions accept or reject them.
+    Any tradition whose implied exclusions would drop at least one stanza is
+    offered as a menu option.  Stanzas without a [Tags: ...] marker are
+    ecumenical and are never listed (they always pass every filter).
+
+    Returns (include_tags, exclude_tags).  Both empty means include all.
+    When stdin is not a TTY, prints a one-line notice to stderr and returns
+    ([], []) so piped / scripted use is unaffected.
+    """
+    # Collect theological tags from explicitly-tagged stanzas.
+    tagged: list[tuple[int, list[str], str]] = []
+    for i, (text, tags) in enumerate(verses):
+        if tags:
+            tagged.append((i, tags, text))
+
+    if not tagged:
+        return [], []
+
+    # All theological tags present across explicitly-tagged stanzas.
+    present_theo = frozenset(
+        t.lower() for _, tags, _ in tagged
+        for t in tags
+        if t.lower() not in _TRADITION_TAGS
+    )
+
+    if not present_theo:
+        return [], []
+
+    # Traditions whose compat matrix overlaps the theological tags present —
+    # i.e. traditions where filtering would actually change the stanza count.
+    discriminating: list[str] = [
+        trad for trad in sorted(_TRADITION_INCOMPATIBLE_THEOLOGY)
+        if present_theo & _TRADITION_INCOMPATIBLE_THEOLOGY[trad]
+    ]
+
+    if not discriminating:
+        return [], []
+
+    # Which stanzas would be excluded by each discriminating tradition?
+    notable_stanzas: list[tuple[int, list[str], str]] = []
+    for stanza_i, tags, text in tagged:
+        theo = frozenset(t.lower() for t in tags if t.lower() not in _TRADITION_TAGS)
+        excluded_by = [
+            trad for trad in discriminating
+            if theo & _TRADITION_INCOMPATIBLE_THEOLOGY[trad]
+        ]
+        if excluded_by:
+            preview = (text[:60] + '…') if len(text) > 60 else text
+            notable_stanzas.append((stanza_i + 1, tags, preview))
+
+    if not sys.stdin.isatty():
+        print(
+            f'[info] {hymn_title}: {len(notable_stanzas)} stanza(s) carry '
+            f'tradition-specific theological tags ({", ".join(sorted(present_theo))}); '
+            'use --include / --exclude to filter. Proceeding with all stanzas.',
+            file=sys.stderr,
+        )
+        return [], []
+
+    # Build menu — one entry per discriminating tradition, with stanza count.
+    menu: list[tuple[str, str, list[str]]] = []
+    for idx, trad in enumerate(discriminating, start=1):
+        count = len(filter_verses(verses, file_tags, [trad], []))
+        noun = 'stanza' if count == 1 else 'stanzas'
+        menu.append((str(idx), f'{trad.capitalize()} only  ({count} {noun})', [trad]))
+
+    # Print header and notable-stanza summary.
+    bar = '─' * 62
+    print(f'\n{bar}')
+    print(f'  {hymn_title}')
+    print(f'  File tradition: {", ".join(file_tags) or "(none)"}')
+    print(bar)
+    print('\n  Stanzas with tradition-specific theological tags:\n')
+    for stanza_num, tags, preview in notable_stanzas:
+        print(f'    Stanza {stanza_num}  [{", ".join(tags)}]')
+        print(f'    "{preview}"\n')
+
+    total = len(verses)
+    noun = 'stanza' if total == 1 else 'stanzas'
+    print('  Options:\n')
+    print(f'    a  Include all  ({total} {noun}, default)')
+    for key, label, _ in menu:
+        print(f'    {key}  {label}')
+    print('    c  Custom filter')
+    print()
+
+    while True:
+        try:
+            choice = input('  Choice [a]: ').strip().lower() or 'a'
+        except (EOFError, KeyboardInterrupt):
+            print()
+            return [], []
+
+        if choice == 'a':
+            return [], []
+
+        for key, _, inc in menu:
+            if choice == key:
+                return inc, []
+
+        if choice == 'c':
+            inc_raw = input('  Include tags (comma-separated, blank = all): ').strip()
+            exc_raw = input('  Exclude tags (comma-separated, blank = none): ').strip()
+            inc = [t.strip() for t in inc_raw.split(',') if t.strip()]
+            exc = [t.strip() for t in exc_raw.split(',') if t.strip()]
+            return inc, exc
+
+        print('  Please enter one of the listed choices.  ', end='', flush=True)
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -835,14 +1097,28 @@ def main() -> None:
                     help='Max melody/lyric pairs per content slide (default: 3)')
     ap.add_argument('--max-lyric-chars', type=int, default=25, metavar='C',
                     help='Max characters per lyric line (default: 25)')
+    ap.add_argument('--include', '-I', action='append', default=[], metavar='TAG',
+                    help='Include only stanzas matching this tag (tradition or theological); '
+                         'tradition tags also imply doctrinal exclusions (repeatable)')
+    ap.add_argument('--exclude', '-X', action='append', default=[], metavar='TAG',
+                    help='Exclude stanzas matching this tag (tradition or theological; repeatable)')
     args = ap.parse_args()
 
     src = Path(args.file)
     if not src.exists():
         sys.exit(f'Error: file not found: {src}')
 
-    hymn   = parse_hymn_file(src)
-    slides = build_slides(hymn, args.lines_per_slide, args.max_lyric_chars)
+    hymn = parse_hymn_file(src)
+
+    if not args.include and not args.exclude:
+        args.include, args.exclude = _prompt_tradition_filter(
+            hymn['title'],
+            hymn.get('file_tags', []),
+            parse_verses(hymn['lyrics_text']),
+        )
+
+    slides = build_slides(hymn, args.lines_per_slide, args.max_lyric_chars,
+                          args.include, args.exclude)
     out    = Path(args.output) if args.output else Path(src.name + '.' + args.format)
 
     if args.format == 'html':
