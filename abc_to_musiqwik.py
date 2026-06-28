@@ -1029,6 +1029,64 @@ _LUTHERAN_INTENTIONAL_OMISSIONS: list = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# Tag taxonomy
+# ---------------------------------------------------------------------------
+
+_TRADITION_TAGS: frozenset[str] = frozenset({
+    "lutheran",
+    "roman",
+    "reformed",
+    "baptist",
+    "anglican",
+    "ecumenical",
+    "eastern",
+    "charismatic",
+})
+
+_THEOLOGICAL_TAGS: frozenset[str] = frozenset({
+    "sacramental",
+    "real-presence",
+    "baptismal-regeneration",
+    "absolution",
+    "lords-supper",
+    "baptism",
+    "reformation",
+    "sola-scriptura",
+    "sola-fide",
+    "sola-gratia",
+    "solus-christus",
+})
+
+_FORM_TAGS: frozenset[str] = frozenset({
+    "liturgical",
+    "office",
+    "canticle",
+    "psalm",
+    "creed",
+    "intercession",
+})
+
+_VALID_TAGS: frozenset[str] = _TRADITION_TAGS | _THEOLOGICAL_TAGS | _FORM_TAGS
+
+
+def _parse_tags(text: str) -> list[str]:
+    """Extract comma-separated tags from the Tags: line of a hymn file."""
+    match = re.search(r"^Tags:[ \t]*(.+)$", text, re.MULTILINE)
+    if not match:
+        return []
+    return [t.strip() for t in match.group(1).split(",") if t.strip()]
+
+
+def _check_tags(tags: list[str]) -> list[str]:
+    """Return warning strings for any tags not in the known taxonomy."""
+    return [
+        f"unknown tag '{t}' — not in the defined tag taxonomy"
+        for t in tags
+        if t not in _VALID_TAGS
+    ]
+
+
 def detect_content_type(title: str) -> str:
     """
     Classify a piece as 'hymn', 'canticle', or 'creed' based on title keywords.
@@ -1442,6 +1500,11 @@ def main() -> None:
         if not path.exists():
             sys.exit(f"Error: file not found: {path}")
         raw_text = path.read_text(encoding="utf-8")
+
+        tag_warnings = _check_tags(_parse_tags(raw_text))
+        for w in tag_warnings:
+            print(f"[warn] {w}", file=sys.stderr)
+
         abc_text = _extract_melody_section(raw_text)
         # _extract_melody_section returns None for text-only files (e.g. spoken
         # liturgical items like an Examination of Conscience) that deliberately

@@ -105,6 +105,8 @@ collections from traditions outside the core Lutheran scope.
 | `baptist` | Baptist tradition (Southern Baptist, Independent Baptist, etc.) |
 | `anglican` | Anglican / Episcopal tradition (BCP-based liturgy and hymnody) |
 | `ecumenical` | Shared across multiple traditions without strong confessional identity |
+| `eastern` | Eastern Orthodox tradition (Greek, Russian, Coptic, Ethiopian, Armenian, etc.) |
+| `charismatic` | Charismatic / Pentecostal tradition (including neo-charismatic and renewal movements) |
 
 ### Theological content tags
 
