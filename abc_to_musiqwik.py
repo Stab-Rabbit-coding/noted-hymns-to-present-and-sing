@@ -865,6 +865,234 @@ def _build_citation(header: dict, source_url: str) -> str:
     return "\n".join(lines)
 
 
+# ---------------------------------------------------------------------------
+# Lyrics completeness checks (canticle-aware truncation detection)
+# ---------------------------------------------------------------------------
+
+# Title keywords that identify a canticle rather than a strophic hymn.
+# Canticles are prose scripture texts chanted to a psalm tone; verse count is
+# not a meaningful truncation signal for them.
+_CANTICLE_KEYWORDS: frozenset = frozenset([
+    "magnificat", "benedictus", "nunc dimittis", "benedicite",
+    "te deum", "gloria in excelsis", "jubilate", "deus misereatur",
+    "venite", "cantate", "phos hilaron", "quicumque vult", "athanasian",
+    "benedic anima", "ecce nunc", "bonum est confiteri",
+])
+
+_CREED_KEYWORDS: frozenset = frozenset([
+    "creed", "athanasian", "quicumque", "nicene", "apostles",
+])
+
+# Phrases marking a Gloria Patri doxology — expected at the end of most canticles
+# when used in Lutheran daily office.
+_DOXOLOGY_MARKERS: list = [
+    "glory be to the father",
+    "gloria patri",
+    "world without end",
+    "as it was in the beginning",
+    "sicut erat in principio",
+]
+
+# For specific canticles: phrases that appear near the end of the complete
+# scriptural source.  Absence suggests the text was cut short.
+# Keys are substrings matched against the lowercased title.
+_CANTICLE_CLOSING_PHRASES: dict = {
+    "magnificat": [
+        "to his seed for ever",        # Luke 1:55 — final clause
+        "he hath holpen his servant",  # Luke 1:54
+    ],
+    "benedictus": [
+        "to guide our feet into the way of peace",  # Luke 1:79 — final clause
+        "through the tender mercy",                  # Luke 1:78
+    ],
+    "nunc dimittis": [
+        "glory of thy people israel",  # Luke 2:32 — final clause
+        "all people",                  # Luke 2:31
+    ],
+    "jubilate": [
+        "his truth endureth to all generations",  # Psalm 100:5 — final verse
+        "into his courts with praise",             # Psalm 100:4
+    ],
+    "deus misereatur": [
+        "all the ends of the earth shall fear him",  # Psalm 67:7 — final clause
+        "god shall bless us",                         # Psalm 67:7
+    ],
+    "benedicite": [
+        "praise him, and magnify him for ever",  # recurring refrain
+        "works of the lord",                      # opening call
+    ],
+    "te deum": [
+        "let me never be confounded",  # traditional closing verse
+        "in thee have i trusted",      # near the end
+    ],
+}
+
+# Phrases whose *absence* in a Lutheran canticle is intentional, not truncation.
+# Lutheran worship omits Marian invocations and intercessory appeals to saints.
+_LUTHERAN_INTENTIONAL_OMISSIONS: list = [
+    ("holy mary, pray for us",
+     "Marian intercession — intentionally omitted in Lutheran use"),
+    ("queen of heaven",
+     "Marian title — intentionally omitted in Lutheran worship"),
+    ("mother of god, pray for us",
+     "Marian intercession — intentionally omitted"),
+    ("holy mother of god",
+     "Marian title — not part of Lutheran liturgical texts"),
+    ("hail mary",
+     "Ave Maria — not used in Lutheran worship"),
+    ("all ye holy angels and archangels, pray for us",
+     "invocation of angels as intercessors — not part of Lutheran practice"),
+]
+
+
+def detect_content_type(title: str) -> str:
+    """
+    Classify a piece as 'hymn', 'canticle', or 'creed' based on title keywords.
+
+    Canticles are prose scripture texts set to a psalm tone; verse count is not
+    a valid truncation check for them.  Returns one of 'hymn', 'canticle', 'creed'.
+    """
+    lower = title.lower()
+    for kw in _CREED_KEYWORDS:
+        if kw in lower:
+            return "creed"
+    for kw in _CANTICLE_KEYWORDS:
+        if kw in lower:
+            return "canticle"
+    if re.search(r"\bpsalm\s*\d+\b", lower):
+        return "canticle"
+    return "hymn"
+
+
+def check_lyrics_completeness(
+    full_text: str,
+    title: str,
+    content_type: str,
+    verse_count: Optional[int] = None,
+) -> list:
+    """
+    Return a list of warning strings about possible text truncation.
+
+    Strategy differs by content type:
+
+    hymn     — warn when verse_count < 3 (if count is known), noting that
+                Lutheran settings may intentionally omit verses invoking saints.
+    canticle — ignore verse count; instead check for a complete final sentence,
+                the presence of a closing Gloria Patri doxology, and key phrases
+                expected near the end of the scriptural source.
+    creed    — verify the text ends with 'Amen' and is not suspiciously short.
+
+    For all types, an abrupt (non-sentence-final) ending triggers a warning.
+    Messages prefixed with '[info]' are informational rather than warnings; the
+    caller should print them at the info level.
+    """
+    warnings: list = []
+    if not full_text.strip():
+        warnings.append("No lyrics found — verify the source file.")
+        return warnings
+
+    lower_text = full_text.lower()
+    title_lower = title.lower()
+
+    # Universal: abrupt ending without sentence-final punctuation.
+    last_char = full_text.rstrip()[-1] if full_text.strip() else ""
+    sentence_endings = {".", "!", "?", '"', "”", "'", "’", ")", "]"}
+    if last_char not in sentence_endings:
+        warnings.append(
+            f"Text ends without sentence-final punctuation "
+            f"(last character: {last_char!r}) — may be truncated. "
+            "Verify against the original source."
+        )
+
+    # --- Hymn checks ---
+    if content_type == "hymn":
+        if verse_count is not None and verse_count < 3:
+            warnings.append(
+                f"Only {verse_count} verse(s) found. Lutheran settings sometimes "
+                "intentionally omit verses invoking saints or containing content "
+                "inconsistent with Lutheran theology, but fewer than 3 verses may "
+                "also indicate truncation — compare with the original source."
+            )
+        return warnings
+
+    # --- Canticle checks ---
+    if content_type == "canticle":
+        has_doxology = any(marker in lower_text for marker in _DOXOLOGY_MARKERS)
+        if not has_doxology:
+            warnings.append(
+                "No Gloria Patri doxology found ('Glory be to the Father… "
+                "world without end. Amen.'). Lutheran office use appends the doxology "
+                "to canticles — verify whether it is intentionally absent for this "
+                "specific liturgical use, or whether the text is incomplete."
+            )
+
+        # Check for canticle-specific closing phrases.
+        for key, phrases in _CANTICLE_CLOSING_PHRASES.items():
+            if key in title_lower:
+                for phrase in phrases:
+                    if phrase not in lower_text:
+                        warnings.append(
+                            f"Expected phrase not found: '{phrase}'. "
+                            f"This phrase appears near the end of the {title!r} "
+                            "scriptural source — verify all verses are present. "
+                            "Compare with the KJV or other public-domain source."
+                        )
+                break  # only match the first canticle key
+
+        word_count = len(full_text.split())
+        if word_count < 60:
+            warnings.append(
+                f"Canticle text is short ({word_count} words). "
+                "Verify all scriptural verses are included."
+            )
+
+        # Flag Catholic-only phrases that are present but unexpected in Lutheran use.
+        # These signal an *addition*, not a truncation — print at info level.
+        for phrase, reason in _LUTHERAN_INTENTIONAL_OMISSIONS:
+            if phrase in lower_text:
+                warnings.append(
+                    f"[info] Text contains '{phrase}' ({reason})."
+                )
+        return warnings
+
+    # --- Creed checks ---
+    if content_type == "creed":
+        if "amen" not in lower_text[-200:]:
+            warnings.append(
+                "Creed text does not appear to end with 'Amen' — may be incomplete."
+            )
+        word_count = len(full_text.split())
+        if word_count < 80:
+            warnings.append(
+                f"Creed text is short ({word_count} words) — verify the full text "
+                "is present."
+            )
+        return warnings
+
+    return warnings
+
+
+def _extract_lyrics_section(text: str) -> Optional[str]:
+    """Pull the raw prose text from a hymn file's #Lyrics section."""
+    match = re.search(
+        r"^#\s*Lyrics[^\n]*\n(.*?)(?=^#|\Z)",
+        text,
+        re.DOTALL | re.MULTILINE,
+    )
+    if match:
+        return match.group(1).strip()
+    return None
+
+
+def _emit_completeness_warnings(warnings: list, source: str) -> None:
+    """Print completeness warnings to stderr, using [info] level for informational items."""
+    for w in warnings:
+        if w.startswith("[info]"):
+            print(f"[info] {w[6:].strip()}", file=sys.stderr)
+        else:
+            print(f"[warn] {w}", file=sys.stderr)
+
+
 def create_hymn_from_url(url: str, output_dir: Path) -> Path:
     """
     Fetch an ABC file from *url*, convert it, and write a complete hymn file.
@@ -899,10 +1127,14 @@ def create_hymn_from_url(url: str, output_dir: Path) -> Path:
             "[warn] No W: lyrics fields found; #Lyrics section will be empty.",
             file=sys.stderr,
         )
-    elif len(verses) < 3:
-        print(
-            f"[warn] Only {len(verses)} verse(s) found — this hymn may be truncated.",
-            file=sys.stderr,
+    else:
+        content_type = detect_content_type(title)
+        full_lyrics = "  ".join(verses)
+        _emit_completeness_warnings(
+            check_lyrics_completeness(
+                full_lyrics, title, content_type, verse_count=len(verses)
+            ),
+            source=url,
         )
 
     # Format lyrics as continuous prose with inline verse numbers.
@@ -1100,6 +1332,16 @@ def main() -> None:
                 print(f"[warn] {w}", file=sys.stderr)
         print(result)
         _update_musiqwik_section(path, result)
+
+        # Check lyrics completeness using canticle-aware detection.
+        lyrics_raw = _extract_lyrics_section(raw_text)
+        if lyrics_raw:
+            title_guess = path.name.replace("_", " ")
+            content_type = detect_content_type(title_guess)
+            _emit_completeness_warnings(
+                check_lyrics_completeness(lyrics_raw, title_guess, content_type),
+                source=str(path),
+            )
         return
 
     run_interactive()
