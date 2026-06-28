@@ -43,52 +43,52 @@ The ordinary and propers of the Lutheran Divine Service derive from ancient litu
 predating copyright by centuries.
 
 ### 2.1 Ordinary of the Mass (Kyrie through Benediction)
-- [ ] 2.1.1 Kyrie eleison (ancient Greek, pre-4th c.)
-- [ ] 2.1.2 Gloria in Excelsis Deo (ancient Latin doxology, 4th c.)
-- [ ] 2.1.3 Nicene Creed (Council of Constantinople, 381 AD)
-- [ ] 2.1.4 Apostles' Creed (ancient Roman baptismal creed)
-- [ ] 2.1.5 Sanctus — "Holy, Holy, Holy" (Isaiah 6:3 / ancient liturgical)
-- [ ] 2.1.6 Agnus Dei — "Lamb of God" (John 1:29 / ancient liturgical, 7th c.)
-- [ ] 2.1.7 Nunc Dimittis — "Lord, now lettest Thou" (Luke 2:29–32 / ancient)
-- [ ] 2.1.8 Pax Domini — "The peace of the Lord" (ancient)
-- [ ] 2.1.9 Benedicamus (ancient versicle)
-- [ ] 2.1.10 Aaronic Benediction (Numbers 6:24–26 / ancient)
+- [x] 2.1.1 Kyrie eleison (ancient Greek, pre-4th c.) [FILE: hymns/2.0_Divine_Service_Liturgy/Kyrie_Eleison]
+- [x] 2.1.2 Gloria in Excelsis Deo (ancient Latin doxology, 4th c.) [FILE: hymns/2.0_Divine_Service_Liturgy/Gloria_in_Excelsis_Deo]
+- [x] 2.1.3 Nicene Creed (Council of Constantinople, 381 AD) [FILE: hymns/2.0_Divine_Service_Liturgy/Nicene_Creed]
+- [x] 2.1.4 Apostles' Creed (ancient Roman baptismal creed) [FILE: hymns/2.0_Divine_Service_Liturgy/Apostles_Creed]
+- [x] 2.1.5 Sanctus — "Holy, Holy, Holy" (Isaiah 6:3 / ancient liturgical) [FILE: hymns/2.0_Divine_Service_Liturgy/Sanctus]
+- [x] 2.1.6 Agnus Dei — "Lamb of God" (John 1:29 / ancient liturgical, 7th c.) [FILE: hymns/2.0_Divine_Service_Liturgy/Agnus_Dei]
+- [x] 2.1.7 Nunc Dimittis — "Lord, now lettest Thou" (Luke 2:29–32 / ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Nunc_Dimittis]
+- [x] 2.1.8 Pax Domini — "The peace of the Lord" (ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Pax_Domini]
+- [x] 2.1.9 Benedicamus (ancient versicle) [FILE: hymns/2.0_Divine_Service_Liturgy/Benedicamus]
+- [x] 2.1.10 Aaronic Benediction (Numbers 6:24–26 / ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Aaronic_Benediction]
 
 ### 2.2 Propers and Versicles
-- [ ] 2.2.1 Introit tones — Gregorian psalm tones 1–8
-- [ ] 2.2.2 Alleluia verse (ancient)
-- [ ] 2.2.3 Offertory — "Create in Me a Clean Heart" (Psalm 51:10–12 / ancient)
-- [ ] 2.2.4 Collect tones (ancient)
-- [ ] 2.2.5 Sursum Corda — "Lift up your hearts" (ancient preface dialog)
+- [x] 2.2.1 Introit tones — Gregorian psalm tones 1–8 [FILE: hymns/2.0_Divine_Service_Liturgy/Introit_Psalm_Tones]
+- [x] 2.2.2 Alleluia verse (ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Alleluia_Verse]
+- [x] 2.2.3 Offertory — "Create in Me a Clean Heart" (Psalm 51:10–12 / ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Offertory_Create_in_Me]
+- [x] 2.2.4 Collect tones (ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Collect_Tones]
+- [x] 2.2.5 Sursum Corda — "Lift up your hearts" (ancient preface dialog) [FILE: hymns/2.0_Divine_Service_Liturgy/Sursum_Corda]
 
 ### 2.3 Lutherian Divine Service Distinctives
-- [ ] 2.3.1 Confession and Absolution versicles (LSB Setting 1–3 ordinary, TLH era)
-- [ ] 2.3.2 Salutation and Response (ancient)
-- [ ] 2.3.3 Words of Institution (1 Corinthians 11 / ancient)
+- [x] 2.3.1 Confession and Absolution versicles (LSB Setting 1–3 ordinary, TLH era) [FILE: hymns/2.0_Divine_Service_Liturgy/Confession_and_Absolution]
+- [x] 2.3.2 Salutation and Response (ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Salutation_and_Response]
+- [x] 2.3.3 Words of Institution (1 Corinthians 11 / ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Words_of_Institution]
 
 ---
 
 ## 3.0 Matins / Morning Prayer (Ancient Office)
 
-- [ ] 3.1 Opening Versicles (ancient)
-- [ ] 3.2 Venite — Psalm 95 (ancient)
-- [ ] 3.3 Invitatory antiphon tones (Gregorian)
-- [ ] 3.4 Office Hymn versicles (ancient)
-- [ ] 3.5 Benedictus — "Blessed Is the Lord" (Luke 1:68–79 / ancient)
-- [ ] 3.6 Suffrages (ancient)
-- [ ] 3.7 Closing Versicles (ancient)
+- [x] 3.1 Opening Versicles (ancient) [FILE: hymns/3.0_Matins/Matins_Opening_Versicles]
+- [x] 3.2 Venite — Psalm 95 (ancient) [FILE: hymns/3.0_Matins/Venite_Psalm_95]
+- [x] 3.3 Invitatory antiphon tones (Gregorian) [FILE: hymns/3.0_Matins/Invitatory_Antiphon_Tones]
+- [x] 3.4 Office Hymn versicles (ancient) [FILE: hymns/3.0_Matins/Office_Hymn_Versicles]
+- [x] 3.5 Benedictus — "Blessed Is the Lord" (Luke 1:68–79 / ancient) [FILE: hymns/3.0_Matins/Benedictus]
+- [x] 3.6 Suffrages (ancient) [FILE: hymns/3.0_Matins/Matins_Suffrages]
+- [x] 3.7 Closing Versicles (ancient) [FILE: hymns/3.0_Matins/Matins_Closing_Versicles]
 
 ---
 
 ## 4.0 Vespers / Evening Prayer (Ancient Office)
 
-- [ ] 4.1 Opening Versicles (ancient)
-- [ ] 4.2 Phos Hilaron — "O Gracious Light" (Greek, 3rd c.)
-- [ ] 4.3 Psalms with antiphons (Gregorian)
-- [ ] 4.4 Magnificat — "My soul magnifies the Lord" (Luke 1:46–55 / ancient)
-- [ ] 4.5 Nunc Dimittis (see 2.1.7 — may share file)
-- [ ] 4.6 Suffrages (ancient)
-- [ ] 4.7 Closing Versicles and Benediction (ancient)
+- [x] 4.1 Opening Versicles (ancient) [FILE: hymns/4.0_Vespers/Vespers_Opening_Versicles]
+- [x] 4.2 Phos Hilaron — "O Gracious Light" (Greek, 3rd c.) [FILE: hymns/4.0_Vespers/Phos_Hilaron]
+- [x] 4.3 Psalms with antiphons (Gregorian) [FILE: hymns/4.0_Vespers/Psalms_with_Antiphons]
+- [x] 4.4 Magnificat — "My soul magnifies the Lord" (Luke 1:46–55 / ancient) [FILE: hymns/4.0_Vespers/Magnificat]
+- [x] 4.5 Nunc Dimittis (see 2.1.7 — may share file) [FILE: hymns/4.0_Vespers/Nunc_Dimittis]
+- [x] 4.6 Suffrages (ancient) [FILE: hymns/4.0_Vespers/Vespers_Suffrages]
+- [x] 4.7 Closing Versicles and Benediction (ancient) [FILE: hymns/4.0_Vespers/Vespers_Closing_Versicles]
 
 ---
 
