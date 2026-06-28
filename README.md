@@ -24,3 +24,9 @@ This reposository is an attempt to produce text based hymns with music notation.
 
 
 for version 0.1, I'm using "Musiqwik" font, copyright 2000 by Robert Allgeyer. https://www.fontspace.com/musiqwik-font-f3722 for the notes and Opendyslexic Mono for the lyrics https://opendyslexic.org/
+
+## License
+
+The hymnal collection as a whole — selection, arrangement, editorial annotations, tagging taxonomy, citations, and tooling — is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). See [LICENSE](LICENSE) for details.
+
+Individual hymn texts and tunes are public domain or reproduced from sources authorizing free reproduction without royalties; see the `#Citations and References` section of each hymn file for the specific status of each work.
