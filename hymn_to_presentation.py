@@ -66,16 +66,16 @@ _TRADITION_TAGS = frozenset({
 # Specifying --include lutheran also excludes stanzas tagged 'saints' or 'decision'.
 _TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
     "lutheran":    frozenset({"saints", "decision"}),
-    "reformed":    frozenset({"saints", "real-presence", "baptismal-regeneration", "decision"}),
+    "reformed":    frozenset({"saints", "real-presence", "baptismal-regeneration", "decision", "gifts"}),
     "baptist":     frozenset({"saints", "sacramental", "real-presence",
-                              "baptismal-regeneration", "absolution", "lords-supper"}),
+                              "baptismal-regeneration", "absolution", "lords-supper", "gifts"}),
     "roman":       frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
                               "solus-christus", "decision", "reformation"}),
     "anglican":    frozenset({"decision"}),
     "eastern":     frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
                               "solus-christus", "decision", "reformation"}),
     "ecumenical":  frozenset(),
-    "charismatic": frozenset({"saints", "decision"}),
+    "charismatic": frozenset({"saints"}),
 }
 
 

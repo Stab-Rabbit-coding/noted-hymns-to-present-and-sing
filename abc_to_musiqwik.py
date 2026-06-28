@@ -1058,6 +1058,7 @@ _THEOLOGICAL_TAGS: frozenset[str] = frozenset({
     "solus-christus",
     "saints",
     "decision",
+    "gifts",
 })
 
 _FORM_TAGS: frozenset[str] = frozenset({
@@ -1076,16 +1077,16 @@ _VALID_TAGS: frozenset[str] = _TRADITION_TAGS | _THEOLOGICAL_TAGS | _FORM_TAGS
 # theological tags are implicitly excluded for that tradition.
 _TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
     "lutheran":   frozenset({"saints", "decision"}),
-    "reformed":   frozenset({"saints", "real-presence", "baptismal-regeneration", "decision"}),
+    "reformed":   frozenset({"saints", "real-presence", "baptismal-regeneration", "decision", "gifts"}),
     "baptist":    frozenset({"saints", "sacramental", "real-presence",
-                             "baptismal-regeneration", "absolution", "lords-supper"}),
+                             "baptismal-regeneration", "absolution", "lords-supper", "gifts"}),
     "roman":      frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
                              "solus-christus", "decision", "reformation"}),
     "anglican":   frozenset({"decision"}),
     "eastern":    frozenset({"sola-scriptura", "sola-fide", "sola-gratia",
                              "solus-christus", "decision", "reformation"}),
     "ecumenical":  frozenset(),
-    "charismatic": frozenset({"saints", "decision"}),
+    "charismatic": frozenset({"saints"}),
 }
 
 # Inline stanza-level tag marker: [Tags: tag1, tag2] placed after a verse number.
