@@ -1069,6 +1069,10 @@ _FORM_TAGS: frozenset[str] = frozenset({
 
 _VALID_TAGS: frozenset[str] = _TRADITION_TAGS | _THEOLOGICAL_TAGS | _FORM_TAGS
 
+# Inline stanza-level tag marker: [Tags: tag1, tag2] placed after a verse number.
+# e.g.  "2. [Tags: anglican] O Holy Spirit, who didst brood…"
+_STANZA_TAG_RE = re.compile(r"\[Tags:\s*([^\]]+)\]", re.IGNORECASE)
+
 
 def _parse_tags(text: str) -> list[str]:
     """Extract comma-separated tags from the Tags: line of a hymn file."""
@@ -1076,6 +1080,14 @@ def _parse_tags(text: str) -> list[str]:
     if not match:
         return []
     return [t.strip() for t in match.group(1).split(",") if t.strip()]
+
+
+def _parse_stanza_tags(lyrics_raw: str) -> list[list[str]]:
+    """Extract all [Tags: ...] stanza-level tag lists from a #Lyrics block."""
+    return [
+        [t.strip() for t in m.group(1).split(",") if t.strip()]
+        for m in _STANZA_TAG_RE.finditer(lyrics_raw)
+    ]
 
 
 def _check_tags(tags: list[str]) -> list[str]:
@@ -1142,6 +1154,8 @@ def check_lyrics_completeness(
     check_text, _seg_label, _seg_text = _parse_lyric_segments(full_text)
     if not check_text:
         check_text = full_text
+    # Strip stanza-level [Tags: ...] markers so they don't skew word counts.
+    check_text = _STANZA_TAG_RE.sub("", check_text)
 
     # Universal: abrupt ending without sentence-final punctuation.
     last_char = full_text.rstrip()[-1] if full_text.strip() else ""
@@ -1526,6 +1540,9 @@ def main() -> None:
         # Check lyrics completeness using canticle-aware detection.
         lyrics_raw = _extract_lyrics_section(raw_text)
         if lyrics_raw:
+            for tag_list in _parse_stanza_tags(lyrics_raw):
+                for w in _check_tags(tag_list):
+                    print(f"[warn] stanza tag — {w}", file=sys.stderr)
             title_guess = path.name.replace("_", " ")
             content_type = detect_content_type(title_guess)
             _emit_completeness_warnings(
