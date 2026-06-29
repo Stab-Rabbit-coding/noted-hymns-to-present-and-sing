@@ -22,37 +22,108 @@ metadata, or when automating bulk imports.
 
 | Resource | URL pattern | Notes |
 |----------|-------------|-------|
-| Individual ABC file | `http://openhymnal.org/Abc/<Filename>.abc` | Filename visible in `#Citations and References` of every hymn file |
-| Full collection (one file) | `http://openhymnal.org/OpenHymnal2014.06.abc` | ~4 MB; all tunes concatenated; last updated June 2014 |
-| GitHub mirror (individual) | `https://raw.githubusercontent.com/mzealey/openhymnal/master/Choir/<Filename>.abc` | Same filenames as the live site; updated irregularly |
-| GitHub mirror (bulk) | clone `https://github.com/mzealey/openhymnal` | `Choir/` and `Complete/` directories hold individual ABC files |
+| Individual ABC file (live) | `http://openhymnal.org/Abc/<Filename>.abc` | Filename visible in `#Citations and References` of every hymn file; returns 403 in scripted environments |
+| Full collection (live) | `http://openhymnal.org/OpenHymnal2014.06.abc` | ~4 MB; all tunes concatenated; last updated June 2014; also returns 403 in scripted environments |
+| GitHub mirror directory listing | `https://github.com/mzealey/openhymnal/tree/master/Complete/<HymnName>` | Lists the `.abc` file(s) in that hymn's subdirectory |
+| GitHub mirror raw file | `https://raw.githubusercontent.com/mzealey/openhymnal/master/Complete/<HymnName>/<Filename>.abc` | Returns raw ABC text; **this is the primary working access path** |
+
+### GitHub mirror: actual file structure
+
+The mirror at `github.com/mzealey/openhymnal` uses a **subdirectory-per-hymn**
+layout under `Complete/`, not flat files under `Choir/`:
+
+```
+Complete/
+├── O_Sacred_Head_Now_Wounded/
+│   └── O_Sacred_Head_Now_Wounded-Passion_Chorale-Herzlich_Tut_Mich_Verlangen.abc
+├── Jesus_In_Thy_Dying_Woes/
+│   └── Jesus_In_Thy_Dying_Woes-Words_On_The_Cross_The_Litany.abc
+└── <HymnName>/
+    └── <HymnName>-<TuneName>[-<AlternateName>].abc
+```
+
+**Important differences from the live-site filenames:**
+
+- The subdirectory is named after the hymn title (same naming convention as this
+  repo's hymn files).
+- The `.abc` filename often appends a second tune name or German original name
+  that the live-site URL omits.  Example:
+  - Live site: `O_Sacred_Head_Now_Wounded-Passion_Chorale.abc`
+  - GitHub:    `O_Sacred_Head_Now_Wounded-Passion_Chorale-Herzlich_Tut_Mich_Verlangen.abc`
+- The `Choir/` directory in the repo contains **multi-part choral arrangements**
+  (Canon, JesuJoyOfMansDesiring, etc.), not hymn ABC files.  Do **not** use
+  `Choir/` paths for individual hymn tunes.
+
+**ABC file format in the mirror** — files are SATB four-voice arrangements.
+The melody is always the `[V: S1V1]` voice.  Extract it for single-line use:
+
+```
+[V: S1V1] [Q:1/4=100] E | A G F E | D2 E B | ...
+```
+
+Strip the `[V: S1V1]` prefix and any `!sintro!`/`!eintro!` markers before
+pasting into the `## ABC` section of a hymn file.
+
+### Mirror coverage
+
+The mirror is a partial export — not every Open Hymnal hymn is present.
+Coverage confirmed by directory inspection (June 2026):
+
+| Hymn | In mirror? | Path |
+|------|-----------|------|
+| O Sacred Head, Now Wounded | ✅ | `Complete/O_Sacred_Head_Now_Wounded/` |
+| Jesus, In Thy Dying Woes | ✅ | `Complete/Jesus_In_Thy_Dying_Woes/` |
+| Upon the Cross Extended | ❌ | not present |
+| Christ, the Life of All the Living | ❌ | not present |
+| O Perfect Life of Love | ❌ | not present |
+| Not All the Blood of Beasts | ❌ | not present |
+
+When a hymn is absent from the mirror and the live site returns 403, ABC must
+be encoded from memory or a printed score and flagged for later verification.
+
+### Browsing the mirror directory
+
+To find a hymn's subdirectory name and the exact `.abc` filename within it,
+fetch the GitHub tree page:
+
+```
+https://github.com/mzealey/openhymnal/tree/master/Complete/<HymnName>
+```
+
+The page lists files; the raw download URL is then:
+
+```
+https://raw.githubusercontent.com/mzealey/openhymnal/master/Complete/<HymnName>/<filename>.abc
+```
+
+The GitHub API also works for a partial directory listing (no auth required
+for public repos, but WebFetch may truncate the response):
+
+```
+https://api.github.com/repos/mzealey/openhymnal/contents/Complete
+```
 
 ### Rate limits and access notes
 
-No rate limit is documented.  The live site (`openhymnal.org`) has returned
-`403 Forbidden` responses in automated environments — likely Cloudflare bot
-protection.  Workarounds:
+No rate limit is documented.  The live site (`openhymnal.org`) returns
+`403 Forbidden` in all scripted/automated environments tested.  Workarounds:
 
-1. **Prefer the GitHub mirror** for scripted access; GitHub's CDN does not
-   apply the same bot filter.
-2. **Download the bulk file once** (`OpenHymnal2014.06.abc`) and split it
-   locally — each tune begins with an `X:` field.
-3. For one-off lookups, open the URL in a browser (not a script) — the site
-   works normally for interactive use.
+1. **Use the GitHub mirror** (`Complete/<HymnName>/`) for scripted access.
+2. **Download the bulk file once** when you have browser access — split on
+   `X:` fields to extract individual tunes.
+3. For one-off lookups, open the URL in a browser (not a script).
 
 ### Using `abc_to_musiqwik.py --url`
 
-The script accepts a full Open Hymnal ABC URL:
+The `--url` flag accepts any HTTP/HTTPS URL that returns raw ABC text.
+Use the GitHub raw URL when the live site is inaccessible:
 
 ```
-python3 abc_to_musiqwik.py --url http://openhymnal.org/Abc/A_Mighty_Fortress-Ein_Feste_Burg.abc
+python3 abc_to_musiqwik.py --url https://raw.githubusercontent.com/mzealey/openhymnal/master/Complete/O_Sacred_Head_Now_Wounded/O_Sacred_Head_Now_Wounded-Passion_Chorale-Herzlich_Tut_Mich_Verlangen.abc
 ```
 
-If the live site returns 403, substitute the GitHub raw URL:
-
-```
-python3 abc_to_musiqwik.py --url https://raw.githubusercontent.com/mzealey/openhymnal/master/Choir/A_Mighty_Fortress-Ein_Feste_Burg.abc
-```
+Note: the `--url` flag is designed for single-voice ABC files.  The SATB
+files in the mirror will need manual voice extraction first.
 
 ---
 
@@ -221,7 +292,7 @@ tunes specifically, check the "Hymn Tunes" category at
 | Source | Format | Auth | API | Best use |
 |--------|--------|------|-----|----------|
 | Open Hymnal Project (live) | ABC | None | None (file download) | Primary ABC source; may 403 in scripts |
-| Open Hymnal Project (GitHub) | ABC | None | None (Git/raw URL) | Scripted ABC access; more reliable |
+| Open Hymnal Project (GitHub) | ABC (SATB) | None | None (Git/raw URL) | Scripted ABC access; partial mirror; extract S1V1 for melody |
 | Open Hymnal (bulk file) | ABC | None | None (single download) | Offline bulk import |
 | Hymnary.org | JSON / CSV / HTML | None | Scripture JSON; CSV export | Metadata, cross-references, lyrics verification |
 | abcnotation.com | ABC | None | None (HTML search) | Secondary ABC source; verify quality |
@@ -231,22 +302,173 @@ tunes specifically, check the "Hymn Tunes" category at
 
 ---
 
-## Environment Notes (this execution environment)
+## Environment Notes (Claude Code remote execution environment)
 
 In the managed remote execution environment used by Claude Code sessions for
-this repository, outbound HTTP is routed through a proxy that blocks several
-hymn-source domains:
+this repository, outbound HTTP is routed through a proxy.  The following
+access outcomes were observed in June 2026 sessions:
 
-- `openhymnal.org` — 403 on all ABC file requests
-- `hymnary.org` — 403 on some automated requests
+### Blocked (403 Forbidden)
 
-**Workarounds used in this repository:**
+Every request to these domains returned 403, whether via `WebFetch` tool or
+via `abc_to_musiqwik.py --url`:
 
-1. ABC notation for hymn files has been encoded from memory or reference
-   scores where the live Open Hymnal fetch was blocked.  These encodings
-   should be verified against the original Open Hymnal ABC files when access
-   is available (browser, unproxied environment, or GitHub raw URL).
-2. The GitHub mirror (`raw.githubusercontent.com/mzealey/openhymnal`) is not
-   subject to the same block and should be preferred in scripts.
-3. The `--url` flag of `abc_to_musiqwik.py` accepts any HTTP/HTTPS URL; swap
-   in the GitHub raw URL when the live site is inaccessible.
+- `openhymnal.org` — all paths including `/Abc/`, `/OpenHymnal2014.06.abc`
+- `hymnary.org` — all page URLs
+- `ccel.org` — hymn text pages
+- `lutheranchoralebook.com` — all pages
+- `hymntime.com` — all pages
+- `traditionalmusic.co.uk` — PDF downloads
+- `pgdp.net` — wiki pages
+
+### Accessible
+
+These sources returned content successfully:
+
+- `github.com/mzealey/openhymnal` — tree pages (via `WebFetch`)
+- `raw.githubusercontent.com/mzealey/openhymnal` — raw ABC files (via `WebFetch`)
+- `api.github.com/repos/mzealey/openhymnal` — partial directory JSON (via `WebFetch`)
+- Web search (`WebSearch` tool) — all queries succeeded; useful for metadata
+
+### Workarounds used in this repository
+
+1. For melody retrieval: use the GitHub mirror `Complete/<HymnName>/` path.
+2. For hymns not in the mirror: encode ABC from memory; flag in the `C:` field
+   or commit message for later verification against a score or browser fetch.
+3. For tune/composer metadata: use `WebSearch` — it reliably returns
+   attribution facts even when the underlying pages are blocked.
+
+---
+
+## Tool and Query Patterns for Claude Code Sessions
+
+This section documents successful and failed tool/query combinations observed
+during sessions working on this repository.  Use it as a decision tree before
+spending time on approaches that are known not to work.
+
+### Quick decision tree
+
+```
+Need ABC notation for a hymn?
+  → Check mzealey/openhymnal Complete/ directory first (WebFetch tree page)
+  → If found: fetch raw file, extract S1V1 voice
+  → If not found: encode from memory; note for verification
+
+Need tune/composer metadata?
+  → WebSearch with tune name + composer + year keywords
+  → Works even when hymnary.org pages are blocked
+
+Need lyrics verification?
+  → WebSearch for hymn title + Watts/Gerhardt/etc + "stanza" or "text"
+  → ccel.org links often appear in results but pages are blocked — use cached snippets in search results instead
+```
+
+### Confirmed working tool calls
+
+#### 1. Discover what's in the GitHub mirror directory
+
+```
+WebFetch(
+  url="https://github.com/mzealey/openhymnal/tree/master/Complete/<HymnName>",
+  prompt="List all files in this directory. What .abc files are present and what are their exact filenames?"
+)
+```
+
+Returns: filename(s) of `.abc` files in that hymn's subdirectory, or 404 if the hymn is not present.
+
+**Tip:** 404 from this call definitively means the hymn is absent from the mirror.
+
+#### 2. Retrieve raw ABC content from the mirror
+
+```
+WebFetch(
+  url="https://raw.githubusercontent.com/mzealey/openhymnal/master/Complete/<HymnName>/<filename>.abc",
+  prompt="Return ONLY the raw text verbatim. Include every header line (X:, T:, C:, S:, M:, L:, Q:, K:) and every note sequence line exactly as it appears."
+)
+```
+
+Returns: full SATB ABC file.  Extract the `[V: S1V1]` lines for the melody.
+
+**Tip:** Be explicit in the prompt that you need verbatim output including note
+sequences — otherwise the model summarizing the fetch may paraphrase and omit
+the actual notes.
+
+#### 3. Tune attribution lookup via WebSearch
+
+```
+WebSearch(query='"<TuneName>" <Composer> <Year> meter key "Hymns Ancient and Modern" OR hymnary')
+WebSearch(query='"<HymnTitle>" tune composer "<Setting source>" OR "<Alternative tune name>"')
+```
+
+Reliably returns: composer name, year, alternate tune names, meter, key.
+
+**Examples that worked:**
+
+| Query | Key finding |
+|-------|-------------|
+| `"O Perfect Life of Love" Baker 1875 tune "Contemplation" OR "Aber" composer Dykes OR Monk` | Confirmed ABER by William H. Monk; Dykes attribution wrong |
+| `"Christ the Life of All the Living" tune "Jesu meines Lebens Leben" composer Schop 1641 OR Darmstadt 1687` | Confirmed Unknown composer; pub. Darmstadt 1687 |
+| `"Upon the Cross Extended" Heermann Massie tune name "Passion Chorale" OR "O Welt" LSB 430` | Confirmed Passion Chorale (same tune as O Sacred Head) |
+| `Arlington tune Thomas Arne 1762 "Not All the Blood of Beasts" LSB 431 tune name` | Confirmed ARLINGTON/Arne for Open Hymnal version; LSB uses SOUTHWELL |
+| `"Contemplation" Dykes tune name hymn 1875 "Hymns Ancient and Modern"` | Revealed CONTEMPLATION is by Ouseley (not Dykes); Dykes did not compose it |
+
+#### 4. Browse the GitHub tree for a directory listing
+
+```
+WebFetch(
+  url="https://github.com/mzealey/openhymnal/tree/master/Complete",
+  prompt="List every directory name shown on this page."
+)
+```
+
+Returns: ~100 hymn subdirectory names per page.  Pagination via `?after=<LastEntry>` 
+does **not** work reliably through WebFetch — the tool returns the same first page
+regardless of the `after` parameter.  Use direct subdirectory access instead of
+trying to paginate the full listing.
+
+#### 5. GitHub API partial directory listing
+
+```
+WebFetch(
+  url="https://api.github.com/repos/mzealey/openhymnal/contents/Complete",
+  prompt="List every 'name' field in the JSON. Specifically look for entries containing: <keywords>."
+)
+```
+
+Returns: partial JSON (WebFetch model may truncate large arrays).  Useful for
+spot-checking presence of a hymn by name.  Not reliable as a complete directory scan.
+
+### Confirmed non-working approaches
+
+| Approach | Outcome | Reason |
+|----------|---------|--------|
+| `WebFetch(openhymnal.org/Abc/...)` | 403 | Proxy/Cloudflare block |
+| `WebFetch(hymnary.org/text/...)` | 403 | Proxy block |
+| `WebFetch(ccel.org/...)` | 403 | Proxy block |
+| `WebFetch(raw.githubusercontent.com/mzealey/openhymnal/master/Choir/<file>.abc)` | 404 | Wrong path — hymn ABC files are in `Complete/`, not `Choir/` |
+| GitHub code search (`github.com/search?q=repo:mzealey...&type=code`) | Requires sign-in | Login wall blocks WebFetch |
+| `mcp__github__search_code` on external repo | Permission denied | MCP tools scoped to this repo only |
+| `WebFetch` with `?after=` pagination on GitHub tree | Returns first page | Pagination state not preserved |
+
+### Metadata sources that surface via WebSearch even when direct fetch fails
+
+When `WebFetch` on a hymn resource page returns 403, `WebSearch` often returns
+useful snippet-level data extracted from the same page by Google/Bing:
+
+- **Hymnary.org tune pages** — meter, key, melodic incipit (solfege numbers)
+- **Hymnary.org text pages** — standard tune pairings, composer credits
+- **Wikipedia tune articles** — confirmed public domain dates, key/meter
+- **IMSLP category pages** — page listings accessible via search snippets
+
+**Effective query patterns for metadata recovery:**
+
+```
+# When hymnary.org page is blocked:
+WebSearch(query='site:hymnary.org "<TuneName>" OR "<HymnTitle>" meter composer')
+
+# For meter and solfege incipit:
+WebSearch(query='"<TuneName>" tune meter "short meter" OR "common meter" OR "long meter" incipit key')
+
+# For public domain date verification:
+WebSearch(query='"<Composer name>" died year hymn composer public domain')
+```
