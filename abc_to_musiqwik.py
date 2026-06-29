@@ -924,6 +924,91 @@ def _safe_filename(title: str) -> str:
     return re.sub(r"[^A-Za-z0-9]+", "_", title).strip("_")
 
 
+def _extract_tune_from_abc_header(header: dict, hymn_title: str) -> str:
+    """
+    Attempt to extract a distinct tune name from an ABC header dict.
+
+    Search order:
+    1. C: field — the Open Hymnal uses ``Music: 'TuneName' …`` inside C:.
+    2. T: field — sometimes the tune title differs from the hymn title.
+
+    Returns an empty string when no distinct tune name can be determined
+    (i.e. when the tune name equals the hymn title, case-insensitively).
+    """
+    # 1. C: field — look for Music: 'TuneName' (single-quoted)
+    composer = header.get("C", "")
+    m = re.search(r"Music:\s*'([^']+)'", composer)
+    if m:
+        tune = m.group(1).strip()
+        if tune.lower() != hymn_title.lower():
+            return tune
+
+    # 2. T: field — use when it differs meaningfully from the hymn title.
+    t_field = header.get("T", "")
+    if t_field and t_field.lower() != hymn_title.lower():
+        # The T: field in Open Hymnal often IS the hymn title, not a tune name.
+        # Only promote it when it looks like a distinct tune identifier, i.e. it
+        # shares fewer than half its words with the hymn title.
+        hymn_words = set(hymn_title.lower().split())
+        tune_words  = set(t_field.lower().split())
+        overlap = len(hymn_words & tune_words)
+        if overlap < len(tune_words) / 2:
+            return t_field
+
+    return ""
+
+
+def _update_title_block(
+    path: Path,
+    also_known_as: list[str],
+    tune: str,
+) -> bool:
+    """
+    Insert or replace ``Also known as:`` and ``Tune:`` lines in a hymn file.
+
+    The lines are placed between the title line and the ``Tags:`` line.
+    Existing ``Also known as:`` / ``Tune:`` lines are removed first so the
+    operation is safe to re-run.  Returns True when the file was changed.
+    """
+    text = path.read_text(encoding="utf-8")
+    lines = text.split("\n")
+
+    # Strip any pre-existing alias/tune lines to make this idempotent.
+    cleaned = [
+        l for l in lines
+        if not l.startswith("Also known as:") and not l.startswith("Tune:")
+    ]
+
+    tags_idx = next(
+        (i for i, l in enumerate(cleaned) if l.startswith("Tags:")), None
+    )
+    if tags_idx is None:
+        print(
+            f"[warn] No Tags: line found in {path}; cannot update title block.",
+            file=sys.stderr,
+        )
+        return False
+
+    insertion = []
+    if also_known_as:
+        insertion.append("Also known as: " + "; ".join(also_known_as))
+    if tune:
+        insertion.append("Tune: " + tune)
+
+    if not insertion:
+        return False
+
+    # Remove blank lines immediately before Tags: so we can re-add them cleanly.
+    insert_at = tags_idx
+    while insert_at > 0 and cleaned[insert_at - 1].strip() == "":
+        insert_at -= 1
+
+    final = cleaned[:insert_at] + [""] + insertion + [""] + cleaned[insert_at:]
+    path.write_text("\n".join(final), encoding="utf-8")
+    print(f"[info] Title block updated in {path}", file=sys.stderr)
+    return True
+
+
 def _build_citation(header: dict, source_url: str) -> str:
     """Build the #Citations and References block from ABC header fields."""
     composer = header.get("C", "Unknown")
@@ -1330,12 +1415,22 @@ def _emit_completeness_warnings(warnings: list, source: str) -> None:
             print(f"[warn] {w}", file=sys.stderr)
 
 
-def create_hymn_from_url(url: str, output_dir: Path) -> Path:
+def create_hymn_from_url(
+    url: str,
+    output_dir: Path,
+    also_known_as: list[str] | None = None,
+    tune: str | None = None,
+    tags: str = "lutheran",
+) -> Path:
     """
     Fetch an ABC file from *url*, convert it, and write a complete hymn file.
 
     Returns the path of the created file.  Progress and warnings go to stderr.
     Raises ValueError or RuntimeError on failure.
+
+    *also_known_as*: alternate titles to embed in the title block.
+    *tune*: explicit tune name; auto-detected from the ABC C: field when omitted.
+    *tags*: comma-separated tag string for the ``Tags:`` line.
     """
     print(f"[info] Fetching {url} …", file=sys.stderr)
     raw = fetch_abc_url(url)
@@ -1350,6 +1445,11 @@ def create_hymn_from_url(url: str, output_dir: Path) -> Path:
 
     title = header.get("T", "Untitled Hymn")
     print(f"[info] Title: {title}", file=sys.stderr)
+
+    # Auto-detect tune when not explicitly provided.
+    auto_tune = tune or _extract_tune_from_abc_header(header, title)
+    if auto_tune:
+        print(f"[info] Tune: {auto_tune}", file=sys.stderr)
 
     # Convert melody.
     print("[info] Converting melody to MusiQwik …", file=sys.stderr)
@@ -1391,14 +1491,25 @@ def create_hymn_from_url(url: str, output_dir: Path) -> Path:
 
     citation_text = _build_citation(header, url)
 
+    # Build title block lines (title → Also known as → Tune → blank → Tags:).
+    title_block_lines = [title, ""]
+    if also_known_as:
+        title_block_lines.append("Also known as: " + "; ".join(also_known_as))
+    if auto_tune:
+        title_block_lines.append("Tune: " + auto_tune)
+    if also_known_as or auto_tune:
+        title_block_lines.append("")
+    title_block_lines.append(f"Tags: {tags}")
+
     hymn_content = (
-        f"{title}\n\n"
-        f"# Melody\n\n"
-        f"## ABC\n{abc_for_file}\n\n"
-        f"## Musiquik\n{musiqwik}\n\n"
-        f"#Lyrics\n{lyrics_text}\n\n"
-        f"#Citations and References\n\n"
-        f"{citation_text}\n"
+        "\n".join(title_block_lines)
+        + "\n\n"
+        + f"# Melody\n\n"
+        + f"## ABC\n{abc_for_file}\n\n"
+        + f"## Musiquik\n{musiqwik}\n\n"
+        + f"#Lyrics\n{lyrics_text}\n\n"
+        + f"#Citations and References\n\n"
+        + f"{citation_text}\n"
     )
 
     filename = _safe_filename(title) or "Untitled_Hymn"
@@ -1446,6 +1557,35 @@ def _build_arg_parser() -> argparse.ArgumentParser:
         metavar="DIR",
         default=".",
         help="Directory in which to write the hymn file created with --url (default: .).",
+    )
+    parser.add_argument(
+        "--also-known-as", "-a",
+        metavar="NAMES",
+        dest="also_known_as",
+        help=(
+            "Semicolon-separated alternate titles to embed in the title block "
+            "(e.g. \"St Patrick's Breastplate; The Deer's Cry\"). "
+            "With --file: updates an existing hymn file. "
+            "With --url: written into the newly created file."
+        ),
+    )
+    parser.add_argument(
+        "--tune", "-t",
+        metavar="TUNE",
+        help=(
+            "Tune name to embed in the title block "
+            "(e.g. 'Bunessan (Scottish Gaelic trad.)'). "
+            "When omitted the script auto-detects the tune from the ABC C: field."
+        ),
+    )
+    parser.add_argument(
+        "--tags", "-T",
+        metavar="TAGS",
+        default="lutheran",
+        help=(
+            "Comma-separated tags for the Tags: line when creating a file with "
+            "--url (default: 'lutheran')."
+        ),
     )
     parser.add_argument(
         "--example",
@@ -1547,9 +1687,21 @@ def main() -> None:
         print(result)
         return
 
+    also_known_as = (
+        [s.strip() for s in args.also_known_as.split(";") if s.strip()]
+        if args.also_known_as
+        else []
+    )
+
     if args.url:
         try:
-            out = create_hymn_from_url(args.url, Path(args.output_dir))
+            out = create_hymn_from_url(
+                args.url,
+                Path(args.output_dir),
+                also_known_as=also_known_as or None,
+                tune=args.tune or None,
+                tags=args.tags,
+            )
             print(out)
         except (ValueError, RuntimeError) as exc:
             sys.exit(f"Error: {exc}")
@@ -1560,6 +1712,23 @@ def main() -> None:
         if not path.exists():
             sys.exit(f"Error: file not found: {path}")
         raw_text = path.read_text(encoding="utf-8")
+
+        # Update title block when alias/tune flags are supplied.
+        if also_known_as or args.tune:
+            _update_title_block(path, also_known_as, args.tune or "")
+            raw_text = path.read_text(encoding="utf-8")
+
+        # Auto-detect tune from ABC header and report it even without --tune flag.
+        abc_text_peek = _extract_melody_section(raw_text)
+        if abc_text_peek:
+            try:
+                hdr = parse_full_abc(abc_text_peek)["header"]
+                title_guess = path.name.replace("_", " ")
+                detected_tune = _extract_tune_from_abc_header(hdr, title_guess)
+                if detected_tune and not args.tune:
+                    print(f"[info] Detected tune: {detected_tune}", file=sys.stderr)
+            except Exception:
+                pass
 
         file_tags = _parse_tags(raw_text)
         tag_warnings = _check_tags(file_tags)
