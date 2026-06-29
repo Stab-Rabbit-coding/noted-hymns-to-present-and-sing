@@ -401,21 +401,188 @@ predating copyright by centuries.
 
 ---
 
-## 8.0 Psalm Settings (Metered / Hymn Versions)
+## 8.0 Psalm Settings (Chant Tones with Antiphons)
 
-- [ ] 8.01 Psalm 1 — "That Man Is Blest" (Scottish Psalter, 1650)
-- [ ] 8.02 Psalm 23 — "The Lord's My Shepherd, I'll Not Want" (Scottish Psalter, 1650)
-- [ ] 8.03 Psalm 46 — "God Is Our Refuge and Our Strength" (Watts, 1719)
-- [ ] 8.04 Psalm 51 — "Have Mercy on Me, O My God" (Watts / Scottish Psalter)
-- [ ] 8.05 Psalm 90 — "O God, Our Help in Ages Past" (Watts, 1719)
-- [ ] 8.06 Psalm 98 — "Joy to the World" (Watts, 1719) [see 7.2.05]
-- [ ] 8.07 Psalm 100 — "All People That on Earth Do Dwell" (Kethe, 1561) [see 7.17.02]
-- [ ] 8.08 Psalm 103 — "Praise, My Soul, the King of Heaven" (Lyte, 1834) [see 7.17.04]
-- [ ] 8.09 Psalm 121 — "I to the Hills Will Lift My Eyes" (Scottish Psalter, 1650)
-- [ ] 8.10 Psalm 130 — "From Depths of Woe I Cry to Thee" (Luther, 1523) [see 7.4.01]
-- [ ] 8.11 Psalm 150 — "Praise the Lord! Ye Heavens, Adore Him" (anon., 1796)
+### 8.1–8.150 Complete Psalm Cycle
 
-- [ ] populate all 150 psalms with the antiphon and chant line using an open source, late 20th century or newer formal equivalence translation.
+All 150 psalms with Gregorian chant tones and antiphons. Each entry will have:
+- First setting (8.X.1): Liturgical chant tone with antiphon
+- Additional settings (8.X.2, 8.X.3, etc.): Alternate metered versions as applicable
+
+- [ ] 8.1 Psalm 1 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_1]
+- [ ] 8.2 Psalm 2 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_2]
+- [ ] 8.3 Psalm 3 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_3]
+- [ ] 8.4 Psalm 4 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_4]
+- [ ] 8.5 Psalm 5 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_5]
+- [ ] 8.6 Psalm 6 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_6]
+- [ ] 8.7 Psalm 7 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_7]
+- [ ] 8.8 Psalm 8 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_8]
+- [ ] 8.9 Psalm 9 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_9]
+- [ ] 8.10 Psalm 10 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_10]
+- [ ] 8.11 Psalm 11 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_11]
+- [ ] 8.12 Psalm 12 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_12]
+- [ ] 8.13 Psalm 13 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_13]
+- [ ] 8.14 Psalm 14 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_14]
+- [ ] 8.15 Psalm 15 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_15]
+- [ ] 8.16 Psalm 16 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_16]
+- [ ] 8.17 Psalm 17 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_17]
+- [ ] 8.18 Psalm 18 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_18]
+- [ ] 8.19 Psalm 19 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_19]
+- [ ] 8.20 Psalm 20 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_20]
+- [ ] 8.21 Psalm 21 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_21]
+- [ ] 8.22 Psalm 22 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_22]
+- [ ] 8.23 Psalm 23 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_23]
+- [ ] 8.24 Psalm 24 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_24]
+- [ ] 8.25 Psalm 25 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_25]
+- [ ] 8.26 Psalm 26 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_26]
+- [ ] 8.27 Psalm 27 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_27]
+- [ ] 8.28 Psalm 28 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_28]
+- [ ] 8.29 Psalm 29 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_29]
+- [ ] 8.30 Psalm 30 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_30]
+- [ ] 8.31 Psalm 31 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_31]
+- [ ] 8.32 Psalm 32 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_32]
+- [ ] 8.33 Psalm 33 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_33]
+- [ ] 8.34 Psalm 34 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_34]
+- [ ] 8.35 Psalm 35 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_35]
+- [ ] 8.36 Psalm 36 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_36]
+- [ ] 8.37 Psalm 37 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_37]
+- [ ] 8.38 Psalm 38 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_38]
+- [ ] 8.39 Psalm 39 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_39]
+- [ ] 8.40 Psalm 40 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_40]
+- [ ] 8.41 Psalm 41 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_41]
+- [ ] 8.42 Psalm 42 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_42]
+- [ ] 8.43 Psalm 43 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_43]
+- [ ] 8.44 Psalm 44 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_44]
+- [ ] 8.45 Psalm 45 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_45]
+- [ ] 8.46 Psalm 46 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_46]
+- [ ] 8.47 Psalm 47 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_47]
+- [ ] 8.48 Psalm 48 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_48]
+- [ ] 8.49 Psalm 49 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_49]
+- [ ] 8.50 Psalm 50 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_50]
+- [ ] 8.51 Psalm 51 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_51]
+- [ ] 8.52 Psalm 52 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_52]
+- [ ] 8.53 Psalm 53 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_53]
+- [ ] 8.54 Psalm 54 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_54]
+- [ ] 8.55 Psalm 55 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_55]
+- [ ] 8.56 Psalm 56 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_56]
+- [ ] 8.57 Psalm 57 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_57]
+- [ ] 8.58 Psalm 58 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_58]
+- [ ] 8.59 Psalm 59 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_59]
+- [ ] 8.60 Psalm 60 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_60]
+- [ ] 8.61 Psalm 61 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_61]
+- [ ] 8.62 Psalm 62 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_62]
+- [ ] 8.63 Psalm 63 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_63]
+- [ ] 8.64 Psalm 64 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_64]
+- [ ] 8.65 Psalm 65 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_65]
+- [ ] 8.66 Psalm 66 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_66]
+- [ ] 8.67 Psalm 67 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_67]
+- [ ] 8.68 Psalm 68 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_68]
+- [ ] 8.69 Psalm 69 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_69]
+- [ ] 8.70 Psalm 70 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_70]
+- [ ] 8.71 Psalm 71 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_71]
+- [ ] 8.72 Psalm 72 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_72]
+- [ ] 8.73 Psalm 73 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_73]
+- [ ] 8.74 Psalm 74 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_74]
+- [ ] 8.75 Psalm 75 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_75]
+- [ ] 8.76 Psalm 76 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_76]
+- [ ] 8.77 Psalm 77 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_77]
+- [ ] 8.78 Psalm 78 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_78]
+- [ ] 8.79 Psalm 79 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_79]
+- [ ] 8.80 Psalm 80 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_80]
+- [ ] 8.81 Psalm 81 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_81]
+- [ ] 8.82 Psalm 82 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_82]
+- [ ] 8.83 Psalm 83 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_83]
+- [ ] 8.84 Psalm 84 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_84]
+- [ ] 8.85 Psalm 85 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_85]
+- [ ] 8.86 Psalm 86 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_86]
+- [ ] 8.87 Psalm 87 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_87]
+- [ ] 8.88 Psalm 88 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_88]
+- [ ] 8.89 Psalm 89 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_89]
+- [ ] 8.90 Psalm 90 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_90]
+- [ ] 8.91 Psalm 91 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_91]
+- [ ] 8.92 Psalm 92 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_92]
+- [ ] 8.93 Psalm 93 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_93]
+- [ ] 8.94 Psalm 94 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_94]
+- [ ] 8.95 Psalm 95 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_95]
+- [ ] 8.96 Psalm 96 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_96]
+- [ ] 8.97 Psalm 97 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_97]
+- [ ] 8.98 Psalm 98 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_98]
+- [ ] 8.99 Psalm 99 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_99]
+- [ ] 8.100 Psalm 100 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_100]
+- [ ] 8.101 Psalm 101 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_101]
+- [ ] 8.102 Psalm 102 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_102]
+- [ ] 8.103 Psalm 103 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_103]
+- [ ] 8.104 Psalm 104 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_104]
+- [ ] 8.105 Psalm 105 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_105]
+- [ ] 8.106 Psalm 106 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_106]
+- [ ] 8.107 Psalm 107 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_107]
+- [ ] 8.108 Psalm 108 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_108]
+- [ ] 8.109 Psalm 109 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_109]
+- [ ] 8.110 Psalm 110 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_110]
+- [ ] 8.111 Psalm 111 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_111]
+- [ ] 8.112 Psalm 112 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_112]
+- [ ] 8.113 Psalm 113 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_113]
+- [ ] 8.114 Psalm 114 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_114]
+- [ ] 8.115 Psalm 115 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_115]
+- [ ] 8.116 Psalm 116 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_116]
+- [ ] 8.117 Psalm 117 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_117]
+- [ ] 8.118 Psalm 118 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_118]
+- [ ] 8.119 Psalm 119 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_119]
+- [ ] 8.120 Psalm 120 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_120]
+- [ ] 8.121 Psalm 121 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_121]
+- [ ] 8.122 Psalm 122 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_122]
+- [ ] 8.123 Psalm 123 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_123]
+- [ ] 8.124 Psalm 124 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_124]
+- [ ] 8.125 Psalm 125 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_125]
+- [ ] 8.126 Psalm 126 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_126]
+- [ ] 8.127 Psalm 127 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_127]
+- [ ] 8.128 Psalm 128 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_128]
+- [ ] 8.129 Psalm 129 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_129]
+- [ ] 8.130 Psalm 130 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_130]
+- [ ] 8.131 Psalm 131 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_131]
+- [ ] 8.132 Psalm 132 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_132]
+- [ ] 8.133 Psalm 133 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_133]
+- [ ] 8.134 Psalm 134 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_134]
+- [ ] 8.135 Psalm 135 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_135]
+- [ ] 8.136 Psalm 136 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_136]
+- [ ] 8.137 Psalm 137 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_137]
+- [ ] 8.138 Psalm 138 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_138]
+- [ ] 8.139 Psalm 139 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_139]
+- [ ] 8.140 Psalm 140 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_140]
+- [ ] 8.141 Psalm 141 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_141]
+- [ ] 8.142 Psalm 142 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_142]
+- [ ] 8.143 Psalm 143 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_143]
+- [ ] 8.144 Psalm 144 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_144]
+- [ ] 8.145 Psalm 145 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_145]
+- [ ] 8.146 Psalm 146 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_146]
+- [ ] 8.147 Psalm 147 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_147]
+- [ ] 8.148 Psalm 148 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_148]
+- [ ] 8.149 Psalm 149 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_149]
+- [ ] 8.150 Psalm 150 (ancient, liturgical chant) [FILE: hymns/8.0_Psalm_Settings/Psalm_150]
+
+---
+
+### Notes on Psalm Numbering
+
+Psalms are numbered according to their canonical number in the Bible:
+- Psalm 1 = 8.1, Psalm 23 = 8.23, Psalm 150 = 8.150
+
+**Multiple settings**: Any psalm with more than one liturgical or metered version will have decimal expansion:
+- Psalm 1, Setting 1 (chant) = 8.1.1
+- Psalm 1, Setting 2 (metered version) = 8.1.2
+- Psalm 1, Setting 3 (alternate version) = 8.1.3, etc.
+
+**Existing metered versions** (cross-referenced with section 7):
+- Psalm 23 — "The Lord's My Shepherd, I'll Not Want" (Scottish Psalter, 1650)
+- Psalm 46 — "God Is Our Refuge and Our Strength" (Watts, 1719)
+- Psalm 51 — "Have Mercy on Me, O My God" (Watts / Scottish Psalter)
+- Psalm 90 — "O God, Our Help in Ages Past" (Watts, 1719) [see 7.15.06]
+- Psalm 98 — "Joy to the World" (Watts, 1719) [see 7.2.05]
+- Psalm 100 — "All People That on Earth Do Dwell" (Kethe, 1561) [see 7.17.02]
+- Psalm 103 — "Praise, My Soul, the King of Heaven" (Lyte, 1834) [see 7.17.04]
+- Psalm 121 — "I to the Hills Will Lift My Eyes" (Scottish Psalter, 1650)
+- Psalm 130 — "From Depths of Woe I Cry to Thee" (Luther, 1523) [see 7.4.01]
+- Psalm 150 — "Praise the Lord! Ye Heavens, Adore Him" (anon., 1796)
 ---
 
 ## Notes
