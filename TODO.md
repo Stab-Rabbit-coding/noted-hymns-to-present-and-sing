@@ -66,6 +66,7 @@ predating copyright by centuries.
 - [x] 2.2.3 Offertory — "Create in Me a Clean Heart" (Psalm 51:10–12 / ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Offertory_Create_in_Me]
 - [x] 2.2.4 Collect tones (ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Collect_Tones]
 - [x] 2.2.5 Sursum Corda — "Lift up your hearts" (ancient preface dialog) [FILE: hymns/2.0_Divine_Service_Liturgy/Sursum_Corda]
+- [ ] 2.2.6 Litany
 
 ### 2.3 Lutherian Divine Service Distinctives
 - [x] 2.3.1 Confession and Absolution versicles (LSB Setting 1–3 ordinary, TLH era) [FILE: hymns/2.0_Divine_Service_Liturgy/Confession_and_Absolution]
@@ -123,7 +124,7 @@ predating copyright by centuries.
 - [x] 6.2.1 Te Deum Laudamus (attr. Ambrose/Nicetas, 4th c.) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Te_Deum_Laudamus]
 - [x] 6.2.2 Gloria in Excelsis (see 2.1.2 — shared) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Gloria_in_Excelsis]
 - [x] 6.2.3 Athanasian Creed — Quicumque vult (ancient, 5th–6th c.) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Athanasian_Creed]
-- [ ] 6.2.4 Litany
+
 
 ---
 
