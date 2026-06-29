@@ -415,6 +415,7 @@ predating copyright by centuries.
 - [ ] 8.10 Psalm 130 — "From Depths of Woe I Cry to Thee" (Luther, 1523) [see 7.4.01]
 - [ ] 8.11 Psalm 150 — "Praise the Lord! Ye Heavens, Adore Him" (anon., 1796)
 
+- [ ] populate all 150 psalms with the antiphon and chant line using an open source, late 20th century or newer formal equivalence translation.
 ---
 
 ## Notes
