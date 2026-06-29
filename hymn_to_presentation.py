@@ -18,15 +18,21 @@ Usage:
 
 Tradition filtering (stanza-level [Tags: ...] markers in the hymn file):
     python3 hymn_to_presentation.py --file <hymn_file> --include lutheran
-    python3 hymn_to_presentation.py --file <hymn_file> --exclude baptist
-    python3 hymn_to_presentation.py --file <hymn_file> -I lutheran -I ecumenical -X anglican
+    python3 hymn_to_presentation.py --file <hymn_file> --exclude saints
+    python3 hymn_to_presentation.py --file <hymn_file> -I lutheran -X saints
 
-    --include / -I  Keep only stanzas whose tradition or theological tags overlap this set.
-    --exclude / -X  Drop any stanza whose tradition or theological tags overlap this set.
+    --include / -I  Keep only stanzas whose theological tags overlap this set,
+                    OR trigger tradition-implied theological exclusions when a
+                    tradition tag is named.
+    --exclude / -X  Drop any stanza whose theological tags overlap this set.
 
-    Stanzas without a [Tags: ...] marker are ecumenical and always included.
-    Specifying a tradition tag as --include also implies theological exclusions
-    (e.g. --include lutheran automatically drops stanzas tagged 'saints' or 'decision').
+    Stanza [Tags: ...] markers carry two kinds of tags:
+      - Tradition-of-origin (ancient, lutheran, anglican, ecumenical, etc.):
+        informational only — identifies who authored the stanza, never filtered on.
+      - Theological (saints, sacramental, decision, gifts, etc.): used for filtering.
+    Stanzas without a marker are ecumenical and always included.
+    Naming a tradition via --include implies its doctrinal exclusions:
+      --include lutheran → automatically drops stanzas tagged 'saints' or 'decision'.
     Both flags are repeatable; omitting both emits all stanzas unchanged.
 
 Dependencies:
@@ -55,16 +61,19 @@ from pathlib import Path
 # Matches [Tags: tag1, tag2] stanza-level markers at the start of a verse chunk.
 _STANZA_TAG_RE = re.compile(r'^\s*\[Tags:\s*([^\]]+)\]', re.IGNORECASE)
 
-# Canonical tradition tags — used to distinguish tradition-scoping from
-# theological-content tags when deciding which stanzas to flag in the prompt.
+# Canonical tradition tags — used to distinguish tradition-of-origin / adoption
+# tags from theological-content tags.
 _TRADITION_TAGS = frozenset({
+    "ancient",  # pre-AD 1050 origin (undivided church)
     "lutheran", "roman", "reformed", "baptist", "anglican",
     "ecumenical", "eastern", "charismatic",
 })
 
 # Theological tags implicitly excluded when a tradition is included.
 # Specifying --include lutheran also excludes stanzas tagged 'saints' or 'decision'.
+# The 'ancient' tradition has no incompatible theological tags.
 _TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
+    "ancient":     frozenset(),
     "lutheran":    frozenset({"saints", "decision"}),
     "reformed":    frozenset({"saints", "real-presence", "baptismal-regeneration", "decision", "gifts"}),
     "baptist":     frozenset({"saints", "sacramental", "real-presence",
@@ -215,19 +224,25 @@ def filter_verses(
     exclude: list[str],
 ) -> list[tuple[str, list[str]]]:
     """
-    Filter (verse_text, stanza_tags) pairs by tradition and/or theological tag.
+    Filter (verse_text, stanza_tags) pairs by theological tag.
 
     A stanza with no explicit [Tags: ...] marker is ecumenical and always passes.
-    For tagged stanzas, filters are split into tradition and theological sets:
 
-    - Tradition filter: a tagged stanza must overlap the --include tradition set
-      (if provided) and must not overlap the --exclude tradition set.
-    - Theological filter: applied directly via --include / --exclude; also applied
-      implicitly when a tradition is included — e.g. --include lutheran
-      automatically excludes stanzas tagged 'saints' or 'decision'.
-    - Form tags (liturgical, canticle, etc.) are not filtered; they pass through.
+    Stanza-level [Tags: ...] markers carry two kinds of tags:
+      - Tradition-of-origin tags (ancient, lutheran, roman, anglican, ecumenical,
+        etc.): identify which tradition authored or added that stanza.  These are
+        INFORMATIONAL ONLY and are never used to include or exclude a stanza.
+      - Theological tags (saints, sacramental, decision, gifts, etc.): identify
+        doctrinal content that some traditions cannot accept.  These are the sole
+        basis for stanza filtering.
 
-    When neither list is provided all verses are returned unchanged.
+    Specifying a tradition via --include triggers implicit theological exclusions
+    defined in _TRADITION_INCOMPATIBLE_THEOLOGY (e.g. --include lutheran
+    automatically drops stanzas tagged 'saints' or 'decision').
+
+    Form tags (liturgical, canticle, etc.) are not filtered; they pass through.
+
+    When neither include nor exclude is provided all verses are returned unchanged.
     """
     if not include and not exclude:
         return verses
@@ -237,7 +252,6 @@ def filter_verses(
 
     inc_trad = inc & _TRADITION_TAGS
     inc_theo = inc - _TRADITION_TAGS
-    exc_trad = exc & _TRADITION_TAGS
     exc_theo = exc - _TRADITION_TAGS
 
     # Accumulate tradition-implied theological exclusions.
@@ -251,15 +265,9 @@ def filter_verses(
             continue
 
         tag_set  = {t.lower() for t in stanza_tags}
-        trad_set = tag_set & _TRADITION_TAGS
+        # Tradition-of-origin tags on stanzas are informational; exclude them
+        # from theological filtering.
         theo_set = tag_set - _TRADITION_TAGS
-
-        # Tradition filter (only when the stanza carries at least one tradition tag).
-        if trad_set:
-            if inc_trad and not trad_set & inc_trad:
-                continue
-            if exc_trad and trad_set & exc_trad:
-                continue
 
         # Theological filter (explicit + tradition-implied exclusions).
         if inc_theo and not theo_set & inc_theo:
@@ -966,10 +974,11 @@ def _prompt_tradition_filter(
     When the hymn contains stanzas with theological tags that are tradition-
     incompatible, describe them and interactively ask the user how to filter.
 
-    Stanzas carry only theological tags (sacramental, saints, decision, etc.).
-    The compatibility matrix determines which traditions accept or reject them.
-    Any tradition whose implied exclusions would drop at least one stanza is
-    offered as a menu option.  Stanzas without a [Tags: ...] marker are
+    Stanza markers carry two kinds of tags: tradition-of-origin (informational,
+    never used for filtering) and theological (sacramental, saints, decision, etc.).
+    The compatibility matrix determines which traditions accept or reject theological
+    content.  Any tradition whose implied exclusions would drop at least one stanza
+    is offered as a menu option.  Stanzas without a [Tags: ...] marker are
     ecumenical and are never listed (they always pass every filter).
 
     Returns (include_tags, exclude_tags).  Both empty means include all.
