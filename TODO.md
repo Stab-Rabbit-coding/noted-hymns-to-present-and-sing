@@ -123,6 +123,7 @@ predating copyright by centuries.
 - [x] 6.2.1 Te Deum Laudamus (attr. Ambrose/Nicetas, 4th c.) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Te_Deum_Laudamus]
 - [x] 6.2.2 Gloria in Excelsis (see 2.1.2 — shared) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Gloria_in_Excelsis]
 - [x] 6.2.3 Athanasian Creed — Quicumque vult (ancient, 5th–6th c.) [FILE: hymns/6.2_Ancient_Hymnic_Canticles/Athanasian_Creed]
+- [ ] 6.2.4 Litany
 
 ---
 
