@@ -2156,10 +2156,122 @@
       "liturgical",
       "psalm"
     ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_1",
+    "file": "hymns/8.0_Psalm_Settings/Psalm_001",
     "location": "8.0_Psalm_Settings",
     "section_number": "8.0",
-    "filename": "Psalm_1"
+    "filename": "Psalm_001"
+  },
+  {
+    "title": "Psalm 2",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_002",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_002"
+  },
+  {
+    "title": "Psalm 3",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_003",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_003"
+  },
+  {
+    "title": "Psalm 4",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_004",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_004"
+  },
+  {
+    "title": "Psalm 5",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_005",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_005"
+  },
+  {
+    "title": "Psalm 6",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_006",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_006"
+  },
+  {
+    "title": "Psalm 7",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_007",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_007"
+  },
+  {
+    "title": "Psalm 8",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_008",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_008"
+  },
+  {
+    "title": "Psalm 9",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_009",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_009"
   },
   {
     "title": "Psalm 10",
@@ -2170,10 +2282,1256 @@
       "liturgical",
       "psalm"
     ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_10",
+    "file": "hymns/8.0_Psalm_Settings/Psalm_010",
     "location": "8.0_Psalm_Settings",
     "section_number": "8.0",
-    "filename": "Psalm_10"
+    "filename": "Psalm_010"
+  },
+  {
+    "title": "Psalm 11",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_011",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_011"
+  },
+  {
+    "title": "Psalm 12",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_012",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_012"
+  },
+  {
+    "title": "Psalm 13",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_013",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_013"
+  },
+  {
+    "title": "Psalm 14",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_014",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_014"
+  },
+  {
+    "title": "Psalm 15",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_015",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_015"
+  },
+  {
+    "title": "Psalm 16",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_016",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_016"
+  },
+  {
+    "title": "Psalm 17",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_017",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_017"
+  },
+  {
+    "title": "Psalm 18",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_018",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_018"
+  },
+  {
+    "title": "Psalm 19",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_019",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_019"
+  },
+  {
+    "title": "Psalm 20",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_020",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_020"
+  },
+  {
+    "title": "Psalm 21",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_021",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_021"
+  },
+  {
+    "title": "Psalm 22",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_022",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_022"
+  },
+  {
+    "title": "Psalm 23",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_023",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_023"
+  },
+  {
+    "title": "Psalm 24",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_024",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_024"
+  },
+  {
+    "title": "Psalm 25",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_025",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_025"
+  },
+  {
+    "title": "Psalm 26",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_026",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_026"
+  },
+  {
+    "title": "Psalm 27",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_027",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_027"
+  },
+  {
+    "title": "Psalm 28",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_028",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_028"
+  },
+  {
+    "title": "Psalm 29",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_029",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_029"
+  },
+  {
+    "title": "Psalm 30",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_030",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_030"
+  },
+  {
+    "title": "Psalm 31",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_031",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_031"
+  },
+  {
+    "title": "Psalm 32",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_032",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_032"
+  },
+  {
+    "title": "Psalm 33",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_033",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_033"
+  },
+  {
+    "title": "Psalm 34",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_034",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_034"
+  },
+  {
+    "title": "Psalm 35",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_035",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_035"
+  },
+  {
+    "title": "Psalm 36",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_036",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_036"
+  },
+  {
+    "title": "Psalm 37",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_037",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_037"
+  },
+  {
+    "title": "Psalm 38",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_038",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_038"
+  },
+  {
+    "title": "Psalm 39",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_039",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_039"
+  },
+  {
+    "title": "Psalm 40",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_040",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_040"
+  },
+  {
+    "title": "Psalm 41",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_041",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_041"
+  },
+  {
+    "title": "Psalm 42",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_042",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_042"
+  },
+  {
+    "title": "Psalm 43",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_043",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_043"
+  },
+  {
+    "title": "Psalm 44",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_044",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_044"
+  },
+  {
+    "title": "Psalm 45",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_045",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_045"
+  },
+  {
+    "title": "Psalm 46",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_046",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_046"
+  },
+  {
+    "title": "Psalm 47",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_047",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_047"
+  },
+  {
+    "title": "Psalm 48",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_048",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_048"
+  },
+  {
+    "title": "Psalm 49",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_049",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_049"
+  },
+  {
+    "title": "Psalm 50",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_050",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_050"
+  },
+  {
+    "title": "Psalm 51",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_051",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_051"
+  },
+  {
+    "title": "Psalm 52",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_052",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_052"
+  },
+  {
+    "title": "Psalm 53",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_053",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_053"
+  },
+  {
+    "title": "Psalm 54",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_054",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_054"
+  },
+  {
+    "title": "Psalm 55",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_055",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_055"
+  },
+  {
+    "title": "Psalm 56",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_056",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_056"
+  },
+  {
+    "title": "Psalm 57",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_057",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_057"
+  },
+  {
+    "title": "Psalm 58",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_058",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_058"
+  },
+  {
+    "title": "Psalm 59",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_059",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_059"
+  },
+  {
+    "title": "Psalm 60",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_060",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_060"
+  },
+  {
+    "title": "Psalm 61",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_061",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_061"
+  },
+  {
+    "title": "Psalm 62",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_062",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_062"
+  },
+  {
+    "title": "Psalm 63",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_063",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_063"
+  },
+  {
+    "title": "Psalm 64",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_064",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_064"
+  },
+  {
+    "title": "Psalm 65",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_065",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_065"
+  },
+  {
+    "title": "Psalm 66",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_066",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_066"
+  },
+  {
+    "title": "Psalm 67",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_067",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_067"
+  },
+  {
+    "title": "Psalm 68",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_068",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_068"
+  },
+  {
+    "title": "Psalm 69",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_069",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_069"
+  },
+  {
+    "title": "Psalm 70",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_070",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_070"
+  },
+  {
+    "title": "Psalm 71",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_071",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_071"
+  },
+  {
+    "title": "Psalm 72",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_072",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_072"
+  },
+  {
+    "title": "Psalm 73",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_073",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_073"
+  },
+  {
+    "title": "Psalm 74",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_074",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_074"
+  },
+  {
+    "title": "Psalm 75",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_075",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_075"
+  },
+  {
+    "title": "Psalm 76",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_076",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_076"
+  },
+  {
+    "title": "Psalm 77",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_077",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_077"
+  },
+  {
+    "title": "Psalm 78",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_078",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_078"
+  },
+  {
+    "title": "Psalm 79",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_079",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_079"
+  },
+  {
+    "title": "Psalm 80",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_080",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_080"
+  },
+  {
+    "title": "Psalm 81",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_081",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_081"
+  },
+  {
+    "title": "Psalm 82",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_082",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_082"
+  },
+  {
+    "title": "Psalm 83",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_083",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_083"
+  },
+  {
+    "title": "Psalm 84",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_084",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_084"
+  },
+  {
+    "title": "Psalm 85",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_085",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_085"
+  },
+  {
+    "title": "Psalm 86",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_086",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_086"
+  },
+  {
+    "title": "Psalm 87",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_087",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_087"
+  },
+  {
+    "title": "Psalm 88",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_088",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_088"
+  },
+  {
+    "title": "Psalm 89",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_089",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_089"
+  },
+  {
+    "title": "Psalm 90",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_090",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_090"
+  },
+  {
+    "title": "Psalm 91",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_091",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_091"
+  },
+  {
+    "title": "Psalm 92",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_092",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_092"
+  },
+  {
+    "title": "Psalm 93",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_093",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_093"
+  },
+  {
+    "title": "Psalm 94",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_094",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_094"
+  },
+  {
+    "title": "Psalm 95",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_095",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_095"
+  },
+  {
+    "title": "Psalm 96",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_096",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_096"
+  },
+  {
+    "title": "Psalm 97",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_097",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_097"
+  },
+  {
+    "title": "Psalm 98",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_098",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_098"
+  },
+  {
+    "title": "Psalm 99",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_099",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_099"
   },
   {
     "title": "Psalm 100",
@@ -2316,20 +3674,6 @@
     "filename": "Psalm_109"
   },
   {
-    "title": "Psalm 11",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_11",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_11"
-  },
-  {
     "title": "Psalm 110",
     "aliases": [],
     "tune": "",
@@ -2468,20 +3812,6 @@
     "location": "8.0_Psalm_Settings",
     "section_number": "8.0",
     "filename": "Psalm_119"
-  },
-  {
-    "title": "Psalm 12",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_12",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_12"
   },
   {
     "title": "Psalm 120",
@@ -2624,20 +3954,6 @@
     "filename": "Psalm_129"
   },
   {
-    "title": "Psalm 13",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_13",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_13"
-  },
-  {
     "title": "Psalm 130",
     "aliases": [],
     "tune": "",
@@ -2776,20 +4092,6 @@
     "location": "8.0_Psalm_Settings",
     "section_number": "8.0",
     "filename": "Psalm_139"
-  },
-  {
-    "title": "Psalm 14",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_14",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_14"
   },
   {
     "title": "Psalm 140",
@@ -2932,20 +4234,6 @@
     "filename": "Psalm_149"
   },
   {
-    "title": "Psalm 15",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_15",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_15"
-  },
-  {
     "title": "Psalm 150",
     "aliases": [],
     "tune": "",
@@ -2958,1294 +4246,6 @@
     "location": "8.0_Psalm_Settings",
     "section_number": "8.0",
     "filename": "Psalm_150"
-  },
-  {
-    "title": "Psalm 16",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_16",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_16"
-  },
-  {
-    "title": "Psalm 17",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_17",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_17"
-  },
-  {
-    "title": "Psalm 18",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_18",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_18"
-  },
-  {
-    "title": "Psalm 19",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_19",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_19"
-  },
-  {
-    "title": "Psalm 2",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_2",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_2"
-  },
-  {
-    "title": "Psalm 20",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_20",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_20"
-  },
-  {
-    "title": "Psalm 21",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_21",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_21"
-  },
-  {
-    "title": "Psalm 22",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_22",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_22"
-  },
-  {
-    "title": "Psalm 23",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_23",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_23"
-  },
-  {
-    "title": "Psalm 24",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_24",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_24"
-  },
-  {
-    "title": "Psalm 25",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_25",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_25"
-  },
-  {
-    "title": "Psalm 26",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_26",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_26"
-  },
-  {
-    "title": "Psalm 27",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_27",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_27"
-  },
-  {
-    "title": "Psalm 28",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_28",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_28"
-  },
-  {
-    "title": "Psalm 29",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_29",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_29"
-  },
-  {
-    "title": "Psalm 3",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_3",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_3"
-  },
-  {
-    "title": "Psalm 30",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_30",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_30"
-  },
-  {
-    "title": "Psalm 31",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_31",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_31"
-  },
-  {
-    "title": "Psalm 32",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_32",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_32"
-  },
-  {
-    "title": "Psalm 33",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_33",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_33"
-  },
-  {
-    "title": "Psalm 34",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_34",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_34"
-  },
-  {
-    "title": "Psalm 35",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_35",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_35"
-  },
-  {
-    "title": "Psalm 36",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_36",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_36"
-  },
-  {
-    "title": "Psalm 37",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_37",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_37"
-  },
-  {
-    "title": "Psalm 38",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_38",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_38"
-  },
-  {
-    "title": "Psalm 39",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_39",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_39"
-  },
-  {
-    "title": "Psalm 4",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_4",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_4"
-  },
-  {
-    "title": "Psalm 40",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_40",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_40"
-  },
-  {
-    "title": "Psalm 41",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_41",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_41"
-  },
-  {
-    "title": "Psalm 42",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_42",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_42"
-  },
-  {
-    "title": "Psalm 43",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_43",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_43"
-  },
-  {
-    "title": "Psalm 44",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_44",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_44"
-  },
-  {
-    "title": "Psalm 45",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_45",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_45"
-  },
-  {
-    "title": "Psalm 46",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_46",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_46"
-  },
-  {
-    "title": "Psalm 47",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_47",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_47"
-  },
-  {
-    "title": "Psalm 48",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_48",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_48"
-  },
-  {
-    "title": "Psalm 49",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_49",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_49"
-  },
-  {
-    "title": "Psalm 5",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_5",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_5"
-  },
-  {
-    "title": "Psalm 50",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_50",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_50"
-  },
-  {
-    "title": "Psalm 51",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_51",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_51"
-  },
-  {
-    "title": "Psalm 52",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_52",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_52"
-  },
-  {
-    "title": "Psalm 53",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_53",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_53"
-  },
-  {
-    "title": "Psalm 54",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_54",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_54"
-  },
-  {
-    "title": "Psalm 55",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_55",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_55"
-  },
-  {
-    "title": "Psalm 56",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_56",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_56"
-  },
-  {
-    "title": "Psalm 57",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_57",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_57"
-  },
-  {
-    "title": "Psalm 58",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_58",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_58"
-  },
-  {
-    "title": "Psalm 59",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_59",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_59"
-  },
-  {
-    "title": "Psalm 6",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_6",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_6"
-  },
-  {
-    "title": "Psalm 60",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_60",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_60"
-  },
-  {
-    "title": "Psalm 61",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_61",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_61"
-  },
-  {
-    "title": "Psalm 62",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_62",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_62"
-  },
-  {
-    "title": "Psalm 63",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_63",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_63"
-  },
-  {
-    "title": "Psalm 64",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_64",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_64"
-  },
-  {
-    "title": "Psalm 65",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_65",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_65"
-  },
-  {
-    "title": "Psalm 66",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_66",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_66"
-  },
-  {
-    "title": "Psalm 67",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_67",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_67"
-  },
-  {
-    "title": "Psalm 68",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_68",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_68"
-  },
-  {
-    "title": "Psalm 69",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_69",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_69"
-  },
-  {
-    "title": "Psalm 7",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_7",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_7"
-  },
-  {
-    "title": "Psalm 70",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_70",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_70"
-  },
-  {
-    "title": "Psalm 71",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_71",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_71"
-  },
-  {
-    "title": "Psalm 72",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_72",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_72"
-  },
-  {
-    "title": "Psalm 73",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_73",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_73"
-  },
-  {
-    "title": "Psalm 74",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_74",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_74"
-  },
-  {
-    "title": "Psalm 75",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_75",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_75"
-  },
-  {
-    "title": "Psalm 76",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_76",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_76"
-  },
-  {
-    "title": "Psalm 77",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_77",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_77"
-  },
-  {
-    "title": "Psalm 78",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_78",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_78"
-  },
-  {
-    "title": "Psalm 79",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_79",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_79"
-  },
-  {
-    "title": "Psalm 8",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_8",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_8"
-  },
-  {
-    "title": "Psalm 80",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_80",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_80"
-  },
-  {
-    "title": "Psalm 81",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_81",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_81"
-  },
-  {
-    "title": "Psalm 82",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_82",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_82"
-  },
-  {
-    "title": "Psalm 83",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_83",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_83"
-  },
-  {
-    "title": "Psalm 84",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_84",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_84"
-  },
-  {
-    "title": "Psalm 85",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_85",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_85"
-  },
-  {
-    "title": "Psalm 86",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_86",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_86"
-  },
-  {
-    "title": "Psalm 87",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_87",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_87"
-  },
-  {
-    "title": "Psalm 88",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_88",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_88"
-  },
-  {
-    "title": "Psalm 89",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_89",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_89"
-  },
-  {
-    "title": "Psalm 9",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_9",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_9"
-  },
-  {
-    "title": "Psalm 90",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_90",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_90"
-  },
-  {
-    "title": "Psalm 91",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_91",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_91"
-  },
-  {
-    "title": "Psalm 92",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_92",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_92"
-  },
-  {
-    "title": "Psalm 93",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_93",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_93"
-  },
-  {
-    "title": "Psalm 94",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_94",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_94"
-  },
-  {
-    "title": "Psalm 95",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_95",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_95"
-  },
-  {
-    "title": "Psalm 96",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_96",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_96"
-  },
-  {
-    "title": "Psalm 97",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_97",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_97"
-  },
-  {
-    "title": "Psalm 98",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_98",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_98"
-  },
-  {
-    "title": "Psalm 99",
-    "aliases": [],
-    "tune": "",
-    "tags": [
-      "ancient",
-      "liturgical",
-      "psalm"
-    ],
-    "file": "hymns/8.0_Psalm_Settings/Psalm_99",
-    "location": "8.0_Psalm_Settings",
-    "section_number": "8.0",
-    "filename": "Psalm_99"
   },
   {
     "title": "That Man Is Blest",
