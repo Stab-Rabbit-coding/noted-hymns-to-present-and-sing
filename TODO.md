@@ -38,7 +38,7 @@ otherwise free to reproduce without royalties.
 ### 1.4 Release Packaging and Extensibility
 
 - [ ] 1.4.1 Self-contained release bundle — design and document a distributable archive (zip or installer) that packages hymn files, both fonts (Musiqwik, OpenDyslexic Mono), presentation templates, conversion scripts, and this documentation so that a congregation can deploy it offline on any platform without external dependencies or network access; the bundle format must accommodate future additions without breaking existing content or scripts.
-- [ ] 1.4.2 Extensibility guide — document the complete file format, theological tag taxonomy, folder naming convention, and copyright verification checklist so that end users can contribute hymns from traditions beyond the initial LSB scope (Roman Catholic, Reformed, Baptist, Anglican, etc.) following the same conventions as the core collection.
+- [x] 1.4.2 Extensibility guide — document the complete file format, theological tag taxonomy, folder naming convention, and copyright verification checklist so that end users can contribute hymns from traditions beyond the initial LSB scope (Roman Catholic, Reformed, Baptist, Anglican, etc.) following the same conventions as the core collection. [FILE: docs/extensibility-guide.md]
 - [x] 1.4.3 Theological tag taxonomy — defined in CLAUDE.md; tags applied to all existing hymn files.
 
 ---
@@ -205,13 +205,13 @@ predating copyright by centuries.
 
 ### 7.5 Holy Week
 
-- [ ] 7.5.01 O Sacred Head, Now Wounded — Bernard/Gerhardt; Alexander trans. 1830
-- [ ] 7.5.02 Upon the Cross Extended — Johann Heermann, 1630; Heermann/Massie trans.
-- [ ] 7.5.03 A Lamb Goes Uncomplaining Forth (see 7.4.06)
-- [ ] 7.5.04 Christ, the Life of All the Living — Ernst Homburg, 1659; Winkworth trans.
-- [ ] 7.5.05 Jesus, in Your Dying Woes — Thomas Benson Pollock, 1871
-- [ ] 7.5.06 O Perfect Life of Love — Henry Baker, 1875
-- [ ] 7.5.07 Not All the Blood of Beasts — Isaac Watts, 1709
+- [x] 7.5.01 O Sacred Head, Now Wounded — Bernard/Gerhardt; Alexander trans. 1830 [FILE: hymns/7.5_Holy_Week/O_Sacred_Head_Now_Wounded]
+- [x] 7.5.02 Upon the Cross Extended — Johann Heermann, 1630; Heermann/Massie trans. [FILE: hymns/7.5_Holy_Week/Upon_the_Cross_Extended]
+- [x] 7.5.03 A Lamb Goes Uncomplaining Forth (see 7.4.06)
+- [x] 7.5.04 Christ, the Life of All the Living — Ernst Homburg, 1659; Winkworth trans. [FILE: hymns/7.5_Holy_Week/Christ_the_Life_of_All_the_Living]
+- [x] 7.5.05 Jesus, in Your Dying Woes — Thomas Benson Pollock, 1871 [FILE: hymns/7.5_Holy_Week/Jesus_in_Your_Dying_Woes]
+- [x] 7.5.06 O Perfect Life of Love — Henry Baker, 1875 [FILE: hymns/7.5_Holy_Week/O_Perfect_Life_of_Love]
+- [x] 7.5.07 Not All the Blood of Beasts — Isaac Watts, 1709 [FILE: hymns/7.5_Holy_Week/Not_All_the_Blood_of_Beasts]
 
 ### 7.6 Easter
 

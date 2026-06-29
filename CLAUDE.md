@@ -434,6 +434,28 @@ two-digit TODO section number so `ls` orders them numerically.
 
 ---
 
+## External Hymn Sources
+
+The primary ABC source for this project is the **Open Hymnal Project**
+(`openhymnal.org`).  Individual files follow the URL pattern:
+
+```
+http://openhymnal.org/Abc/<Filename>.abc
+```
+
+The filename appears in `#Citations and References` in every hymn file.
+If the live site is inaccessible in a scripted context (returns 403), use
+the GitHub mirror instead:
+
+```
+https://raw.githubusercontent.com/mzealey/openhymnal/master/Choir/<Filename>.abc
+```
+
+For secondary sources (Hymnary.org, IMSLP, OpenLP, abcnotation.com) and full
+access-protocol details, see **`docs/hymn-sources-api.md`**.
+
+---
+
 ## Copyright Notes for Lutheran Service Book Content
 
 The LSB (2006) contains a mix of ancient, public domain, and modern copyrighted material.
