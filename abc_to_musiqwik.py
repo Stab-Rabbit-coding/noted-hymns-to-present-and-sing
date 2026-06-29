@@ -1034,6 +1034,7 @@ _LUTHERAN_INTENTIONAL_OMISSIONS: list = [
 # ---------------------------------------------------------------------------
 
 _TRADITION_TAGS: frozenset[str] = frozenset({
+    "ancient",      # pre-AD 1050, undivided church
     "lutheran",
     "roman",
     "reformed",
@@ -1076,6 +1077,7 @@ _VALID_TAGS: frozenset[str] = _TRADITION_TAGS | _THEOLOGICAL_TAGS | _FORM_TAGS
 # When --include specifies a tradition, stanzas carrying any of these
 # theological tags are implicitly excluded for that tradition.
 _TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
+    "ancient":    frozenset(),  # undivided church — no incompatible theological tags
     "lutheran":   frozenset({"saints", "decision"}),
     "reformed":   frozenset({"saints", "real-presence", "baptismal-regeneration", "decision", "gifts"}),
     "baptist":    frozenset({"saints", "sacramental", "real-presence",
@@ -1090,7 +1092,14 @@ _TRADITION_INCOMPATIBLE_THEOLOGY: dict[str, frozenset[str]] = {
 }
 
 # Inline stanza-level tag marker: [Tags: tag1, tag2] placed after a verse number.
-# e.g.  "2. [Tags: anglican] O Holy Spirit, who didst brood…"
+# A stanza marker carries two kinds of tags, both optional:
+#   - tradition-of-origin (ancient, lutheran, anglican, etc.): identifies which
+#     tradition authored or added this stanza — informational only, not used for filtering
+#   - theological (saints, sacramental, decision, etc.): identifies doctrinal content
+#     that some traditions cannot accept — used by hymn_to_presentation.py for filtering
+# e.g.  "5. [Tags: ecumenical] Eternal Father, grant, we pray…"
+# e.g.  "3. [Tags: saints] I bind unto myself the power…"
+# e.g.  "3. [Tags: anglican, saints] O Holy Spirit, who didst brood…"
 _STANZA_TAG_RE = re.compile(r"\[Tags:\s*([^\]]+)\]", re.IGNORECASE)
 
 

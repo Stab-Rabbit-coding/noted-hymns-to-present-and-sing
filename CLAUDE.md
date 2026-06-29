@@ -93,12 +93,30 @@ describes the piece; do not omit a tag because another tag implies it.
 
 ### Tradition tags
 
-These identify the liturgical or confessional tradition from which a piece originates
-or for which it is primarily intended.  They are the primary filter for users building
-collections from traditions outside the core Lutheran scope.
+Tradition tags serve two roles simultaneously:
+1. **Origin** — identifies the tradition in which the piece (or individual stanza) was first written.
+2. **Adoption** — lists every tradition that has taken the piece into regular liturgical or devotional use.
+
+Apply every tradition that uses the piece; do not omit an adoption tradition because
+the origin tradition is different.
+
+#### Origin date rules
+
+The **primary tradition tag** (listed first on the `Tags:` line) indicates origin:
+
+| Period | Primary tag | Rationale |
+|--------|-------------|-----------|
+| Before AD 1050 | `ancient` | Pre-schism, undivided church; applies to all scriptural texts, early liturgical forms, and church fathers |
+| AD 1050–1517 | `roman` or `eastern` | Medieval Western church (Roman) or Byzantine/Eastern church (Eastern) |
+| After AD 1517 | `lutheran`, `reformed`, `anglican`, `baptist`, `charismatic`, etc. | Post-Reformation denominations |
+
+The 1050 boundary approximates the Great Schism (1054); the 1517 boundary marks Luther's 95 Theses.
+
+#### Tradition tag definitions
 
 | Tag | Use |
 |-----|-----|
+| `ancient` | Pre-AD 1050 — scriptural texts, early liturgical forms, creeds, and hymns of the undivided church |
 | `lutheran` | Lutheran tradition (LCMS, ELCA, LMS, etc.); default for all LSB content |
 | `roman` | Roman Catholic tradition (includes Tridentine and Novus Ordo repertoire) |
 | `reformed` | Reformed / Calvinist tradition (Presbyterian, Dutch Reformed, etc.) |
@@ -107,6 +125,23 @@ collections from traditions outside the core Lutheran scope.
 | `ecumenical` | Shared across multiple traditions without strong confessional identity |
 | `eastern` | Eastern Orthodox tradition (Greek, Russian, Coptic, Ethiopian, Armenian, etc.) |
 | `charismatic` | Charismatic / Pentecostal tradition (including neo-charismatic and renewal movements) |
+
+**Examples**
+
+```
+# Nicene Creed — ancient text, 325/381 AD; adopted by all major traditions
+Tags: ancient, lutheran, roman, anglican, eastern, ecumenical, liturgical, creed
+
+# O Sacred Head Now Wounded — Bernard of Clairvaux, 12th c. (Roman medieval);
+# Gerhardt's German version adopted by Lutherans; widely ecumenical
+Tags: roman, lutheran, ecumenical, liturgical
+
+# A Mighty Fortress Is Our God — Luther, 1529; Lutheran origin
+Tags: lutheran, reformation, sola-scriptura, solus-christus
+
+# Eternal Father, Strong to Save — Whiting, 1860; Anglican origin
+Tags: anglican, lutheran, ecumenical, intercession
+```
 
 ### Theological content tags
 
@@ -179,36 +214,62 @@ Tags: roman, liturgical, canticle
 
 ### Stanza-level tags
 
-When a hymn originates in one tradition but is later adopted by another —
-with verses added, dropped, or altered in the process — individual stanzas
-can be tagged independently using an inline `[Tags: ...]` marker.
+Individual stanzas can be tagged independently using an inline `[Tags: ...]`
+marker.  Stanza markers carry **two kinds of tags**, both optional:
 
-**Placement** — immediately after the verse number (or at the very start of
-the `#Lyrics` block for verse 1):
+| Kind | Examples | Purpose |
+|------|----------|---------|
+| **Tradition-of-origin** | `ancient`, `lutheran`, `anglican`, `ecumenical` | Identifies which tradition authored or added this stanza — **informational only**, never used to include or exclude the stanza |
+| **Theological** | `saints`, `sacramental`, `decision`, `gifts` | Identifies doctrinal content that some traditions cannot accept — **used for filtering** by `hymn_to_presentation.py --include / --exclude` |
+
+#### When to add a stanza tradition-of-origin tag
+
+Add a tradition tag to a stanza only when that stanza was authored or inserted by a
+tradition **different** from the hymn's origin tradition.  Stanzas from the origin
+tradition (including the original body of the hymn) do not need an origin tag — the
+file-level `Tags:` line already communicates the origin.
+
+```
+# Eternal Father, Strong to Save — Anglican origin (Whiting, 1860)
+# Stanzas 1–4 are Whiting's (Anglican origin = no stanza tag needed)
+# Stanzas 5–17 were added by the US military (ecumenical, non-denominational)
+# Stanzas 18–19 were added by the Protestant Episcopal Church (same Anglican tradition)
+
+Tags: ancient, lutheran, roman, anglican, eastern, ecumenical, liturgical
+
+#Lyrics
+Eternal Father, strong to save...  2. O Christ! Whose voice the waters heard...  3. Most Holy Spirit!...  4. O Trinity of love and power!...  5. [Tags: ecumenical] Eternal Father, grant, we pray, To all Marines...  ...  18. O Christ, the Lord of hill and plain...  19. O Spirit, Whom the Father send...
+```
+
+#### Combining origin and theological tags
+
+Both kinds can appear together in a single marker:
+
+```
+3. [Tags: ancient, saints] I bind unto myself the power Of the great love of cherubim...
+```
+
+This means: stanza authored by the ancient church (`ancient`) AND contains
+invocation-of-saints content (`saints`).  The `ancient` tag is informational;
+the `saints` tag drives filtering (excluded by `--include lutheran`, etc.).
+
+#### Placement
+
+Immediately after the verse number (or at the very start of the `#Lyrics` block
+for verse 1):
 
 ```
 #Lyrics
-[Tags: lutheran, ecumenical] First verse text...  2. [Tags: lutheran, ecumenical] Second verse...  3. [Tags: anglican] Verse added in the Anglican setting...
+First verse (no tag — from origin tradition)...  2. [Tags: ecumenical] Second verse added by another group...  3. [Tags: saints] Third verse with theologically distinctive content...  4. [Tags: anglican, saints] Anglican-added stanza invoking saints...
 ```
 
-The file-level `Tags:` line reflects the **broadest** tradition covered by
-any stanza in the file.  Stanza tags narrow that down to individual verses.
+The file-level `Tags:` line reflects the **broadest** tradition covered by any
+stanza in the file.
 
-**Example** — a hymn where the third stanza was added for Anglican naval use
-and is absent from some Lutheran settings:
-
-```
-Tags: lutheran, ecumenical, anglican
-
-#Lyrics
-Eternal Father, strong to save... [Refrain]  2. O Christ, whose voice the waters heard... [Refrain]  3. [Tags: anglican] O Holy Spirit, who didst brood upon the chaos dark and rude... [Refrain]  4. O Trinity of love and power... [Refrain]
-
-Refrain: O hear us when we cry to Thee For those in peril on the sea.
-```
-
-The `abc_to_musiqwik.py` script validates stanza tags against the same
-taxonomy as file-level tags and strips the markers before word-count
-completeness checks.
+The `abc_to_musiqwik.py` script validates stanza tags against the same taxonomy
+as file-level tags and strips the markers before word-count completeness checks.
+`hymn_to_presentation.py` treats stanza tradition tags as informational and
+filters only on theological tags.
 
 ---
 
