@@ -1,0 +1,6213 @@
+[
+  {
+    "title": "Come, Holy Ghost, Creator Blest",
+    "aliases": [
+      "Veni Creator Spiritus (Latin)",
+      "Come, O Creator Spirit Blest",
+      "Come, Holy Ghost, Our Souls Inspire",
+      "Creator Spirit, by Whose Aid",
+      "Come, Holy Spirit, Creator Blest"
+    ],
+    "tune": "Komm, Gott Schöpfer | Veni Creator Spiritus (Gregorian plainsong, c. 9th c., adapted Luther 1524)",
+    "tags": [
+      "ancient",
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.7_Pentecost/Come_Holy_Ghost_Creator_Blest",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "Come_Holy_Ghost_Creator_Blest"
+  },
+  {
+    "title": "Come, Holy Ghost, God and Lord",
+    "aliases": [
+      "Komm, Heiliger Geist, Herre Gott (German)",
+      "Come, Holy Spirit, God and Lord",
+      "Come, Holy Ghost, Lord God"
+    ],
+    "tune": "Komm Heiliger Geist Herre Gott (German medieval melody, adapted Luther/Walter, 1524)",
+    "tags": [
+      "lutheran",
+      "reformation"
+    ],
+    "file": "hymns/7.7_Pentecost/Come_Holy_Ghost_God_and_Lord",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "Come_Holy_Ghost_God_and_Lord"
+  },
+  {
+    "title": "Creator Spirit, by Whose Aid",
+    "aliases": [
+      "Veni Creator Spiritus (Latin, Rabanus Maurus, 9th c.)",
+      "Come, Holy Ghost, Our Souls Inspire (Cosin trans.)",
+      "Come, O Creator Spirit Blest (Neale trans.)"
+    ],
+    "tune": "Veni Creator Spiritus | Komm, Gott Schöpfer (Gregorian plainsong, c. 9th c.; adapt. Luther, 1524)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.7_Pentecost/Creator_Spirit_by_Whose_Aid",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "Creator_Spirit_by_Whose_Aid"
+  },
+  {
+    "title": "Gracious Spirit, Dwell with Me",
+    "aliases": [],
+    "tune": "Redhead 76 | Gethsemane (Richard Redhead, 1853); alt. Hendon (Henri A.C. Malan, 1827)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.7_Pentecost/Gracious_Spirit_Dwell_with_Me",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "Gracious_Spirit_Dwell_with_Me"
+  },
+  {
+    "title": "Hail Thee, Festival Day! (Pentecost)",
+    "aliases": [
+      "Salve festa dies — Pentecost stanzas (Venantius Fortunatus, 6th c.)"
+    ],
+    "tune": "Salve festa dies (Ralph Vaughan Williams, 1906)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.7_Pentecost/Hail_Thee_Festival_Day_Pentecost",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "Hail_Thee_Festival_Day_Pentecost"
+  },
+  {
+    "title": "Holy Spirit, Light Divine",
+    "aliases": [],
+    "tune": "Mercy (Louis Moreau Gottschalk, adapt. Edwin P. Parker, c. 1867)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.7_Pentecost/Holy_Spirit_Light_Divine",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "Holy_Spirit_Light_Divine"
+  },
+  {
+    "title": "O Holy Spirit, Enter In",
+    "aliases": [
+      "O Heilger Geist, kehr bei uns ein (German)",
+      "O Holy Ghost, Enter In"
+    ],
+    "tune": "Wie schön leuchtet | How Bright Appears the Morning Star (Philipp Nicolai, 1599)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.7_Pentecost/O_Holy_Spirit_Enter_In",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "O_Holy_Spirit_Enter_In"
+  },
+  {
+    "title": "Spirit of God, Descend upon My Heart",
+    "aliases": [],
+    "tune": "Morecambe (Frederick Cook Atkinson, 1870)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.7_Pentecost/Spirit_of_God_Descend_upon_My_Heart",
+    "location": "7.7_Pentecost",
+    "section_number": "7.7",
+    "filename": "Spirit_of_God_Descend_upon_My_Heart"
+  },
+  {
+    "title": "By Grace I'm Saved",
+    "aliases": [
+      "Aus Gnaden soll ich selig werden (German, Christian Ludwig Scheidt, 1742)",
+      "By Grace I'm Saved, Grace Free and Boundless"
+    ],
+    "tune": "O daß ich tausend Zungen hätte (Johann Mentzer, 1704; harm. J.S. Bach, BWV 320)",
+    "tags": [
+      "lutheran",
+      "sola-gratia",
+      "sola-fide"
+    ],
+    "file": "hymns/7.12_Justification/By_Grace_I_m_Saved",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "By_Grace_I_m_Saved"
+  },
+  {
+    "title": "Dear Christians, One and All Rejoice",
+    "aliases": [
+      "Nun freut euch, lieben Christen g'mein (German, Martin Luther, 1523)",
+      "Now Rejoice, Dear Christians",
+      "To God the Holy Spirit Let Us Pray (same tune, different text)"
+    ],
+    "tune": "Nun freut euch (Klug's Geistliche Lieder, Wittenberg, 1535)",
+    "tags": [
+      "lutheran",
+      "reformation",
+      "sola-gratia",
+      "sola-fide",
+      "solus-christus"
+    ],
+    "file": "hymns/7.12_Justification/Dear_Christians_One_and_All_Rejoice",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "Dear_Christians_One_and_All_Rejoice"
+  },
+  {
+    "title": "Jesus Sinners Doth Receive",
+    "aliases": [
+      "Jesu nimmt die Sünder an (German, Erdmann Neumeister, 1718)"
+    ],
+    "tune": "Jesu nimmt die Sünder an (Thuringian folk song; pub. Johann Sebastian Bach's Schemelli Gesangbuch, 1736)",
+    "tags": [
+      "lutheran",
+      "sola-gratia"
+    ],
+    "file": "hymns/7.12_Justification/Jesus_Sinners_Doth_Receive",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "Jesus_Sinners_Doth_Receive"
+  },
+  {
+    "title": "Jesus, Thy Blood and Righteousness",
+    "aliases": [
+      "Christi Blut und Gerechtigkeit (German, Nikolaus von Zinzendorf, 1739)"
+    ],
+    "tune": "Breslau (14th-c. German melody, pub. Hymnodus Sacer, Leipzig, 1625); alt. Duke Street (John Hatton, c. 1793)",
+    "tags": [
+      "lutheran",
+      "ecumenical",
+      "sola-fide"
+    ],
+    "file": "hymns/7.12_Justification/Jesus_Thy_Blood_and_Righteousness",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "Jesus_Thy_Blood_and_Righteousness"
+  },
+  {
+    "title": "Just as I Am, without One Plea",
+    "aliases": [],
+    "tune": "Woodworth (William Batchelder Bradbury, 1849)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical",
+      "sola-fide"
+    ],
+    "file": "hymns/7.12_Justification/Just_as_I_Am_without_One_Plea",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "Just_as_I_Am_without_One_Plea"
+  },
+  {
+    "title": "Lord, to You I Make Confession",
+    "aliases": [
+      "Herr, ich habe missgehandelt (German, Johann Franck, 1653)",
+      "Lord, Thee I Have Sinned Against"
+    ],
+    "tune": "Herr, ich habe missgehandelt (Johann Crüger, 1640)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.12_Justification/Lord_to_You_I_Make_Confession",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "Lord_to_You_I_Make_Confession"
+  },
+  {
+    "title": "My Hope Is Built on Nothing Less",
+    "aliases": [
+      "The Solid Rock",
+      "On Christ the Solid Rock I Stand (refrain line)"
+    ],
+    "tune": "Solid Rock (William Batchelder Bradbury, 1863); alt. Melita (John Bacchus Dykes, 1861)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical",
+      "sola-fide"
+    ],
+    "file": "hymns/7.12_Justification/My_Hope_Is_Built_on_Nothing_Less",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "My_Hope_Is_Built_on_Nothing_Less"
+  },
+  {
+    "title": "Rock of Ages, Cleft for Me",
+    "aliases": [],
+    "tune": "Toplady (Thomas Hastings, 1830)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical",
+      "sola-fide"
+    ],
+    "file": "hymns/7.12_Justification/Rock_of_Ages_Cleft_for_Me",
+    "location": "7.12_Justification",
+    "section_number": "7.12",
+    "filename": "Rock_of_Ages_Cleft_for_Me"
+  },
+  {
+    "title": "Abide With Me",
+    "aliases": [
+      "Abide with Me! Fast Falls the Eventide"
+    ],
+    "tune": "Eventide (William Henry Monk, 1861)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Abide_With_Me",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Abide_With_Me"
+  },
+  {
+    "title": "All the Way My Savior Leads Me",
+    "aliases": [],
+    "tune": "All the Way (Robert Lowry, 1875)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/All_the_Way_My_Savior_Leads_Me",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "All_the_Way_My_Savior_Leads_Me"
+  },
+  {
+    "title": "Be Still My Soul",
+    "aliases": [
+      "Stille, mein Wille, dein Jesus hilft siegen (German, Katharina von Schlegel, 1752)"
+    ],
+    "tune": "Finlandia (Jean Sibelius, 1899; arr. 1900)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Be_Still_My_Soul",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Be_Still_My_Soul"
+  },
+  {
+    "title": "Beautiful Savior",
+    "aliases": [
+      "Schönster Herr Jesu (German, Münster Gesangbuch, 1677)",
+      "Fairest Lord Jesus",
+      "Crusaders' Hymn"
+    ],
+    "tune": "Schönster Herr Jesu | Crusaders' Hymn | St. Elizabeth (Silesian folk melody; coll. August Heinrich Hoffmann von Fallersleben, 1842)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Beautiful_Savior",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Beautiful_Savior"
+  },
+  {
+    "title": "Children of the Heavenly Father",
+    "aliases": [
+      "Tryggare kan ingen vara (Swedish, Carolina Sandell Berg, 1858)",
+      "Children of the Heav'nly Father"
+    ],
+    "tune": "Tryggare kan ingen vara (Swedish folk melody; pub. Lindfors' Samling, 1761)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Children_of_the_Heavenly_Father",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Children_of_the_Heavenly_Father"
+  },
+  {
+    "title": "How Firm A Foundation",
+    "aliases": [
+      "How Firm a Foundation, Ye Saints of the Lord",
+      "K in John Rippon's A Selection of Hymns (anonymous author, c. 1787)"
+    ],
+    "tune": "Foundation | How Firm a Foundation (American folk melody; Southern Harmony, 1835); alt. Adeste Fideles",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/How_Firm_A_Foundation",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "How_Firm_A_Foundation"
+  },
+  {
+    "title": "Jesus, Thy Boundless Love to Me",
+    "aliases": [
+      "O Jesu Christ, mein schönstes Licht (German, Paul Gerhardt, 1653)"
+    ],
+    "tune": "St. Catherine | Faith of Our Fathers (Henri Frederick Hemy, 1864; ext. James George Walton, 1874)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Jesus_Thy_Boundless_Love_to_Me",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Jesus_Thy_Boundless_Love_to_Me"
+  },
+  {
+    "title": "Lord of All Hopefulness",
+    "aliases": [],
+    "tune": "Slane (Irish folk melody, trad.)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Lord_of_All_Hopefulness",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Lord_of_All_Hopefulness"
+  },
+  {
+    "title": "My Faith Looks Up to Thee",
+    "aliases": [],
+    "tune": "Olivet (Lowell Mason, 1832)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/My_Faith_Looks_Up_to_Thee",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "My_Faith_Looks_Up_to_Thee"
+  },
+  {
+    "title": "O God, Our Help in Ages Past",
+    "aliases": [
+      "Our God, Our Help in Ages Past (Wesley's 1738 alteration of Watts's original opening)"
+    ],
+    "tune": "St. Anne (William Croft, 1708)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/O_God_Our_Help_in_Ages_Past",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "O_God_Our_Help_in_Ages_Past"
+  },
+  {
+    "title": "O Jesus, King Most Wonderful",
+    "aliases": [
+      "Jesu Rex admirabilis (Latin, Bernard of Clairvaux, 12th c.)",
+      "O King Most High of All the Earth (alt. trans.)"
+    ],
+    "tune": "Wareham (William Knapp, 1738)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/O_Jesus_King_Most_Wonderful",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "O_Jesus_King_Most_Wonderful"
+  },
+  {
+    "title": "Take My Life and Let It Be",
+    "aliases": [],
+    "tune": "Nottingham | Mozart (adapt. from W.A. Mozart); alt. Hendon (Henri A.C. Malan, 1827)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Take_My_Life_and_Let_It_Be",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Take_My_Life_and_Let_It_Be"
+  },
+  {
+    "title": "Take the World, but Give Me Jesus",
+    "aliases": [],
+    "tune": "Fill Me Now (Silas Jones Vail, 1874); alt. All for Jesus (John Stainer, 1887)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.15_Trust/Take_the_World_but_Give_Me_Jesus",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "Take_the_World_but_Give_Me_Jesus"
+  },
+  {
+    "title": "What A Friend We Have In Jesus",
+    "aliases": [],
+    "tune": "Converse (Charles Crozat Converse, 1868)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical",
+      "intercession"
+    ],
+    "file": "hymns/7.15_Trust/What_A_Friend_We_Have_In_Jesus",
+    "location": "7.15_Trust",
+    "section_number": "7.15",
+    "filename": "What_A_Friend_We_Have_In_Jesus"
+  },
+  {
+    "title": "For All The Saints",
+    "aliases": [],
+    "tune": "Sine Nomine (Ralph Vaughan Williams, 1906); alt. Sarum (Joseph Barnby, 1868)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/For_All_The_Saints",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "For_All_The_Saints"
+  },
+  {
+    "title": "Jerusalem, My Happy Home",
+    "aliases": [],
+    "tune": "Land of Rest (American folk melody, pub. Southern Harmony, 1835); alt. St. Anne (William Croft, 1708)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/Jerusalem_My_Happy_Home",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "Jerusalem_My_Happy_Home"
+  },
+  {
+    "title": "Jerusalem the Golden",
+    "aliases": [
+      "De Contemptu Mundi (Latin, Bernard of Cluny, 12th c. — parent poem)",
+      "The World Is Very Evil (another section of same poem)"
+    ],
+    "tune": "Ewing (Alexander Ewing, 1853)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/Jerusalem_the_Golden",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "Jerusalem_the_Golden"
+  },
+  {
+    "title": "Jesus, the Very Thought of Thee",
+    "aliases": [
+      "Jesu dulcis memoria (Latin, attr. Bernard of Clairvaux, 12th c.)",
+      "Jesus, the Very Thought of Thee",
+      "O Jesu, Joy of Loving Hearts (alt. trans.)"
+    ],
+    "tune": "St. Agnes (John Bacchus Dykes, 1866); alt. St. Botolph (Gordon Slater, 1930)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/Jesus_the_Very_Thought_of_Thee",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "Jesus_the_Very_Thought_of_Thee"
+  },
+  {
+    "title": "Oh, What Their Joy and Their Glory Must Be",
+    "aliases": [
+      "O quanta qualia (Latin, Peter Abelard, 12th c.)"
+    ],
+    "tune": "O quanta qualia (Paris Antiphoner, 1681)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/Oh_What_Their_Joy_and_Their_Glory_Must_Be",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "Oh_What_Their_Joy_and_Their_Glory_Must_Be"
+  },
+  {
+    "title": "The Day Is Surely Drawing Near",
+    "aliases": [
+      "Es ist gewisslich an der Zeit (German, Bartholomäus Ringwald, 1586)"
+    ],
+    "tune": "Nun freut euch, lieben Christen g'mein (Klug, Wittenberg, 1535); alt. Es ist gewisslich (derived variant)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/The_Day_Is_Surely_Drawing_Near",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "The_Day_Is_Surely_Drawing_Near"
+  },
+  {
+    "title": "Wake, Awake, for Night Is Flying",
+    "aliases": [
+      "Wachet auf, ruft uns die Stimme (German, Philipp Nicolai, 1599)",
+      "Sleepers, Wake! A Voice Astounds Us (alt. English trans.)"
+    ],
+    "tune": "Wachet auf (Philipp Nicolai, 1599; harm. J.S. Bach, BWV 645, 1748)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/Wake_Awake_for_Night_Is_Flying",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "Wake_Awake_for_Night_Is_Flying"
+  },
+  {
+    "title": "Ye Watchers and Ye Holy Ones",
+    "aliases": [],
+    "tune": "Lasst uns erfreuen (Geistliche Kirchengesäng, Cologne, 1623; harm. Ralph Vaughan Williams, 1906)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.20_Church_Triumphant/Ye_Watchers_and_Ye_Holy_Ones",
+    "location": "7.20_Church_Triumphant",
+    "section_number": "7.20",
+    "filename": "Ye_Watchers_and_Ye_Holy_Ones"
+  },
+  {
+    "title": "Before the Ending of the Day (Te lucis ante terminum)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/5.0_Compline/Before_the_Ending_of_the_Day",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Before_the_Ending_of_the_Day"
+  },
+  {
+    "title": "Closing Antiphon — In Peace I Will Lie Down and Sleep (Compline)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/5.0_Compline/Closing_Antiphon",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Closing_Antiphon"
+  },
+  {
+    "title": "Compline Opening Versicles",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/5.0_Compline/Compline_Opening_Versicles",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Compline_Opening_Versicles"
+  },
+  {
+    "title": "Examination of Conscience — Compline Confessional Rite",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office",
+      "sacramental",
+      "absolution"
+    ],
+    "file": "hymns/5.0_Compline/Examination_of_Conscience",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Examination_of_Conscience"
+  },
+  {
+    "title": "Nunc Dimittis (Lord, Now Lettest Thou Thy Servant Depart in Peace)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "canticle"
+    ],
+    "file": "hymns/5.0_Compline/Nunc_Dimittis",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Nunc_Dimittis"
+  },
+  {
+    "title": "Psalm 134 (Compline)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "psalm"
+    ],
+    "file": "hymns/5.0_Compline/Psalm_134",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Psalm_134"
+  },
+  {
+    "title": "Psalm 31 (Compline)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "psalm"
+    ],
+    "file": "hymns/5.0_Compline/Psalm_31",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Psalm_31"
+  },
+  {
+    "title": "Psalm 4 (Compline)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "psalm"
+    ],
+    "file": "hymns/5.0_Compline/Psalm_4",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Psalm_4"
+  },
+  {
+    "title": "Psalm 91 (Compline)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "psalm"
+    ],
+    "file": "hymns/5.0_Compline/Psalm_91",
+    "location": "5.0_Compline",
+    "section_number": "5.0",
+    "filename": "Psalm_91"
+  },
+  {
+    "title": "All Praise To Thee, My God, This Night",
+    "aliases": [
+      "Evening Hymn (Ken, 1709)",
+      "Glory to Thee, My God, This Night (alt. opening line)"
+    ],
+    "tune": "Tallis' Canon (Thomas Tallis, c. 1561; first pub. Archbishop Parker's Psalter, 1567)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/All_Praise_To_Thee_My_God_This_Night",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "All_Praise_To_Thee_My_God_This_Night"
+  },
+  {
+    "title": "Before the Ending of the Day",
+    "aliases": [
+      "Te lucis ante terminum (Latin, 8th c.)",
+      "Before the Light of Evening Fades"
+    ],
+    "tune": "Te lucis ante terminum (Gregorian plainsong, 8th c.)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/Before_the_Ending_of_the_Day",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "Before_the_Ending_of_the_Day"
+  },
+  {
+    "title": "Father, We Praise Thee",
+    "aliases": [
+      "Nocte surgentes (Latin, Gregory the Great, 6th c.)"
+    ],
+    "tune": "Christe Sanctorum (French church melody, Paris Antiphoner, 1681)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/Father_We_Praise_Thee",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "Father_We_Praise_Thee"
+  },
+  {
+    "title": "God, Who Made the Earth and Heaven",
+    "aliases": [],
+    "tune": "Ar Hyd y Nos | All Through the Night (Welsh traditional)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/God_Who_Made_the_Earth_and_Heaven",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "God_Who_Made_the_Earth_and_Heaven"
+  },
+  {
+    "title": "Now Rest Beneath Night's Shadow",
+    "aliases": [
+      "Nun ruhen alle Wälder (German, Paul Gerhardt, 1647)"
+    ],
+    "tune": "Innsbruck | O Welt, ich muss dich lassen (Heinrich Isaac, c. 1490; adapt. Johann Walter, 1552)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/Now_Rest_Beneath_Night_s_Shadow",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "Now_Rest_Beneath_Night_s_Shadow"
+  },
+  {
+    "title": "Now the Light Has Gone Away",
+    "aliases": [],
+    "tune": "Ar Hyd y Nos | All Through the Night (Welsh traditional)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/Now_the_Light_Has_Gone_Away",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "Now_the_Light_Has_Gone_Away"
+  },
+  {
+    "title": "Sun of My Soul, Thou Savior Dear",
+    "aliases": [],
+    "tune": "Hursley (Peter Ritter, 1792; adapt. William Henry Monk, 1861)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/Sun_of_My_Soul_Thou_Savior_Dear",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "Sun_of_My_Soul_Thou_Savior_Dear"
+  },
+  {
+    "title": "Thee I Ardently Desire",
+    "aliases": [
+      "Ich will dich lieben, meine Stärke (German, Johann Scheffler, 1657)"
+    ],
+    "tune": "Ich will dich lieben (Georg Ebeling, 1666)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.16_Morning_and_Evening/Thee_I_Ardently_Desire",
+    "location": "7.16_Morning_and_Evening",
+    "section_number": "7.16",
+    "filename": "Thee_I_Ardently_Desire"
+  },
+  {
+    "title": "A Lamb Goes Uncomplaining Forth",
+    "aliases": [
+      "Ein Lämmlein geht und trägt die Schuld (German, Paul Gerhardt, 1647)",
+      "A Lamb Unspotted, Pure and White"
+    ],
+    "tune": "An Wasserflüssen Babylon (Wolfgang Dachstein, 1525; harm. J.S. Bach, BWV 267)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.4_Lent/A_Lamb_Goes_Uncomplaining_Forth",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "A_Lamb_Goes_Uncomplaining_Forth"
+  },
+  {
+    "title": "From Depths of Woe I Cry to Thee",
+    "aliases": [
+      "Aus tiefer Not schrei ich zu dir (German, Martin Luther, 1523)",
+      "Out of the Deep Have I Called (Winkworth trans.)",
+      "De Profundis (Psalm 130 — psalm of origin)"
+    ],
+    "tune": "Aus tiefer Not (Martin Luther, 1524; harm. J.S. Bach)",
+    "tags": [
+      "lutheran",
+      "reformation",
+      "sola-gratia"
+    ],
+    "file": "hymns/7.4_Lent/From_Depths_of_Woe_I_Cry_to_Thee",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "From_Depths_of_Woe_I_Cry_to_Thee"
+  },
+  {
+    "title": "Go to Dark Gethsemane",
+    "aliases": [],
+    "tune": "Gethsemane | Redhead 76 (Richard Redhead, 1853); alt. Petra (Redhead 76 alt. name)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/Go_to_Dark_Gethsemane",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "Go_to_Dark_Gethsemane"
+  },
+  {
+    "title": "Jesus, I Will Ponder Now",
+    "aliases": [
+      "Jesu, deine tiefen Wunden (German, Jeremias Homburg, 1659)"
+    ],
+    "tune": "Jesu Kreuz, Leiden und Pein (J.H. Schein, 1627); alt. Auf meinen lieben Gott (Jakob Regnart, 1574)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.4_Lent/Jesus_I_Will_Ponder_Now",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "Jesus_I_Will_Ponder_Now"
+  },
+  {
+    "title": "Lord Jesus, Think on Me",
+    "aliases": [
+      "Μνήσθητί μου, Κύριε (Greek, Synesius of Cyrene, 5th c.)"
+    ],
+    "tune": "Southwell (William Damon, Psalter, 1579); alt. Saffron Walden (A.H. Brown, 1890)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/Lord_Jesus_Think_on_Me",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "Lord_Jesus_Think_on_Me"
+  },
+  {
+    "title": "My Song Is Love Unknown",
+    "aliases": [],
+    "tune": "Love Unknown (John Ireland, 1918); alt. Rhosymedre (John David Edwards, 1840)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/My_Song_Is_Love_Unknown",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "My_Song_Is_Love_Unknown"
+  },
+  {
+    "title": "O Dearest Jesus",
+    "aliases": [
+      "Herzliebster Jesu (German, Johann Heermann, 1630)",
+      "O Dearest Jesus, What Law Hast Thou Broken"
+    ],
+    "tune": "Herzliebster Jesu (Johann Crüger, 1640)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.4_Lent/O_Dearest_Jesus",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "O_Dearest_Jesus"
+  },
+  {
+    "title": "O Lord, Throughout These Forty Days",
+    "aliases": [],
+    "tune": "St. Flavian (Day's Psalter, 1562); alt. Consolation (Felix Mendelssohn, 1830)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/O_Lord_Throughout_These_Forty_Days",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "O_Lord_Throughout_These_Forty_Days"
+  },
+  {
+    "title": "Out of the Depths I Cry to You",
+    "aliases": [
+      "Aus tiefer Not schrei ich zu dir (German, Martin Luther, 1523)",
+      "From Depths of Woe I Cry to Thee (alt. English trans.)"
+    ],
+    "tune": "Aus tiefer Not (Martin Luther, 1524; harm. J.S. Bach)",
+    "tags": [
+      "lutheran",
+      "reformation",
+      "sola-gratia"
+    ],
+    "file": "hymns/7.4_Lent/Out_of_the_Depths_I_Cry_to_You",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "Out_of_the_Depths_I_Cry_to_You"
+  },
+  {
+    "title": "Savior, When in Dust to Thee",
+    "aliases": [],
+    "tune": "Aberystwyth (Joseph Parry, 1879); alt. Stuttgart (C.F. Witt, 1715)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/Savior_When_in_Dust_to_Thee",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "Savior_When_in_Dust_to_Thee"
+  },
+  {
+    "title": "Stricken, Smitten, and Afflicted",
+    "aliases": [],
+    "tune": "O Mein Jesu, Ich Muss Sterben (German chorale, Geistreiches Gesangbuch, Darmstadt, 1698)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/Stricken_Smitten_and_Afflicted",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "Stricken_Smitten_and_Afflicted"
+  },
+  {
+    "title": "The Glory of These Forty Days",
+    "aliases": [
+      "Clarum decus ieiunij (Latin, Gregory the Great, 6th c.)",
+      "Forty Days and Forty Nights (different text, same period)"
+    ],
+    "tune": "Erhalt uns, Herr (Klug's Geistliche Lieder, Wittenberg, 1543)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/The_Glory_of_These_Forty_Days",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "The_Glory_of_These_Forty_Days"
+  },
+  {
+    "title": "Were You There",
+    "aliases": [
+      "Were You There When They Crucified My Lord"
+    ],
+    "tune": "Were You There (African American spiritual, trad.)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/Were_You_There",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "Were_You_There"
+  },
+  {
+    "title": "What Wondrous Love Is This",
+    "aliases": [],
+    "tune": "Wondrous Love (American folk hymn; Southern Harmony, 1835; Sacred Harp, 1844)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.4_Lent/What_Wondrous_Love_Is_This",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "What_Wondrous_Love_Is_This"
+  },
+  {
+    "title": "When I Survey the Wondrous Cross",
+    "aliases": [],
+    "tune": "Rockingham (adapt. Edward Miller from Robert Miller, 1790); alt. Hamburg (Lowell Mason, 1824)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical",
+      "solus-christus"
+    ],
+    "file": "hymns/7.4_Lent/When_I_Survey_the_Wondrous_Cross",
+    "location": "7.4_Lent",
+    "section_number": "7.4",
+    "filename": "When_I_Survey_the_Wondrous_Cross"
+  },
+  {
+    "title": "As With Gladness Men of Old",
+    "aliases": [],
+    "tune": "Dix (Conrad Kocher, 1838; adapt. William Henry Monk, 1861)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/As_With_Gladness_Men_of_Old",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "As_With_Gladness_Men_of_Old"
+  },
+  {
+    "title": "Bright and Glorious Is the Sky",
+    "aliases": [
+      "Dejlig er den himmel blå (Danish, Nikolai Grundtvig, 1810)"
+    ],
+    "tune": "Dejlig er den himmel blå (Danish folk melody; arr. C.E.F. Weyse, 1840)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/Bright_and_Glorious_Is_the_Sky",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "Bright_and_Glorious_Is_the_Sky"
+  },
+  {
+    "title": "Christ, Whose Glory Fills the Skies",
+    "aliases": [
+      "Christ, Whose Glory Fills the Skies (Wesley, 1740)"
+    ],
+    "tune": "Ratisbon (Johann Werner's Choralbuch, Leipzig, 1815); alt. Lux Prima (Charles Gounod, 1872)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/Christ_Whose_Glory_Fills_the_Skies",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "Christ_Whose_Glory_Fills_the_Skies"
+  },
+  {
+    "title": "O Christ, Our True and Only Light",
+    "aliases": [
+      "O Jesu Christ, mein's Lebens Licht (German, Johann Heermann, 1630)"
+    ],
+    "tune": "Christus, der ist mein Leben (Melchior Vulpius, 1609)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.3_Epiphany/O_Christ_Our_True_and_Only_Light",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "O_Christ_Our_True_and_Only_Light"
+  },
+  {
+    "title": "O Love, How Deep, How Broad, How High",
+    "aliases": [
+      "O amor quam ecstaticus (Latin, 15th c.)",
+      "O Love, How Deep"
+    ],
+    "tune": "Puer nobis (Trier MS, 15th c.; arr. Michael Praetorius, 1609); alt. Deus Tuorum Militum (Grenoble Antiphoner, 1753)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/O_Love_How_Deep_How_Broad_How_High",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "O_Love_How_Deep_How_Broad_How_High"
+  },
+  {
+    "title": "O Wondrous Type! O Vision Fair",
+    "aliases": [
+      "O nata lux de lumine (Latin, 15th c.)",
+      "O Vision Blest of Heavenly Light"
+    ],
+    "tune": "Wareham (William Knapp, 1738)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/O_Wondrous_Type_O_Vision_Fair",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "O_Wondrous_Type_O_Vision_Fair"
+  },
+  {
+    "title": "The Only Son from Heaven",
+    "aliases": [
+      "Herr Christ, der einig Gotts Sohn (German, Elisabeth Cruciger, 1524)"
+    ],
+    "tune": "Herr Christ, der einig Gotts Sohn (Erfurt Enchiridion, 1524)",
+    "tags": [
+      "lutheran",
+      "reformation"
+    ],
+    "file": "hymns/7.3_Epiphany/The_Only_Son_from_Heaven",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "The_Only_Son_from_Heaven"
+  },
+  {
+    "title": "The Star Proclaims the King Is Here",
+    "aliases": [
+      "Illuminans Altissimus (Latin, Celerius, 4th c.)",
+      "Bethlehem of Noblest Cities"
+    ],
+    "tune": "Puer nobis (Trier MS, 15th c.; arr. Michael Praetorius, 1609)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/The_Star_Proclaims_the_King_Is_Here",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "The_Star_Proclaims_the_King_Is_Here"
+  },
+  {
+    "title": "To Jordan Came the Christ, Our Lord",
+    "aliases": [
+      "Christ unser Herr zum Jordan kam (German, Martin Luther, 1541)"
+    ],
+    "tune": "Christ unser Herr zum Jordan kam (Johann Walther, 1524; adapt. Luther, 1541)",
+    "tags": [
+      "lutheran",
+      "reformation",
+      "sacramental",
+      "baptism"
+    ],
+    "file": "hymns/7.3_Epiphany/To_Jordan_Came_the_Christ_Our_Lord",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "To_Jordan_Came_the_Christ_Our_Lord"
+  },
+  {
+    "title": "We Three Kings",
+    "aliases": [
+      "We Three Kings of Orient Are",
+      "Three Kings of Orient"
+    ],
+    "tune": "Three Kings of Orient (John Henry Hopkins Jr., 1857)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/We_Three_Kings",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "We_Three_Kings"
+  },
+  {
+    "title": "What Star Is This, with Beams So Bright",
+    "aliases": [
+      "Quae stella sole pulchrior (Latin, Charles Coffin, 1736)"
+    ],
+    "tune": "Puer nobis (Trier MS, 15th c.; arr. Michael Praetorius, 1609)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/What_Star_Is_This_with_Beams_So_Bright",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "What_Star_Is_This_with_Beams_So_Bright"
+  },
+  {
+    "title": "When Christ's Appearing Was Made Known",
+    "aliases": [
+      "Illuminans Altissimus (Latin, Celerius, 4th c.)",
+      "Songs of Thankfulness and Praise"
+    ],
+    "tune": "Doncaster (Samuel Webbe Jr., c. 1808)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.3_Epiphany/When_Christs_Appearing_Was_Made_Known",
+    "location": "7.3_Epiphany",
+    "section_number": "7.3",
+    "filename": "When_Christs_Appearing_Was_Made_Known"
+  },
+  {
+    "title": "Alleluia, Sing To Jesus!",
+    "aliases": [],
+    "tune": "Hyfrydol (Rowland H. Prichard, 1830); alt. tune: Alleluia (Samuel Sebastian Wesley, 1868)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Alleluia_Sing_To_Jesus",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Alleluia_Sing_To_Jesus"
+  },
+  {
+    "title": "At the Lamb's High Feast We Sing",
+    "aliases": [
+      "Ad cenam Agni providi (Latin, pre-8th c.)",
+      "Ad regias Agni dapes (Latin, Roman Breviary 1632 revision)",
+      "The Lamb's High Banquet We Await"
+    ],
+    "tune": "Sonne der Gerechtigkeit (15th-c. Bohemian melody, Kirchengeseng 1566); alt. tune: Salzburg (Jakob Hintze, 1678, harm. J. S. Bach)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/7.6_Easter/At_the_Lambs_High_Feast_We_Sing",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "At_the_Lambs_High_Feast_We_Sing"
+  },
+  {
+    "title": "Christ Is Arisen",
+    "aliases": [
+      "Christ ist erstanden (German, 12th c.)",
+      "Christ the Lord Has Risen"
+    ],
+    "tune": "Christ ist erstanden (German medieval melody, 12th c.)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Christ_Is_Arisen",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Christ_Is_Arisen"
+  },
+  {
+    "title": "Christ Jesus Lay In Death's Strong Bands",
+    "aliases": [
+      "Christ lag in Todesbanden (German)",
+      "Christ Lay in Death's Strong Bonds",
+      "Christ Lay in Death's Dark Prison",
+      "Christ, the Lord, in Death-Bonds Lay"
+    ],
+    "tune": "Christ lag in Todesbanden (medieval German melody, pre-Luther; harmonized J. S. Bach)",
+    "tags": [
+      "lutheran",
+      "reformation"
+    ],
+    "file": "hymns/7.6_Easter/Christ_Jesus_Lay_In_Death_s_Strong_Bands",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Christ_Jesus_Lay_In_Death_s_Strong_Bands"
+  },
+  {
+    "title": "Christ The Lord Is Risen Today (Lyra)",
+    "aliases": [
+      "Christ the Lord Is Risen Today, Alleluia",
+      "Hymn for Easter Day"
+    ],
+    "tune": "Easter Hymn | Lyra Davidica (same tune as 'Jesus Christ Is Risen Today', 1708); alt. tune: Llanfair (Robert Williams, 1817)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Christ_The_Lord_Is_Risen_Today_Lyra",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Christ_The_Lord_Is_Risen_Today_Lyra"
+  },
+  {
+    "title": "Christians, to the Paschal Victim",
+    "aliases": [
+      "Victimae paschali laudes (Latin, Wipo of Burgundy, 11th c.)"
+    ],
+    "tune": "Victimae paschali laudes (plainsong, 11th c.)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Christians_to_the_Paschal_Victim",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Christians_to_the_Paschal_Victim"
+  },
+  {
+    "title": "Come, You Faithful, Raise the Strain",
+    "aliases": [
+      "Come, Ye Faithful, Raise the Strain",
+      "Ἀνοίξω τὸ στόμα μου (Greek, John of Damascus, 8th c.)"
+    ],
+    "tune": "St. Kevin (Arthur S. Sullivan, 1872); alt. Ave Virgo Virginum (Geistliche Lieder, Leipzig, 1535)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Come_You_Faithful_Raise_the_Strain",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Come_You_Faithful_Raise_the_Strain"
+  },
+  {
+    "title": "Hail Thee, Festival Day!",
+    "aliases": [
+      "Salve festa dies (Latin, Venantius Fortunatus, 6th c.)"
+    ],
+    "tune": "Salve festa dies (Ralph Vaughan Williams, 1906)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Hail_Thee_Festival_Day",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Hail_Thee_Festival_Day"
+  },
+  {
+    "title": "Hallelujah! Jesus Lives!",
+    "aliases": [
+      "Halleluja! Jesus lever (Swedish, Carolina Sandell Berg, 1858)"
+    ],
+    "tune": "Jesus lever (Swedish melody)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Hallelujah_Jesus_Lives",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Hallelujah_Jesus_Lives"
+  },
+  {
+    "title": "I Know That My Redeemer Lives",
+    "aliases": [
+      "I Know That My Redeemer Lives, What Joy the Blest Assurance Gives"
+    ],
+    "tune": "Duke Street (John Hatton, c. 1793); alt. tune: Shout On (The Sacred Harp, 1850)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/I_Know_That_My_Redeemer_Lives",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "I_Know_That_My_Redeemer_Lives"
+  },
+  {
+    "title": "Jesus Christ Is Risen Today",
+    "aliases": [
+      "Surrexit Christus hodie (Latin)",
+      "Jesus Christ Is Risen Today, Our Triumphant Holy Day"
+    ],
+    "tune": "Easter Hymn | Lyra Davidica (anonymous, first pub. Lyra Davidica, 1708)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Jesus_Christ_Is_Risen_Today",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Jesus_Christ_Is_Risen_Today"
+  },
+  {
+    "title": "Jesus Lives! The Victory's Won",
+    "aliases": [
+      "Jesus lebt, mit ihm auch ich (German, Christian Fürchtegott Gellert, 1757)"
+    ],
+    "tune": "Jesus, meine Zuversicht | Jesus, My Redeemer, Lives (Johann Crüger, pub. Berlin, 1653)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/Jesus_Lives_The_Victorys_Won",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Jesus_Lives_The_Victorys_Won"
+  },
+  {
+    "title": "Now All the Vault of Heaven Resounds",
+    "aliases": [
+      "Erstanden ist der heilige Christ (German)",
+      "O Day Full of Grace"
+    ],
+    "tune": "Erstanden ist der heilige Christ (German medieval melody, 14th c.)",
+    "tags": [
+      "lutheran",
+      "reformation"
+    ],
+    "file": "hymns/7.6_Easter/Now_All_the_Vault_of_Heaven_Resounds",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "Now_All_the_Vault_of_Heaven_Resounds"
+  },
+  {
+    "title": "O Sons and Daughters of the King",
+    "aliases": [
+      "O filii et filiae (Latin, Jean Tisserand, 15th c.)",
+      "O Sons and Daughters, Let Us Sing"
+    ],
+    "tune": "O filii et filiae (French melody, 15th c.)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/O_Sons_and_Daughters_of_the_King",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "O_Sons_and_Daughters_of_the_King"
+  },
+  {
+    "title": "The Day of Resurrection!",
+    "aliases": [
+      "Ἀναστάσεως ἡμέρα (Greek, John of Damascus, 8th c.)"
+    ],
+    "tune": "Ellacombe (Gesangbuch der Herz. Hofkapelle, Württemberg, 1784); alt. Lancashire (Henry Smart, 1836)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/The_Day_of_Resurrection",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "The_Day_of_Resurrection"
+  },
+  {
+    "title": "The Strife Is O'er, The Battle Done",
+    "aliases": [
+      "Finita iam sunt proelia (Latin)",
+      "The Strife Is O'er"
+    ],
+    "tune": "Victory | Palestrina (adapted by W. H. Monk from G. P. da Palestrina, 1591)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.6_Easter/The_Strife_Is_O_er_The_Battle_Done",
+    "location": "7.6_Easter",
+    "section_number": "7.6",
+    "filename": "The_Strife_Is_O_er_The_Battle_Done"
+  },
+  {
+    "title": "Benedicite, Omnia Opera (Song of the Three Young Men)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle"
+    ],
+    "file": "hymns/6.1_Canticles_from_Scripture/Benedicite_Omnia_Opera",
+    "location": "6.1_Canticles_from_Scripture",
+    "section_number": "6.1",
+    "filename": "Benedicite_Omnia_Opera"
+  },
+  {
+    "title": "Benedictus (The Song of Zechariah)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle"
+    ],
+    "file": "hymns/6.1_Canticles_from_Scripture/Benedictus",
+    "location": "6.1_Canticles_from_Scripture",
+    "section_number": "6.1",
+    "filename": "Benedictus"
+  },
+  {
+    "title": "Deus Misereatur (Psalm 67)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle",
+      "psalm"
+    ],
+    "file": "hymns/6.1_Canticles_from_Scripture/Deus_Misereatur",
+    "location": "6.1_Canticles_from_Scripture",
+    "section_number": "6.1",
+    "filename": "Deus_Misereatur"
+  },
+  {
+    "title": "Jubilate (Psalm 100)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle",
+      "psalm"
+    ],
+    "file": "hymns/6.1_Canticles_from_Scripture/Jubilate",
+    "location": "6.1_Canticles_from_Scripture",
+    "section_number": "6.1",
+    "filename": "Jubilate"
+  },
+  {
+    "title": "Magnificat (The Song of Mary)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle"
+    ],
+    "file": "hymns/6.1_Canticles_from_Scripture/Magnificat",
+    "location": "6.1_Canticles_from_Scripture",
+    "section_number": "6.1",
+    "filename": "Magnificat"
+  },
+  {
+    "title": "Nunc Dimittis (The Song of Simeon)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle"
+    ],
+    "file": "hymns/6.1_Canticles_from_Scripture/Nunc_Dimittis",
+    "location": "6.1_Canticles_from_Scripture",
+    "section_number": "6.1",
+    "filename": "Nunc_Dimittis"
+  },
+  {
+    "title": "Come, Holy Ghost, in Love",
+    "aliases": [
+      "Veni Sancte Spiritus (Latin, attr. Sylvester II, 10th c.)",
+      "Come, Holy Ghost, Our Hearts Inspire"
+    ],
+    "tune": "Iste Confessor (Poitiers Antiphoner, 1746)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.8_Holy_Trinity/Come_Holy_Ghost_in_Love",
+    "location": "7.8_Holy_Trinity",
+    "section_number": "7.8",
+    "filename": "Come_Holy_Ghost_in_Love"
+  },
+  {
+    "title": "Come, Thou Almighty King",
+    "aliases": [
+      "Venite Signore (Italian, anon., c. 1757)",
+      "Come, Thou Almighty King (Wesley title, anon. text)"
+    ],
+    "tune": "Moscow | Italian Hymn (Felice de Giardini, 1769)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.8_Holy_Trinity/Come_Thou_Almighty_King",
+    "location": "7.8_Holy_Trinity",
+    "section_number": "7.8",
+    "filename": "Come_Thou_Almighty_King"
+  },
+  {
+    "title": "Father Most Holy",
+    "aliases": [
+      "Pater superni luminis (Latin, 10th c.)",
+      "O Trinity of Blessed Light"
+    ],
+    "tune": "Christe Sanctorum (French church melody, Paris Antiphoner, 1681)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.8_Holy_Trinity/Father_Most_Holy",
+    "location": "7.8_Holy_Trinity",
+    "section_number": "7.8",
+    "filename": "Father_Most_Holy"
+  },
+  {
+    "title": "Holy, Holy, Holy",
+    "aliases": [
+      "Holy, Holy, Holy! Lord God Almighty!"
+    ],
+    "tune": "Nicaea (John Bacchus Dykes, 1861)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.8_Holy_Trinity/Holy_Holy_Holy",
+    "location": "7.8_Holy_Trinity",
+    "section_number": "7.8",
+    "filename": "Holy_Holy_Holy"
+  },
+  {
+    "title": "We All Believe in One True God",
+    "aliases": [
+      "Wir glauben all an einen Gott (German)",
+      "Das deudsche Patrem (Luther's original title for this German creed hymn)",
+      "We All Believe in One True God, Maker of the Earth and Heaven"
+    ],
+    "tune": "Wir glauben all an einen Gott (adapted from plainsong Credo, Breslau MS 1417, pub. Walter 1524)",
+    "tags": [
+      "lutheran",
+      "reformation",
+      "creed"
+    ],
+    "file": "hymns/7.8_Holy_Trinity/We_All_Believe_in_One_True_God",
+    "location": "7.8_Holy_Trinity",
+    "section_number": "7.8",
+    "filename": "We_All_Believe_in_One_True_God"
+  },
+  {
+    "title": "Draw Near and Take the Body of the Lord",
+    "aliases": [
+      "Sancti venite (Latin, 7th c.)",
+      "Draw Nigh and Take the Body of the Lord"
+    ],
+    "tune": "Unde et memores (William Daman, Psalter, 1591); alt. St. Flavian (Day's Psalter, 1562)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Draw_Near_and_Take_the_Body_of_the_Lord",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Draw_Near_and_Take_the_Body_of_the_Lord"
+  },
+  {
+    "title": "I Come, O Savior, to Thy Table",
+    "aliases": [
+      "Ich komm' zu deinem Abendmahle (German, Friedrich Franck, 1674)"
+    ],
+    "tune": "O Jesu mi dulcissime | Wo soll ich fliehen hin (various Lutheran chorales)",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/7.11_Lords_Supper/I_Come_O_Savior_to_Thy_Table",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "I_Come_O_Savior_to_Thy_Table"
+  },
+  {
+    "title": "Jesus Christ, Our Blessed Savior",
+    "aliases": [
+      "Jesus Christus, unser Heiland (German, Martin Luther / Jan Hus, c. 1524)",
+      "Jesus Christ, Our Blessed Savior, Turned Away God's Wrath Forever"
+    ],
+    "tune": "Jesus Christus unser Heiland (medieval plainsong, adapt. Luther, Geistliche Gesangbüchlein, 1524)",
+    "tags": [
+      "lutheran",
+      "reformation",
+      "sacramental",
+      "lords-supper",
+      "real-presence"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Jesus_Christ_Our_Blessed_Savior",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Jesus_Christ_Our_Blessed_Savior"
+  },
+  {
+    "title": "Let All Mortal Flesh Keep Silent",
+    "aliases": [
+      "Σιγησάτω πᾶσα σὰρξ βροτεία (Greek, Liturgy of St. James, 4th c.)",
+      "Let All Mortal Flesh Keep Silence"
+    ],
+    "tune": "Picardy (French carol, 17th c.; first pub. Chansons populaires des Provinces de France, 1860)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Let_All_Mortal_Flesh_Keep_Silent",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Let_All_Mortal_Flesh_Keep_Silent"
+  },
+  {
+    "title": "Lord Jesus Christ, We Humbly Pray",
+    "aliases": [
+      "Herr Jesu Christ, du hast bereit't (German, Henry Hayn, 1659)"
+    ],
+    "tune": "Herr Jesu Christ, dich zu uns wend (Cantionale Germanicum, Gotha, 1628)",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Lord_Jesus_Christ_We_Humbly_Pray",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Lord_Jesus_Christ_We_Humbly_Pray"
+  },
+  {
+    "title": "Now, Lord, You Have Kept Your Word",
+    "aliases": [
+      "Herr, nun lässest du deinen Diener (German, Caspar Huberinus, 1542)"
+    ],
+    "tune": "Lobt Gott, ihr Christen allzugleich (Nikolaus Herman, 1554)",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Now_Lord_You_Have_Kept_Your_Word",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Now_Lord_You_Have_Kept_Your_Word"
+  },
+  {
+    "title": "O Jesus, Blessed Lord, to Thee",
+    "aliases": [
+      "Tak og ære være dig, o Jesu (Danish, Thomas Hansen Kingo, 1689)"
+    ],
+    "tune": "Werde munter, mein Gemüte (Johann Schop, 1642; harm. J.S. Bach)",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/7.11_Lords_Supper/O_Jesus_Blessed_Lord_to_Thee",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "O_Jesus_Blessed_Lord_to_Thee"
+  },
+  {
+    "title": "O Lord We Praise Thee",
+    "aliases": [
+      "Gott sei gelobet und gebenedeiet (German, Martin Luther, 1524",
+      "based on Jan Hus)",
+      "O Lord, We Praise You"
+    ],
+    "tune": "Gott sei gelobet (medieval German plainsong; adapt. Luther/Walther, 1524)",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "lords-supper",
+      "real-presence"
+    ],
+    "file": "hymns/7.11_Lords_Supper/O_Lord_We_Praise_Thee",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "O_Lord_We_Praise_Thee"
+  },
+  {
+    "title": "Soul, Adorn Yourself with Gladness",
+    "aliases": [
+      "Schmücke dich, o liebe Seele (German, Johann Franck, 1649)",
+      "Deck Thyself, My Soul, with Gladness"
+    ],
+    "tune": "Schmücke dich (Johann Crüger, 1649)",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "lords-supper",
+      "real-presence"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Soul_Adorn_Yourself_with_Gladness",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Soul_Adorn_Yourself_with_Gladness"
+  },
+  {
+    "title": "Thee Will I Love, My Strength, My Tower",
+    "aliases": [
+      "Ich will dich lieben, meine Stärke (German, Johann Scheffler, 1657)"
+    ],
+    "tune": "Ich will dich lieben (Georg Ebeling, 1666); alt. Seelenbräutigam (Adam Drese, 1698)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Thee_Will_I_Love_My_Strength_My_Tower",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Thee_Will_I_Love_My_Strength_My_Tower"
+  },
+  {
+    "title": "Thy Body, Given for Me, O Savior",
+    "aliases": [
+      "Dein Leib, Herr Jesu Christus (German, Friedrich Franck, 1674)"
+    ],
+    "tune": "O Jesu mi dulcissime | Wo soll ich fliehen hin",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "lords-supper",
+      "real-presence"
+    ],
+    "file": "hymns/7.11_Lords_Supper/Thy_Body_Given_for_Me_O_Savior",
+    "location": "7.11_Lords_Supper",
+    "section_number": "7.11",
+    "filename": "Thy_Body_Given_for_Me_O_Savior"
+  },
+  {
+    "title": "Athanasian Creed (Quicumque vult)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "creed"
+    ],
+    "file": "hymns/6.2_Ancient_Hymnic_Canticles/Athanasian_Creed",
+    "location": "6.2_Ancient_Hymnic_Canticles",
+    "section_number": "6.2",
+    "filename": "Athanasian_Creed"
+  },
+  {
+    "title": "Gloria in Excelsis Deo (The Greater Doxology)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical"
+    ],
+    "file": "hymns/6.2_Ancient_Hymnic_Canticles/Gloria_in_Excelsis",
+    "location": "6.2_Ancient_Hymnic_Canticles",
+    "section_number": "6.2",
+    "filename": "Gloria_in_Excelsis"
+  },
+  {
+    "title": "Te Deum Laudamus (We Praise Thee, O God)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle"
+    ],
+    "file": "hymns/6.2_Ancient_Hymnic_Canticles/Te_Deum_Laudamus",
+    "location": "6.2_Ancient_Hymnic_Canticles",
+    "section_number": "6.2",
+    "filename": "Te_Deum_Laudamus"
+  },
+  {
+    "title": "Hear Us, Father, When We Pray",
+    "aliases": [],
+    "tune": "Dismissal (adapt. from various sources)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.18_Prayer/Hear_Us_Father_When_We_Pray",
+    "location": "7.18_Prayer",
+    "section_number": "7.18",
+    "filename": "Hear_Us_Father_When_We_Pray"
+  },
+  {
+    "title": "Lord, Teach Us How to Pray Aright",
+    "aliases": [],
+    "tune": "St. Hugh (Edward John Hopkins, 1869); alt. Repton (Hubert Parry, 1888)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.18_Prayer/Lord_Teach_Us_How_to_Pray_Aright",
+    "location": "7.18_Prayer",
+    "section_number": "7.18",
+    "filename": "Lord_Teach_Us_How_to_Pray_Aright"
+  },
+  {
+    "title": "Sweet Hour of Prayer",
+    "aliases": [],
+    "tune": "Sweet Hour (William Batchelder Bradbury, 1861)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.18_Prayer/Sweet_Hour_of_Prayer",
+    "location": "7.18_Prayer",
+    "section_number": "7.18",
+    "filename": "Sweet_Hour_of_Prayer"
+  },
+  {
+    "title": "For All the Blessings of the Year",
+    "aliases": [],
+    "tune": "Innocents (The Parish Choir, London, 1850)",
+    "tags": [
+      "reformed",
+      "ecumenical"
+    ],
+    "file": "hymns/7.19_Society/For_All_the_Blessings_of_the_Year",
+    "location": "7.19_Society",
+    "section_number": "7.19",
+    "filename": "For_All_the_Blessings_of_the_Year"
+  },
+  {
+    "title": "God Bless Our Native Land",
+    "aliases": [
+      "Stimmt an den Lobgesang (German, Siegfried Augustinus Mahlmann, 1815)"
+    ],
+    "tune": "America | God Save the King (Henry Carey, c. 1740; attr.)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.19_Society/God_Bless_Our_Native_Land",
+    "location": "7.19_Society",
+    "section_number": "7.19",
+    "filename": "God_Bless_Our_Native_Land"
+  },
+  {
+    "title": "Lord, Whose Love in Humble Service",
+    "aliases": [],
+    "tune": "Beach Spring (The Sacred Harp, 1844)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.19_Society/Lord_Whose_Love_in_Humble_Service",
+    "location": "7.19_Society",
+    "section_number": "7.19",
+    "filename": "Lord_Whose_Love_in_Humble_Service"
+  },
+  {
+    "title": "Lord of Our Life",
+    "aliases": [
+      "Christe, du Beistand deiner Kreuzgemeinde (German, Philip Puteanus, 17th c.)"
+    ],
+    "tune": "Iste Confessor (Sarum plainsong; pub. Poitiers Antiphoner, 1746)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.19_Society/Lord_of_Our_Life",
+    "location": "7.19_Society",
+    "section_number": "7.19",
+    "filename": "Lord_of_Our_Life"
+  },
+  {
+    "title": "Son of God, Eternal Savior",
+    "aliases": [],
+    "tune": "In Babilone (Dutch traditional melody, Oude en Nieuwe Hollantse Boerenlieties, c. 1710)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.19_Society/Son_of_God_Eternal_Savior",
+    "location": "7.19_Society",
+    "section_number": "7.19",
+    "filename": "Son_of_God_Eternal_Savior"
+  },
+  {
+    "title": "God Is Our Refuge and Our Strength",
+    "aliases": [
+      "Psalm 46 (Isaac Watts, 1719)"
+    ],
+    "tune": "Ein feste Burg (Martin Luther, 1529) — Luther based hymn on Ps. 46; Watts's paraphrase uses other tunes: Bethlehem (Gottfried W. Fink, 1842)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/God_Is_Our_Refuge_and_Our_Strength",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "God_Is_Our_Refuge_and_Our_Strength"
+  },
+  {
+    "title": "Have Mercy on Me, O My God",
+    "aliases": [
+      "Psalm 51 (Isaac Watts / Scottish Psalter)"
+    ],
+    "tune": "Third Mode Melody (Thomas Tallis, 1567)",
+    "tags": [
+      "lutheran",
+      "reformed",
+      "ecumenical"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Have_Mercy_on_Me_O_My_God",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Have_Mercy_on_Me_O_My_God"
+  },
+  {
+    "title": "I to the Hills Will Lift My Eyes",
+    "aliases": [
+      "Psalm 121 (Scottish Psalter, 1650)",
+      "Unto the Hills I Lift My Longing Eyes"
+    ],
+    "tune": "Sandon (Charles Henry Purday, 1857); alt. Dundee (Scottish Psalter, 1615)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/I_to_the_Hills_Will_Lift_My_Eyes",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "I_to_the_Hills_Will_Lift_My_Eyes"
+  },
+  {
+    "title": "Praise the Lord! Ye Heavens, Adore Him",
+    "aliases": [
+      "Psalm 150 (anon., 1796",
+      "pub. Foundling Hospital Collection, London)"
+    ],
+    "tune": "Laus Deo | Redhead 46 (Richard Redhead, 1853); alt. Austria (Joseph Haydn, 1797)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Praise_the_Lord_Ye_Heavens_Adore_Him",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Praise_the_Lord_Ye_Heavens_Adore_Him"
+  },
+  {
+    "title": "Psalm 1",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_1",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_1"
+  },
+  {
+    "title": "Psalm 10",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_10",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_10"
+  },
+  {
+    "title": "Psalm 100",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_100",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_100"
+  },
+  {
+    "title": "Psalm 101",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_101",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_101"
+  },
+  {
+    "title": "Psalm 102",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_102",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_102"
+  },
+  {
+    "title": "Psalm 103",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_103",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_103"
+  },
+  {
+    "title": "Psalm 104",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_104",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_104"
+  },
+  {
+    "title": "Psalm 105",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_105",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_105"
+  },
+  {
+    "title": "Psalm 106",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_106",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_106"
+  },
+  {
+    "title": "Psalm 107",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_107",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_107"
+  },
+  {
+    "title": "Psalm 108",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_108",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_108"
+  },
+  {
+    "title": "Psalm 109",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_109",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_109"
+  },
+  {
+    "title": "Psalm 11",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_11",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_11"
+  },
+  {
+    "title": "Psalm 110",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_110",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_110"
+  },
+  {
+    "title": "Psalm 111",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_111",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_111"
+  },
+  {
+    "title": "Psalm 112",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_112",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_112"
+  },
+  {
+    "title": "Psalm 113",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_113",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_113"
+  },
+  {
+    "title": "Psalm 114",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_114",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_114"
+  },
+  {
+    "title": "Psalm 115",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_115",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_115"
+  },
+  {
+    "title": "Psalm 116",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_116",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_116"
+  },
+  {
+    "title": "Psalm 117",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_117",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_117"
+  },
+  {
+    "title": "Psalm 118",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_118",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_118"
+  },
+  {
+    "title": "Psalm 119",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_119",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_119"
+  },
+  {
+    "title": "Psalm 12",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_12",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_12"
+  },
+  {
+    "title": "Psalm 120",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_120",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_120"
+  },
+  {
+    "title": "Psalm 121",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_121",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_121"
+  },
+  {
+    "title": "Psalm 122",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_122",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_122"
+  },
+  {
+    "title": "Psalm 123",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_123",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_123"
+  },
+  {
+    "title": "Psalm 124",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_124",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_124"
+  },
+  {
+    "title": "Psalm 125",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_125",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_125"
+  },
+  {
+    "title": "Psalm 126",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_126",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_126"
+  },
+  {
+    "title": "Psalm 127",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_127",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_127"
+  },
+  {
+    "title": "Psalm 128",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_128",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_128"
+  },
+  {
+    "title": "Psalm 129",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_129",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_129"
+  },
+  {
+    "title": "Psalm 13",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_13",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_13"
+  },
+  {
+    "title": "Psalm 130",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_130",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_130"
+  },
+  {
+    "title": "Psalm 131",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_131",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_131"
+  },
+  {
+    "title": "Psalm 132",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_132",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_132"
+  },
+  {
+    "title": "Psalm 133",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_133",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_133"
+  },
+  {
+    "title": "Psalm 134",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_134",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_134"
+  },
+  {
+    "title": "Psalm 135",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_135",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_135"
+  },
+  {
+    "title": "Psalm 136",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_136",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_136"
+  },
+  {
+    "title": "Psalm 137",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_137",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_137"
+  },
+  {
+    "title": "Psalm 138",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_138",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_138"
+  },
+  {
+    "title": "Psalm 139",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_139",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_139"
+  },
+  {
+    "title": "Psalm 14",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_14",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_14"
+  },
+  {
+    "title": "Psalm 140",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_140",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_140"
+  },
+  {
+    "title": "Psalm 141",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_141",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_141"
+  },
+  {
+    "title": "Psalm 142",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_142",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_142"
+  },
+  {
+    "title": "Psalm 143",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_143",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_143"
+  },
+  {
+    "title": "Psalm 144",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_144",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_144"
+  },
+  {
+    "title": "Psalm 145",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_145",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_145"
+  },
+  {
+    "title": "Psalm 146",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_146",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_146"
+  },
+  {
+    "title": "Psalm 147",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_147",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_147"
+  },
+  {
+    "title": "Psalm 148",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_148",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_148"
+  },
+  {
+    "title": "Psalm 149",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_149",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_149"
+  },
+  {
+    "title": "Psalm 15",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_15",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_15"
+  },
+  {
+    "title": "Psalm 150",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_150",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_150"
+  },
+  {
+    "title": "Psalm 16",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_16",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_16"
+  },
+  {
+    "title": "Psalm 17",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_17",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_17"
+  },
+  {
+    "title": "Psalm 18",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_18",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_18"
+  },
+  {
+    "title": "Psalm 19",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_19",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_19"
+  },
+  {
+    "title": "Psalm 2",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_2",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_2"
+  },
+  {
+    "title": "Psalm 20",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_20",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_20"
+  },
+  {
+    "title": "Psalm 21",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_21",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_21"
+  },
+  {
+    "title": "Psalm 22",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_22",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_22"
+  },
+  {
+    "title": "Psalm 23",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_23",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_23"
+  },
+  {
+    "title": "Psalm 24",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_24",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_24"
+  },
+  {
+    "title": "Psalm 25",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_25",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_25"
+  },
+  {
+    "title": "Psalm 26",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_26",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_26"
+  },
+  {
+    "title": "Psalm 27",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_27",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_27"
+  },
+  {
+    "title": "Psalm 28",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_28",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_28"
+  },
+  {
+    "title": "Psalm 29",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_29",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_29"
+  },
+  {
+    "title": "Psalm 3",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_3",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_3"
+  },
+  {
+    "title": "Psalm 30",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_30",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_30"
+  },
+  {
+    "title": "Psalm 31",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_31",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_31"
+  },
+  {
+    "title": "Psalm 32",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_32",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_32"
+  },
+  {
+    "title": "Psalm 33",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_33",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_33"
+  },
+  {
+    "title": "Psalm 34",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_34",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_34"
+  },
+  {
+    "title": "Psalm 35",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_35",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_35"
+  },
+  {
+    "title": "Psalm 36",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_36",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_36"
+  },
+  {
+    "title": "Psalm 37",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_37",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_37"
+  },
+  {
+    "title": "Psalm 38",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_38",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_38"
+  },
+  {
+    "title": "Psalm 39",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_39",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_39"
+  },
+  {
+    "title": "Psalm 4",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_4",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_4"
+  },
+  {
+    "title": "Psalm 40",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_40",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_40"
+  },
+  {
+    "title": "Psalm 41",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_41",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_41"
+  },
+  {
+    "title": "Psalm 42",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_42",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_42"
+  },
+  {
+    "title": "Psalm 43",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_43",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_43"
+  },
+  {
+    "title": "Psalm 44",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_44",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_44"
+  },
+  {
+    "title": "Psalm 45",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_45",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_45"
+  },
+  {
+    "title": "Psalm 46",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_46",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_46"
+  },
+  {
+    "title": "Psalm 47",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_47",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_47"
+  },
+  {
+    "title": "Psalm 48",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_48",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_48"
+  },
+  {
+    "title": "Psalm 49",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_49",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_49"
+  },
+  {
+    "title": "Psalm 5",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_5",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_5"
+  },
+  {
+    "title": "Psalm 50",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_50",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_50"
+  },
+  {
+    "title": "Psalm 51",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_51",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_51"
+  },
+  {
+    "title": "Psalm 52",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_52",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_52"
+  },
+  {
+    "title": "Psalm 53",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_53",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_53"
+  },
+  {
+    "title": "Psalm 54",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_54",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_54"
+  },
+  {
+    "title": "Psalm 55",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_55",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_55"
+  },
+  {
+    "title": "Psalm 56",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_56",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_56"
+  },
+  {
+    "title": "Psalm 57",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_57",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_57"
+  },
+  {
+    "title": "Psalm 58",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_58",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_58"
+  },
+  {
+    "title": "Psalm 59",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_59",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_59"
+  },
+  {
+    "title": "Psalm 6",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_6",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_6"
+  },
+  {
+    "title": "Psalm 60",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_60",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_60"
+  },
+  {
+    "title": "Psalm 61",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_61",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_61"
+  },
+  {
+    "title": "Psalm 62",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_62",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_62"
+  },
+  {
+    "title": "Psalm 63",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_63",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_63"
+  },
+  {
+    "title": "Psalm 64",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_64",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_64"
+  },
+  {
+    "title": "Psalm 65",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_65",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_65"
+  },
+  {
+    "title": "Psalm 66",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_66",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_66"
+  },
+  {
+    "title": "Psalm 67",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_67",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_67"
+  },
+  {
+    "title": "Psalm 68",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_68",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_68"
+  },
+  {
+    "title": "Psalm 69",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_69",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_69"
+  },
+  {
+    "title": "Psalm 7",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_7",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_7"
+  },
+  {
+    "title": "Psalm 70",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_70",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_70"
+  },
+  {
+    "title": "Psalm 71",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_71",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_71"
+  },
+  {
+    "title": "Psalm 72",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_72",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_72"
+  },
+  {
+    "title": "Psalm 73",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_73",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_73"
+  },
+  {
+    "title": "Psalm 74",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_74",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_74"
+  },
+  {
+    "title": "Psalm 75",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_75",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_75"
+  },
+  {
+    "title": "Psalm 76",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_76",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_76"
+  },
+  {
+    "title": "Psalm 77",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_77",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_77"
+  },
+  {
+    "title": "Psalm 78",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_78",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_78"
+  },
+  {
+    "title": "Psalm 79",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_79",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_79"
+  },
+  {
+    "title": "Psalm 8",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_8",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_8"
+  },
+  {
+    "title": "Psalm 80",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_80",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_80"
+  },
+  {
+    "title": "Psalm 81",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_81",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_81"
+  },
+  {
+    "title": "Psalm 82",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_82",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_82"
+  },
+  {
+    "title": "Psalm 83",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_83",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_83"
+  },
+  {
+    "title": "Psalm 84",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_84",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_84"
+  },
+  {
+    "title": "Psalm 85",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_85",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_85"
+  },
+  {
+    "title": "Psalm 86",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_86",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_86"
+  },
+  {
+    "title": "Psalm 87",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_87",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_87"
+  },
+  {
+    "title": "Psalm 88",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_88",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_88"
+  },
+  {
+    "title": "Psalm 89",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_89",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_89"
+  },
+  {
+    "title": "Psalm 9",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_9",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_9"
+  },
+  {
+    "title": "Psalm 90",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_90",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_90"
+  },
+  {
+    "title": "Psalm 91",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_91",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_91"
+  },
+  {
+    "title": "Psalm 92",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_92",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_92"
+  },
+  {
+    "title": "Psalm 93",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_93",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_93"
+  },
+  {
+    "title": "Psalm 94",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_94",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_94"
+  },
+  {
+    "title": "Psalm 95",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_95",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_95"
+  },
+  {
+    "title": "Psalm 96",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_96",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_96"
+  },
+  {
+    "title": "Psalm 97",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_97",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_97"
+  },
+  {
+    "title": "Psalm 98",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_98",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_98"
+  },
+  {
+    "title": "Psalm 99",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/Psalm_99",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "Psalm_99"
+  },
+  {
+    "title": "That Man Is Blest",
+    "aliases": [
+      "Psalm 1 (Scottish Psalter, 1650)",
+      "How Blest Is He Who Ne'er Consents"
+    ],
+    "tune": "York (Scottish Psalter, 1615); alt. Christus, der ist mein Leben (Melchior Vulpius, 1609)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/That_Man_Is_Blest",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "That_Man_Is_Blest"
+  },
+  {
+    "title": "The Lord's My Shepherd, I'll Not Want",
+    "aliases": [
+      "Psalm 23 (Scottish Psalter, 1650)",
+      "The Lord's My Shepherd (Crimond)",
+      "Brother James's Air (alt. setting)"
+    ],
+    "tune": "Crimond (Jessie Seymour Irvine, 1872); alt. Dominus Regit Me (John Bacchus Dykes, 1868); alt. Brother James's Air (James Leith Macbeth Bain, c. 1915)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/8.0_Psalm_Settings/The_Lords_My_Shepherd",
+    "location": "8.0_Psalm_Settings",
+    "section_number": "8.0",
+    "filename": "The_Lords_My_Shepherd"
+  },
+  {
+    "title": "Aaronic Benediction (The Lord Bless You and Keep You)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Aaronic_Benediction",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Aaronic_Benediction"
+  },
+  {
+    "title": "Agnus Dei (O Christ, Thou Lamb of God)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Agnus_Dei",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Agnus_Dei"
+  },
+  {
+    "title": "Alleluia Verse (Ancient)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Alleluia_Verse",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Alleluia_Verse"
+  },
+  {
+    "title": "Apostles' Creed",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "reformed",
+      "baptist",
+      "ecumenical",
+      "liturgical",
+      "creed"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Apostles_Creed",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Apostles_Creed"
+  },
+  {
+    "title": "Benedicamus (Bless We the Lord)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Benedicamus",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Benedicamus"
+  },
+  {
+    "title": "Collect Tones (Ancient Prayer Tones)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Collect_Tones",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Collect_Tones"
+  },
+  {
+    "title": "Confession and Absolution Versicles",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "sacramental",
+      "absolution"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Confession_and_Absolution",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Confession_and_Absolution"
+  },
+  {
+    "title": "Gloria in Excelsis Deo (Glory to God in the Highest)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Gloria_in_Excelsis_Deo",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Gloria_in_Excelsis_Deo"
+  },
+  {
+    "title": "Introit Psalm Tones (Gregorian Psalm Tones 1–8)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Introit_Psalm_Tones",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Introit_Psalm_Tones"
+  },
+  {
+    "title": "Kyrie Eleison (Lord, Have Mercy)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "eastern",
+      "ecumenical",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Kyrie_Eleison",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Kyrie_Eleison"
+  },
+  {
+    "title": "Nicene Creed",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "eastern",
+      "ecumenical",
+      "liturgical",
+      "creed"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Nicene_Creed",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Nicene_Creed"
+  },
+  {
+    "title": "Nunc Dimittis (Lord, Now Lettest Thou Thy Servant Depart in Peace)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "canticle"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Nunc_Dimittis",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Nunc_Dimittis"
+  },
+  {
+    "title": "Offertory — Create in Me a Clean Heart (Psalm 51:10–12)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "liturgical",
+      "psalm"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Offertory_Create_in_Me",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Offertory_Create_in_Me"
+  },
+  {
+    "title": "Pax Domini (The Peace of the Lord)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "sacramental",
+      "real-presence",
+      "lords-supper"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Pax_Domini",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Pax_Domini"
+  },
+  {
+    "title": "Salutation and Response (The Lord Be with You)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Salutation_and_Response",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Salutation_and_Response"
+  },
+  {
+    "title": "Sanctus (Holy, Holy, Holy Lord)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Sanctus",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Sanctus"
+  },
+  {
+    "title": "Sursum Corda (Lift Up Your Hearts)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "sacramental",
+      "lords-supper"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Sursum_Corda",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Sursum_Corda"
+  },
+  {
+    "title": "Words of Institution (The Verba)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "sacramental",
+      "real-presence",
+      "lords-supper"
+    ],
+    "file": "hymns/2.0_Divine_Service_Liturgy/Words_of_Institution",
+    "location": "2.0_Divine_Service_Liturgy",
+    "section_number": "2.0",
+    "filename": "Words_of_Institution"
+  },
+  {
+    "title": "Come, Thou Long-Expected Jesus",
+    "aliases": [],
+    "tune": "Stuttgart (Christian Friedrich Witt, 1716); alt. Hyfrydol (Rowland H. Prichard, 1830); alt. Cross of Jesus (John Stainer, 1887)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.1_Advent/Come_Thou_Long_Expected_Jesus",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Come_Thou_Long_Expected_Jesus"
+  },
+  {
+    "title": "Come, Thou Precious Ransom, Come",
+    "aliases": [
+      "Komm, du wertes Lösegeld (German, Johann Gottfried Olearius, 1671)"
+    ],
+    "tune": "Straf mich nicht in deinem Zorn (Johann Rosenmüller, 1648)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.1_Advent/Come_Thou_Precious_Ransom_Come",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Come_Thou_Precious_Ransom_Come"
+  },
+  {
+    "title": "Hark! A Thrilling Voice Is Sounding",
+    "aliases": [
+      "En clara vox redarguit (Latin, Celerius, 6th c.)",
+      "Hark! A Herald Voice Is Sounding",
+      "Hark! A Voice Is Sounding"
+    ],
+    "tune": "Merton (William Henry Monk, 1850)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.1_Advent/Hark_A_Thrilling_Voice_Is_Sounding",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Hark_A_Thrilling_Voice_Is_Sounding"
+  },
+  {
+    "title": "Hark the Glad Sound",
+    "aliases": [
+      "Hark, the Glad Sound! The Savior Comes"
+    ],
+    "tune": "Richmond | Chesterfield | Spa Fields Chapel (Thomas Haweis, 1792; adapted Samuel Webbe Jr., 1808)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.1_Advent/Hark_the_Glad_Sound",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Hark_the_Glad_Sound"
+  },
+  {
+    "title": "Lo! He Comes with Clouds Descending",
+    "aliases": [
+      "Lo! He Cometh, Countless Trumpets (Cennick's original, 1750)"
+    ],
+    "tune": "Helmsley (attr. Thomas Olivers, c. 1765); alt. Llangloffan (Welsh trad.)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.1_Advent/Lo_He_Comes_with_Clouds_Descending",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Lo_He_Comes_with_Clouds_Descending"
+  },
+  {
+    "title": "O Bride of Christ, Rejoice",
+    "aliases": [
+      "Brudgom, som din brud bereder (Danish, 1639)"
+    ],
+    "tune": "Bereden väg | Prepare the Way (Swedish melody, 17th c.)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.1_Advent/O_Bride_of_Christ_Rejoice",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "O_Bride_of_Christ_Rejoice"
+  },
+  {
+    "title": "O Come O Come Emmanuel",
+    "aliases": [
+      "Veni, Veni, Emmanuel (Latin, 9th c.)",
+      "O Come, O Come, Immanuel",
+      "Draw Nigh, Draw Nigh, Emmanuel (early English form)"
+    ],
+    "tune": "Veni Emmanuel (15th-c. French Franciscan processional melody, pub. Thomas Helmore, 1851)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.1_Advent/O_Come_O_Come_Emmanuel",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "O_Come_O_Come_Emmanuel"
+  },
+  {
+    "title": "O Lord, How Shall I Meet You",
+    "aliases": [
+      "Wie soll ich dich empfangen (German, Paul Gerhardt, 1653)",
+      "O Lord, How Shall I Greet You"
+    ],
+    "tune": "Valet will ich dir geben (Melchior Teschner, 1615; harm. J.S. Bach)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.1_Advent/O_Lord_How_Shall_I_Meet_You",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "O_Lord_How_Shall_I_Meet_You"
+  },
+  {
+    "title": "Once He Came in Blessing",
+    "aliases": [
+      "Gottes Sohn ist kommen (German, Johann Horn, 1544)",
+      "Once in Blessing Jesus Came"
+    ],
+    "tune": "Gottes Sohn ist kommen (medieval German melody, pub. Erfurt 1517; arr. Michael Weisse, 1531)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.1_Advent/Once_He_Came_in_Blessing",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Once_He_Came_in_Blessing"
+  },
+  {
+    "title": "Prepare the Royal Highway",
+    "aliases": [
+      "Bereden väg för Herran (Swedish, Frans Mikael Franzén, 1812)"
+    ],
+    "tune": "Bereden väg (Swedish melody, 17th c.; arr. 1697)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.1_Advent/Prepare_the_Royal_Highway",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Prepare_the_Royal_Highway"
+  },
+  {
+    "title": "Rejoice, Rejoice, Believers",
+    "aliases": [
+      "Macht hoch die Tür (German original association)",
+      "Rejoice, Ye Saints and Sinners"
+    ],
+    "tune": "Lob Gott getrost mit Singen | Soar We Now (Johann Schop, 1641)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.1_Advent/Rejoice_Rejoice_Believers",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Rejoice_Rejoice_Believers"
+  },
+  {
+    "title": "Savior Of The Nations Come",
+    "aliases": [
+      "Veni Redemptor Gentium (Latin, Ambrose, c. 397)",
+      "Nun komm, der Heiden Heiland (German, Luther, 1524)",
+      "Come, Thou Redeemer of the Earth (Neale trans.)",
+      "Come, Savior of the Nations"
+    ],
+    "tune": "Nun komm, der Heiden Heiland (plainsong adapted Johann Walther, Erfurt Enchiridia, 1524)",
+    "tags": [
+      "ancient",
+      "lutheran"
+    ],
+    "file": "hymns/7.1_Advent/Savior_Of_The_Nations_Come",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "Savior_Of_The_Nations_Come"
+  },
+  {
+    "title": "The King Shall Come When Morning Dawns",
+    "aliases": [
+      "The King Shall Come"
+    ],
+    "tune": "St. Stephen | Newington (William Jones, 1789)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.1_Advent/The_King_Shall_Come_When_Morning_Dawns",
+    "location": "7.1_Advent",
+    "section_number": "7.1",
+    "filename": "The_King_Shall_Come_When_Morning_Dawns"
+  },
+  {
+    "title": "All My Heart Again Rejoices",
+    "aliases": [
+      "All My Heart This Night Rejoices (more common English title)",
+      "Fröhlich soll mein Herze springen (German, Gerhardt, 1653)"
+    ],
+    "tune": "Warum sollt ich | Bonn | Ebeling (Johann Georg Ebeling, 1666); alt. tune: Fröhlich soll mein Herze springen (Johann Crüger, 1653)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.2_Christmas/All_My_Heart_Again_Rejoices",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "All_My_Heart_Again_Rejoices"
+  },
+  {
+    "title": "Angels From the Realms of Glory",
+    "aliases": [
+      "The Nativity (Montgomery's original title, Sheffield Iris, 1816)"
+    ],
+    "tune": "Regent Square (Henry T. Smart, 1867; US standard); alt. Iris (French trad.; UK standard — same tune as Gloria/'Angels We Have Heard on High')",
+    "tags": [
+      "ecumenical",
+      "lutheran"
+    ],
+    "file": "hymns/7.2_Christmas/Angels_From_the_Realms_of_Glory",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Angels_From_the_Realms_of_Glory"
+  },
+  {
+    "title": "Angels We Have Heard On High",
+    "aliases": [
+      "Les anges dans nos campagnes (French original, Languedoc, 18th c.)"
+    ],
+    "tune": "Gloria | Les anges dans nos campagnes (French traditional; related to Iris, used for 'Angels from the Realms of Glory' in UK settings)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Angels_We_Have_Heard_On_High",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Angels_We_Have_Heard_On_High"
+  },
+  {
+    "title": "Away In A Manger",
+    "aliases": [
+      "Luther's Cradle Hymn (19th-c. misattribution",
+      "text not by Luther)"
+    ],
+    "tune": "Mueller | Away in a Manger (James R. Murray, 1887; US standard); alt. Cradle Song (William J. Kirkpatrick, 1895; UK/Canada standard)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Away_In_A_Manger",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Away_In_A_Manger"
+  },
+  {
+    "title": "From Heaven Above to Earth I Come",
+    "aliases": [
+      "Vom Himmel hoch, da komm ich her (German, Luther, 1535)",
+      "From Heaven Above",
+      "From Heaven High I Come to You (Winkworth trans.)"
+    ],
+    "tune": "Vom Himmel Hoch (Martin Luther, pub. Geistliche Lieder, Leipzig, 1539)",
+    "tags": [
+      "lutheran",
+      "reformation"
+    ],
+    "file": "hymns/7.2_Christmas/From_Heaven_Above_to_Earth_I_Come",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "From_Heaven_Above_to_Earth_I_Come"
+  },
+  {
+    "title": "Good Christian Friends, Rejoice",
+    "aliases": [
+      "In dulci jubilo (Latin/German macaronic, Heinrich Suso, 14th c.)",
+      "Good Christian Men, Rejoice (older English form)"
+    ],
+    "tune": "In dulci jubilo (German carol melody, 14th c.)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Good_Christian_Friends_Rejoice",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Good_Christian_Friends_Rejoice"
+  },
+  {
+    "title": "Good King Wenceslas",
+    "aliases": [],
+    "tune": "Tempus adest floridum (Piae Cantiones, 1582)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Good_King_Wenceslas",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Good_King_Wenceslas"
+  },
+  {
+    "title": "Hark! The Herald Angels Sing",
+    "aliases": [
+      "Hark How All the Welkin Rings (Wesley's original 1739 opening line)"
+    ],
+    "tune": "Mendelssohn (Felix Mendelssohn, Festgesang, 1840; adapted William H. Cummings, 1856)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Hark_The_Herald_Angels_Sing",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Hark_The_Herald_Angels_Sing"
+  },
+  {
+    "title": "In the Bleak Midwinter",
+    "aliases": [],
+    "tune": "Cranham (Gustav Holst, 1906); alt. In the Bleak Midwinter (Harold Darke, 1911)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/In_the_Bleak_Midwinter",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "In_the_Bleak_Midwinter"
+  },
+  {
+    "title": "Infant Holy, Infant Lowly",
+    "aliases": [
+      "W żłobie leży (Polish carol, trad.)",
+      "Infant Holy"
+    ],
+    "tune": "W Żłobie Leży (Polish carol melody, trad.)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Infant_Holy_Infant_Lowly",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Infant_Holy_Infant_Lowly"
+  },
+  {
+    "title": "Joy to the World",
+    "aliases": [
+      "The Messiah's Coming and Kingdom (Watts's original heading, 1719)",
+      "Joy to the World! The Lord Is Come"
+    ],
+    "tune": "Antioch (arr. Lowell Mason from Handel, pub. 1836; earlier called Comfort)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Joy_to_the_World",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Joy_to_the_World"
+  },
+  {
+    "title": "Let Our Gladness Have No End",
+    "aliases": [
+      "Narodil se Kristus Pán (Czech, 15th c.",
+      "meaning: Christ the Lord Is Born)",
+      "Christ the Lord to Us Is Born (Pisek/Bajus English trans.)"
+    ],
+    "tune": "Narodil se Kristus Pán | Salvator Natus (Bohemian carol melody, 15th c.)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Let_Our_Gladness_Have_No_End",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Let_Our_Gladness_Have_No_End"
+  },
+  {
+    "title": "Now Sing We, Now Rejoice",
+    "aliases": [
+      "In dulci jubilo (Latin/German, 14th c.)",
+      "Nun singet und seid froh"
+    ],
+    "tune": "In dulci jubilo (German carol melody, 14th c.)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Now_Sing_We_Now_Rejoice",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Now_Sing_We_Now_Rejoice"
+  },
+  {
+    "title": "O Come, All Ye Faithful",
+    "aliases": [
+      "Adeste Fideles (Latin original, Wade, c. 1743)",
+      "The Portuguese Hymn (18th–19th c. English nickname)",
+      "Ye Faithful, Approach Ye (Oakeley's original English title, c. 1841)"
+    ],
+    "tune": "Adeste Fideles (John Francis Wade, c. 1743)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/O_Come_All_Ye_Faithful",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "O_Come_All_Ye_Faithful"
+  },
+  {
+    "title": "O Come, Little Children",
+    "aliases": [
+      "Ihr Kinderlein, kommet (German, Christoph von Schmid, c. 1790)"
+    ],
+    "tune": "Ihr Kinderlein, kommet (Johann Abraham Peter Schulz, 1794)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/O_Come_Little_Children",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "O_Come_Little_Children"
+  },
+  {
+    "title": "O Little Town of Bethlehem",
+    "aliases": [],
+    "tune": "St. Louis (Lewis Redner, 1868; US standard); alt. Forest Green (English trad., coll. Vaughan Williams, 1906; UK/Ireland standard)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/O_Little_Town_of_Bethlehem",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "O_Little_Town_of_Bethlehem"
+  },
+  {
+    "title": "O Morning Star, How Fair and Bright",
+    "aliases": [
+      "Wie schön leuchtet der Morgenstern (German, Philipp Nicolai, 1597)",
+      "How Brightly Shines the Morning Star",
+      "How Bright Appears the Morning Star"
+    ],
+    "tune": "Wie schön leuchtet | How Bright Appears the Morning Star (Philipp Nicolai, 1599)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.2_Christmas/O_Morning_Star_How_Fair_and_Bright",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "O_Morning_Star_How_Fair_and_Bright"
+  },
+  {
+    "title": "Of The Father's Love Begotten",
+    "aliases": [
+      "Corde natus ex Parentis (Latin, Prudentius, c. 405)",
+      "Of the Father's Heart Begotten (English Hymnal, 1906)",
+      "Of the Father Sole Begotten (Neale's original 1851 trans.)"
+    ],
+    "tune": "Divinum Mysterium (plainsong, 13th c.; pub. in triple metre, Piae Cantiones, 1582)",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Of_The_Father_s_Love_Begotten",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Of_The_Father_s_Love_Begotten"
+  },
+  {
+    "title": "On Christmas Night All Christians Sing",
+    "aliases": [
+      "Sussex Carol"
+    ],
+    "tune": "Sussex Carol (English traditional, Sussex; coll. Lucy Broadwood, 1893)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/On_Christmas_Night_All_Christians_Sing",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "On_Christmas_Night_All_Christians_Sing"
+  },
+  {
+    "title": "Once in Royal David's City",
+    "aliases": [],
+    "tune": "Irby (Henry John Gauntlett, 1848)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Once_in_Royal_Davids_City",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Once_in_Royal_Davids_City"
+  },
+  {
+    "title": "Silent Night, Holy Night",
+    "aliases": [
+      "Stille Nacht, heilige Nacht (German, Mohr, 1818)",
+      "Holy Night, Peaceful Night (Jane M. Campbell trans., 1863)"
+    ],
+    "tune": "Stille Nacht (Franz Gruber, 1818)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Silent_Night_Holy_Night",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Silent_Night_Holy_Night"
+  },
+  {
+    "title": "Songs of Thankfulness and Praise",
+    "aliases": [],
+    "tune": "Salzburg (Jakob Hintze, 1678; harm. J. S. Bach)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/Songs_of_Thankfulness_and_Praise",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "Songs_of_Thankfulness_and_Praise"
+  },
+  {
+    "title": "What Child Is This?",
+    "aliases": [],
+    "tune": "Greensleeves (English traditional, 16th c.)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.2_Christmas/What_Child_Is_This",
+    "location": "7.2_Christmas",
+    "section_number": "7.2",
+    "filename": "What_Child_Is_This"
+  },
+  {
+    "title": "Abide, O Dearest Jesus",
+    "aliases": [
+      "Ach bleib mit deiner Gnade (German, Josua Stegmann, 1628)",
+      "Abide with Us, Our Savior"
+    ],
+    "tune": "Ach bleib bei uns, Herr Jesu Christ (Seth Calvisius, 1594; after Philipp Nicolai, 1599)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/Abide_O_Dearest_Jesus",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Abide_O_Dearest_Jesus"
+  },
+  {
+    "title": "All Depends On Our Possessing",
+    "aliases": [
+      "In dich hab ich gehoffet, Herr (German, Adam Reusner, c. 1533)",
+      "In Thee, Lord, Have I Put My Trust"
+    ],
+    "tune": "In dich hab ich gehoffet (Seth Calvisius, 1581)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/All_Depends_On_Our_Possessing",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "All_Depends_On_Our_Possessing"
+  },
+  {
+    "title": "I Walk in Danger All the Way",
+    "aliases": [
+      "Jeg gaar i Fare (Danish, Hans Adolph Brorson, 1734)"
+    ],
+    "tune": "Hvo ikkun lader Herren råde | Treuer Heiland (Johann Gottfried Schicht, Halle, 1704); alt. Danish folk tune",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/I_Walk_in_Danger_All_the_Way",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "I_Walk_in_Danger_All_the_Way"
+  },
+  {
+    "title": "In Thee Is Gladness",
+    "aliases": [
+      "In dir ist Freude (German, Johann Lindemann, 1598)"
+    ],
+    "tune": "In dir ist Freude (Giovanni Giacomo Gastoldi, 1591; adapt. Johann Lindemann, 1598)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/In_Thee_Is_Gladness",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "In_Thee_Is_Gladness"
+  },
+  {
+    "title": "Jesus, Lead Thou On",
+    "aliases": [
+      "Jesu, geh voran (German, Nikolaus von Zinzendorf, 1721)",
+      "Jesus, Still Lead On"
+    ],
+    "tune": "Seelenbräutigam (Adam Drese, 1698)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.14_Discipleship/Jesus_Lead_Thou_On",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Jesus_Lead_Thou_On"
+  },
+  {
+    "title": "Jesus, Priceless Treasure",
+    "aliases": [
+      "Jesu, meine Freude (German, Johann Franck, 1653)",
+      "Jesus, I My Cross Have Taken (different text, same tune)"
+    ],
+    "tune": "Jesu, meine Freude (Johann Crüger, 1653)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/Jesus_Priceless_Treasure",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Jesus_Priceless_Treasure"
+  },
+  {
+    "title": "Jesus, Still Lead On",
+    "aliases": [
+      "Jesu, geh voran (German, Nikolaus von Zinzendorf, 1721)",
+      "Jesus, Lead Thou On (same text, alternate trans.)"
+    ],
+    "tune": "Seelenbräutigam (Adam Drese, 1698)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.14_Discipleship/Jesus_Still_Lead_On",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Jesus_Still_Lead_On"
+  },
+  {
+    "title": "Let Me Be Thine Forever",
+    "aliases": [
+      "Lass mich dein sein und bleiben (German, Nikolaus Selnecker, 1572)"
+    ],
+    "tune": "Ich dank dir, lieber Herre (Johann Crüger, 1640); alt. Mach's mit mir, Gott (Johann Schein, 1628)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/Let_Me_Be_Thine_Forever",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Let_Me_Be_Thine_Forever"
+  },
+  {
+    "title": "Lord, Thee I Love with All My Heart",
+    "aliases": [
+      "Herzlich lieb hab ich dich, o Herr (German, Martin Schalling, 1571)"
+    ],
+    "tune": "Herzlich lieb (Strassburg, 1577; harm. J.S. Bach, St. John Passion, 1724)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/Lord_Thee_I_Love_with_All_My_Heart",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Lord_Thee_I_Love_with_All_My_Heart"
+  },
+  {
+    "title": "O Holy Spirit, Grant Us Grace",
+    "aliases": [
+      "O Heiliger Geist, o heiliger Gott (German, Paul Gerhardt, 1653)"
+    ],
+    "tune": "O Heiliger Geist (German melody, c. 1590)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/O_Holy_Spirit_Grant_Us_Grace",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "O_Holy_Spirit_Grant_Us_Grace"
+  },
+  {
+    "title": "Preserve Your Word, O Savior",
+    "aliases": [
+      "Bewahre uns, Gott (German, Andreas Gryphius, 1639)"
+    ],
+    "tune": "Erhalt uns, Herr (Klug's Geistliche Lieder, Wittenberg, 1543)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/Preserve_Your_Word_O_Savior",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Preserve_Your_Word_O_Savior"
+  },
+  {
+    "title": "Seek Where You May to Find a Way",
+    "aliases": [
+      "Finde, wer da Ruhe sucht (German, Johann Freystein, c. 1697)"
+    ],
+    "tune": "Auf meinen lieben Gott (Jakob Regnart, 1574; pub. Harmoniae poeticae, 1577)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/Seek_Where_You_May_to_Find_a_Way",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "Seek_Where_You_May_to_Find_a_Way"
+  },
+  {
+    "title": "What God Ordains Is Always Good",
+    "aliases": [
+      "Was Gott tut, das ist wohlgetan (German, Samuel Rodigast, 1675)"
+    ],
+    "tune": "Was Gott tut, das ist wohlgetan (Severus Gastorius, 1679)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.14_Discipleship/What_God_Ordains_Is_Always_Good",
+    "location": "7.14_Discipleship",
+    "section_number": "7.14",
+    "filename": "What_God_Ordains_Is_Always_Good"
+  },
+  {
+    "title": "All Creatures of Our God and King",
+    "aliases": [
+      "Canticle of the Sun (English — Francis of Assisi, 1225",
+      "trans. William H. Draper, c. 1900)",
+      "Laudato si' (Italian original title, Francis of Assisi, 1225)"
+    ],
+    "tune": "Lasst uns erfreuen (Geistliche Kirchengesäng, Cologne, 1623; harm. Ralph Vaughan Williams, 1906)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/All_Creatures_of_Our_God_and_King",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "All_Creatures_of_Our_God_and_King"
+  },
+  {
+    "title": "All People That on Earth Do Dwell",
+    "aliases": [
+      "Old Hundredth Psalm (Psalm 100, Anglo-Genevan Psalter, 1561)"
+    ],
+    "tune": "Old Hundredth (Genevan Psalter, 1551; attrib. Louis Bourgeois)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/All_People_That_on_Earth_Do_Dwell",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "All_People_That_on_Earth_Do_Dwell"
+  },
+  {
+    "title": "Come, We That Love the Lord",
+    "aliases": [
+      "Marching to Zion (Robert Lowry's refrain added, 1867)"
+    ],
+    "tune": "St. Thomas (Aaron Williams, 1762); alt. Marching to Zion (Robert Lowry, 1867)",
+    "tags": [
+      "reformed",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Come_We_That_Love_the_Lord",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Come_We_That_Love_the_Lord"
+  },
+  {
+    "title": "For The Beauty Of The Earth",
+    "aliases": [],
+    "tune": "Dix (Conrad Kocher, 1838; adapt. William Henry Monk, 1861)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/For_The_Beauty_Of_The_Earth",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "For_The_Beauty_Of_The_Earth"
+  },
+  {
+    "title": "Glory Be to God the Father",
+    "aliases": [],
+    "tune": "Regent Square (Henry Thomas Smart, 1867)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Glory_Be_to_God_the_Father",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Glory_Be_to_God_the_Father"
+  },
+  {
+    "title": "Hark, the Sound of Holy Voices",
+    "aliases": [],
+    "tune": "Jucunda Laudatio (Ionian Psalter, 1579; adapt.); alt. Deerhurst (James Langran, 1861)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Hark_the_Sound_of_Holy_Voices",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Hark_the_Sound_of_Holy_Voices"
+  },
+  {
+    "title": "Immortal, Invisible, God Only Wise",
+    "aliases": [],
+    "tune": "St. Denio | Joanna (Welsh traditional melody; pub. John Roberts, Canaidau y Cyssegr, 1839)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Immortal_Invisible_God_Only_Wise",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Immortal_Invisible_God_Only_Wise"
+  },
+  {
+    "title": "In Christ There Is No East or West",
+    "aliases": [],
+    "tune": "St. Peter (Alexander Robert Reinagle, 1836); alt. McKee (African American spiritual, arr. Harry T. Burleigh, 1939)",
+    "tags": [
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/In_Christ_There_Is_No_East_or_West",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "In_Christ_There_Is_No_East_or_West"
+  },
+  {
+    "title": "Now Thank We All Our God",
+    "aliases": [
+      "Nun danket alle Gott (German, Martin Rinkart, 1636)"
+    ],
+    "tune": "Nun danket alle Gott (Johann Crüger, 1648)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.17_Praise/Now_Thank_We_All_Our_God",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Now_Thank_We_All_Our_God"
+  },
+  {
+    "title": "Praise God From Whom All Blessings Flow",
+    "aliases": [
+      "The Doxology",
+      "Old Hundredth Doxology"
+    ],
+    "tune": "Old Hundredth (Genevan Psalter, 1551; attrib. Louis Bourgeois)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Praise_God_From_Whom_All_Blessings_Flow",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Praise_God_From_Whom_All_Blessings_Flow"
+  },
+  {
+    "title": "Praise My Soul The King Of Heaven",
+    "aliases": [],
+    "tune": "Lauda Anima (John Goss, 1869)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Praise_My_Soul_The_King_Of_Heaven",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Praise_My_Soul_The_King_Of_Heaven"
+  },
+  {
+    "title": "Praise To The Lord, The Almighty",
+    "aliases": [
+      "Lobe den Herren, den mächtigen König der Ehren (German, Joachim Neander, 1680)"
+    ],
+    "tune": "Lobe den Herren (Stralsund Gesangbuch, 1665; harm. various, incl. J.S. Bach)",
+    "tags": [
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Praise_To_The_Lord_The_Almighty",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Praise_To_The_Lord_The_Almighty"
+  },
+  {
+    "title": "Rejoice, O Pilgrim Throng",
+    "aliases": [
+      "Rejoice, Ye Pure in Heart"
+    ],
+    "tune": "Marion (Arthur Henry Messiter, 1883)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/Rejoice_O_Pilgrim_Throng",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Rejoice_O_Pilgrim_Throng"
+  },
+  {
+    "title": "Sing Praise to God Who Reigns Above",
+    "aliases": [
+      "Sei Lob und Ehr dem höchsten Gut (German, Johann Jakob Schütz, 1675)"
+    ],
+    "tune": "Mit Freuden zart (Bohemian Brethren Kirchengeseng, 1566)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.17_Praise/Sing_Praise_to_God_Who_Reigns_Above",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "Sing_Praise_to_God_Who_Reigns_Above"
+  },
+  {
+    "title": "This Is the Day the Lord Has Made",
+    "aliases": [],
+    "tune": "Arlington (Thomas Augustine Arne, 1762)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/This_Is_the_Day_the_Lord_Has_Made",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "This_Is_the_Day_the_Lord_Has_Made"
+  },
+  {
+    "title": "We All Believe in One True God (Creedal)",
+    "aliases": [
+      "Wir glauben all an einen Gott (Clausnitzer version, 1668)"
+    ],
+    "tune": "Wir glauben all an einen Gott (Klug's Geistliche Lieder, Wittenberg, 1543)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.17_Praise/We_All_Believe_in_One_True_God_Creedal",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "We_All_Believe_in_One_True_God_Creedal"
+  },
+  {
+    "title": "We Praise You, O God",
+    "aliases": [
+      "We Gather Together (different text, same tune)"
+    ],
+    "tune": "Kremser (Dutch melody, Adrianus Valerius, 1626; arr. Eduard Kremser, 1877)",
+    "tags": [
+      "reformed",
+      "ecumenical"
+    ],
+    "file": "hymns/7.17_Praise/We_Praise_You_O_God",
+    "location": "7.17_Praise",
+    "section_number": "7.17",
+    "filename": "We_Praise_You_O_God"
+  },
+  {
+    "title": "Almighty God Your Word Is Cast",
+    "aliases": [
+      "Lord, Thy Word Abideth (different text, related theme)"
+    ],
+    "tune": "Cawood | Totteridge (various settings); standard tune: St. Hugh (Edward John Hopkins, 1869)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.9_Word_of_God/Almighty_God_Your_Word_Is_Cast",
+    "location": "7.9_Word_of_God",
+    "section_number": "7.9",
+    "filename": "Almighty_God_Your_Word_Is_Cast"
+  },
+  {
+    "title": "Built on the Rock",
+    "aliases": [
+      "Kirken den er et gammelt hus (Danish, Nikolai Grundtvig, 1837)",
+      "The Church's One Foundation (different text, same theme — not to be confused)"
+    ],
+    "tune": "Kirken (Ludvig Mathias Lindeman, 1840)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.9_Word_of_God/Built_on_the_Rock",
+    "location": "7.9_Word_of_God",
+    "section_number": "7.9",
+    "filename": "Built_on_the_Rock"
+  },
+  {
+    "title": "Hark, the Voice of Jesus Crying",
+    "aliases": [
+      "Hark, the Voice of Jesus Calling"
+    ],
+    "tune": "Galilean (Joseph Barnby, 1883)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.9_Word_of_God/Hark_the_Voice_of_Jesus_Crying",
+    "location": "7.9_Word_of_God",
+    "section_number": "7.9",
+    "filename": "Hark_the_Voice_of_Jesus_Crying"
+  },
+  {
+    "title": "Lord, Keep Us Steadfast in Your Word",
+    "aliases": [
+      "Erhalt uns, Herr, bei deinem Wort (German, Martin Luther, 1542)",
+      "Lord, Keep Us Steadfast in Thy Word"
+    ],
+    "tune": "Erhalt uns, Herr (Klug's Geistliche Lieder, Wittenberg, 1543)",
+    "tags": [
+      "lutheran",
+      "reformation",
+      "sola-scriptura"
+    ],
+    "file": "hymns/7.9_Word_of_God/Lord_Keep_Us_Steadfast_in_Your_Word",
+    "location": "7.9_Word_of_God",
+    "section_number": "7.9",
+    "filename": "Lord_Keep_Us_Steadfast_in_Your_Word"
+  },
+  {
+    "title": "O Word of God Incarnate",
+    "aliases": [],
+    "tune": "Munich (Meiningen Gesangbuch, 1693; harm. Felix Mendelssohn, 1847)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.9_Word_of_God/O_Word_of_God_Incarnate",
+    "location": "7.9_Word_of_God",
+    "section_number": "7.9",
+    "filename": "O_Word_of_God_Incarnate"
+  },
+  {
+    "title": "Spread, Oh, Spread, Thou Mighty Word",
+    "aliases": [
+      "Walte, walte nah und fern (German, Jonathan Fabricius, 1724)",
+      "Spread the Reign of God the Lord"
+    ],
+    "tune": "Gott sei Dank (Heinrich Pape, Hannover, 18th c.)",
+    "tags": [
+      "lutheran"
+    ],
+    "file": "hymns/7.9_Word_of_God/Spread_Oh_Spread_Thou_Mighty_Word",
+    "location": "7.9_Word_of_God",
+    "section_number": "7.9",
+    "filename": "Spread_Oh_Spread_Thou_Mighty_Word"
+  },
+  {
+    "title": "The Gospel Shows the Father's Grace",
+    "aliases": [
+      "Des heilgen Geistes reiche Gnad' (German, Erasmus Alber, c. 1549)"
+    ],
+    "tune": "Nun freut euch, lieben Christen g'mein (Klug, Wittenberg, 1535)",
+    "tags": [
+      "lutheran",
+      "reformation"
+    ],
+    "file": "hymns/7.9_Word_of_God/The_Gospel_Shows_the_Fathers_Grace",
+    "location": "7.9_Word_of_God",
+    "section_number": "7.9",
+    "filename": "The_Gospel_Shows_the_Fathers_Grace"
+  },
+  {
+    "title": "Eternal Father, Strong to Save",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical",
+      "intercession"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Eternal_Father_Strong_to_Save",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Eternal_Father_Strong_to_Save"
+  },
+  {
+    "title": "Glorious Things of Thee Are Spoken",
+    "aliases": [],
+    "tune": "Austria | Austrian Hymn (Franz Joseph Haydn, 1797)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Glorious_Things_of_Thee_Are_Spoken",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Glorious_Things_of_Thee_Are_Spoken"
+  },
+  {
+    "title": "Lead On, O King Eternal",
+    "aliases": [],
+    "tune": "Lancashire (Henry Thomas Smart, 1836)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Lead_On_O_King_Eternal",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Lead_On_O_King_Eternal"
+  },
+  {
+    "title": "Lift High The Cross",
+    "aliases": [],
+    "tune": "Crucifer (Sydney Hugo Nicholson, 1916)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Lift_High_The_Cross",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Lift_High_The_Cross"
+  },
+  {
+    "title": "Onward, Christian Soldiers",
+    "aliases": [],
+    "tune": "St. Gertrude (Arthur S. Sullivan, 1871)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Onward_Christian_Soldiers",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Onward_Christian_Soldiers"
+  },
+  {
+    "title": "Rise Up, O Men of God",
+    "aliases": [
+      "Rise Up, O Church of God"
+    ],
+    "tune": "Festal Song (William Henry Walter, 1894)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Rise_Up_O_Men_of_God",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Rise_Up_O_Men_of_God"
+  },
+  {
+    "title": "Stand Up, Stand Up for Jesus",
+    "aliases": [],
+    "tune": "Webb (George James Webb, 1837); alt. Morning Light (same tune, alt. name)",
+    "tags": [
+      "anglican",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Stand_Up_Stand_Up_for_Jesus",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Stand_Up_Stand_Up_for_Jesus"
+  },
+  {
+    "title": "The Church's One Foundation",
+    "aliases": [],
+    "tune": "Aurelia (Samuel Sebastian Wesley, 1864)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/The_Church_s_One_Foundation",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "The_Church_s_One_Foundation"
+  },
+  {
+    "title": "Thee We Adore, O Hidden Savior",
+    "aliases": [
+      "Adoro te devote (Latin, Thomas Aquinas, c. 1264)",
+      "Humbly I Adore Thee (alt. English trans.)"
+    ],
+    "tune": "Adoro te devote (Gregorian plainsong, 13th c.)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical"
+    ],
+    "file": "hymns/7.13_The_Church_and_Ministry/Thee_We_Adore_O_Hidden_Savior",
+    "location": "7.13_The_Church_and_Ministry",
+    "section_number": "7.13",
+    "filename": "Thee_We_Adore_O_Hidden_Savior"
+  },
+  {
+    "title": "All Who Believe and Are Baptized",
+    "aliases": [
+      "Den store hvide flok (Danish, Thomas Hansen Kingo, 1689 — different hymn same author)",
+      "Alle Menschen müssen sterben (German tune association)"
+    ],
+    "tune": "Es ist das Heil uns kommen her (Wittenberg, 1524); alt. Alle Menschen müssen sterben (Johann Rosenmüller, 1649)",
+    "tags": [
+      "lutheran",
+      "baptism",
+      "baptismal-regeneration"
+    ],
+    "file": "hymns/7.10_Holy_Baptism/All_Who_Believe_and_Are_Baptized",
+    "location": "7.10_Holy_Baptism",
+    "section_number": "7.10",
+    "filename": "All_Who_Believe_and_Are_Baptized"
+  },
+  {
+    "title": "God's Own Child, I Gladly Say It",
+    "aliases": [
+      "Gottes Kind, ich heiße so (German, Erdmann Neumeister, 1718)"
+    ],
+    "tune": "O daß ich tausend Zungen hätte | Dretzel (Cornelius Heinrich Dretzel, 1731)",
+    "tags": [
+      "lutheran",
+      "sacramental",
+      "baptism",
+      "baptismal-regeneration"
+    ],
+    "file": "hymns/7.10_Holy_Baptism/God_s_Own_Child_I_Gladly_Say_It",
+    "location": "7.10_Holy_Baptism",
+    "section_number": "7.10",
+    "filename": "God_s_Own_Child_I_Gladly_Say_It"
+  },
+  {
+    "title": "I Bind Unto Myself Today",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "ecumenical",
+      "anglican",
+      "roman",
+      "sacramental",
+      "baptism",
+      "baptismal-regeneration"
+    ],
+    "file": "hymns/7.10_Holy_Baptism/I_Bind_Unto_Myself_Today",
+    "location": "7.10_Holy_Baptism",
+    "section_number": "7.10",
+    "filename": "I_Bind_Unto_Myself_Today"
+  },
+  {
+    "title": "Christ, the Life of All the Living",
+    "aliases": [
+      "Jesu, meines Lebens Leben (German, Ernst Christoph Homburg, 1659)"
+    ],
+    "tune": "Jesu, meines Lebens Leben (Nürnberger Gesangbuch, 1676)",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "solus-christus"
+    ],
+    "file": "hymns/7.5_Holy_Week/Christ_the_Life_of_All_the_Living",
+    "location": "7.5_Holy_Week",
+    "section_number": "7.5",
+    "filename": "Christ_the_Life_of_All_the_Living"
+  },
+  {
+    "title": "Jesus, In Thy Dying Woes",
+    "aliases": [],
+    "tune": "Jesus, in Thy Dying Woes (Thomas Benson Pollock, 1871; tune published with text)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "liturgical",
+      "solus-christus"
+    ],
+    "file": "hymns/7.5_Holy_Week/Jesus_In_Thy_Dying_Woes",
+    "location": "7.5_Holy_Week",
+    "section_number": "7.5",
+    "filename": "Jesus_In_Thy_Dying_Woes"
+  },
+  {
+    "title": "Not All the Blood of Beasts",
+    "aliases": [],
+    "tune": "Evan (William Henry Havergal, 1847); alt. St. Peter (Alexander Reinagle, 1836)",
+    "tags": [
+      "reformed",
+      "lutheran",
+      "ecumenical",
+      "sola-fide",
+      "solus-christus"
+    ],
+    "file": "hymns/7.5_Holy_Week/Not_All_the_Blood_of_Beasts",
+    "location": "7.5_Holy_Week",
+    "section_number": "7.5",
+    "filename": "Not_All_the_Blood_of_Beasts"
+  },
+  {
+    "title": "O Perfect Life of Love",
+    "aliases": [],
+    "tune": "St. Christopher (Frederick Charles Maker, 1881)",
+    "tags": [
+      "anglican",
+      "lutheran",
+      "ecumenical",
+      "liturgical",
+      "solus-christus"
+    ],
+    "file": "hymns/7.5_Holy_Week/O_Perfect_Life_of_Love",
+    "location": "7.5_Holy_Week",
+    "section_number": "7.5",
+    "filename": "O_Perfect_Life_of_Love"
+  },
+  {
+    "title": "O Sacred Head, Now Wounded",
+    "aliases": [
+      "Salve caput cruentatum (Latin, attr. Bernard of Clairvaux / Arnulf of Louvain, c. 1250)",
+      "O Haupt voll Blut und Wunden (German, Paul Gerhardt, 1656)",
+      "O Sacred Head, Sore Wounded (alt. English form)"
+    ],
+    "tune": "Herzlich tut mich verlangen | Passion Chorale (Hans Leo Hassler, 1601; harm. J.S. Bach, St. Matthew Passion, 1729)",
+    "tags": [
+      "roman",
+      "lutheran",
+      "ecumenical",
+      "liturgical"
+    ],
+    "file": "hymns/7.5_Holy_Week/O_Sacred_Head_Now_Wounded",
+    "location": "7.5_Holy_Week",
+    "section_number": "7.5",
+    "filename": "O_Sacred_Head_Now_Wounded"
+  },
+  {
+    "title": "Upon the Cross Extended",
+    "aliases": [
+      "O Jesu Christ, dein Kripplein ist (German, Johann Heermann, 1630 — related text)"
+    ],
+    "tune": "Herzliebster Jesu (Johann Crüger, 1640)",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "solus-christus"
+    ],
+    "file": "hymns/7.5_Holy_Week/Upon_the_Cross_Extended",
+    "location": "7.5_Holy_Week",
+    "section_number": "7.5",
+    "filename": "Upon_the_Cross_Extended"
+  },
+  {
+    "title": "Benedictus (Blessed Is the Lord God of Israel)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "canticle"
+    ],
+    "file": "hymns/3.0_Matins/Benedictus",
+    "location": "3.0_Matins",
+    "section_number": "3.0",
+    "filename": "Benedictus"
+  },
+  {
+    "title": "Invitatory Antiphon Tones (Gregorian)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/3.0_Matins/Invitatory_Antiphon_Tones",
+    "location": "3.0_Matins",
+    "section_number": "3.0",
+    "filename": "Invitatory_Antiphon_Tones"
+  },
+  {
+    "title": "Matins Closing Versicles (Morning Prayer)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/3.0_Matins/Matins_Closing_Versicles",
+    "location": "3.0_Matins",
+    "section_number": "3.0",
+    "filename": "Matins_Closing_Versicles"
+  },
+  {
+    "title": "Matins Opening Versicles (Morning Prayer)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/3.0_Matins/Matins_Opening_Versicles",
+    "location": "3.0_Matins",
+    "section_number": "3.0",
+    "filename": "Matins_Opening_Versicles"
+  },
+  {
+    "title": "Matins Suffrages (Ancient)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office",
+      "intercession"
+    ],
+    "file": "hymns/3.0_Matins/Matins_Suffrages",
+    "location": "3.0_Matins",
+    "section_number": "3.0",
+    "filename": "Matins_Suffrages"
+  },
+  {
+    "title": "Office Hymn Versicles (Matins)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/3.0_Matins/Office_Hymn_Versicles",
+    "location": "3.0_Matins",
+    "section_number": "3.0",
+    "filename": "Office_Hymn_Versicles"
+  },
+  {
+    "title": "Venite — Psalm 95 (Oh Come, Let Us Sing to the Lord)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "canticle",
+      "psalm"
+    ],
+    "file": "hymns/3.0_Matins/Venite_Psalm_95",
+    "location": "3.0_Matins",
+    "section_number": "3.0",
+    "filename": "Venite_Psalm_95"
+  },
+  {
+    "title": "Magnificat (My Soul Magnifies the Lord)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "canticle"
+    ],
+    "file": "hymns/4.0_Vespers/Magnificat",
+    "location": "4.0_Vespers",
+    "section_number": "4.0",
+    "filename": "Magnificat"
+  },
+  {
+    "title": "Nunc Dimittis (Lord, Now Lettest Thou Thy Servant Depart in Peace)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "canticle"
+    ],
+    "file": "hymns/4.0_Vespers/Nunc_Dimittis",
+    "location": "4.0_Vespers",
+    "section_number": "4.0",
+    "filename": "Nunc_Dimittis"
+  },
+  {
+    "title": "Phos Hilaron (O Gracious Light)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "eastern",
+      "ecumenical",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/4.0_Vespers/Phos_Hilaron",
+    "location": "4.0_Vespers",
+    "section_number": "4.0",
+    "filename": "Phos_Hilaron"
+  },
+  {
+    "title": "Psalms with Antiphons (Gregorian)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "ancient",
+      "lutheran",
+      "roman",
+      "anglican",
+      "ecumenical",
+      "liturgical",
+      "office",
+      "psalm"
+    ],
+    "file": "hymns/4.0_Vespers/Psalms_with_Antiphons",
+    "location": "4.0_Vespers",
+    "section_number": "4.0",
+    "filename": "Psalms_with_Antiphons"
+  },
+  {
+    "title": "Vespers Closing Versicles and Benediction (Evening Prayer)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/4.0_Vespers/Vespers_Closing_Versicles",
+    "location": "4.0_Vespers",
+    "section_number": "4.0",
+    "filename": "Vespers_Closing_Versicles"
+  },
+  {
+    "title": "Vespers Opening Versicles (Evening Prayer)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office"
+    ],
+    "file": "hymns/4.0_Vespers/Vespers_Opening_Versicles",
+    "location": "4.0_Vespers",
+    "section_number": "4.0",
+    "filename": "Vespers_Opening_Versicles"
+  },
+  {
+    "title": "Vespers Suffrages (Ancient)",
+    "aliases": [],
+    "tune": "",
+    "tags": [
+      "lutheran",
+      "liturgical",
+      "office",
+      "intercession"
+    ],
+    "file": "hymns/4.0_Vespers/Vespers_Suffrages",
+    "location": "4.0_Vespers",
+    "section_number": "4.0",
+    "filename": "Vespers_Suffrages"
+  }
+]
