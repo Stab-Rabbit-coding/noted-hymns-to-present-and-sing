@@ -206,6 +206,40 @@ def strip_antiphon(lyrics_text: str) -> str:
     return text.strip()
 
 
+# CLAUDE.md's general refrain/chorus/response/antiphon convention (distinct
+# from the psalm-specific [Antiphon]/[Antiphon closes] inline-repeat style
+# above): an inline reference marker is sung wherever the segment recurs,
+# and its full text is written once, after a blank line, at the end of the
+# #Lyrics block via a labeled definition.
+_INLINE_SEGMENT_RE = re.compile(r'\[(Refrain|Chorus|Response|Antiphon)\]', re.IGNORECASE)
+_SEGMENT_LABEL_RE = re.compile(r'(?m)^(Refrain|Chorus|Response|Antiphon)\s*:[ \t]*', re.IGNORECASE)
+
+
+def extract_lyric_segment(lyrics_text: str) -> tuple[str, str]:
+    """
+    Split a #Lyrics block into (verse_text, segment_text), where segment_text
+    is the once-only Refrain:/Chorus:/Response:/Antiphon: definition.
+
+    Per CLAUDE.md, only the first labeled definition in the block is parsed;
+    returns (lyrics_text, '') unchanged when no such label is present (e.g.
+    psalm files, which use the separate inline-repeat [Antiphon] convention
+    handled by strip_antiphon() above).
+    """
+    m = _SEGMENT_LABEL_RE.search(lyrics_text)
+    if not m:
+        return lyrics_text, ''
+    return lyrics_text[:m.start()].strip(), lyrics_text[m.end():].strip()
+
+
+def expand_inline_segments(verse_text: str, segment_text: str) -> str:
+    """Replace [Refrain]/[Chorus]/[Response]/[Antiphon] reference markers
+    with the actual segment text, so slides show the words that are sung
+    rather than the literal marker."""
+    if not segment_text:
+        return verse_text
+    return _INLINE_SEGMENT_RE.sub(lambda _m: segment_text, verse_text)
+
+
 def parse_verses(lyrics_text: str) -> list[tuple[str, list[str]]]:
     """
     Split continuous lyric text into (verse_text, stanza_tags) pairs.
@@ -381,6 +415,9 @@ def build_slides(hymn: dict, lines_per_slide: int = 3,
     lyrics_text = hymn['lyrics_text']
     if no_antiphon:
         lyrics_text = strip_antiphon(lyrics_text)
+
+    lyrics_text, segment_text = extract_lyric_segment(lyrics_text)
+    lyrics_text = expand_inline_segments(lyrics_text, segment_text)
 
     all_verses = parse_verses(lyrics_text)
     verses = filter_verses(
@@ -1148,10 +1185,14 @@ def main() -> None:
     hymn = parse_hymn_file(src)
 
     if not args.include and not args.exclude:
+        preview_text = hymn['lyrics_text']
+        if args.no_antiphon:
+            preview_text = strip_antiphon(preview_text)
+        preview_text, _segment_text = extract_lyric_segment(preview_text)
         args.include, args.exclude = _prompt_tradition_filter(
             hymn['title'],
             hymn.get('file_tags', []),
-            parse_verses(hymn['lyrics_text']),
+            parse_verses(preview_text),
         )
 
     slides = build_slides(hymn, args.lines_per_slide, args.max_lyric_chars,
