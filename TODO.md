@@ -67,7 +67,7 @@ predating copyright by centuries.
 - [x] 2.2.3 Offertory — "Create in Me a Clean Heart" (Psalm 51:10–12 / ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Offertory_Create_in_Me]
 - [x] 2.2.4 Collect tones (ancient) [FILE: hymns/2.0_Divine_Service_Liturgy/Collect_Tones]
 - [x] 2.2.5 Sursum Corda — "Lift up your hearts" (ancient preface dialog) [FILE: hymns/2.0_Divine_Service_Liturgy/Sursum_Corda]
-- [ ] 2.2.6 Litany
+- [x] 2.2.6 Litany [FILE: hymns/2.0_Divine_Service_Liturgy/Litany]
 
 ### 2.3 Lutherian Divine Service Distinctives
 - [x] 2.3.1 Confession and Absolution versicles (LSB Setting 1–3 ordinary, TLH era) [FILE: hymns/2.0_Divine_Service_Liturgy/Confession_and_Absolution]
