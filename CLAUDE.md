@@ -443,6 +443,60 @@ directly in the presentation software.
 
 ---
 
+## Exporting Slides and Bulletins
+
+Two export scripts read a finished hymn file and render it for use.  Both share
+the same hymn-file parser, melody splitter, antiphon/refrain handling, and
+stanza tradition-filter, so the same `--include / --exclude` and `--no-antiphon`
+options behave identically across them.
+
+### Presentation slides — `hymn_to_presentation.py`
+
+Paginates the hymn into projection slides (one title slide plus content slides
+of melody/lyric pairs, each verse starting fresh).
+
+```
+python3 hymn_to_presentation.py --file <hymn_file> --format pptx
+python3 hymn_to_presentation.py --file <hymn_file> --format pdf -o out.pdf
+```
+
+Formats: `html` (default), `pdf`, `pptx`, `otp`, `pro6`, `ewsx`.
+
+### Sheet music and service bulletins — `hymn_to_bulletin.py`
+
+Lays the same hymn out as a single flowing printable document: a title heading,
+a sheet-music block (the tune in MusiQwik with the first stanza beneath the
+staff), the remaining stanzas as numbered prose, and the citation block as a
+footer.  Use it for a printed worship bulletin or a one-page lead sheet.
+
+```
+python3 hymn_to_bulletin.py --file <hymn_file>                  # PDF (default)
+python3 hymn_to_bulletin.py --file <hymn_file> --format odt
+python3 hymn_to_bulletin.py --file <hymn_file> --format docx -o out.docx
+```
+
+Formats: `pdf` (default), `odt`, `docx`.  It accepts the same arguments as
+`hymn_to_presentation.py`; `--lines-per-slide` is accepted for parity but does
+not affect the un-paginated bulletin layout.
+
+The bulletin can also be triggered from the presentation script in one run:
+
+```
+python3 hymn_to_presentation.py --file <hymn_file> --format pptx --bulletin pdf
+```
+
+### Dependencies
+
+- `pdf` output (either script) — `playwright` plus the Chromium at
+  `/opt/pw-browsers` (`pip install playwright`).
+- `pptx` — `python-pptx`.
+- `html`, `otp`, `pro6`, `ewsx`, `odt`, `docx` — Python standard library only.
+
+Apply the **MusiQwik** font to melody text and **OpenDyslexic Mono** to lyric
+text in any tool that does not embed fonts automatically (see `docs/fonts.md`).
+
+---
+
 ## Adding a New Hymn — Checklist
 
 1. Confirm all three components are public domain: words, music, setting
@@ -479,6 +533,8 @@ numbers, making them easy to locate by liturgical category.
 ├── README.md                             ← project overview
 ├── TODO.md                               ← work breakdown structure
 ├── abc_to_musiqwik.py                    ← ABC-to-MusiQwik converter script
+├── hymn_to_presentation.py               ← presentation-slide export (html/pdf/pptx/otp/pro6/ewsx)
+├── hymn_to_bulletin.py                   ← sheet-music / service-bulletin export (pdf/odt/docx)
 ├── A_Mighty_Fortress_Trusty_Shield       ← legacy root-level file (7.9)
 └── hymns/
     ├── 7.10_Holy_Baptism/

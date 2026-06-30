@@ -16,6 +16,12 @@ Usage:
     python3 hymn_to_presentation.py --file <hymn_file> --format ewsx
     python3 hymn_to_presentation.py --file <hymn_file> --lines-per-slide 2
     python3 hymn_to_presentation.py --file <hymn_file> --no-antiphon
+    python3 hymn_to_presentation.py --file <hymn_file> --bulletin pdf
+
+The --bulletin {pdf,odt,docx} option additionally produces a printable
+sheet-music / service bulletin via hymn_to_bulletin.py (which can also be run on
+its own), honouring the same --file, --include/--exclude, and --no-antiphon
+options.
 
 Psalm chant settings (hymns/8.0_Psalm_Settings/) include the [Antiphon] /
 [Antiphon closes] text by default. Pass --no-antiphon to omit it and export
@@ -1176,6 +1182,13 @@ def main() -> None:
     ap.add_argument('--no-antiphon', action='store_true',
                     help='Omit the [Antiphon]/[Antiphon closes] text from psalm chant settings '
                          '(antiphon is included by default)')
+    ap.add_argument('--bulletin', choices=['pdf', 'odt', 'docx'], metavar='FORMAT',
+                    help='Also produce a printable sheet-music / service bulletin in this '
+                         'format (pdf, odt, or docx) via hymn_to_bulletin.py, using the '
+                         'same file, stanza filter, and antiphon options')
+    ap.add_argument('--bulletin-output',
+                    help='Output path for the --bulletin file '
+                         '(default: <hymn_name>.<bulletin-format>)')
     args = ap.parse_args()
 
     src = Path(args.file)
@@ -1214,6 +1227,18 @@ def main() -> None:
         to_ewsx(slides, out)
 
     print(f'Written {len(slides)} slides → {out}')
+
+    if args.bulletin:
+        import hymn_to_bulletin
+        b_out = hymn_to_bulletin.generate_bulletin(
+            src, args.bulletin,
+            Path(args.bulletin_output) if args.bulletin_output else None,
+            max_lyric_chars=args.max_lyric_chars,
+            include=args.include,
+            exclude=args.exclude,
+            no_antiphon=args.no_antiphon,
+        )
+        print(f'Written bulletin → {b_out}')
 
 
 if __name__ == '__main__':
