@@ -5,18 +5,31 @@ Tags: ancient, liturgical, psalm
 # Melody
 
 ## ABC
-[ABC notation for Psalm 18 chant tone to be added]
+X:1
+T:Psalm 18 — Gregorian Chant Tone 3
+C:Gregorian chant; ancient, public domain
+S:Traditional Gregorian psalm tone; public domain
+M:C
+L:1/4
+K:C
+%% Tone 3: Reciting B4, mediant G-A-B-c, final E
+B B B B | B B B B | G A B c | c B A G | G4 ||
 
 ## Musiquik
-[MusiQwik rendering of chant tone to be added]
+&0XXXX.XXXX.VWXY.YXWV.v)
 
 #Lyrics
-[Psalm 18 text to be added — antiphon followed by chant line]
+[Antiphon] The heavens declare [Psalm text follows]
+
+The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge.
+
+[Antiphon closes] The heavens declare
 
 #Citations and References
 
-Psalm: 18 (ancient — source translation to be confirmed)
-Chant: Gregorian psalm tone (ancient)
-Setting: Antiphonal setting with chant tone (to be sourced)
+Psalm: 18 (World English Bible Updated Edition)
+Chant: 'Gregorian Psalm Tone 3' Ancient Gregorian chant; public domain.
+Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
+copyright: public domain.
 
 https://openhymnal.org/

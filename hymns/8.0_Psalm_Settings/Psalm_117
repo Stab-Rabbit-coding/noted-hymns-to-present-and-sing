@@ -5,18 +5,31 @@ Tags: ancient, liturgical, psalm
 # Melody
 
 ## ABC
-[ABC notation for Psalm 117 chant tone to be added]
+X:1
+T:Psalm 117 — Gregorian Chant Tone 1
+C:Gregorian chant; ancient, public domain
+S:Traditional Gregorian psalm tone; public domain
+M:C
+L:1/4
+K:C
+%% Tone 1: Reciting D5, mediant F-E-D, final G
+d d d d | d d d d | d d e d | d2 c B | A4 ||
 
 ## Musiquik
-[MusiQwik rendering of chant tone to be added]
+&0ZZZZ.ZZZZ.ZZ[Z.jYX.w)
 
 #Lyrics
-[Psalm 117 text to be added — antiphon followed by chant line]
+[Antiphon] Praise the Lord [Psalm text follows]
+
+Praise the LORD, all ye nations: praise him, all ye people. For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.
+
+[Antiphon closes] Praise the Lord
 
 #Citations and References
 
-Psalm: 117 (ancient — source translation to be confirmed)
-Chant: Gregorian psalm tone (ancient)
-Setting: Antiphonal setting with chant tone (to be sourced)
+Psalm: 117 (World English Bible Updated Edition)
+Chant: 'Gregorian Psalm Tone 1' Ancient Gregorian chant; public domain.
+Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
+copyright: public domain.
 
 https://openhymnal.org/

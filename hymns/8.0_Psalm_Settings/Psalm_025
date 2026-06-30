@@ -5,18 +5,31 @@ Tags: ancient, liturgical, psalm
 # Melody
 
 ## ABC
-[ABC notation for Psalm 25 chant tone to be added]
+X:1
+T:Psalm 25 — Gregorian Chant Tone 8
+C:Gregorian chant; ancient, public domain
+S:Traditional Gregorian psalm tone; public domain
+M:C
+L:1/4
+K:C
+%% Tone 8: Reciting G4, mediant A-G, final C
+G G G G | G G G G | G G A G | G F E D | C4 ||
 
 ## Musiquik
-[MusiQwik rendering of chant tone to be added]
+&0VVVV.VVVV.VVWV.VUTS.r)
 
 #Lyrics
-[Psalm 25 text to be added — antiphon followed by chant line]
+[Antiphon] Unto you, O Lord [Psalm text follows]
+
+Unto thee, O LORD, do I lift up my soul. O my God, I trust in thee: let me not be ashamed, let not mine enemies triumph over me.
+
+[Antiphon closes] Unto you, O Lord
 
 #Citations and References
 
-Psalm: 25 (ancient — source translation to be confirmed)
-Chant: Gregorian psalm tone (ancient)
-Setting: Antiphonal setting with chant tone (to be sourced)
+Psalm: 25 (World English Bible Updated Edition)
+Chant: 'Gregorian Psalm Tone 8' Ancient Gregorian chant; public domain.
+Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
+copyright: public domain.
 
 https://openhymnal.org/

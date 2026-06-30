@@ -5,18 +5,31 @@ Tags: ancient, liturgical, psalm
 # Melody
 
 ## ABC
-[ABC notation for Psalm 118 chant tone to be added]
+X:1
+T:Psalm 118 — Gregorian Chant Tone 6
+C:Gregorian chant; ancient, public domain
+S:Traditional Gregorian psalm tone; public domain
+M:C
+L:1/4
+K:C
+%% Tone 6: Reciting F4, mediant G-A-G-F, final F
+F F F F | F F F F | G G A G | G F E D | F4 ||
 
 ## Musiquik
-[MusiQwik rendering of chant tone to be added]
+&0UUUU.UUUU.VVWV.VUTS.u)
 
 #Lyrics
-[Psalm 118 text to be added — antiphon followed by chant line]
+[Antiphon] Give thanks to the Lord [Psalm text follows]
+
+O give thanks unto the LORD; for he is good: because his mercy endureth for ever.
+
+[Antiphon closes] Give thanks to the Lord
 
 #Citations and References
 
-Psalm: 118 (ancient — source translation to be confirmed)
-Chant: Gregorian psalm tone (ancient)
-Setting: Antiphonal setting with chant tone (to be sourced)
+Psalm: 118 (World English Bible Updated Edition)
+Chant: 'Gregorian Psalm Tone 6' Ancient Gregorian chant; public domain.
+Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
+copyright: public domain.
 
 https://openhymnal.org/
