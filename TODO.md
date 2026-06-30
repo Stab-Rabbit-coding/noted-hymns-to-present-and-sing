@@ -34,7 +34,7 @@ otherwise free to reproduce without royalties.
 
 - [x] 1.3.1 Import and conversion script to generate hymn files with MusiQwik melody lines from abc music files. (abc_to_musiqwik.py)
 - [x] 1.3.2 Export script to create presentation slides in common formats (hymn_to_presentation.py)
-- [ ] 1.3.3 Export script to create sheet music and service bulletins.  (hymn_to_bulletin.py) that can be used independently or triggered by hymn_to_presentation.py. it accepts the same arguments as hymn_to_presentation.py and outputs pdf, odt, or docx.
+- [x] 1.3.3 Export script to create sheet music and service bulletins.  (hymn_to_bulletin.py) that can be used independently or triggered by hymn_to_presentation.py (`--bulletin {pdf,odt,docx}`). it accepts the same arguments as hymn_to_presentation.py and outputs pdf, odt, or docx.
 
 ### 1.4 Release Packaging and Extensibility
 
