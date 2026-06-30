@@ -5,18 +5,31 @@ Tags: ancient, liturgical, psalm
 # Melody
 
 ## ABC
-[ABC notation for Psalm 1 chant tone to be added]
+X:1
+T:Psalm 1 — Gregorian Chant Tone 1
+C:Gregorian chant; ancient, public domain
+S:Traditional Gregorian psalm tone; public domain
+M:C
+L:1/4
+K:C
+%% Tone 1: Reciting D5, mediant F-E-D, final G
+d d d d | d d d d | d d e d | d2 c B | A4 ||
 
 ## Musiquik
-[MusiQwik rendering of chant tone to be added]
+&0ZZZZ.ZZZZ.ZZ[Z.jYX.w)
 
 #Lyrics
-[Psalm 1 text to be added — antiphon followed by chant line]
+[Antiphon] Blessed is the man
+
+Blessed is the man who doesn’t walk in the counsel of the wicked, nor stand on the path of sinners, nor sit in the seat of scoffers; but his delight is in the LORD’s law. On his law he meditates day and night. He will be like a tree planted by the streams of water, that produces its fruit in its season, whose leaf also does not wither. Whatever he does shall prosper. The wicked are not so, but are like the chaff which the wind drives away. Therefore the wicked shall not stand in the judgment, nor sinners in the congregation of the righteous. For the LORD knows the way of the righteous, but the way of the wicked shall perish.
+
+[Antiphon closes] Blessed is the man
 
 #Citations and References
 
-Psalm: 1 (ancient — source translation to be confirmed)
-Chant: Gregorian psalm tone (ancient)
-Setting: Antiphonal setting with chant tone (to be sourced)
+Psalm: 1 (World English Bible Updated Edition)
+Chant: 'Gregorian Psalm Tone 1' Ancient Gregorian chant; public domain. Traditional assignment per Sarum Tonale / St. Dunstan's Plainsong Psalter, Tone I; Latin incipit 'Beatus vir qui non abiit'.
+Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
+copyright: public domain.
 
 https://openhymnal.org/

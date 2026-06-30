@@ -5,18 +5,31 @@ Tags: ancient, liturgical, psalm
 # Melody
 
 ## ABC
-[ABC notation for Psalm 117 chant tone to be added]
+X:1
+T:Psalm 117 — Gregorian Chant Tone 9
+C:Gregorian chant; ancient, public domain
+S:Traditional Gregorian psalm tone; public domain
+M:C
+L:1/4
+K:C
+%% Tonus Peregrinus ('wandering tone'): reciting A4 in the first half-verse, G4 in the second, final D — the one Gregorian tone outside the standard 8-tone system, traditionally proper to Psalm 113/117 (Vulgate)/114
+A A A A | A A A A | G A G E | G G G G | G F E D | D4 ||
 
 ## Musiquik
-[MusiQwik rendering of chant tone to be added]
+&0WWWW.WWWW.VWVT.VVVV.VUTS.s)
 
 #Lyrics
-[Psalm 117 text to be added — antiphon followed by chant line]
+[Antiphon] Praise the LORD, all you nations
+
+Praise the LORD, all you nations! Extol him, all you peoples! For his loving kindness is great toward us. The LORD’s faithfulness endures forever. Praise the LORD!
+
+[Antiphon closes] Praise the LORD, all you nations
 
 #Citations and References
 
-Psalm: 117 (ancient — source translation to be confirmed)
-Chant: Gregorian psalm tone (ancient)
-Setting: Antiphonal setting with chant tone (to be sourced)
+Psalm: 117 (World English Bible Updated Edition)
+Chant: 'Gregorian Psalm Tone 9' Ancient Gregorian chant; public domain. Traditional assignment per Sarum Tonale / St. Dunstan's Plainsong Psalter, Tonus Peregrinus; Latin incipit 'Laudate Dominum omnes gentes'.
+Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
+copyright: public domain.
 
 https://openhymnal.org/
