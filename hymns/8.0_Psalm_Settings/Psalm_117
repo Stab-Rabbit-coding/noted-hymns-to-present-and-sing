@@ -6,34 +6,30 @@ Tags: ancient, liturgical, psalm
 
 ## ABC
 X:1
-T:Psalm 117 — Gregorian Chant Tone 1
+T:Psalm 117 — Gregorian Chant Tone 9
 C:Gregorian chant; ancient, public domain
 S:Traditional Gregorian psalm tone; public domain
 M:C
 L:1/4
 K:C
-%% Tone 1: Reciting D5, mediant F-E-D, final G
-d d d d | d d d d | d d e d | d2 c B | A4 ||
+%% Tonus Peregrinus ('wandering tone'): reciting A4 in the first half-verse, G4 in the second, final D — the one Gregorian tone outside the standard 8-tone system, traditionally proper to Psalm 113/117 (Vulgate)/114
+A A A A | A A A A | G A G E | G G G G | G F E D | D4 ||
 
 ## Musiquik
-&0ZZZZ.ZZZZ.ZZ[Z.jYX.w)
+&0WWWW.WWWW.VWVT.VVVV.VUTS.s)
 
 #Lyrics
-[Antiphon] Praise the Lord
+[Antiphon] Praise the LORD, all you nations
 
-Praise the LORD, all ye nations: praise him, all ye people. For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD.
+Praise the LORD, all you nations! Extol him, all you peoples! For his loving kindness is great toward us. The LORD’s faithfulness endures forever. Praise the LORD!
 
-Glory be to the Father, and to the Son, and to the Holy Spirit; as it was in the beginning, is now, and ever shall be, world without end. Amen.
-
-[Antiphon closes] Praise the Lord
+[Antiphon closes] Praise the LORD, all you nations
 
 #Citations and References
 
-Psalm: 117 World English Bible Updated Edition; public domain. (https://worldenglish.bible/)
-Chant: 'Gregorian Psalm Tone 1' Ancient Gregorian chant; public domain.
+Psalm: 117 (World English Bible Updated Edition)
+Chant: 'Gregorian Psalm Tone 9' Ancient Gregorian chant; public domain. Traditional assignment per Sarum Tonale / St. Dunstan's Plainsong Psalter, Tonus Peregrinus; Latin incipit 'Laudate Dominum omnes gentes'.
 Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
-copyright: public domain. All components (Scripture text, chant, setting) are freely available for copying, distributing, publishing, and modifying.
+copyright: public domain.
 
 https://openhymnal.org/
-https://worldenglish.bible/
-See docs/WEB-UE-COPYRIGHT.md for full public domain statement.

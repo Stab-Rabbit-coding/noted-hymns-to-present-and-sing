@@ -38,15 +38,39 @@ GREGORIAN_TONES = {
     8: {"reciting": "G4", "mediant": "A-G", "final": "C",
         "abc_tone": "G G G G | G G G G | G G A G | G F E D | C4 ||",
         "description": "Tone 8: Reciting G4, mediant A-G, final C"},
+    9: {"reciting": "A4 (1st half) / G4 (2nd half)", "mediant": "G-A-G-E", "final": "D",
+        "abc_tone": "A A A A | A A A A | G A G E | G G G G | G F E D | D4 ||",
+        "description": "Tonus Peregrinus ('wandering tone'): reciting A4 in the first half-verse, "
+                        "G4 in the second, final D — the one Gregorian tone outside the standard "
+                        "8-tone system, traditionally proper to Psalm 113/117 (Vulgate)/114"},
 }
 
+# Traditional tone assignments, researched and cited per psalm rather than
+# auto-rotated. Gregorian/Sarum practice does not have one universal fixed
+# psalm-to-tone chart -- strictly, "the tone of the psalm comes from the
+# antiphon" sung with it on a given occasion. The citations below record a
+# real, attested historical assignment for each psalm currently in this
+# project so the choice is traceable rather than arbitrary. Adding a new
+# psalm requires the same kind of citation; see the error raised below if
+# none is supplied.
 ANTIPHON_ASSIGNMENTS = {
-    1: {"tone": 1, "antiphon": "Blessed is the man"},
-    12: {"tone": 4, "antiphon": "Help, O Lord"},
-    18: {"tone": 3, "antiphon": "The heavens declare"},
-    25: {"tone": 8, "antiphon": "Unto you, O Lord"},
-    117: {"tone": 1, "antiphon": "Praise the Lord"},
-    118: {"tone": 6, "antiphon": "Give thanks to the Lord"}
+    1: {"tone": 1, "antiphon": "Blessed is the man",
+        "source": "Sarum Tonale / St. Dunstan's Plainsong Psalter, Tone I; "
+                   "Latin incipit 'Beatus vir qui non abiit'"},
+    12: {"tone": 4, "antiphon": "Help, LORD",
+         "source": "Sarum Tonale / St. Dunstan's Plainsong Psalter, Tone IV; "
+                    "Latin incipit 'Salvum me fac, Domine'"},
+    18: {"tone": 1, "antiphon": "I love you, LORD, my strength",
+         "source": "Sarum Tonale / St. Dunstan's Plainsong Psalter, Tone I; "
+                    "Latin incipit 'Diligam te, Domine'"},
+    25: {"tone": 8, "antiphon": "To you, LORD, I lift up my soul",
+         "source": "Roman Gradual, Introit for Advent I 'Ad te levavi animam meam', Mode VIII"},
+    117: {"tone": 9, "antiphon": "Praise the LORD, all you nations",
+          "source": "Sarum Tonale / St. Dunstan's Plainsong Psalter, Tonus Peregrinus; "
+                     "Latin incipit 'Laudate Dominum omnes gentes'"},
+    118: {"tone": 1, "antiphon": "Give thanks to the LORD",
+          "source": "Sarum Tonale / St. Dunstan's Plainsong Psalter, Tone I; "
+                     "Latin incipit 'Confitemini Domino'"},
 }
 
 DOXOLOGY = "Glory be to the Father, and to the Son, and to the Holy Spirit; as it was in the beginning, is now, and ever shall be, world without end. Amen."
@@ -65,28 +89,44 @@ class PsalmGenerator:
         if tone is None and psalm_num in ANTIPHON_ASSIGNMENTS:
             tone = ANTIPHON_ASSIGNMENTS[psalm_num]["tone"]
         if tone is None:
-            tone = (psalm_num - 1) % 8 + 1
+            raise ValueError(
+                f"No traditional tone assignment found for Psalm {psalm_num}. "
+                "This project does not auto-assign tones by rotation. Research a "
+                "real, citable historical assignment (e.g. via the Sarum Tonale / "
+                "St. Dunstan's Plainsong Psalter, or the antiphon's liturgical mode "
+                "in the Roman Gradual) and add it to ANTIPHON_ASSIGNMENTS with a "
+                "'source' citation, or pass --tone explicitly."
+            )
         if tone not in GREGORIAN_TONES:
             raise ValueError(f"Invalid tone: {tone}")
-        
+
         antiphon = ANTIPHON_ASSIGNMENTS.get(psalm_num, {}).get("antiphon", f"Psalm {psalm_num}")
-        
+        source = ANTIPHON_ASSIGNMENTS.get(psalm_num, {}).get("source")
+
         if psalm_text is None:
-            psalm_text = self.texts.get(str(psalm_num), 
+            psalm_text = self.texts.get(str(psalm_num),
                 f"[Psalm {psalm_num} text — World English Bible Updated Edition to be added]")
-        
+
         tone_data = GREGORIAN_TONES[tone]
-        return self._build_psalm_content(psalm_num, tone, tone_data, antiphon, 
-                                        psalm_text, include_doxology)
-    
+        return self._build_psalm_content(psalm_num, tone, tone_data, antiphon,
+                                        psalm_text, include_doxology, source)
+
     def _build_psalm_content(self, psalm_num: int, tone: int, tone_data: Dict,
-                            antiphon: str, psalm_text: str, include_doxology: bool) -> str:
+                            antiphon: str, psalm_text: str, include_doxology: bool,
+                            source: Optional[str] = None) -> str:
         """Build complete psalm file content."""
         
         doxology_section = ""
         if include_doxology:
             doxology_section = f"\n\n{DOXOLOGY}"
-        
+
+        chant_line = f"Chant: 'Gregorian Psalm Tone {tone}' Ancient Gregorian chant; public domain."
+        if source:
+            chant_line = (
+                f"Chant: 'Gregorian Psalm Tone {tone}' Ancient Gregorian chant; public domain. "
+                f"Traditional assignment per {source}."
+            )
+
         content = f"""Psalm {psalm_num}
 
 Tags: ancient, liturgical, psalm
@@ -117,7 +157,7 @@ K:C
 #Citations and References
 
 Psalm: {psalm_num} (World English Bible Updated Edition)
-Chant: 'Gregorian Psalm Tone {tone}' Ancient Gregorian chant; public domain.
+{chant_line}
 Setting: Traditional antiphonal setting with Gregorian chant tone; public domain.
 copyright: public domain.
 

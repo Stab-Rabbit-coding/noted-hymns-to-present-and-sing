@@ -15,6 +15,11 @@ Usage:
     python3 hymn_to_presentation.py --file <hymn_file> --format pro6
     python3 hymn_to_presentation.py --file <hymn_file> --format ewsx
     python3 hymn_to_presentation.py --file <hymn_file> --lines-per-slide 2
+    python3 hymn_to_presentation.py --file <hymn_file> --no-antiphon
+
+Psalm chant settings (hymns/8.0_Psalm_Settings/) include the [Antiphon] /
+[Antiphon closes] text by default. Pass --no-antiphon to omit it and export
+the psalm body alone.
 
 Tradition filtering (stanza-level [Tags: ...] markers in the hymn file):
     python3 hymn_to_presentation.py --file <hymn_file> --include lutheran
@@ -186,6 +191,21 @@ def split_musiqwik(musiqwik: str, barlines_per_line: list[int]) -> list[str]:
 # Lyric parsing
 # ---------------------------------------------------------------------------
 
+# Matches the leading [Antiphon] marker line and its inline text (psalm
+# chant settings, see hymns/8.0_Psalm_Settings/).
+_ANTIPHON_OPEN_RE = re.compile(r'^\[Antiphon\][ \t]*[^\n]*\n+', re.IGNORECASE)
+# Matches the trailing [Antiphon closes] marker line and its inline text.
+_ANTIPHON_CLOSE_RE = re.compile(r'\n*\[Antiphon closes\][ \t]*[^\n]*\s*$', re.IGNORECASE)
+
+
+def strip_antiphon(lyrics_text: str) -> str:
+    """Remove the leading [Antiphon] ... and trailing [Antiphon closes] ...
+    lines from a psalm chant's lyrics text, leaving only the psalm body."""
+    text = _ANTIPHON_OPEN_RE.sub('', lyrics_text, count=1)
+    text = _ANTIPHON_CLOSE_RE.sub('', text)
+    return text.strip()
+
+
 def parse_verses(lyrics_text: str) -> list[tuple[str, list[str]]]:
     """
     Split continuous lyric text into (verse_text, stanza_tags) pairs.
@@ -344,7 +364,8 @@ class Slide:
 def build_slides(hymn: dict, lines_per_slide: int = 3,
                  max_lyric_chars: int = 25,
                  include_tags: list[str] | None = None,
-                 exclude_tags: list[str] | None = None) -> list[Slide]:
+                 exclude_tags: list[str] | None = None,
+                 no_antiphon: bool = False) -> list[Slide]:
     slides: list[Slide] = [
         Slide('title', title=hymn['title'], attribution=hymn['attribution'])
     ]
@@ -357,7 +378,11 @@ def build_slides(hymn: dict, lines_per_slide: int = 3,
         print('[warn] No melody lines found; slides will contain lyrics only.',
               file=sys.stderr)
 
-    all_verses = parse_verses(hymn['lyrics_text'])
+    lyrics_text = hymn['lyrics_text']
+    if no_antiphon:
+        lyrics_text = strip_antiphon(lyrics_text)
+
+    all_verses = parse_verses(lyrics_text)
     verses = filter_verses(
         all_verses,
         hymn.get('file_tags', []),
@@ -1111,6 +1136,9 @@ def main() -> None:
                          'tradition tags also imply doctrinal exclusions (repeatable)')
     ap.add_argument('--exclude', '-X', action='append', default=[], metavar='TAG',
                     help='Exclude stanzas matching this tag (tradition or theological; repeatable)')
+    ap.add_argument('--no-antiphon', action='store_true',
+                    help='Omit the [Antiphon]/[Antiphon closes] text from psalm chant settings '
+                         '(antiphon is included by default)')
     args = ap.parse_args()
 
     src = Path(args.file)
@@ -1127,7 +1155,7 @@ def main() -> None:
         )
 
     slides = build_slides(hymn, args.lines_per_slide, args.max_lyric_chars,
-                          args.include, args.exclude)
+                          args.include, args.exclude, args.no_antiphon)
     out    = Path(args.output) if args.output else Path(src.name + '.' + args.format)
 
     if args.format == 'html':
